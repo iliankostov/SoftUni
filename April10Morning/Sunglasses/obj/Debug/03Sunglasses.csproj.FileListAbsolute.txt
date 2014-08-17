@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\Sunglasses\bin\Debug\Sunglasses.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\Sunglasses\bin\Debug\Sunglasses.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\Sunglasses\obj\Debug\03Sunglasses.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\Sunglasses\obj\Debug\Sunglasses.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\Sunglasses\obj\Debug\Sunglasses.pdb
