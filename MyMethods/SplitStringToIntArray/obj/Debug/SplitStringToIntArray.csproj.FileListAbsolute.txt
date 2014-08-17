@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\bin\Debug\SplitStringToIntArray.exe
+C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\bin\Debug\SplitStringToIntArray.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.exe
+C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.pdb
