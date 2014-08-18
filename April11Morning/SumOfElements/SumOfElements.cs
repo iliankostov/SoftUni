@@ -16,6 +16,7 @@ class SumOfElements
 
         int maxValue = numbers.Max();
         long diff = Math.Abs(maxValue - (sum - maxValue));
+
         if (diff == 0)
         {
             Console.WriteLine("Yes, sum={0}", maxValue);

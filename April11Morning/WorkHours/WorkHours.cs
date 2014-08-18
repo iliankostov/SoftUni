@@ -11,6 +11,7 @@ class WorkHours
         double workHours = days * 0.9 * 12 * productivity;
         workHours = (int)workHours;
         double diff = workHours - projectHours;
+
         if (diff < 0)
         {
             Console.WriteLine("No\n{0}", diff);

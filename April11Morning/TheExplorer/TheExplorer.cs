@@ -38,6 +38,7 @@ class TheExplorer
             {
                 Console.WriteLine(topDownLane);
             }
+
         }
     }
 }
