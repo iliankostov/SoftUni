@@ -7,6 +7,7 @@ class HalfSum
         int number = int.Parse(Console.ReadLine());
         int sumOne = 0;
         int sumTwo = 0;
+
         for (int i = 1; i <= number; i++)
         {
             sumOne += int.Parse(Console.ReadLine());
@@ -15,6 +16,7 @@ class HalfSum
         {
             sumTwo += int.Parse(Console.ReadLine());
         }
+
         if (sumOne == sumTwo)
         {
             Console.WriteLine("Yes, sum={0}", sumOne);

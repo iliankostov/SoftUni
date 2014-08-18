@@ -14,6 +14,7 @@ class JoroTheFootballPlayer
         {
             plays += 3;
         }
+
         Console.WriteLine((int)plays);
     }
 }

@@ -11,7 +11,6 @@ class BitsInverter
         {
             bitsArray[i] = int.Parse(Console.ReadLine());
              
-
         }
         
     }

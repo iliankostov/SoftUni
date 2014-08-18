@@ -4,6 +4,6 @@ class NineDigitMagicNumbers
 {
     static void Main()
     {
-        
+         
     }
 }
