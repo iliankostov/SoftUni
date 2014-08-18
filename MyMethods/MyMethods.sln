@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitStringToIntArray", "Sp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfDigit", "SumOfDigits\SumOfDigit.csproj", "{263EFC76-5562-4CA4-A729-5A69D633698A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwolledValues", "AwolledValues\AwolledValues.csproj", "{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllowedValues", "AwolledValues\AllowedValues.csproj", "{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

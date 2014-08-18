@@ -1,0 +1,2 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\AwolledValues\obj\Debug\AwolledValues.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\AwolledValues\obj\Debug\AwolledValues.pdb

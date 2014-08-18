@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\WorkHours\bin\Debug\WorkHours.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\WorkHours\bin\Debug\WorkHours.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\WorkHours\obj\Debug\01WorkHours.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\WorkHours\obj\Debug\WorkHours.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\WorkHours\obj\Debug\WorkHours.pdb

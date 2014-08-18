@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\TheExplorer\bin\Debug\TheExplorer.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\TheExplorer\bin\Debug\TheExplorer.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\TheExplorer\obj\Debug\03TheExplorer.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\TheExplorer\obj\Debug\TheExplorer.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\TheExplorer\obj\Debug\TheExplorer.pdb
