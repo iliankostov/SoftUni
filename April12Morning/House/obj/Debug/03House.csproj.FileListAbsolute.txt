@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\House\bin\Debug\House.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\House\bin\Debug\House.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\House\obj\Debug\03House.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\House\obj\Debug\House.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\House\obj\Debug\House.pdb
