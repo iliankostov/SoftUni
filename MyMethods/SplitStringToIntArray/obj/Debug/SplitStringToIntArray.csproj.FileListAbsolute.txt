@@ -3,3 +3,5 @@ C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\bin\De
 C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.csprojResolveAssemblyReference.cache
 C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.exe
 C:\Users\Ilian\Desktop\CSharpMay\Practice\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\SplitStringToIntArray\obj\Debug\SplitStringToIntArray.pdb

@@ -1,0 +1,4 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\SumOfDigits\bin\Debug\SumOfDigits.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\SumOfDigits\bin\Debug\SumOfDigits.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\SumOfDigits\obj\Debug\SumOfDigits.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\SumOfDigits\obj\Debug\SumOfDigits.pdb

@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitStringToIntArray", "SplitStringToIntArray\SplitStringToIntArray.csproj", "{7D2923DA-74AD-41A5-9984-61DAE7907BDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfDigit", "SumOfDigits\SumOfDigit.csproj", "{263EFC76-5562-4CA4-A729-5A69D633698A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwolledValues", "AwolledValues\AwolledValues.csproj", "{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7D2923DA-74AD-41A5-9984-61DAE7907BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D2923DA-74AD-41A5-9984-61DAE7907BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D2923DA-74AD-41A5-9984-61DAE7907BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263EFC76-5562-4CA4-A729-5A69D633698A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263EFC76-5562-4CA4-A729-5A69D633698A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263EFC76-5562-4CA4-A729-5A69D633698A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263EFC76-5562-4CA4-A729-5A69D633698A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DFE116A-89F0-4C04-8B4C-948BC31D4F3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
