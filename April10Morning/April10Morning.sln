@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02HalfSum", "HalfSum\02Half
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Sunglasses", "Sunglasses\03Sunglasses.csproj", "{C3DBA159-38AA-4223-97B0-6634BBE56599}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04NineDigitMagicNumbers", "NineDigitMagicNumbers\04NineDigitMagicNumbers.csproj", "{3B661090-5C2B-4C19-B941-A7F2144829A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05BitsInverter", "BitsInverter\05BitsInverter.csproj", "{EDB9A5ED-BBE2-4281-8676-AFCDF0435908}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{C3DBA159-38AA-4223-97B0-6634BBE56599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3DBA159-38AA-4223-97B0-6634BBE56599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3DBA159-38AA-4223-97B0-6634BBE56599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B661090-5C2B-4C19-B941-A7F2144829A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B661090-5C2B-4C19-B941-A7F2144829A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B661090-5C2B-4C19-B941-A7F2144829A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B661090-5C2B-4C19-B941-A7F2144829A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB9A5ED-BBE2-4281-8676-AFCDF0435908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB9A5ED-BBE2-4281-8676-AFCDF0435908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB9A5ED-BBE2-4281-8676-AFCDF0435908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB9A5ED-BBE2-4281-8676-AFCDF0435908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
