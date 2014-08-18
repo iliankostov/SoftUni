@@ -8,6 +8,7 @@ class OddEvenSum
         int[] arrNumbers = new int[number*2];
         int oddSum = 0;
         int evenSum = 0;
+
         for (int i = 0; i < arrNumbers.Length; i++)
         {
             arrNumbers[i] = int.Parse(Console.ReadLine());
@@ -20,6 +21,7 @@ class OddEvenSum
                 evenSum += arrNumbers[i];
             }
         }
+
         if (oddSum == evenSum)
         {
             Console.WriteLine("Yes, sum={0}", oddSum);

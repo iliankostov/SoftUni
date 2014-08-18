@@ -5,6 +5,7 @@ class Eclipse
     static void Main()
     {
         int height = int.Parse(Console.ReadLine());
+        
         char frame = '*';
         char glases = '/';
         char bridge = '-';
