@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\OddEvenSum\bin\Debug\OddEvenSum.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\OddEvenSum\bin\Debug\OddEvenSum.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\OddEvenSum\obj\Debug\02OddEvenSum.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\OddEvenSum\obj\Debug\OddEvenSum.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\OddEvenSum\obj\Debug\OddEvenSum.pdb

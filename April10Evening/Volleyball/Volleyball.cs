@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Volleyball
+class Volleyball
 {
-    class Volleyball
+    static void Main()
     {
-        static void Main(string[] args)
+        string isYearLeap = Console.ReadLine();
+        int holidays = int.Parse(Console.ReadLine());
+        int hometown = int.Parse(Console.ReadLine());
+        double plays = hometown + (48 - hometown) * 3.0 / 4 + holidays * 2.0 / 3;
+        if (isYearLeap == "leap")
         {
+            plays = plays + plays * 0.15;
         }
+        Console.WriteLine((int)plays);
     }
 }
