@@ -1,5 +1,5 @@
 ﻿using System;
-class AwolledValues
+class AllowedValue
 {
     static void Main()
     {
