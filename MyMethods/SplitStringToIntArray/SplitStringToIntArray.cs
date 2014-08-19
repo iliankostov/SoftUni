@@ -11,7 +11,6 @@ class SplitStringToIntArray
             Console.WriteLine(intArray[i]);
         }
     }
-
     private static int[] SplitStringsToInts(string s)
     {
         string[] strArray = s.Split(' ');

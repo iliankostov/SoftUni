@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\PrimeChecker\bin\Debug\PrimeChecker.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\PrimeChecker\bin\Debug\PrimeChecker.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\PrimeChecker\obj\Debug\PrimeChecker.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\PrimeChecker\obj\Debug\PrimeChecker.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\PrimeChecker\obj\Debug\PrimeChecker.pdb

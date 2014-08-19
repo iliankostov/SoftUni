@@ -6,7 +6,6 @@ class AllowedValue
         int value = int.Parse(Console.ReadLine());
         Console.WriteLine(AllowedValues(value));
     }
-
     private static bool AllowedValues(int num)
     {
         string digits = num.ToString();
