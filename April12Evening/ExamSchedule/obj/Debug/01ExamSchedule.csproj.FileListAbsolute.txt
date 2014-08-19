@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\ExamSchedule\obj\Debug\01ExamSchedule.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\ExamSchedule\bin\Debug\ExamSchedule.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\ExamSchedule\bin\Debug\ExamSchedule.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\ExamSchedule\obj\Debug\ExamSchedule.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\ExamSchedule\obj\Debug\ExamSchedule.pdb
