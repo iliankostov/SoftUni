@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\OddEvenElements\bin\Debug\OddEvenElements.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\OddEvenElements\bin\Debug\OddEvenElements.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\OddEvenElements\obj\Debug\OddEvenElements.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\OddEvenElements\obj\Debug\OddEvenElements.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\OddEvenElements\obj\Debug\02OddEvenElements.csprojResolveAssemblyReference.cache
