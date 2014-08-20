@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Illuminati\bin\Debug\Illuminati.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Illuminati\bin\Debug\Illuminati.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Illuminati\obj\Debug\02Illuminati.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Illuminati\obj\Debug\Illuminati.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Illuminati\obj\Debug\Illuminati.pdb
