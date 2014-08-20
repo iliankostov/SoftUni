@@ -5,11 +5,11 @@ class FruitMarket
     static void Main()
     {
         string day = Console.ReadLine();
-        int quantitiesProductOne = int.Parse(Console.ReadLine());
+        decimal quantitiesProductOne = decimal.Parse(Console.ReadLine());
         string productOne = Console.ReadLine();
-        int quantitiesProducTwo = int.Parse(Console.ReadLine());
+        decimal quantitiesProducTwo = decimal.Parse(Console.ReadLine());
         string productTwo = Console.ReadLine();
-        int quantitiesProductThree = int.Parse(Console.ReadLine());
+        decimal quantitiesProductThree = decimal.Parse(Console.ReadLine());
         string productThree = Console.ReadLine();
 
         decimal	banana = 1.80m;
