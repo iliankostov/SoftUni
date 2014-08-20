@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\FitBoxInBox\bin\Debug\FitBoxInBox.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\FitBoxInBox\bin\Debug\FitBoxInBox.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\FitBoxInBox\obj\Debug\01FitBoxInBox.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\FitBoxInBox\obj\Debug\FitBoxInBox.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\FitBoxInBox\obj\Debug\FitBoxInBox.pdb
