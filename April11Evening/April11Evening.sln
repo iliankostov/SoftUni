@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Cinema", "Cinema\01Cinema
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02Illuminati", "Illuminati\02Illuminati.csproj", "{5C869B8E-DA36-4AF7-8CAE-B0C9B21790E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03NewHouse", "NewHouse\03NewHouse.csproj", "{5535AC69-1756-4F1F-BE52-C7241227FD58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5C869B8E-DA36-4AF7-8CAE-B0C9B21790E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C869B8E-DA36-4AF7-8CAE-B0C9B21790E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C869B8E-DA36-4AF7-8CAE-B0C9B21790E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5535AC69-1756-4F1F-BE52-C7241227FD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5535AC69-1756-4F1F-BE52-C7241227FD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5535AC69-1756-4F1F-BE52-C7241227FD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5535AC69-1756-4F1F-BE52-C7241227FD58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
