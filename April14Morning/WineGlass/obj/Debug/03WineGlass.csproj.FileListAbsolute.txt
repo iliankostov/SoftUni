@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\WineGlass\bin\Debug\WineGlass.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\WineGlass\bin\Debug\WineGlass.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\WineGlass\obj\Debug\03WineGlass.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\WineGlass\obj\Debug\WineGlass.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\WineGlass\obj\Debug\WineGlass.pdb

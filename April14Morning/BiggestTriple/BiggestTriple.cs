@@ -40,7 +40,7 @@ class BiggestTriple
                 if (maxSum != 0)
                 {
                     Console.Write(" ");
-                }               
+                }
             }         
         }
     }
