@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01FitBoxInBox", "FitBoxInBox\01FitBoxInBox.csproj", "{0F6B5F2D-5BDB-4449-ABDE-3D8CC1D0D82A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02SequenceOfKNumbers", "SequenceOfKNumbers\02SequenceOfKNumbers.csproj", "{27755702-C264-4087-8A6E-CAB4F5F34D9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0F6B5F2D-5BDB-4449-ABDE-3D8CC1D0D82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F6B5F2D-5BDB-4449-ABDE-3D8CC1D0D82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F6B5F2D-5BDB-4449-ABDE-3D8CC1D0D82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27755702-C264-4087-8A6E-CAB4F5F34D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27755702-C264-4087-8A6E-CAB4F5F34D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27755702-C264-4087-8A6E-CAB4F5F34D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27755702-C264-4087-8A6E-CAB4F5F34D9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
