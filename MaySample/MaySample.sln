@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01SimpleCalculation", "Simp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02SimpleLoops", "SimpleLoops\02SimpleLoops.csproj", "{6C250301-DA26-4A76-8317-1904FE3E9776}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03DrawFigure", "DrawFigure\03DrawFigure.csproj", "{3E0D3DB9-7C26-4778-B097-848EF9EC6508}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6C250301-DA26-4A76-8317-1904FE3E9776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C250301-DA26-4A76-8317-1904FE3E9776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C250301-DA26-4A76-8317-1904FE3E9776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E0D3DB9-7C26-4778-B097-848EF9EC6508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0D3DB9-7C26-4778-B097-848EF9EC6508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0D3DB9-7C26-4778-B097-848EF9EC6508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0D3DB9-7C26-4778-B097-848EF9EC6508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
