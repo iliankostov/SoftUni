@@ -1,0 +1,5 @@
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\OddAndEvenJumps\bin\Debug\OddAndEvenJumps.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\OddAndEvenJumps\bin\Debug\OddAndEvenJumps.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\OddAndEvenJumps\obj\Debug\02OddAndEvenJumps.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\OddAndEvenJumps\obj\Debug\OddAndEvenJumps.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\OddAndEvenJumps\obj\Debug\OddAndEvenJumps.pdb
