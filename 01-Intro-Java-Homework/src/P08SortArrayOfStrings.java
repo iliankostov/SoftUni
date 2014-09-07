@@ -10,9 +10,9 @@ public class P08SortArrayOfStrings {
 		System.out.print("Enter number: ");
 		number = scanner.nextInt();
 		String[] strArray = new String[number];
-		for (int i = 1; i <= number; i++) {
-			System.out.print("Enter string " + i + ":");
-			strArray[i] = scanner.next(); 					// boom after the last input						
+		for (int i = 0; i < number; i++) {
+			System.out.print("Enter string" + (i+1) + ":");
+			strArray[i] = scanner.next();					
 		}
 		scanner.close();		
 		sortStringExchange (strArray);
