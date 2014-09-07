@@ -6,7 +6,7 @@ public class P08SortArrayOfStrings {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);		
-		int number;	
+		int number;
 		System.out.print("Enter number: ");
 		number = scanner.nextInt();
 		String[] strArray = new String[number];
