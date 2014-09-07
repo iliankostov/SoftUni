@@ -12,6 +12,7 @@ public class P02TriangleArea {
 		by = scan.nextInt();
 		cx = scan.nextInt();
 		cy = scan.nextInt();
+		scan.close();
 		a = Math.sqrt(Math.pow((bx - ax), 2) + Math.pow((by - ay), 2));
 		b = Math.sqrt(Math.pow((cx - bx), 2) + Math.pow((cy - by), 2));
 		c = Math.sqrt(Math.pow((ax - cx), 2) + Math.pow((ay - cy), 2));
