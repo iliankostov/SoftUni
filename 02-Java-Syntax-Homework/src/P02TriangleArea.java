@@ -4,14 +4,18 @@ public class P02TriangleArea {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		int ax, ay, bx, by, cx, cy;
+		int ax = 0, ay = 0, bx = 0, by = 0, cx = 0, cy = 0;
 		double a, b, c, perimeter, area;		
-		ax = scan.nextInt();
-		ay = scan.nextInt();
-		bx = scan.nextInt();
-		by = scan.nextInt();
-		cx = scan.nextInt();
-		cy = scan.nextInt();
+		try {
+			ax = scan.nextInt();
+			ay = scan.nextInt();
+			bx = scan.nextInt();
+			by = scan.nextInt();
+			cx = scan.nextInt();
+			cy = scan.nextInt();
+		} catch (NumberFormatException nfex) {
+			System.err.println("Fail to scan number" + nfex);
+		}		
 		scan.close();
 		a = Math.sqrt(Math.pow((bx - ax), 2) + Math.pow((by - ay), 2));
 		b = Math.sqrt(Math.pow((cx - bx), 2) + Math.pow((cy - by), 2));
