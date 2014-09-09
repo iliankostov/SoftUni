@@ -14,7 +14,7 @@ public class P04TheSmallestOfThreeNumbers {
 		}
 		scan.close();		
 		float[] numbers = {aNumber, bNumber, cNumber};
-		try {
+		try {			
 			float output = min(numbers);
 			System.out.println(output);
 		} catch (IllegalArgumentException iae) {
