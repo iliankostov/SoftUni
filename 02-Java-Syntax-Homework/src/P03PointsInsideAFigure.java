@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class P03PointsInsideAFigure {
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);		
 		float xPoint = 0 ,yPoint = 0;
 		try {
@@ -10,16 +11,15 @@ public class P03PointsInsideAFigure {
 			yPoint = scan.nextFloat();			
 		} catch (NumberFormatException nfex) {
 			System.err.println("Fail to scan number" + nfex);
-		}				
-		scan.close();
-		boolean output = isInside(xPoint, yPoint);	
-		System.out.println(output);
-		if (output == true) {
+		}	
+		
+		if (isInside(xPoint, yPoint)) {
 			System.out.println("Inside");
 		}
 		else {
 			System.out.println("Outside");
 		}
+				
 	}
 	private static boolean isInside(float xPoint, float yPoint) {
 		boolean answer = false;

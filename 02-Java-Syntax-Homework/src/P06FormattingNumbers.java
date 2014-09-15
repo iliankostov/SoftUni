@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class P06FormattingNumbers {
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		int aNumber = 0;
 		float bNumber = 0.0f, cNumber = 0.0f;
@@ -14,7 +15,6 @@ public class P06FormattingNumbers {
 		} catch (NumberFormatException nfex) {
 			System.err.println("Fail to scan numbers" + nfex);
 		}
-		scan.close();
 		String hex = Integer.toHexString(aNumber);
 		String bin = Integer.toBinaryString(aNumber);
 		

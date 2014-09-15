@@ -4,6 +4,7 @@ public class P01SymmetricNumbersInRange {
 
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		int startRange = 0;
 		int endRange = 0;
@@ -13,7 +14,6 @@ public class P01SymmetricNumbersInRange {
 		} catch (NumberFormatException nfex) {
 			System.err.println("Invalid input " + nfex);
 		}				
-		scanner.close();
 					
 		String output = "";
 		for (int i = startRange; i <= endRange; i++) {

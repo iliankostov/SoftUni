@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class P07CountOfBitsOne {
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		
 		try {
 			int number = scanner.nextInt();
-			scanner.close();
 			int output = numOnesInBinary(number);
 			System.out.println(output);
 		} catch (NumberFormatException nfex) {
