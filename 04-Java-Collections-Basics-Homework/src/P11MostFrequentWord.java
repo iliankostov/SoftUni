@@ -32,8 +32,7 @@ public class P11MostFrequentWord {
 
 		for (Map.Entry<String, Integer> entry : wordOccurrences.entrySet()) {
 			if (entry.getValue() == maxCountWord) {
-				System.out.println(entry.getKey() + " -> " + maxCountWord
-						+ " times");
+				System.out.println(entry.getKey() + " -> " + maxCountWord + " times");
 			}
 
 		}
