@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
-
 public class P02SequencesOfEqualStrings {
 			
 	public static void main(String[] args) {
 
 		@SuppressWarnings("resource")
-		Scanner str = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		String[] strings = str.nextLine().split(" ");
+		String[] strings = scan.nextLine().split(" ");
 		
 		for (int i = 0; i < strings.length - 1; i++) {
 			

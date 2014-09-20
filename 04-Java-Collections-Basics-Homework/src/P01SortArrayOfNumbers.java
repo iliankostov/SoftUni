@@ -1,16 +1,15 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-
 public class P01SortArrayOfNumbers {
 
 	public static void main(String[] args) {
 		
 		@SuppressWarnings("resource")
-		Scanner str = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		
-		int n =Integer.parseInt(str.nextLine());
-		String sLine = str.nextLine();
+		int n =Integer.parseInt(scan.nextLine());
+		String sLine = scan.nextLine();
 		
 		String[] strings = sLine.split(" ");
 		int[] numbers = new int[n];

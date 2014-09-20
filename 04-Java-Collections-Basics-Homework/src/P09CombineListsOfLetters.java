@@ -1,21 +1,20 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class P09CombineListsOfLetters {
 
 	public static void main(String[] args) {
 		
 		@SuppressWarnings("resource")
-		Scanner input = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		ArrayList<Character> firstList = new ArrayList<>();
 		ArrayList<Character> secondList = new ArrayList<>();
 		ArrayList<Character> resultList = new ArrayList<>();
 
-		for (char chars : input.nextLine().toCharArray()) {
+		for (char chars : scan.nextLine().toCharArray()) {
 			firstList.add(chars);
 		}
-		for (char chars : input.nextLine().toCharArray()) {
+		for (char chars : scan.nextLine().toCharArray()) {
 			secondList.add(chars);
 		}
 		resultList.addAll(firstList);

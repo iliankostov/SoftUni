@@ -7,8 +7,8 @@ public class P08ExtractEmails {
 	public static void main(String[] args) {
 
 		@SuppressWarnings("resource")
-		Scanner in = new Scanner(System.in);
-		String text = in.nextLine().toLowerCase();
+		Scanner scan = new Scanner(System.in);
+		String text = scan.nextLine().toLowerCase();
 
 		Pattern emailPattern = Pattern.compile("[\\w-+]+(?:\\.[\\w-+]+)*@(?:[\\w-]+\\.)+[a-zA-Z]{2,7}");
 

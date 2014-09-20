@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
-
 public class P03LargestSequenceOfEqualStrings {
 
 	public static void main(String[] args) {
 		@SuppressWarnings("resource")
-		Scanner in = new Scanner(System.in);
-		String input = in.nextLine();
+		Scanner scan = new Scanner(System.in);
+		String input = scan.nextLine();
 		String[] elements = input.split(" ");
 
 		int repeat = 1;
