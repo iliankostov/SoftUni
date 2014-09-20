@@ -20,18 +20,17 @@ public class P01CognateWords {
 							cognateWords.add(words[a] + "|" + words[b] + "=" + words[c]);
 						}
 					}
-				}
-				
-			}
-			
+				}				
+			}		
 		}
-		if (cognateWords.isEmpty()) {
-			System.out.println("No");		
-		}
-		else {
+		if (!cognateWords.isEmpty()) {
 			for (String cognate : cognateWords) {
 				System.out.println(cognate);
 			}
+					
+		}
+		else {
+			System.out.println("No");
 		}
 		
 	}
