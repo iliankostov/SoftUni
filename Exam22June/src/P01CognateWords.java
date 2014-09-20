@@ -8,14 +8,14 @@ public class P01CognateWords {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		String input = scan.nextLine();
-		String[] words = input.split("\\W+");
-		boolean check = false;
+		String[] words = input.split("[^a-zA-Z]+");
+		
 		HashSet<String> cognateWords = new HashSet<>();
 		for (int a = 0; a < words.length; a++) {
 			for (int b = 0; b < words.length; b++) {
 				for (int c = 0; c < words.length; c++) {
 					if (a!=b) {
-						check = (words[a] + words[b]).equals(words[c]);
+						boolean check = (words[a] + words[b]).equals(words[c]);
 						if (check) {
 							cognateWords.add(words[a] + "|" + words[b] + "=" + words[c]);
 						}
@@ -25,13 +25,13 @@ public class P01CognateWords {
 			}
 			
 		}
-		if (!cognateWords.isEmpty()) {
+		if (cognateWords.isEmpty()) {
+			System.out.println("No");		
+		}
+		else {
 			for (String cognate : cognateWords) {
 				System.out.println(cognate);
 			}
-		}
-		else {
-			System.out.println("No");
 		}
 		
 	}
