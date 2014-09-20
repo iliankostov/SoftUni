@@ -39,8 +39,8 @@ public class P04LongestIncreasingSequence {
 		System.out.println();
 		System.out.print("Longest: ");
 		
-		for (int i = 0; i < counter - 1; i++) {
-			System.out.print(numbers[positionOfInt - counter + 1 + i] + " ");
+		for (int i = 0; i < maxCounter - 1; i++) {
+			System.out.print(numbers[positionOfInt - maxCounter + 1 + i] + " ");
 		}
 		System.out.print(numbers[positionOfInt]);
 
