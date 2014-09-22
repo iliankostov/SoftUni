@@ -2,6 +2,5 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/ilian/git/JavaBasics/01-Intro-Java-Homework/lib/pdfbox-app-1.8.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
