@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02BookOrders", "BookOrders\02BookOrders.csproj", "{94E966E5-EE07-4B82-9FE0-8595805D187E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Car", "Car\03Car.csproj", "{9274A6D4-D659-48A3-8E67-9C93835A8511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Tables", "Tables\01Tables.csproj", "{AA7D0FA5-443E-4B11-B769-24D4ECFA2FAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94E966E5-EE07-4B82-9FE0-8595805D187E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E966E5-EE07-4B82-9FE0-8595805D187E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E966E5-EE07-4B82-9FE0-8595805D187E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E966E5-EE07-4B82-9FE0-8595805D187E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9274A6D4-D659-48A3-8E67-9C93835A8511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9274A6D4-D659-48A3-8E67-9C93835A8511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9274A6D4-D659-48A3-8E67-9C93835A8511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9274A6D4-D659-48A3-8E67-9C93835A8511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7D0FA5-443E-4B11-B769-24D4ECFA2FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7D0FA5-443E-4B11-B769-24D4ECFA2FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7D0FA5-443E-4B11-B769-24D4ECFA2FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7D0FA5-443E-4B11-B769-24D4ECFA2FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
