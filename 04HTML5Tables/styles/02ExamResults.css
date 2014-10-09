@@ -1,0 +1,26 @@
+html, body, table, thead, tbody, tfoot, tr, th, td, div, span {
+    margin: 0;
+    padding: 0;
+}
+table, th, td {
+    border: 0.1em solid #000000;
+}
+table {
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+th {
+    padding: 0.2em;
+    font-size: 2em;
+}
+td {
+    padding: 0.2em;
+    border: 0.1em solid #000000;
+}
+tbody>tr:first-child {
+    font-weight: bold;
+    text-align: center;
+}
+tfoot tr {
+    text-align: right;
+}
