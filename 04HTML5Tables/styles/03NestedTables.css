@@ -4,7 +4,7 @@ html, body, table, tr, td, div {
 }
 
 table, td {
-    margin: 0.3em;
+     margin: 0.3em;
     border: 0.1em solid #000000;
 }
 span {
