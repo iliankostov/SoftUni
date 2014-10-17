@@ -1,0 +1,84 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: tahoma, sans-serif;
+}
+fieldset {
+    border: none;
+}
+fieldset legend{
+    color: #ffffff;
+    font-weight: 700;
+}
+form{
+    background-image: url("../images/formBackground.jpg");
+    display: inline-block;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+form div{
+    background-color: rgba(128,162,195, 0.7);
+    border: solid 0.16em #C4D6E7;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-bottom: 0.3em;
+}
+form div label{
+    display: inline-block;
+    width: 10em;
+}
+form div input, form div textarea{
+    width: 12em;
+    height: 1.5em;
+    background-color: rgba(255,255,255, 0.8);
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-right: 8.5em;
+}
+fieldset fieldset {
+    color: #000000;
+    font-weight: normal;
+}
+fieldset fieldset legend{
+    color: #000000;
+    font-weight: normal;
+}
+.radio-label{
+    margin: 0;
+    display: inline;
+    padding: 1em 3em 0 0.5em;
+}
+
+#input7, #input8, #input9 {
+    width: 0.7em;
+    background-color: rgba(255,255,255, 0.8);
+    border: none;
+    margin-right: 0;
+    margin-bottom: 0.7em;
+}
+
+form div textarea{
+    height: 7em;
+    vertical-align: top;
+}
+form div input:focus, form div textarea:focus {
+    background-color: rgba(255,255,255, 1);
+}
+img{
+    width: 1.5em;
+    margin-right: 0.2em;
+}
+
+input[type=submit]{
+    background: #04152F;
+    color: #ffffff;
+    border-radius: 3em;
+    padding: 0.7em 2em;
+    border: none;
+}
+
+.button{
+    display: block;
+    text-align: center;
+}
