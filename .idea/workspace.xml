@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48465a95-ed51-43fa-bfb5-4e9ce5f0ae4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/googleplus.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/styles/02WebsiteFooter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/02WebsiteFooter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/3th-of-July.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/softuni-conf-news.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/summer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebFundamentals.iws" />
@@ -29,7 +29,36 @@
     <favorites_list name="WebFundamentals" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="03TheSoftUniNews.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.61041296" vertical-offset="969" max-vertical-offset="1887">
+                  <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="03TheSoftUniNews.css" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.5922818" vertical-offset="2158" max-vertical-offset="2754">
+                  <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -64,6 +93,8 @@
         <option value="$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html" />
         <option value="$PROJECT_DIR$/07CSSLayout/styles/02WebsiteFooter.css" />
         <option value="$PROJECT_DIR$/07CSSLayout/02WebsiteFooter.html" />
+        <option value="$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css" />
+        <option value="$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html" />
       </list>
     </option>
   </component>
@@ -430,7 +461,7 @@
       <workItem from="1414057035870" duration="1308000" />
       <workItem from="1414150454085" duration="4650000" />
       <workItem from="1414155132471" duration="5763000" />
-      <workItem from="1414160922322" duration="2506000" />
+      <workItem from="1414160922322" duration="4115000" />
     </task>
     <task id="LOCAL-00001" summary="Web Fundamentals Homework">
       <created>1413303463135</created>
@@ -476,11 +507,15 @@
       <created>1414160801141</created>
       <updated>1414160801141</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Web Fundamentals Homework">
+      <created>1414163697583</created>
+      <updated>1414163697583</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79243000" />
+    <option name="totallyTimeSpent" value="80852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -495,10 +530,11 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32636657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -510,7 +546,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32334048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32636657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -838,6 +873,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.819398" vertical-offset="643" max-vertical-offset="1802">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5922818" vertical-offset="2158" max-vertical-offset="2754">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61041296" vertical-offset="969" max-vertical-offset="1887">
+          <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
           <folding />
         </state>
       </provider>
