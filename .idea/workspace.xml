@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48465a95-ed51-43fa-bfb5-4e9ce5f0ae4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/3th-of-July.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/softuni-conf-news.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/images/summer.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html" />
+    <list default="true" id="48465a95-ed51-43fa-bfb5-4e9ce5f0ae4c" name="Default" comment="Web Fundamentals Homework">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/styles/04PrettyWebsite.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07CSSLayout/04PrettyWebsite.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebFundamentals.iws" />
@@ -32,11 +29,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="03TheSoftUniNews.html" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html">
+          <file leaf-file-name="04PrettyWebsite.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/07CSSLayout/04PrettyWebsite.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.61041296" vertical-offset="969" max-vertical-offset="1887">
-                  <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+                <state vertical-scroll-proportion="0.3286517" vertical-offset="1923" max-vertical-offset="2482">
+                  <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -46,11 +43,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="03TheSoftUniNews.css" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css">
+          <file leaf-file-name="04PrettyWebsite.css" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/04PrettyWebsite.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.5922818" vertical-offset="2158" max-vertical-offset="2754">
-                  <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+                <state vertical-scroll-proportion="0.33246073" vertical-offset="3154" max-vertical-offset="3689">
+                  <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -95,6 +92,8 @@
         <option value="$PROJECT_DIR$/07CSSLayout/02WebsiteFooter.html" />
         <option value="$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css" />
         <option value="$PROJECT_DIR$/07CSSLayout/03TheSoftUniNews.html" />
+        <option value="$PROJECT_DIR$/07CSSLayout/04PrettyWebsite.html" />
+        <option value="$PROJECT_DIR$/07CSSLayout/styles/04PrettyWebsite.css" />
       </list>
     </option>
   </component>
@@ -133,7 +132,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,6 +185,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,7 +460,8 @@
       <workItem from="1414057035870" duration="1308000" />
       <workItem from="1414150454085" duration="4650000" />
       <workItem from="1414155132471" duration="5763000" />
-      <workItem from="1414160922322" duration="4115000" />
+      <workItem from="1414160922322" duration="4134000" />
+      <workItem from="1414167536784" duration="382000" />
     </task>
     <task id="LOCAL-00001" summary="Web Fundamentals Homework">
       <created>1413303463135</created>
@@ -511,11 +511,15 @@
       <created>1414163697583</created>
       <updated>1414163697583</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Web Fundamentals Homework">
+      <created>1414165505232</created>
+      <updated>1414165505232</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80852000" />
+    <option name="totallyTimeSpent" value="81253000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -534,7 +538,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32636657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3253205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -579,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1103" max-vertical-offset="1496">
           <caret line="82" column="7" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -587,7 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="646">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="306">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.615385" vertical-offset="240" max-vertical-offset="1496">
           <caret line="38" column="61" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3381038" vertical-offset="0" max-vertical-offset="1037">
           <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,15 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.819398" vertical-offset="643" max-vertical-offset="1802">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5922818" vertical-offset="2158" max-vertical-offset="2754">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,6 +877,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61041296" vertical-offset="969" max-vertical-offset="1887">
           <caret line="77" column="70" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/03TheSoftUniNews.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5922818" vertical-offset="2158" max-vertical-offset="2754">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/04PrettyWebsite.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33246073" vertical-offset="3154" max-vertical-offset="3689">
+          <caret line="193" column="4" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07CSSLayout/04PrettyWebsite.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3286517" vertical-offset="1923" max-vertical-offset="2482">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
