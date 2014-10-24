@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48465a95-ed51-43fa-bfb5-4e9ce5f0ae4c" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Ilian\Documents\GitHub\WebFundamentals\07CSSLayout\images\bell.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html" afterPath="$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebFundamentals.iws" />
@@ -56,8 +56,8 @@
         <option value="$PROJECT_DIR$/06HTML5Forms/05LaptopChoice.html" />
         <option value="$PROJECT_DIR$/responsive.css" />
         <option value="$PROJECT_DIR$/responsive.html" />
-        <option value="$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html" />
         <option value="$PROJECT_DIR$/07CSSLayout/styles/01WebsiteHeader.css" />
+        <option value="$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html" />
       </list>
     </option>
   </component>
@@ -112,6 +112,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WebFundamentals" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebFundamentals" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebFundamentals" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="07CSSLayout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,7 +405,7 @@
       <workItem from="1414056898120" duration="89000" />
       <workItem from="1414057035870" duration="1308000" />
       <workItem from="1414150454085" duration="4650000" />
-      <workItem from="1414155132471" duration="5509000" />
+      <workItem from="1414155132471" duration="5623000" />
     </task>
     <task id="LOCAL-00001" summary="Web Fundamentals Homework">
       <created>1413303463135</created>
@@ -425,11 +439,15 @@
       <created>1414160603776</created>
       <updated>1414160603776</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Web Fundamentals Homework">
+      <created>1414160651267</created>
+      <updated>1414160651267</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76483000" />
+    <option name="totallyTimeSpent" value="76597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -756,18 +774,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71480805" vertical-offset="0" max-vertical-offset="1496">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/07CSSLayout/styles/01WebsiteHeader.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25822785" vertical-offset="986" max-vertical-offset="1921">
           <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07CSSLayout/01WebsiteHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5558583" vertical-offset="1105" max-vertical-offset="1496">
+          <caret line="77" column="56" selection-start-line="77" selection-start-column="56" selection-end-line="77" selection-end-column="56" />
           <folding />
         </state>
       </provider>
