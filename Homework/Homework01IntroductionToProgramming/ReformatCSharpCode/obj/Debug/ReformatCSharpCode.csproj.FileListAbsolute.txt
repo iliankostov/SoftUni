@@ -1,0 +1,6 @@
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\ReformatCSharpCode\bin\Debug\ReformatCSharpCode.exe
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\ReformatCSharpCode\bin\Debug\ReformatCSharpCode.pdb
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\ReformatCSharpCode\obj\Debug\ReformatCSharpCode.exe
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\ReformatCSharpCode\obj\Debug\ReformatCSharpCode.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\ReformatCSharpCode\obj\Debug\ReformatCSharpCode.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\ReformatCSharpCode\obj\Debug\ReformatCSharpCode.pdb

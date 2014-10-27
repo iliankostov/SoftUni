@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfNames\bin\Debug\CountOfNames.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfNames\bin\Debug\CountOfNames.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfNames\obj\Debug\CountOfNames.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfNames\obj\Debug\CountOfNames.pdb

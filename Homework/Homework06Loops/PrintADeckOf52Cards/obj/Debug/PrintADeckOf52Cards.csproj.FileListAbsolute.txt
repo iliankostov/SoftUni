@@ -1,0 +1,1 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\PrintADeckOf52Cards\bin\Debug\PrintADeckOf52Cards.exe.config

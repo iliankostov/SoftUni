@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\OddAndEvenProduct\bin\Debug\OddAndEvenProduct.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\OddAndEvenProduct\bin\Debug\OddAndEvenProduct.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\OddAndEvenProduct\obj\Debug\10.OddAndEvenProduct.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\OddAndEvenProduct\obj\Debug\OddAndEvenProduct.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\OddAndEvenProduct\obj\Debug\OddAndEvenProduct.pdb

@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CatalanNumbers\bin\Debug\CatalanNumbers.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CatalanNumbers\bin\Debug\CatalanNumbers.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CatalanNumbers\obj\Debug\CatalanNumbers.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CatalanNumbers\obj\Debug\CatalanNumbers.pdb

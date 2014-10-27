@@ -1,0 +1,6 @@
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumberComparer\bin\Debug\NumberComparer.exe.config
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumberComparer\bin\Debug\NumberComparer.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumberComparer\bin\Debug\NumberComparer.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumberComparer\obj\Debug\04.NumberComparer.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumberComparer\obj\Debug\NumberComparer.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumberComparer\obj\Debug\NumberComparer.pdb

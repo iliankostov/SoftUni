@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\QuotesInStrings\bin\Debug\QuotesInStrings.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\QuotesInStrings\bin\Debug\QuotesInStrings.pdb
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\QuotesInStrings\obj\Debug\QuotesInStrings.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\QuotesInStrings\obj\Debug\QuotesInStrings.pdb

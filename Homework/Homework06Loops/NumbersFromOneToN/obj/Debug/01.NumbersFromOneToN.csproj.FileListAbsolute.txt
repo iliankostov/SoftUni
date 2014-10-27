@@ -1,0 +1,11 @@
+C:\Users\Ilian\Desktop\MayLecture4\6-Loops-Homework\NumbersFromOneToN\bin\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\MayLecture4\6-Loops-Homework\NumbersFromOneToN\bin\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\MayLecture4\6-Loops-Homework\NumbersFromOneToN\obj\Debug\01.NumbersFromOneToN.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\MayLecture4\6-Loops-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\MayLecture4\6-Loops-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\MayLecture6\6-Loops-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\MayLecture6\6-Loops-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb

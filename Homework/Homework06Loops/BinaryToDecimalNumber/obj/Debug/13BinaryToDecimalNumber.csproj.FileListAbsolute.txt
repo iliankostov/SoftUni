@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\BinaryToDecimalNumber\obj\Debug\BinaryToDecimalNumber.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\BinaryToDecimalNumber\obj\Debug\BinaryToDecimalNumber.pdb

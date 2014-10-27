@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\QuotesInStrings\obj\Debug\QuotesInStrings.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\QuotesInStrings\obj\Debug\QuotesInStrings.pdb

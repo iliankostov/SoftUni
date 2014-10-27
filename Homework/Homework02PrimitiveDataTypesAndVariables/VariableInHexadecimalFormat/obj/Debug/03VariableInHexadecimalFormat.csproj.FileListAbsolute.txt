@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\VariableInHexadecimalFormat\obj\Debug\VariableInHexadecimalFormat.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\VariableInHexadecimalFormat\obj\Debug\VariableInHexadecimalFormat.pdb

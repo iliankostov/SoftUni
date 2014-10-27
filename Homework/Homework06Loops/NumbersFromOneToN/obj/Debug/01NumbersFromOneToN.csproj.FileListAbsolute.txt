@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\bin\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\bin\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\NumbersFromOneToN\obj\Debug\01NumbersFromOneToN.csprojResolveAssemblyReference.cache

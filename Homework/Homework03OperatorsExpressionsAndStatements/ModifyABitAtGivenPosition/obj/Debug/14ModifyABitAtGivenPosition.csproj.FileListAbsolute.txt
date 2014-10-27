@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ModifyABitAtGivenPosition\bin\Debug\ModifyABitAtGivenPosition.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ModifyABitAtGivenPosition\bin\Debug\ModifyABitAtGivenPosition.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ModifyABitAtGivenPosition\obj\Debug\14ModifyABitAtGivenPosition.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ModifyABitAtGivenPosition\obj\Debug\ModifyABitAtGivenPosition.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ModifyABitAtGivenPosition\obj\Debug\ModifyABitAtGivenPosition.pdb

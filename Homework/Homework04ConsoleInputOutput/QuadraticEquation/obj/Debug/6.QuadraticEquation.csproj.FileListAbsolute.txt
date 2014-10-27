@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\bin\Debug\QuadraticEquation.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\bin\Debug\QuadraticEquation.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\6.QuadraticEquation.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\QuadraticEquation.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\QuadraticEquation.pdb

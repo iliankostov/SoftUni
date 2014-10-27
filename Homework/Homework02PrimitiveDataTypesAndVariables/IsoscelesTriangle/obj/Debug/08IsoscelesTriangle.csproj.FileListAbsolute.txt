@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\IsoscelesTriangle\bin\Debug\IsoscelesTriangle.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\IsoscelesTriangle\bin\Debug\IsoscelesTriangle.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\IsoscelesTriangle\obj\Debug\08IsoscelesTriangle.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\IsoscelesTriangle\obj\Debug\IsoscelesTriangle.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\IsoscelesTriangle\obj\Debug\IsoscelesTriangle.pdb

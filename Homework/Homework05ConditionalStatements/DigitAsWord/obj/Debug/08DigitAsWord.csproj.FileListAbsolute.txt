@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\DigitAsWord\obj\Debug\DigitAsWord.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\DigitAsWord\obj\Debug\DigitAsWord.pdb

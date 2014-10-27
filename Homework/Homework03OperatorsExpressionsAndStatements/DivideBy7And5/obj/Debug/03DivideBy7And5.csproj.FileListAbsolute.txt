@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\DivideBy7And5\obj\Debug\DivideBy7And5.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\DivideBy7And5\obj\Debug\DivideBy7And5.pdb

@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\NumberAsWords\bin\Debug\NumberAsWords.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\NumberAsWords\bin\Debug\NumberAsWords.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\NumberAsWords\obj\Debug\11NumberAsWords.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\NumberAsWords\obj\Debug\NumberAsWords.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\NumberAsWords\obj\Debug\NumberAsWords.pdb

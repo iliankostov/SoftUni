@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintMyName\obj\Debug\PrintMyName.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintMyName\obj\Debug\PrintMyName.pdb

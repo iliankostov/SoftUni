@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintLongSequence\obj\Debug\PrintLongSequence.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintLongSequence\obj\Debug\PrintLongSequence.pdb

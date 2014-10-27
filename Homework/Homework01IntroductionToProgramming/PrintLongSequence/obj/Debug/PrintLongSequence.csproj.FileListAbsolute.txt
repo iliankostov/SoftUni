@@ -1,0 +1,6 @@
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintLongSequence\bin\Debug\PrintLongSequence.exe
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintLongSequence\bin\Debug\PrintLongSequence.pdb
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintLongSequence\obj\Debug\PrintLongSequence.exe
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintLongSequence\obj\Debug\PrintLongSequence.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintLongSequence\obj\Debug\PrintLongSequence.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintLongSequence\obj\Debug\PrintLongSequence.pdb

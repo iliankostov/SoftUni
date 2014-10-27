@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\BooleanVariable\bin\Debug\BooleanVariable.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\BooleanVariable\bin\Debug\BooleanVariable.pdb
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\BooleanVariable\obj\Debug\BooleanVariable.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\BooleanVariable\obj\Debug\BooleanVariable.pdb

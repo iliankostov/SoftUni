@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\RemoveNames\bin\Debug\RemoveNames.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\RemoveNames\bin\Debug\RemoveNames.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\RemoveNames\obj\Debug\RemoveNames.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\RemoveNames\obj\Debug\RemoveNames.pdb

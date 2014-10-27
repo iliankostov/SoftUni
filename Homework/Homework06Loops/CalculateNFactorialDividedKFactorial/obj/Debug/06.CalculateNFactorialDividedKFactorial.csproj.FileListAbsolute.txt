@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateNFactorialDividedKFactorial\bin\Debug\CalculateNFactorialDividedKFactorial.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateNFactorialDividedKFactorial\bin\Debug\CalculateNFactorialDividedKFactorial.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateNFactorialDividedKFactorial\obj\Debug\CalculateNFactorialDividedKFactorial.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateNFactorialDividedKFactorial\obj\Debug\CalculateNFactorialDividedKFactorial.pdb

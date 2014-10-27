@@ -1,0 +1,1 @@
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PointInsideACircleAndOutsideOfARectangle\bin\Debug\PointInsideACircleAndOutsideOfARectangle.exe.config

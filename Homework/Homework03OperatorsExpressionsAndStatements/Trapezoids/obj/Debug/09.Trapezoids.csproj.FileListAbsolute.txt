@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Trapezoids\bin\Debug\Trapezoids.exe
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Trapezoids\bin\Debug\Trapezoids.pdb
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Trapezoids\obj\Debug\09.Trapezoids.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Trapezoids\obj\Debug\Trapezoids.exe
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Trapezoids\obj\Debug\Trapezoids.pdb

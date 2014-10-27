@@ -1,0 +1,7 @@
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfNNumbers\bin\Debug\SumOfNNumbers.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfNNumbers\bin\Debug\SumOfNNumbers.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfNNumbers\obj\Debug\SumOfNNumbers.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfNNumbers\obj\Debug\SumOfNNumbers.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfNNumbers\obj\Debug\09.SumOfNNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\SumOfNNumbers\obj\Debug\SumOfNNumbers.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\SumOfNNumbers\obj\Debug\SumOfNNumbers.pdb

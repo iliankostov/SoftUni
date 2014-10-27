@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateFormula\bin\Debug\CalculateFormula.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateFormula\bin\Debug\CalculateFormula.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateFormula\obj\Debug\CalculateFormula.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateFormula\obj\Debug\CalculateFormula.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateFormula\obj\Debug\05.CalculateFormula.csprojResolveAssemblyReference.cache

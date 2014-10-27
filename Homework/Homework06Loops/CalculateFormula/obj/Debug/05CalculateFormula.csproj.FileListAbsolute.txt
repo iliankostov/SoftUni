@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\CalculateFormula\obj\Debug\CalculateFormula.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\CalculateFormula\obj\Debug\CalculateFormula.pdb

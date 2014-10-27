@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\AgeAfter10Years\obj\Debug\AgeAfter10Years.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\AgeAfter10Years\obj\Debug\AgeAfter10Years.pdb

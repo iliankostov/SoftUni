@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PrimeNumberCheck\bin\Debug\PrimeNumberCheck.exe
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PrimeNumberCheck\bin\Debug\PrimeNumberCheck.pdb
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PrimeNumberCheck\obj\Debug\PrimeNumberCheck.exe
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PrimeNumberCheck\obj\Debug\PrimeNumberCheck.pdb
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PrimeNumberCheck\obj\Debug\08.PrimeNumberCheck.csprojResolveAssemblyReference.cache

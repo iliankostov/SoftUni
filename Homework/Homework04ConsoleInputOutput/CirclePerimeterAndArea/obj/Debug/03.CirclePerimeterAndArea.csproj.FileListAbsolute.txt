@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\CirclePerimeterAndArea\bin\Debug\CirclePerimeterAndArea.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\CirclePerimeterAndArea\bin\Debug\CirclePerimeterAndArea.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\CirclePerimeterAndArea\obj\Debug\CirclePerimeterAndArea.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\CirclePerimeterAndArea\obj\Debug\CirclePerimeterAndArea.pdb

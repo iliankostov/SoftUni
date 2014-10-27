@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\HexadecimalToDecimalNumber\bin\Debug\HexadecimalToDecimalNumber.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\HexadecimalToDecimalNumber\bin\Debug\HexadecimalToDecimalNumber.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\HexadecimalToDecimalNumber\obj\Debug\HexadecimalToDecimalNumber.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\HexadecimalToDecimalNumber\obj\Debug\HexadecimalToDecimalNumber.pdb

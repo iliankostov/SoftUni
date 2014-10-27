@@ -1,0 +1,7 @@
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\bin\Debug\ExchangeVariableValues.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\bin\Debug\ExchangeVariableValues.pdb
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.pdb
+C:\Users\Ilian\Desktop\MayLecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.exe
+C:\Users\Ilian\Desktop\MayLecture2\2-Primitive-Data-Types-and-Variables-Homework\ExchangeVariableValues\obj\Debug\ExchangeVariableValues.pdb

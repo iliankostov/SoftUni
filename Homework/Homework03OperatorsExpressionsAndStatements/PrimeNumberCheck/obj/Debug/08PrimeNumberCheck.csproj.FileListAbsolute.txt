@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\PrimeNumberCheck\obj\Debug\PrimeNumberCheck.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\PrimeNumberCheck\obj\Debug\PrimeNumberCheck.pdb

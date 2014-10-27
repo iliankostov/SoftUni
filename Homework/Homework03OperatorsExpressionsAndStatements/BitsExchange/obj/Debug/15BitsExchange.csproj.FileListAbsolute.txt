@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitsExchange\bin\Debug\BitsExchange.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitsExchange\bin\Debug\BitsExchange.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitsExchange\obj\Debug\15BitsExchange.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitsExchange\obj\Debug\BitsExchange.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitsExchange\obj\Debug\BitsExchange.pdb

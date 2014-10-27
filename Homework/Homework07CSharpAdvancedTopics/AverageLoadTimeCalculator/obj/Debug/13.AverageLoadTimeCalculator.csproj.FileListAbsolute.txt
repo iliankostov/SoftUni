@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\AverageLoadTimeCalculator\bin\Debug\AverageLoadTimeCalculator.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\AverageLoadTimeCalculator\bin\Debug\AverageLoadTimeCalculator.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\AverageLoadTimeCalculator\obj\Debug\AverageLoadTimeCalculator.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\AverageLoadTimeCalculator\obj\Debug\AverageLoadTimeCalculator.pdb

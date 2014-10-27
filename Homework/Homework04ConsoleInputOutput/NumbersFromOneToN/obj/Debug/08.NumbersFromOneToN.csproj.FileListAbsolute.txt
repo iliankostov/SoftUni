@@ -1,0 +1,6 @@
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumbersFromOneToN\bin\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumbersFromOneToN\bin\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\NumbersFromOneToN\obj\Debug\NumbersFromOneToN.pdb

@@ -1,0 +1,11 @@
+Java is one of the best programing languages. It is extremely similar to C# and you can easy jump from one to another. Their differences are in the frameworks in which they operate.
+
+C++ is another language similar to C#, which uses the value of classes. C++ is usually considered a "multi-paradigm" language. That is, you can use it for object-oriented, procedural, and even functional programming.
+
+Objective-C is the main programming language used by Apple for their operating systems. Just as C# is tightly coupled with .NET, Objective-C is tightly coupled with Cocoa.
+
+PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language. PHP code is usually processed by a PHP interpreter, which is usually implemented as a web server's native module or a Common Gateway Interface (CGI) executable.
+
+Python is open source programing language which has availability to use open source libraries. It is easy to learn and it has easy syntax than the C# language.
+
+Ruby is another open source language which has got completely different platform called Rails. In addition it is easy to write, but hard to understand than C# and .Net Framework.

@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\MatrixOfPalindromes\bin\Debug\MatrixOfPalindromes.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\MatrixOfPalindromes\bin\Debug\MatrixOfPalindromes.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\MatrixOfPalindromes\obj\Debug\MatrixOfPalindromes.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\MatrixOfPalindromes\obj\Debug\MatrixOfPalindromes.pdb

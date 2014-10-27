@@ -1,0 +1,2 @@
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\FourDigitNumber\obj\Debug\FourDigitNumber.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\FourDigitNumber\obj\Debug\FourDigitNumber.pdb

@@ -1,0 +1,8 @@
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintMyName\bin\Debug\PrintMyName.exe
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintMyName\bin\Debug\PrintMyName.pdb
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintMyName\obj\Debug\PrintMyName.exe
+C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintMyName\obj\Debug\PrintMyName.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\PrintMyName\obj\Debug\PrintMyName.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\PrintMyName\obj\Debug\PrintMyName.pdb
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintMyName\obj\Debug\PrintMyName.exe
+C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintMyName\obj\Debug\PrintMyName.pdb

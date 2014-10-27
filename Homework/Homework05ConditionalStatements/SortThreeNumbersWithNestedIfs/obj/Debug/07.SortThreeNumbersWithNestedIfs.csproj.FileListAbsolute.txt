@@ -1,0 +1,8 @@
+C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\bin\Debug\SortThreeNumbersWithNestedIfs.exe
+C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\bin\Debug\SortThreeNumbersWithNestedIfs.pdb
+C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\obj\Debug\SortThreeNumbersWithNestedIfs.exe
+C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\obj\Debug\SortThreeNumbersWithNestedIfs.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\obj\Debug\SortThreeNumbersWithNestedIfs.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\obj\Debug\SortThreeNumbersWithNestedIfs.pdb
+C:\Users\Ilian\Desktop\CSharpMay\Lecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\bin\Debug\SortThreeNumbersWithNestedIfs.exe
+C:\Users\Ilian\Desktop\CSharpMay\Lecture5\5-Conditional-Statements-Homework\SortThreeNumbersWithNestedIfs\bin\Debug\SortThreeNumbersWithNestedIfs.pdb

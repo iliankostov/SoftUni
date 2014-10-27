@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Rectangles\obj\Debug\Rectangles.exe
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Rectangles\obj\Debug\Rectangles.pdb
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Rectangles\bin\Debug\Rectangles.exe
+C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\Rectangles\bin\Debug\Rectangles.pdb

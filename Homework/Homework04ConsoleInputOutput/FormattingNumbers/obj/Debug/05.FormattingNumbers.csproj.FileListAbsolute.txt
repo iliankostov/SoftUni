@@ -1,0 +1,5 @@
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\FormattingNumbers\obj\Debug\FormattingNumbers.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\FormattingNumbers\obj\Debug\FormattingNumbers.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\FormattingNumbers\bin\Debug\FormattingNumbers.exe
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\FormattingNumbers\bin\Debug\FormattingNumbers.pdb
+C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\FormattingNumbers\obj\Debug\05.FormattingNumbers.csprojResolveAssemblyReference.cache

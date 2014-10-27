@@ -1,0 +1,4 @@
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\StringsAndObjects\bin\Debug\StringsAndObjects.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\StringsAndObjects\bin\Debug\StringsAndObjects.pdb
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\StringsAndObjects\obj\Debug\StringsAndObjects.exe
+C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\StringsAndObjects\obj\Debug\StringsAndObjects.pdb
