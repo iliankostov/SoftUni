@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48465a95-ed51-43fa-bfb5-4e9ce5f0ae4c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/background-flowers.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/flower-logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid05.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid07.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/orchid08.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/social_facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/social_google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/social_linkedin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/social_myspace.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/images/social_twitter_box.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/02-Flowers-Home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/styles/styles-02.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/styles/styles-02.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/styles/styles-02.sass" />
+    <list default="true" id="48465a95-ed51-43fa-bfb5-4e9ce5f0ae4c" name="Default" comment="Web Fundamentals Homework">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09ResponsiveDesignBootstrap/03BootstrapBootCamp/03BootstrapBootCamp.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebFundamentals.iws" />
@@ -56,7 +38,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/05CSSPresentation/01TheJauntyTextField.html" />
         <option value="$PROJECT_DIR$/05CSSPresentation/02SoftUniHawaiiVacation.html" />
         <option value="$PROJECT_DIR$/05CSSPresentation/styles/01TheJauntyTextField.css" />
         <option value="$PROJECT_DIR$/05CSSPresentation/styles/02SoftUniHawaiiVacation.css" />
@@ -105,15 +86,18 @@
         <option value="$PROJECT_DIR$/09ResponsiveDesignBootstrap/01UnresponsiveHomework/styles/styles.css" />
         <option value="$PROJECT_DIR$/09ResponsiveDesignBootstrap/01UnresponsiveHomework/styles/styles.sass" />
         <option value="$PROJECT_DIR$/09ResponsiveDesignBootstrap/02FlowersHome/styles/styles-02.sass" />
+        <option value="$PROJECT_DIR$/09ResponsiveDesignBootstrap/03BootstrapBootCamp/styles/03BootstrapBootCamp.css" />
+        <option value="$PROJECT_DIR$/09ResponsiveDesignBootstrap/03BootstrapBootCamp/styles/03BootstrapBootCamp.scss" />
+        <option value="$PROJECT_DIR$/09ResponsiveDesignBootstrap/03BootstrapBootCamp/03BootstrapBootCamp.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="1" />
     <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="height" value="753" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -281,7 +265,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.lastSelected" value="web.server" />
+    <property name="options.lastSelected" value="settings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -292,9 +276,26 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="133" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="161" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="163" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="837" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="154" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="830" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ilian\Documents\GitHub\WebFundamentals\09ResponsiveDesignBootstrap\03BootstrapBootCamp\images" />
       <recent name="C:\Users\Ilian\Documents\GitHub\WebFundamentals\08SemanticHTMLandOtherTags\images" />
     </key>
   </component>
@@ -563,7 +564,7 @@
       <workItem from="1414392922373" duration="10445000" />
       <workItem from="1414407340902" duration="4051000" />
       <workItem from="1414475849184" duration="11836000" />
-      <workItem from="1414489868692" duration="20958000" />
+      <workItem from="1414489868692" duration="23696000" />
     </task>
     <task id="LOCAL-00001" summary="Web Fundamentals Homework">
       <created>1413303463135</created>
@@ -645,11 +646,15 @@
       <created>1414503541915</created>
       <updated>1414503541915</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Web Fundamentals Homework">
+      <created>1414513423324</created>
+      <updated>1414513423324</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135815000" />
+    <option name="totallyTimeSpent" value="138553000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -672,7 +677,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="1" width="1382" height="753" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -680,16 +685,16 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31993568" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31993568" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32396695" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3236715" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32475883" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -730,34 +735,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/05CSSPresentation/03StylingHTMLForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05CSSPresentation/styles/03StylingHTMLForm.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="986">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05CSSPresentation/01TheJauntyTextField.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="442">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05CSSPresentation/02SoftUniHawaiiVacation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53496504" vertical-offset="0" max-vertical-offset="572">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05CSSPresentation/01TheJauntyTextField.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="510">
@@ -1089,6 +1066,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23743017" vertical-offset="408" max-vertical-offset="1836">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09ResponsiveDesignBootstrap/03BootstrapBootCamp/03BootstrapBootCamp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7352114" vertical-offset="971" max-vertical-offset="1326">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding />
         </state>
       </provider>
