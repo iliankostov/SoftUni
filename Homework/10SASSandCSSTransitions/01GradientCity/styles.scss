@@ -1,0 +1,326 @@
+@mixin vertical-gradient($color) {
+  background: $color; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(top,  $color 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color 0%,#ffffff 100%); /* W3C */
+}
+@mixin horizontal-gradient($color) {
+  background: $color; /* Old browsers */
+  background: -moz-linear-gradient(left,  $color 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(left,  $color 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  $color 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  $color 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to right,  $color 0%,#ffffff 100%); /* W3C */
+}
+@mixin diagonal-gradient($color) {
+  background: $color; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  $color 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(-45deg,  $color 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  $color 0%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  $color 0%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(135deg,  $color 0%,#ffffff 100%); /* W3C */
+}
+@mixin radial-gradient($color) {
+  background: $color; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  $color 0%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  $color 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  $color 0%,#ffffff 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  $color 0%,#ffffff 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  $color 0%,#ffffff 100%); /* W3C */
+}
+$purple: #320432;
+$blue: #0303b0;
+$green: #043204;
+$yellow: #f6f60c;
+$orange: #eb9303;
+$red: #cd0303;
+
+body {
+  font-family: tahoma, verdana, sans-serif;
+  color: #818181;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #818181;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  #wrapper {
+    margin: 0 auto;
+    width: 960px;
+    text-align: center;
+    border: 2px solid #b9b9b9;
+
+    header {
+      margin: 10px;
+      nav {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin: 0 200px 20px;
+          li {
+            width: 100px;
+            a {
+              display: block;
+              padding: 10px;
+              border: 2px solid #b9b9b9;
+            }
+            a:hover {
+              cursor: default;
+              color: #ffffff;
+              background: linear-gradient(to bottom, #8d8d8d 0%,#a9a9a9 33%,#c1c1c1 66%,#d9d9d9 100%);
+              box-shadow: 0 0 2px #8d8d8d;
+            }
+          }
+        }
+      }
+    }
+    .linear {
+      border: 2px solid #b9b9b9;
+      margin: 10px;
+      header {
+        h1 {
+          text-decoration: underline;
+        }
+      }
+      article:nth-child(2) {
+         border: 2px solid #b9b9b9;
+         margin: 10px;
+         padding: 5px;
+         .innerContainer {
+           display: flex;
+           flex-wrap: wrap;
+           margin: 1px;
+           .purple {
+             width: 150px;
+             height: 150px;
+             @include vertical-gradient($purple);
+             border-radius: 20px;
+           }
+           .blue {
+             width: 150px;
+             height: 150px;
+             @include vertical-gradient($blue);
+             border-radius: 20px;
+           }
+           .green {
+             width: 150px;
+             height: 150px;
+             @include vertical-gradient($green);
+             border-radius: 20px;
+           }
+           .yellow {
+             width: 150px;
+             height: 150px;
+             @include vertical-gradient($yellow);
+             border-radius: 20px;
+           }
+           .orange {
+             width: 150px;
+             height: 150px;
+             @include vertical-gradient($orange);
+             border-radius: 20px;
+           }
+           .red {
+             width: 150px;
+             height: 150px;
+             @include vertical-gradient($red);
+             border-radius: 20px;
+           }
+         }
+       }
+      article:nth-child(3) {
+        border: 2px solid #b9b9b9;
+        margin: 10px;
+        padding: 5px;
+        .innerContainer {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 1px;
+          .purple {
+            width: 150px;
+            height: 150px;
+            @include horizontal-gradient($purple);
+            border-radius: 20px;
+          }
+          .blue {
+            width: 150px;
+            height: 150px;
+            @include horizontal-gradient($blue);
+            border-radius: 20px;
+          }
+          .green {
+            width: 150px;
+            height: 150px;
+            @include horizontal-gradient($green);
+            border-radius: 20px;
+          }
+          .yellow {
+            width: 150px;
+            height: 150px;
+            @include horizontal-gradient($yellow);
+            border-radius: 20px;
+          }
+          .orange {
+            width: 150px;
+            height: 150px;
+            @include horizontal-gradient($orange);
+            border-radius: 20px;
+          }
+          .red {
+            width: 150px;
+            height: 150px;
+            @include horizontal-gradient($red);
+            border-radius: 20px;
+          }
+        }
+      }
+      article:nth-child(4) {
+        border: 2px solid #b9b9b9;
+        margin: 10px;
+        padding: 5px;
+        .innerContainer {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 1px;
+          .purple {
+            width: 150px;
+            height: 150px;
+            @include diagonal-gradient($purple);
+            border-radius: 20px;
+          }
+          .blue {
+            width: 150px;
+            height: 150px;
+            @include diagonal-gradient($blue);
+            border-radius: 20px;
+          }
+          .green {
+            width: 150px;
+            height: 150px;
+            @include diagonal-gradient($green);
+            border-radius: 20px;
+          }
+          .yellow {
+            width: 150px;
+            height: 150px;
+            @include diagonal-gradient($yellow);
+            border-radius: 20px;
+          }
+          .orange {
+            width: 150px;
+            height: 150px;
+            @include diagonal-gradient($orange);
+            border-radius: 20px;
+          }
+          .red {
+            width: 150px;
+            height: 150px;
+            @include diagonal-gradient($red);
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+    .radial {
+      border: 2px solid #b9b9b9;
+      margin: 10px;
+      header {
+        h1 {
+          text-decoration: underline;
+        }
+      }
+      article:nth-child(2) {
+        border: 2px solid #b9b9b9;
+        margin: 10px;
+        padding: 5px;
+        .innerContainer {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 1px;
+          .purple {
+            width: 150px;
+            height: 150px;
+            @include radial-gradient($purple);
+            border-radius: 20px;
+          }
+          .blue {
+            width: 150px;
+            height: 150px;
+            @include radial-gradient($blue);
+            border-radius: 20px;
+          }
+          .green {
+            width: 150px;
+            height: 150px;
+            @include radial-gradient($green);
+            border-radius: 20px;
+          }
+          .yellow {
+            width: 150px;
+            height: 150px;
+            @include radial-gradient($yellow);
+            border-radius: 20px;
+          }
+          .orange {
+            width: 150px;
+            height: 150px;
+            @include radial-gradient($orange);
+            border-radius: 20px;
+          }
+          .red {
+            width: 150px;
+            height: 150px;
+            @include radial-gradient($red);
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+    footer {
+      border: 2px solid #b9b9b9;
+      margin: 10px;
+      h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+  #wrapper > header:first-child {
+    border: 2px solid #b9b9b9;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    #wrapper {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  body{
+    #wrapper {
+      header {
+        nav {
+          ul {
+            margin: 0;
+            li {
+              width: 100%;
+              margin: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
