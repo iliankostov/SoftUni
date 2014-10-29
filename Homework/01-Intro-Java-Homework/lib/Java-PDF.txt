@@ -1,0 +1,139 @@
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+
+public class _09_GeneratePDFbyExternalLibrary {
+	public static void main(String[] args) {
+		System.out.println("Problem 9. Generate a PDF by External Library ***\n");
+
+		// DECLARING CARD COLORS
+		String[] cardColors = new String[] { "\u2663", "\u2666", "\u2665",
+				"\u2660" };
+		// clubs = "\u2663";
+		// diamonds = "\u2666";
+		// hearts = "\u2665";
+		// spades = "\u2660";
+
+		// CREATING CARD DECK
+		List<String> deck = new ArrayList<String>();
+
+		// FILLING THE CARD DECK WITH CARDS
+		for (int i = 2; i < 15; i++) {
+
+			for (int a = 0; a < 4; a++) {
+				switch (i) {
+				case 11:
+					deck.add("J" + cardColors[a]);
+					break;
+				case 12:
+					deck.add("Q" + cardColors[a]);
+					break;
+				case 13:
+					deck.add("K" + cardColors[a]);
+					break;
+				case 14:
+					deck.add("A" + cardColors[a]);
+					break;
+				default:
+					deck.add(i + cardColors[a]);
+					break;
+				}
+			}
+		}
+
+		// SETING CUSTOM PAGE SIZE TO HOLD THE ENTIRE DECK
+		Rectangle pagesize = new Rectangle(600, 2000);
+		Document document = new Document(pagesize);
+
+		// CREATING PDF FILE
+		try {
+			PdfWriter.getInstance(document, new FileOutputStream("Deck-of-Cards.pdf"));
+
+			System.out.println("Deck-of-Cards.pdf saved to \\\\01-Introduction-to-Java-Homework\\\n");
+
+			document.open();
+
+			// SETTING FONT TO DISPLAY THE CARD COLORS AS SPECIAL CHARACTERS
+			BaseFont unicode = BaseFont.createFont("src/fonts/arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+			Font blackFont = new Font(unicode, 20, 0, BaseColor.BLACK);
+			Font redFont = new Font(unicode, 20, 0, BaseColor.RED);
+
+			// CREATING DOCUMENT TITLE
+			Paragraph title = new Paragraph("Deck of Cards", blackFont);
+			title.setAlignment(Element.ALIGN_CENTER);
+			title.setSpacingAfter(25);
+			document.add(title);
+
+			// CREATING TABLE TO HOLD THE DECK
+			PdfPTable table = new PdfPTable(4);
+
+			// SETTING COUNTERS TO ASSIGN COLORS TO EACH CARD
+			int a = 1;
+			int b = 2;
+
+			// FILLING DECK WITH CARDS AND COLORING THEM APPROPRIATELY
+			for (int i = 0; i < 52; i++) {
+
+				// CREATING TABLE CELLS TO HOLD THE CARDS
+				// NOTICE - NO BORDER
+				PdfPCell cell = new PdfPCell();
+				cell.setPaddingTop(12);
+				cell.setPaddingBottom(12);
+				cell.setBorder(Rectangle.NO_BORDER);
+
+				// CREATING NESTED SINGLE CELL TABLE TO HOLD EACH CARD
+				// SO WE CAN MANIPULATE BORDERS AND PADDING
+				PdfPTable nestedTable = new PdfPTable(1);
+				PdfPCell nestedCell;
+
+				// INSERTING RED COLORED CARDS
+				if (i == a) {
+					nestedCell = new PdfPCell(new Paragraph(deck.get(a),
+							redFont));
+					a += 4;
+				}
+				else if (i == b) {
+					nestedCell = new PdfPCell(new Paragraph(deck.get(b),
+							redFont));
+					b += 4;
+				}
+				// INSERTING BLACK COLORED CARDS
+				else {
+					nestedCell = new PdfPCell(new Paragraph(deck.get(i),
+							blackFont));
+				}
+
+				// FORMATTING NESTED CELL CONTENTS TO POSITION CARD SIGNS IN THE MIDDLE
+				nestedCell.setFixedHeight(120);
+				nestedCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+				nestedCell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+
+				// ADDING SINGLE-CELL TABLE TO MAIN CELL
+				nestedTable.addCell(nestedCell);
+				cell.addElement(nestedTable);
+
+				// ADDING MAIN CELL TO MAIN TABLE
+				table.addCell(cell);
+			}
+
+			// ADDING TABLE TO DOCUMENT
+			document.add(table);
+
+			// CLOSING PDF DOCUMENT
+			document.close();
+		}
+		catch (Exception e) {
+		}
+	}
+}
