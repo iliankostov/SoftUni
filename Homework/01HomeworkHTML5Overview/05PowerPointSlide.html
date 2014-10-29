@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>PowerPointSlide</title>
+    <style>
+        html {
+            background: url(images/background.jpg) no-repeat top center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        h1 {
+            color: #f6d18e;
+            font-size: 3em;
+        }
+        h2 {
+            color: #ffffff;
+            font-size: 2em;
+        }
+        h2 span {
+            color: #f6d18e;
+        }
+        ul {
+            list-style-image: url('images/list.png');
+        }
+        p {
+            padding: 0em 0em 0em 1em;
+        }
+        #main {
+            padding-left: 2em;
+        }
+        .box {
+            color: #ffffff;
+            font-size: 1.5em;
+            border: 2px solid;
+            box-sizing: border-box;
+            width: 95%;
+            opacity: 0.6;
+        }
+        .tab {
+            padding-left: 2.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Headings and Paragraphs</h1>
+        <ul>
+            <li><h2>Heading Tags: <span>&#60;h1&#62;</span> - <span>&#60;h6&#62;</span></h2></li>
+            <div class="box">
+                <p>&#60;h1&#62;Heading 1&#60;/h1&#62;</p>
+                <p>&#60;h2&#62;Sub heading 2&#60;/h2&#62;</p>
+                <p>&#60;h3&#62;Sub heading 3&#60;/h3&#62;</p>
+            </div>
+            <li><h2>Paragraph Tags: <span>&#60;p&#62;</span></h2></li>
+            <div class="box">
+                <p>&#60;p&#62This is my first paragraph&#60;/p&#62</p>
+                <p>&#60;p&#62This is my second paragraph&#60;/p&#62</p>
+            </div>
+            <li><h2>Sections: <span>&#60;div&#62;</span> and <span>&#60;span&#62;</span></h2></li>
+            <div class="box">
+                <p>&#60;div style="background: skyblue;"&#62;</p>
+                <div class="tab">This is a div</div>
+                <p>&#60;/div&#62;</p>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

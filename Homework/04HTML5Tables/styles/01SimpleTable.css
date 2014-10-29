@@ -1,0 +1,27 @@
+html, body, table, tr, td, div {
+    margin: 0;
+    padding: 0;
+}
+table {
+    margin: 2em auto;
+    width: 20em;
+    height: 15em;
+}
+th {
+    text-align: left;
+    vertical-align: top;
+    font-size: 2em;
+    font-weight: bold;
+}
+td {
+    padding-left: 0.5em;
+}
+span {
+    display: block;
+}
+span:first-child {
+    font-weight: bold;
+}
+#logo {
+    content: url(../images/SoftUniLogo.png);
+}
