@@ -1,0 +1,63 @@
+body {
+  font-family:Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  h1 {
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  section {
+    margin: 0 auto;
+    width: 600px;
+    article {
+      display: inline-block;
+      vertical-align: top;
+      margin: 5px;
+      width: 145px;
+      header {
+        a {
+          img {
+            border: 1px solid #dadee4;
+          }
+          h1 {
+            margin: 10px 0 5px 0;
+            height: 27px;
+          }
+          h1:hover {
+            color: #dadee4;
+          }
+        }
+      }
+      p {
+        margin: 5px 0;
+        color: #6a6a6a;
+        height: 27px;
+      }
+      div {
+        margin: 10px 0;
+        color: #90070b;
+        font-weight: 800;
+      }
+      footer {
+
+        button {
+          width: 100px;
+          padding: 3px 0 3px 15px;
+          font-size: 10px;
+          text-transform: uppercase;
+          cursor: pointer;
+          border: none;
+          border-radius: 5px;
+          background: url("../images/shopping-cart-inactive.png");
+        }
+        button:hover {
+          background: url("../images/shopping-cart-active.png");
+        }
+      }
+    }
+  }
+}
