@@ -1,0 +1,54 @@
+body {
+  background: url("../images/blurred-green-background.jpg") no-repeat;
+  background-size: 100%;
+  font-family: Arial, Helvetica, sans-serif; }
+  body form .glyphicon {
+    top: 0; }
+  body form #login {
+    margin: 100px auto 30px auto;
+    background-color: #ecf4d1;
+    width: 350px;
+    height: 265px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    body form #login h1 {
+      color: #ffffff;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 10px;
+      margin-bottom: 30px;
+      background-color: #94d55d;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    body form #login .input-correction {
+      margin: 15px; }
+    body form #login .button-correction {
+      width: 320px;
+      margin: 30px 15px;
+      color: #ffffff;
+      background-color: #5db85d;
+      border-color: #3a853a;
+      box-shadow: 0 5px #249f24; }
+    body form #login .button-correction:hover {
+      background-color: #459e45; }
+    body form #login .button-correction:focus {
+      outline: 0; }
+  body form #search {
+    margin: 0 auto;
+    width: 350px;
+    height: 34px; }
+    body form #search .button-correction {
+      width: 100px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #5db85d;
+      border: none; }
+    body form #search .button-correction:hover {
+      background-color: #459e45; }
+    body form #search .button-correction:focus {
+      outline: 0; }
+    body form #search .search-text {
+      padding: 8px; }
+
+/*# sourceMappingURL=styles.css.map */
