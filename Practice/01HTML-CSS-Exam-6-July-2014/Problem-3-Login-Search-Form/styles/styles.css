@@ -14,7 +14,7 @@ body {
     body form #login h1 {
       color: #ffffff;
       text-align: center;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 600;
       padding: 10px;
       margin-bottom: 30px;
@@ -29,7 +29,7 @@ body {
       color: #ffffff;
       background-color: #5db85d;
       border-color: #3a853a;
-      box-shadow: 0 5px #249f24; }
+      box-shadow: 0 3px #249f24; }
     body form #login .button-correction:hover {
       background-color: #459e45; }
     body form #login .button-correction:focus {
@@ -40,7 +40,7 @@ body {
     height: 34px; }
     body form #search .button-correction {
       width: 100px;
-      font-size: 16px;
+      height: 34px;
       color: #ffffff;
       background-color: #5db85d;
       border: none; }
@@ -49,6 +49,8 @@ body {
     body form #search .button-correction:focus {
       outline: 0; }
     body form #search .search-text {
-      padding: 8px; }
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 5px; }
 
 /*# sourceMappingURL=styles.css.map */
