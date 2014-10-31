@@ -22,6 +22,20 @@
     }
     .mainContent {
         display: flex;
+        flex-wrap: wrap;
     }
+    .content {
+        width: 100%;
+    }
+    .top-sidebar {
+        margin: 10px 0;
+    }
+    .middle-sidebar {
+        margin: 0;
+    }
+    .bottom-sidebar {
+        margin: 10px 0;
+    }
+
 
 }
