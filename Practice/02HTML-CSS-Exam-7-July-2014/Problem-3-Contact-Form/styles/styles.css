@@ -4,48 +4,73 @@
 body {
   font-family: Yanone Kaffeesatz Regular, Arial, sans-serif;
   background-image: url("../images/form-background.png"); }
-  body #envelope-top {
-    position: absolute;
-    left: 430px;
-    top: 200px; }
-  body #envelope-bottom {
-    position: absolute;
-    top: 385px;
-    left: 430px;
-    z-index: 1; }
-  body form {
-    width: 420px;
-    margin: 0 auto; }
-    body form header h1 {
+  body main {
+    position: relative; }
+    body main section:first-child {
+      background: url("../images/envelope-top.png") no-repeat center bottom;
+      width: 600px;
+      margin: 0 auto; }
+    body main section:last-child {
+      background: url("../images/envelope-bottom.png") no-repeat center top;
+      width: 600px;
+      height: 300px;
+      margin: -133px auto 0 auto; }
+    body main section header h1 {
       text-align: center;
       font-size: 40px;
       color: #7d7974; }
-    body form section {
+    body main section form {
       width: 400px;
-      height: 400px;
+      height: 375px;
+      margin: 0 auto;
       padding: 20px;
-      position: relative;
       background-image: url("../images/letter-background.png"); }
-      body form section h2 {
-        margin: 10px 0;
+      body main section form h2 {
+        margin: 10px 0 0 0;
         color: #7d7974; }
-      body form section label {
+      body main section form label {
         color: #b3aca2;
         text-transform: uppercase; }
-      body form section #message {
+      body main section form #message {
+        font-family: Helvetica, Arial, serif;
         width: 100%;
         height: 60px;
+        background: transparent;
         border: 1px solid #e3dcd1;
         border-radius: 5px; }
-      body form section input {
+      body main section form #message:focus {
+        background: #ffffff;
+        outline: none; }
+      body main section form #message:active {
+        outline: none; }
+      body main section form input {
+        font-family: Helvetica, Arial, serif;
         width: 100%;
         height: 30px;
+        background: transparent;
         border: 1px solid #e3dcd1;
         border-radius: 5px; }
-      body form section div {
+      body main section form input:focus {
+        background: #ffffff;
+        outline: none; }
+      body main section form input:active {
+        outline: none; }
+      body main section form div {
         width: 100%;
         text-align: center; }
-        body form section div button {
-          margin: 10px; }
+        body main section form div button {
+          font-family: Yanone Kaffeesatz Regular, Arial, sans-serif;
+          font-size: 22px;
+          color: #7d7974;
+          margin-top: 10px;
+          padding: 5px 10px;
+          background: transparent;
+          border: none; }
+        body main section form div button:hover {
+          color: #445d71;
+          background-color: #bbc9cf;
+          border-radius: 5px; }
+        body main section form div button:focus {
+          outline: none; }
 
 /*# sourceMappingURL=styles.css.map */
