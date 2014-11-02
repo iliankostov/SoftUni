@@ -6,10 +6,22 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    a {
+    .tilt {
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       img {
         margin: 10px;
       }
+    }
+    .tilt:hover {
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      transform: rotate(-5deg);
     }
     nav {
       ul {
@@ -67,6 +79,7 @@ body {
         border: 1px solid #ffffff;
         border-radius: 5px;
         background-color: transparent;
+        cursor: pointer;
       }
       button:hover {
         background-color: rgba(0, 0, 0, 0.30);
@@ -129,6 +142,7 @@ body {
     }
     article:hover {
       background-color: #f2f2f2;
+      cursor: pointer;
       a {
         text-decoration: underline;
       }
