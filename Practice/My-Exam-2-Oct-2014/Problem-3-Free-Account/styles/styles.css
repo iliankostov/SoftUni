@@ -1,0 +1,71 @@
+body {
+  font-family: Tahoma, Helvetica, sans-serif;
+  font-size: 13px; }
+  body main {
+    width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px #dcdcdc; }
+    body main header {
+      text-align: center;
+      color: #323232; }
+      body main header h1 {
+        font-size: 24px;
+        font-weight: 400; }
+      body main header p {
+        font-size: 14px; }
+    body main section {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      border-top: 1px solid #cecece; }
+      body main section article {
+        width: 45%;
+        display: inline-block;
+        vertical-align: top; }
+        body main section article h2 {
+          color: #151d12;
+          font-size: 18px;
+          font-weight: normal;
+          margin-bottom: 0; }
+        body main section article input {
+          width: 95%;
+          padding: 10px;
+          margin: 7px 0;
+          border: 1px solid #cdcfcc;
+          border-radius: 5px; }
+        body main section article .ticked {
+          background: url("../images/ok.png") 290px center no-repeat; }
+        body main section article .crossed {
+          background: url("../images/no.png") 290px center no-repeat; }
+        body main section article input:focus {
+          outline: none; }
+        body main section article div {
+          margin: 10px 0; }
+          body main section article div input[type=checkbox] {
+            width: 15px;
+            margin: 0; }
+          body main section article div label {
+            font-size: 14px;
+            color: #90917f; }
+        body main section article p a {
+          color: #fd5c83;
+          font-weight: bold;
+          text-decoration: none; }
+        body main section article p a:hover {
+          text-decoration: underline; }
+        body main section article button {
+          padding: 10px;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px #c7c7c7;
+          background-color: #f0f0f0;
+          cursor: pointer; }
+        body main section article button:hover {
+          background-color: #b0df68; }
+
+/*# sourceMappingURL=styles.css.map */
