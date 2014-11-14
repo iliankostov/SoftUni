@@ -1,7 +1,7 @@
 function bitChecker(number) {
     var isOne = false;
     var mask = 1 << 3;
-    if (number & mask != number){
+    if (number & mask){
         isOne = true;
     }
     return console.log(isOne);
