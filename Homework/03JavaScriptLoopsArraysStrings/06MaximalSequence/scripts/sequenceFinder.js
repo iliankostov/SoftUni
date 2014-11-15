@@ -15,7 +15,6 @@ function findMaxSequence(arr) {
                 maxSymbol = symbol;
             }
             counter = 1;
-            symbol = undefined;
         }
     }
     for (var j = 0; j < maxCounter; j++) {
