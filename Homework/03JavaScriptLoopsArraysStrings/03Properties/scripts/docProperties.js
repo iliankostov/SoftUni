@@ -4,7 +4,7 @@ function displayProperties() {
         properties.push(property);
     }
     properties.sort();
-    return console.log(properties.join('\n'));
+    console.log(properties.join('\n'));
 }
 
 displayProperties();

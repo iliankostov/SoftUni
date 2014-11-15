@@ -10,7 +10,7 @@ function printNumbers(number) {
             digits.push(i);
         }
     }
-    return console.log(digits.join(', '));
+    console.log(digits.join(', '));
 }
 
 printNumbers(20);

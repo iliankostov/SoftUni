@@ -1,7 +1,7 @@
 function findMinAndMax(arr) {
     var min = Math.min.apply(null, arr),
         max = Math.max.apply(null, arr);
-    return console.log('Min -> %d\nMax -> %d', min, max)
+    console.log('Min -> %d\nMax -> %d', min, max)
 }
 
 findMinAndMax([1, 2, 1, 15, 20, 5, 7, 31]);
