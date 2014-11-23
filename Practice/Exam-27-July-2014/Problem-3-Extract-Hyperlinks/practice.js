@@ -1,23 +1,20 @@
 function solve(input) {
-    var html = input.join('\n');
-    var regex = /<a\s+([^>]+\s+)?href\s*=\s*('([^']*)'|"([^"]*)|([^\s>]+))[^>]*>/g;
-    var match;
-    while (match = regex.exec(html)) {
-        var hrefValue = match[3];
-        if (hrefValue == undefined) {
-            var hrefValue = match[4];
-        }
-        if (hrefValue == undefined) {
-            var hrefValue = match[5];
-        }
-        console.log(hrefValue);
-    }
-}
 
-// ------------------------------------------------------------
-// Read the input from the console as array and process it
-// Remove all below code before submitting to the judge system!
-// ------------------------------------------------------------
+    var hyperlinks = [];
+
+    for (var i = 0; i < input.length; i++) {
+
+        hyperlinks.push(input[i]); //match(/href="([^"]*)/))[1];
+    }
+
+    for (var j = 0; j < hyperlinks.length; j++) {
+
+
+    }
+
+    console.log(hyperlinks);
+
+}
 
 solve(['<a href="http://softuni.bg" class="new"></a>']);
 solve(['<p>This text has no links</p>']);
