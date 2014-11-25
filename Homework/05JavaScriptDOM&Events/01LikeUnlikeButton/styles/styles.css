@@ -1,0 +1,16 @@
+body {
+  margin: 20px auto;
+  text-align: center; }
+  body button {
+    width: 100px;
+    height: 50px;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    background: #000080;
+    cursor: pointer;
+    outline: 0; }
+    body button:hover {
+      background: #ffa500; }
+
+/*# sourceMappingURL=styles.css.map */
