@@ -1,0 +1,9 @@
+body {
+  text-align: center; }
+  body input {
+    width: 300px;
+    padding: 5px; }
+    body input:focus {
+      outline: 0; }
+
+/*# sourceMappingURL=styles.css.map */
