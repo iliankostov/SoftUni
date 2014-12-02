@@ -1,0 +1,13 @@
+body main article {
+  margin: 10px; }
+  body main article table, body main article th, body main article td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px; }
+    body main article table th, body main article th th, body main article td th {
+      text-align: left;
+      background-color: #ff9d02; }
+    body main article table td, body main article th td, body main article td td {
+      text-align: right; }
+
+/*# sourceMappingURL=styles.css.map */
