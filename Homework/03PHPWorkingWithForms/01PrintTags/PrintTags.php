@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Print Tags</title>
+    <title>Print tags</title>
     <link rel="stylesheet" href="styles/styles.css"/>
 </head>
 <body>
