@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Print tags</title>
+    <title>Most Frequent Tag</title>
     <link rel="stylesheet" href="styles/styles.css"/>
 </head>
 <body>

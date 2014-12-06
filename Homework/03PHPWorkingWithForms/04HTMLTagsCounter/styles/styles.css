@@ -1,0 +1,11 @@
+body main {
+  margin: 10px; }
+  body main form section h1 {
+    font-weight: 400;
+    font-size: 18px; }
+  body main form section input {
+    margin-bottom: 20px; }
+  body main h2 {
+    margin: 0; }
+
+/*# sourceMappingURL=styles.css.map */
