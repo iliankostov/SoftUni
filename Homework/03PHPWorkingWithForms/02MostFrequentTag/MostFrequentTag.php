@@ -19,11 +19,15 @@
         <?php
             if(isset($_POST['submit'])) {
                 $arr = preg_split('/(, )/', $_POST['tags']);
+                $arr = array_count_values($arr);
+                arsort($arr);
+
                 echo "<ul>";
                 foreach($arr as $key => $value) {
-                    echo "<li>" . htmlentities($key) . " : " . htmlentities($value) . "</li>";
+                    echo "<li>" . htmlentities($key) . " : " . htmlentities($value) . " times</li>";
                 }
                 echo "</ul>";
+                echo "<p>Most Frequent Tag is: " . htmlentities(array_keys($arr)[0]) . "</p>";
             }
         ?>
 </main>
