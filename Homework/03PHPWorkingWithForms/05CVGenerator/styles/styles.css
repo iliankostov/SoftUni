@@ -1,3 +1,14 @@
-
+body .left {
+  margin: 10px;
+  width: 45%;
+  float: left; }
+body .right {
+  margin-left: 50px;
+  float: left;
+  width: 45%; }
+  body .right h1 {
+    margin-top: 0; }
+  body .right table, body .right th, body .right td {
+    border: 1px solid #000000; }
 
 /*# sourceMappingURL=styles.css.map */

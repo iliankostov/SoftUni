@@ -6,87 +6,88 @@
     <link rel="stylesheet" href="styles/styles.css"/>
 </head>
 <body>
-<form method="post" action="CVGenerator.php">
-    <fieldset>
-        <legend>Personal Information</legend>
-        <input type="text" name="fName" placeholder="First Name" required="required"/><br />
-        <input type="text" name="lName" placeholder="Last Name" required="required"/><br />
-        <input type="email" name="email" placeholder="Email" required="required"/><br />
-        <input type="tel" name="phone" placeholder="Phone Number" required="required"/><br />
-        <label for="female">Female</label>
-        <input type="radio" name="gender" id="female" value="Female"/>
-        <label for="male">Male</label>
-        <input type="radio" name="gender" id="male" value="Male"/><br />
-        <label for="birthday">Birthday</label><br />
-        <input type="date" name="birthday" id="birthday" required="required"/><br />
-        <label for="nationality">Nationality</label><br />
-        <select name="nationality" id="nationality">
-            <option value="Bulgarian">Bulgarian</option>
-            <option value="German">German</option>
-            <option value="English">English</option>
-        </select>
-    </fieldset>
-    <fieldset>
-        <legend>Last Work Position</legend>
-        <label for="company">Company Name</label>
-        <input type="text" name="company" id="company" required="required"/><br />
-        <label for="fromDate">From</label>
-        <input type="date" name="fromDate" id="fromDate" required="required"/><br />
-        <label for="toDate">To</label>
-        <input type="date" name="toDate" id="toDate" required="required"/><br />
-    </fieldset>
-    <fieldset id="computerSkills">
-        <legend>Computer Skills</legend>
-        <label for="progLang">Programming Languages</label><br />
-        <div id="progLang">
-            <input type="text" name="progLang[]" required="required" title="Programming Language"/>
-            <select name="progLangLevel[]" title="Level of Programming Language">
-                <option value="Beginner">Beginner</option>
-                <option value="Programmer">Programmer</option>
-                <option value="Ninja">Ninja</option>
+<section class="left">
+    <form method="post" action="CVGenerator.php">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <input type="text" name="fName" placeholder="First Name" required="required"/><br />
+            <input type="text" name="lName" placeholder="Last Name" required="required"/><br />
+            <input type="email" name="email" placeholder="Email" required="required"/><br />
+            <input type="tel" name="phone" placeholder="Phone Number" required="required"/><br />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="Female"/>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="Male"/><br />
+            <label for="birthday">Birthday</label><br />
+            <input type="date" name="birthday" id="birthday" required="required"/><br />
+            <label for="nationality">Nationality</label><br />
+            <select name="nationality" id="nationality">
+                <option value="Bulgarian">Bulgarian</option>
+                <option value="German">German</option>
+                <option value="English">English</option>
             </select>
-        </div>
-        <input type="button" value="Remove Language" onclick="removeProgLang()" id="remProgLang" />
-        <input type="button" value="Add Language" onclick="addProgLang()" />
-    </fieldset>
-    <fieldset id="otherSkills">
-        <legend>Other Skills</legend>
-        <label for="lang">Languages</label><br />
-        <div id="lang">
-            <input type="text" name="lang[]" required="required" title="Languages"/>
-            <select name="comprehension[]" title="Comprehension">
-                <option disabled="disabled" selected="selected">Comprehension</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">intermediate</option>
-                <option value="advanced">advanced</option>
-            </select>
-            <select name="reading[]" title="Reading">
-                <option disabled="disabled" selected="selected">Reading</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">intermediate</option>
-                <option value="advanced">advanced</option>
-            </select>
-            <select name="writing[]" title="Writing">
-                <option disabled="disabled" selected="selected">Writing</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">intermediate</option>
-                <option value="advanced">advanced</option>
-            </select>
-        </div>
-        <input type="button" value="Remove Language" onclick="removeLang()" id="remLang" />
-        <input type="button" value="Add Language" onclick="addLang()" /><br />
-        <label for="driverLicense">Driver`s License</label><br />
-        <label for="b">B</label>
-        <input type="checkbox" name="b" value="B" id="b" />
-        <label for="a">A</label>
-        <input type="checkbox" name="a" value="A" id="a" />
-        <label for="c">C</label>
-        <input type="checkbox" name="c" value="C" id="c" />
-    </fieldset>
-    <input type="submit" value="Generate CV" />
-</form>
-<br />
-
+        </fieldset>
+        <fieldset>
+            <legend>Last Work Position</legend>
+            <label for="company">Company Name</label>
+            <input type="text" name="company" id="company" required="required"/><br />
+            <label for="fromDate">From</label>
+            <input type="date" name="fromDate" id="fromDate" required="required"/><br />
+            <label for="toDate">To</label>
+            <input type="date" name="toDate" id="toDate" required="required"/><br />
+        </fieldset>
+        <fieldset id="computerSkills">
+            <legend>Computer Skills</legend>
+            <label for="progLang">Programming Languages</label><br />
+            <div id="progLang">
+                <input type="text" name="progLang[]" required="required" title="Programming Language"/>
+                <select name="progLangLevel[]" title="Level of Programming Language">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Programmer">Programmer</option>
+                    <option value="Ninja">Ninja</option>
+                </select>
+            </div>
+            <input type="button" value="Remove Language" onclick="removeProgLang()" id="remProgLang" />
+            <input type="button" value="Add Language" onclick="addProgLang()" />
+        </fieldset>
+        <fieldset id="otherSkills">
+            <legend>Other Skills</legend>
+            <label for="lang">Languages</label><br />
+            <div id="lang">
+                <input type="text" name="lang[]" required="required" title="Languages"/>
+                <select name="comprehension[]" title="Comprehension" required="required">
+                    <option value="" disabled selected>Comprehension</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">intermediate</option>
+                    <option value="advanced">advanced</option>
+                </select>
+                <select name="reading[]" title="Reading" required="required">
+                    <option value="" disabled selected>Reading</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">intermediate</option>
+                    <option value="advanced">advanced</option>
+                </select>
+                <select name="writing[]" title="Writing" required="required">
+                    <option value="" disabled selected>Writing</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">intermediate</option>
+                    <option value="advanced">advanced</option>
+                </select>
+            </div>
+            <input type="button" value="Remove Language" onclick="removeLang()" id="remLang" />
+            <input type="button" value="Add Language" onclick="addLang()" /><br />
+            <label for="driverLicense">Driver`s License</label><br />
+            <label for="b">B</label>
+            <input type="checkbox" name="b" value="B" id="b" />
+            <label for="a">A</label>
+            <input type="checkbox" name="a" value="A" id="a" />
+            <label for="c">C</label>
+            <input type="checkbox" name="c" value="C" id="c" />
+        </fieldset>
+        <input type="submit" value="Generate CV" />
+    </form>
+</section>
+<section class="right">
 <?php
 if (isset($_POST['fName'], $_POST['lName'], $_POST['email'], $_POST['phone'], $_POST['gender'],
     $_POST['birthday'], $_POST['nationality'], $_POST['company'], $_POST['fromDate'],
@@ -128,7 +129,7 @@ if (isset($_POST['fName'], $_POST['lName'], $_POST['email'], $_POST['phone'], $_
     $nameLangPattern = array("options"=>array("regexp"=>"/[^A-Za-z]/"));
     $companyPattern = array("options"=>array("regexp"=>"/[^A-Za-z0-9\s+]/"));
     $phonePattern = array("options"=>array("regexp"=>"/[^0-9-\+ ]+/"));
-    $emailPattern = array("options"=>array("regexp"=>"/^[A-Za-z0-9]+\.[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]+$/"));
+    $emailPattern = array("options"=>array("regexp"=>"/^[A-Za-z0-9_.]+@[A-Za-z0-9]+[.A-Za-z]+$/"));
 
     if (filter_var($fName, FILTER_VALIDATE_REGEXP, $nameLangPattern) ||
         filter_var($lName, FILTER_VALIDATE_REGEXP, $nameLangPattern) ||
@@ -153,9 +154,10 @@ if (isset($_POST['fName'], $_POST['lName'], $_POST['email'], $_POST['phone'], $_
     }
 
     if (!filter_var($email, FILTER_VALIDATE_REGEXP, $emailPattern)) {
-        die ('Email must contain numbers, letters, only one "@" and only one "."!');
+        die ('Email must contain numbers, letters, only one "@"!');
     }
     ?>
+    <h1>CV</h1>
 
     <table>
         <thead>
@@ -290,7 +292,7 @@ if (isset($_POST['fName'], $_POST['lName'], $_POST['email'], $_POST['phone'], $_
         </tbody>
     </table>
 <?php endif; ?>
-
+</section>
 <script src="scripts/addRemoveLang.js"></script>
 </body>
 </html>
