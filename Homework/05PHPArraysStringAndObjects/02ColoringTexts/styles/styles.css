@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px; }
+  form input[type=submit] {
+    margin-top: 10px;
+    width: 100px; }
+
+.red {
+  color: red; }
+
+.blue {
+  color: blue; }
+
+/*# sourceMappingURL=styles.css.map */
