@@ -1,0 +1,16 @@
+aside {
+  width: 150px;
+  margin: 10px;
+  padding: 5px 0 5px 10px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: #c3d4ea;
+  ul {
+    list-style: circle;
+    li {
+      a {
+        color: #000000;
+      }
+    }
+  }
+}

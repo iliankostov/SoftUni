@@ -10,7 +10,7 @@
     <section>
         <form method="post">
             <textarea name="text" title="Enter text"></textarea>
-            <input type="submit" name="submit" value="Count words"/>
+            <input type="submit" name="submit" value="Color text"/>
         </form>
     </section>
     <section>
