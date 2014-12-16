@@ -24,8 +24,8 @@
                 foreach ($wordsCount as $key => $value):
             ?>
             <tr>
-                <td><?php echo $key; ?></td>
-                <td><?php echo $value; ?></td>
+                <td><?php echo htmlspecialchars($key); ?></td>
+                <td><?php echo htmlspecialchars($value); ?></td>
             </tr>
             <?php
                 endforeach;

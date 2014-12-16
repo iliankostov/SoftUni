@@ -25,7 +25,7 @@
                     $words = preg_split('/ /', $sentence);
                     if (in_array($word, $words)):
                 ?>
-                <p><?php echo $sentence ?></p>
+                <p><?php echo htmlspecialchars($sentence); ?></p>
             <?php   endif;
                 endforeach;
             endif; ?>

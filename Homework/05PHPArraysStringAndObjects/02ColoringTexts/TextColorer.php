@@ -21,9 +21,9 @@
             foreach($strArr as $char):
                 if (ord($char) % 2 == 0):
                     ?>
-                <span class="red"><?php echo $char ?></span>
+                <span class="red"><?php echo htmlspecialchars($char); ?></span>
                 <?php else: ?>
-                <span class="blue"><?php echo $char ?></span>
+                <span class="blue"><?php echo htmlspecialchars($char); ?></span>
                 <?php
                 endif;
             endforeach;

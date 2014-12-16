@@ -4,7 +4,7 @@ function buildList($str)
     $strArr = preg_split('/, /', $str);
     echo "<ul>";
     foreach($strArr as $listItem) {
-        echo "<li><a href=''> $listItem </a></li>";
+        echo "<li><a href=''>" . htmlspecialchars($listItem) . "</a></li>";
     }
     echo "</ul>";
 }

@@ -25,7 +25,7 @@
                     $text = str_ireplace($word,$asterisk,$text);
                 }
                 ?>
-                <p><?php echo $text ?></p>
+                <p><?php echo htmlspecialchars($text); ?></p>
             <?php endif; ?>
         </article>
     </section>
