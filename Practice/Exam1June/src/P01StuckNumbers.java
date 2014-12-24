@@ -11,7 +11,7 @@ public class P01StuckNumbers {
 		String input = scan.nextLine();
 		String[] numbers = input.split(" ");
 		
-		HashSet<String> eql = new HashSet<>();
+		HashSet<String> eql = new HashSet<String>();
 		for (int a = 0; a < num; a++) {
 			for (int b = 0; b < num; b++) {
 				for (int c = 0; c < num; c++) {

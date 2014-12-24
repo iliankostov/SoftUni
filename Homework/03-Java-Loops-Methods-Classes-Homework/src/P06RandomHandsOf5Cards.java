@@ -17,11 +17,11 @@ public class P06RandomHandsOf5Cards {
 		ArrayList<String> fullDeck = new ArrayList<String>();
 		for (String card : cards) {
 			for (Character suit : suits) {
-				fullDeck.add("" + card + (char)suit);
+				fullDeck.add(String.format("%s%s", card, suit));
 			}
 		}
 		
-		ArrayList<String> pulledCards = new ArrayList<>();
+		ArrayList<String> pulledCards = new ArrayList<String>();
 		for (int i = 0; i < numberOfHands; i++) {
 			for (int j = 0; j < 5; j++) {
 				int index = rnd.nextInt(fullDeck.size());

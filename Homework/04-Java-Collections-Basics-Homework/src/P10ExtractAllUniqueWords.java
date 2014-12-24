@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -8,11 +9,9 @@ public class P10ExtractAllUniqueWords {
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);				
 		String[] words = scan.nextLine().toLowerCase().split("\\W+");
-		TreeSet<String> orederedWords = new TreeSet<>();
+		TreeSet<String> orederedWords = new TreeSet<String>();
 
-		for (int i = 0; i < words.length; i++) {
-			orederedWords.add(words[i]);
-		}
+		Collections.addAll(orederedWords, words);
 		
 		for (String word : orederedWords) {
 			System.out.print(word + " ");

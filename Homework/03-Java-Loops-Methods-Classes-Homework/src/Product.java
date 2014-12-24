@@ -16,10 +16,6 @@ public class Product implements Comparable<Product> {
 		this.price = new BigDecimal(splitFileRow[1]);
 	}
 
-	public String getName() {
-		return name;
-	}
-
 	public BigDecimal getPrice() {
 		return price;
 	}
@@ -31,7 +27,7 @@ public class Product implements Comparable<Product> {
 	public static ArrayList<String> readFile(String fileName) {
 
 		File file = new File(fileName);
-		ArrayList<String> fileContent = new ArrayList<>();
+		ArrayList<String> fileContent = new ArrayList<String>();
 
 		Scanner fileReader = null;
 
@@ -61,10 +57,11 @@ public class Product implements Comparable<Product> {
 	}
 
 	public int compareTo(Product compareProduct) {
-		 
+
 		@SuppressWarnings("unused")
-		BigDecimal comparePrice = ((Product) compareProduct).getPrice(); 
- 
+		BigDecimal comparePrice;
+		comparePrice = ((Product) compareProduct).getPrice();
+
 		//ascending order
 		return 1;
  

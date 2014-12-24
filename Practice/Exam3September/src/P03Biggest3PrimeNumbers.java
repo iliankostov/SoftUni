@@ -10,7 +10,7 @@ public class P03Biggest3PrimeNumbers {
 		String line = scan.nextLine();
 		String[] inputs = line.split("[ ()]+");
 		
-		TreeSet<Integer> primeNumbers = new TreeSet<>();
+		TreeSet<Integer> primeNumbers = new TreeSet<Integer>();
 		for (String string : inputs) {
 			if (string.equals("")) {
 				continue;

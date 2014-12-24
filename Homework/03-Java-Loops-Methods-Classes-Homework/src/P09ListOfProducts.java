@@ -6,10 +6,8 @@ public class P09ListOfProducts {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		ArrayList<Product> products = new ArrayList<>();
-		ArrayList<String> fileRows = new ArrayList<>();
-
-		fileRows = Product.readFile("Input.txt");
+		ArrayList<Product> products = new ArrayList<Product>();
+		ArrayList<String> fileRows = Product.readFile("Input.txt");
 
 		for (String row : fileRows) {
 

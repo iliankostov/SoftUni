@@ -11,7 +11,7 @@ public class P11MostFrequentWord {
 		
 		String[] text = scan.nextLine().toLowerCase().split("\\W+");
 
-		TreeMap<String, Integer> wordOccurrences = new TreeMap<>();
+		TreeMap<String, Integer> wordOccurrences = new TreeMap<String, Integer>();
 
 		int maxCountWord = 0;
 

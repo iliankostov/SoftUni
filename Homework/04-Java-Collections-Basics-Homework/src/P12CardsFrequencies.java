@@ -10,7 +10,7 @@ public class P12CardsFrequencies {
 		Scanner scan = new Scanner(System.in);
 		String[] cards = scan.nextLine().split("[ ♥♣♦♠]+");
 
-		Map<String, Integer> cardsMap = new LinkedHashMap<>();
+		Map<String, Integer> cardsMap = new LinkedHashMap<String, Integer>();
 
 		for (String card : cards) {
 			Integer count = cardsMap.get(card);

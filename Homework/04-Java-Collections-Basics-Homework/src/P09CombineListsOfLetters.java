@@ -7,9 +7,9 @@ public class P09CombineListsOfLetters {
 		
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
-		ArrayList<Character> firstList = new ArrayList<>();
-		ArrayList<Character> secondList = new ArrayList<>();
-		ArrayList<Character> resultList = new ArrayList<>();
+		ArrayList<Character> firstList = new ArrayList<Character>();
+		ArrayList<Character> secondList = new ArrayList<Character>();
+		ArrayList<Character> resultList = new ArrayList<Character>();
 
 		for (char chars : scan.nextLine().toCharArray()) {
 			firstList.add(chars);
@@ -19,18 +19,16 @@ public class P09CombineListsOfLetters {
 		}
 		resultList.addAll(firstList);
 
-		for (int i = 0; i < secondList.size(); i++) {
+		for (Character aSecondList : secondList) {
 
-			if (firstList.contains(secondList.get(i))) {
-				continue;
-			} else {
+			if (!firstList.contains(aSecondList)) {
 				resultList.add(' ');
-				resultList.add(secondList.get(i));
+				resultList.add(aSecondList);
 			}
 		}
 
-		for (int i = 0; i < resultList.size(); i++) {
-			System.out.print(resultList.get(i));
+		for (Character aResultList : resultList) {
+			System.out.print(aResultList);
 		}
 		
 	}

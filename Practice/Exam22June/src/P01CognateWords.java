@@ -10,14 +10,14 @@ public class P01CognateWords {
 		String input = scan.nextLine();
 		String[] words = input.split("[^a-zA-Z]+");
 		
-		HashSet<String> cognateWords = new HashSet<>();
+		HashSet<String> cognateWords = new HashSet<String>();
 		for (int a = 0; a < words.length; a++) {
 			for (int b = 0; b < words.length; b++) {
-				for (int c = 0; c < words.length; c++) {
-					if (a!=b) {
-						boolean check = (words[a] + words[b]).equals(words[c]);
+				for (String word : words) {
+					if (a != b) {
+						boolean check = (words[a] + words[b]).equals(word);
 						if (check) {
-							cognateWords.add(words[a] + "|" + words[b] + "=" + words[c]);
+							cognateWords.add(words[a] + "|" + words[b] + "=" + word);
 						}
 					}
 				}				

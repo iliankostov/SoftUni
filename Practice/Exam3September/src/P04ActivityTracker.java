@@ -9,7 +9,7 @@ public class P04ActivityTracker {
 		Scanner scan = new Scanner(System.in);
 		Integer n = Integer.parseInt(scan.nextLine());
 		
-		TreeMap<Integer, TreeMap<String, Float>> monthsActivity = new TreeMap<>();
+		TreeMap<Integer, TreeMap<String, Float>> monthsActivity = new TreeMap<Integer, TreeMap<String, Float>>();
 		for (int i = 0; i < n; i++) {
 			String[] activity = scan.nextLine().split(" ");
 			String[] date = activity[0].split("/");
@@ -25,7 +25,7 @@ public class P04ActivityTracker {
 				}					
 				monthsActivity.get(month).put(name, distance);				
 			}else {
-				TreeMap<String, Float> users = new TreeMap<>();
+				TreeMap<String, Float> users = new TreeMap<String, Float>();
 				users.put(name, distance);
 				monthsActivity.put(month, users);
 			}
