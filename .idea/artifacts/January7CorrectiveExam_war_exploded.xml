@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="January7CorrectiveExam:war exploded">
+    <output-path>$PROJECT_DIR$/Practice/September21Evening/out/artifacts/January7CorrectiveExam_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="January7CorrectiveExam/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="January7CorrectiveExam" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
