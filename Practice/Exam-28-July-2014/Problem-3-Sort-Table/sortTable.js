@@ -1,7 +1,6 @@
 function sortTable(input) {
     var rows = [];
-    var i = 0;
-    for (i = 2; i < input.length - 1; i++) {
+    for (var i = 2; i < input.length - 1; i++) {
         var rowData = input[i];
         var regex = /<td>.*?<\/td><td>(.*?)<\/td>/g;
         var match = regex.exec(rowData);
@@ -18,7 +17,7 @@ function sortTable(input) {
     });
     console.log(input[0]);
     console.log(input[1]);
-    for (i = 0; i < rows.length; i++) {
+    for (var i = 0; i < rows.length; i++) {
         console.log(rows[i].data);
     }
     console.log(input[input.length - 1]);
@@ -30,14 +29,13 @@ function sortTable(input) {
 // Read the input from the console as array and process it
 // Remove all below code before submitting to the judge system!
 // ------------------------------------------------------------
-sortTable([
-    "<table>",
-    "<tr><th>Product</th><th>Price</th><th>Votes</th></tr>",
-    "<tr><td>Vodka Finlandia 1 l</td><td>19.35</td><td>+12</td></tr>",
-    "<tr><td>Ariana Radler 0.5 l</td><td>1.19</td><td>+33</td></tr>",
-    "<tr><td>Laptop HP 250 G2</td><td>629</td><td>+1</td></tr>",
-    "<tr><td>Kamenitza Grapefruit 1 l</td><td>1.85</td><td>+7</td></tr>",
-    "<tr><td>Ariana Grapefruit 1.5 l</td><td>1.85</td><td>+7</td></tr>",
-    "<tr><td>Coffee Davidoff 250 gr.</td><td>11.99</td><td>+11</td></tr>",
-    "</table>"
-]);
+
+var arr = [];
+require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+}).on('line', function (line) {
+    arr.push(line);
+}).on('close', function () {
+    sortTable(arr);
+});
