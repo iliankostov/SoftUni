@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ce8f451-4c43-4458-bb98-5e3ac6b76340" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/crutch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/examples.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1/01KeepTheChange.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScriptBasics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,6 +37,7 @@
       <list>
         <option value="$PROJECT_DIR$/Practice/crutch.js" />
         <option value="$PROJECT_DIR$/Practice/examples.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1/01KeepTheChange.js" />
       </list>
     </option>
   </component>
@@ -107,6 +108,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaScriptBasics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaScriptBasics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exam-4-September-2014" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -129,7 +148,7 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.examples.js">
+  <component name="RunManager" selected="Node.js.01KeepTheChange.js">
     <configuration default="false" name="01EwoksFans.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="01EwoksFans.js" working-dir="$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-1">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
@@ -143,6 +162,11 @@
       <method />
     </configuration>
     <configuration default="false" name="examples.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="examples.js" working-dir="$PROJECT_DIR$/Practice">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
+      <method />
+    </configuration>
+    <configuration default="false" name="01KeepTheChange.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="01KeepTheChange.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
@@ -392,16 +416,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Node.js.01EwoksFans.js" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.crutch.js" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.examples.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.01KeepTheChange.js" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.examples.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.crutch.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.01EwoksFans.js" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.01KeepTheChange.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.examples.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.crutch.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.01EwoksFans.js" />
       </list>
     </recent_temporary>
   </component>
@@ -418,15 +444,15 @@
       <workItem from="1420663592963" duration="231000" />
       <workItem from="1420663891526" duration="9000" />
       <workItem from="1420663947083" duration="299000" />
-      <workItem from="1420700864554" duration="35082000" />
+      <workItem from="1420700864554" duration="37512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35621000" />
+    <option name="totallyTimeSpent" value="38051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -484,34 +510,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-2/02Plus-Remove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-3/03LinkStrings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-4/04UsersModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-1/01EwoksFans.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08717949" vertical-offset="0" max-vertical-offset="969">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/crutch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.73015875" vertical-offset="1934" max-vertical-offset="2312">
@@ -524,6 +522,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7195767" vertical-offset="540" max-vertical-offset="1904">
           <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-1/01EwoksFans.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08695652" vertical-offset="0" max-vertical-offset="969">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-2/02Plus-Remove.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-3/03LinkStrings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-4/04UsersModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1/01KeepTheChange.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3478261" vertical-offset="0" max-vertical-offset="714">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding />
         </state>
       </provider>
