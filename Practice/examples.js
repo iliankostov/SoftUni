@@ -67,6 +67,9 @@ function BuildPerson(fname, lname) {
 }
 var dichov = BuildPerson('Dicho', 'Dichov');
 var georgiev = BuildPerson('Georgi', 'Georgiev');
+console.log(dichov.toString());
+console.log(georgiev.toString());
+
 
 // Counting words example
 function getWords(text) {
@@ -100,8 +103,8 @@ var text = 'When I was born my parents named me Pesho Ivanov, and still my name 
 var words = getWords(text);
 var wordsCount = countWords(words);
 
-for (var word in wordsCount) {
-    if (wordsCount.hasOwnProperty(word)) {
-        console.log(word + ' -> ' + wordsCount[word]);
-    }
-}
+//for (var word in wordsCount) {
+//    if (wordsCount.hasOwnProperty(word)) {
+//        console.log(word + ' -> ' + wordsCount[word]);
+//    }
+//}

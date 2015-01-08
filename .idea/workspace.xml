@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ce8f451-4c43-4458-bb98-5e3ac6b76340" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2/The Numbers.js" />
+    <list default="true" id="7ce8f451-4c43-4458-bb98-5e3ac6b76340" name="Default" comment="JavaScript Practice">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js" />
+      <change type="MOVED" beforePath="C:\Users\Ilian\Documents\GitHub\JavaScriptBasics\Practice\Exam-4-September-2014\Problem-2\The Numbers.js" afterPath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2/02TheNumbers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice/examples.js" afterPath="$PROJECT_DIR$/Practice/examples.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScriptBasics.iws" />
@@ -36,9 +38,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Practice/crutch.js" />
-        <option value="$PROJECT_DIR$/Practice/examples.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1/01KeepTheChange.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2/The Numbers.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars!.js" />
+        <option value="$PROJECT_DIR$/Practice/examples.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js" />
       </list>
     </option>
   </component>
@@ -149,12 +153,7 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.The Numbers.js">
-    <configuration default="false" name="01EwoksFans.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="01EwoksFans.js" working-dir="$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-1">
-      <RunnerSettings RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="Basic" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.03ToTheStars.js">
     <configuration default="false" name="crutch.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="crutch.js" working-dir="$PROJECT_DIR$/Practice">
       <RunnerSettings RunnerId="Basic" />
       <RunnerSettings RunnerId="debuggableProgram" />
@@ -164,7 +163,9 @@
     </configuration>
     <configuration default="false" name="examples.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="examples.js" working-dir="$PROJECT_DIR$/Practice">
       <RunnerSettings RunnerId="Basic" />
+      <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="debuggableProgram" />
       <method />
     </configuration>
     <configuration default="false" name="01KeepTheChange.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="01KeepTheChange.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1">
@@ -175,6 +176,13 @@
     <configuration default="false" name="The Numbers.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="The Numbers.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
+      <method />
+    </configuration>
+    <configuration default="false" name="03ToTheStars.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="03ToTheStars.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3">
+      <RunnerSettings RunnerId="Basic" />
+      <RunnerSettings RunnerId="debuggableProgram" />
+      <ConfigurationWrapper RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="debuggableProgram" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -423,19 +431,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.01EwoksFans.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.crutch.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.examples.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.01KeepTheChange.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.The Numbers.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.crutch.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.examples.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.01KeepTheChange.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.The Numbers.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.03ToTheStars.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.The Numbers.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.01KeepTheChange.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.examples.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.crutch.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.01EwoksFans.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.03ToTheStars.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.examples.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.The Numbers.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.01KeepTheChange.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.crutch.js" />
       </list>
     </recent_temporary>
   </component>
@@ -452,7 +460,7 @@
       <workItem from="1420663592963" duration="231000" />
       <workItem from="1420663891526" duration="9000" />
       <workItem from="1420663947083" duration="299000" />
-      <workItem from="1420700864554" duration="41118000" />
+      <workItem from="1420700864554" duration="47772000" />
     </task>
     <task id="LOCAL-00001" summary="JavaScript Practice">
       <created>1420744459722</created>
@@ -460,11 +468,17 @@
       <option name="project" value="LOCAL" />
       <updated>1420744459722</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="JavaScript Practice">
+      <created>1420748056495</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1420748056495</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41657000" />
+    <option name="totallyTimeSpent" value="48311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -473,7 +487,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -491,7 +505,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -519,9 +533,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="NodeJSConfigurationType">
+        <watch expression="star.toAreaX().indexOf(normandy.x)" language="JavaScript" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -532,14 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.73015875" vertical-offset="1934" max-vertical-offset="2312">
           <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/examples.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7195767" vertical-offset="540" max-vertical-offset="1904">
-          <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -592,10 +602,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2/The Numbers.js">
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2/02TheNumbers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3-To-The-Stars!/test.001.out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3-To-The-Stars!/test.002.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3-To-The-Stars!/test.001.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43589744" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/examples.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45888594" vertical-offset="1578" max-vertical-offset="1955">
+          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
           <folding />
         </state>
       </provider>
