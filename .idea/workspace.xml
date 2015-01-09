@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ce8f451-4c43-4458-bb98-5e3ac6b76340" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/Exam-22-November/Problem-1/01DaggersAndSwords.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/Exam-22-November/Problem-2/02XRemove.js" />
+    <list default="true" id="7ce8f451-4c43-4458-bb98-5e3ac6b76340" name="Default" comment="JavaScript Practice">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-1/01TheTetevenTrip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-2/02Parachute.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/Exam-22-November/Problem-3/03QueryStringsMess.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-3/03UseYourChainsBuddy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-4/04AllThatLuggage.js" />
+      <change type="DELETED" beforePath="C:\Users\Ilian\Documents\GitHub\JavaScriptBasics\Practice\crutch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Ilian\Documents\GitHub\JavaScriptBasics\Practice\examples.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice/Exam-22-November/Problem-2/02XRemove.js" afterPath="$PROJECT_DIR$/Practice/Exam-22-November/Problem-2/02XRemove.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js" afterPath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4/04CloudManager.js" afterPath="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4/04CloudManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Practice/Exam-27-July-2014/Problem-2-Reveal-Triangles/revealTriangles.js" afterPath="$PROJECT_DIR$/Practice/Exam-27-July-2014/Problem-2-Reveal-Triangles/revealTriangles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaScriptBasics.iws" />
@@ -28,18 +37,7 @@
     <favorites_list name="JavaScriptBasics" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="02XRemove.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-2/02XRemove.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,16 +45,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Practice/crutch.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-1/01KeepTheChange.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2/The Numbers.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars!.js" />
-        <option value="$PROJECT_DIR$/Practice/examples.js" />
-        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js" />
-        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4/04CloudManager.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4-Cloud-Manager/cloudManager.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-22-November/Problem-1/01DaggersAndSwords.js" />
         <option value="$PROJECT_DIR$/Practice/Exam-22-November/Problem-2/02XRemove.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4/04CloudManager.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-22-November/Problem-3/03QueryStringsMess.js" />
+        <option value="$PROJECT_DIR$/Practice/crutch.js" />
+        <option value="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-1/01TheTetevenTrip.js" />
+        <option value="$PROJECT_DIR$/Practice/MyExam-9-January-2014/test.js" />
+        <option value="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-4/04AllThatLuggage.js" />
+        <option value="$PROJECT_DIR$/Practice/examples.js" />
+        <option value="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-2/02Parachute.js" />
+        <option value="$PROJECT_DIR$/Practice/Exam-27-July-2014/Problem-2-Reveal-Triangles/revealTriangles.js" />
+        <option value="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-3/03UseYourChainsBuddy.js" />
       </list>
     </option>
   </component>
@@ -94,6 +99,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,35 +146,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Exam-22-November" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScriptBasics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaScriptBasics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exam-22-November" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Problem-2" />
+              <option name="myItemId" value="MyExam-9-January-2014" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -189,32 +172,30 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.01DaggersAndSwords.js">
-    <configuration default="false" name="examples.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="examples.js" working-dir="$PROJECT_DIR$/Practice">
+  <component name="RunManager" selected="Node.js.03UseYourChainsBuddy.js">
+    <configuration default="false" name="03UseYourChainsBuddy.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="03UseYourChainsBuddy.js" working-dir="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-3">
       <RunnerSettings RunnerId="Basic" />
       <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="debuggableProgram" />
       <method />
     </configuration>
-    <configuration default="false" name="The Numbers.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="The Numbers.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-2">
+    <configuration default="false" name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/Practice/MyExam-9-January-2014">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
-    <configuration default="false" name="03ToTheStars.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="03ToTheStars.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3">
+    <configuration default="false" name="02Parachute.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="02Parachute.js" working-dir="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-2">
       <RunnerSettings RunnerId="Basic" />
-      <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="debuggableProgram" />
+      <method />
+    </configuration>
+    <configuration default="false" name="04AllThatLuggage.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="04AllThatLuggage.js" working-dir="$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-4">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
     <configuration default="false" name="04CloudManager.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="04CloudManager.js" working-dir="$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4">
-      <RunnerSettings RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="Basic" />
-      <method />
-    </configuration>
-    <configuration default="false" name="01DaggersAndSwords.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="01DaggersAndSwords.js" working-dir="$PROJECT_DIR$/Practice/Exam-22-November/Problem-1">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
@@ -465,19 +446,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.examples.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.The Numbers.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.03ToTheStars.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.04CloudManager.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.01DaggersAndSwords.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.03UseYourChainsBuddy.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.test.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.02Parachute.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.04AllThatLuggage.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.04CloudManager.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.01DaggersAndSwords.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.04CloudManager.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.03ToTheStars.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.examples.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.The Numbers.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.03UseYourChainsBuddy.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.02Parachute.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.04AllThatLuggage.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.04CloudManager.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.test.js" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +476,9 @@
       <workItem from="1420663891526" duration="9000" />
       <workItem from="1420663947083" duration="299000" />
       <workItem from="1420700864554" duration="53522000" />
-      <workItem from="1420782637546" duration="5791000" />
+      <workItem from="1420782637546" duration="21798000" />
+      <workItem from="1420812174711" duration="22360000" />
+      <workItem from="1420838765715" duration="1441000" />
     </task>
     <task id="LOCAL-00001" summary="JavaScript Practice">
       <created>1420744459722</created>
@@ -521,11 +504,17 @@
       <option name="project" value="LOCAL" />
       <updated>1420760398311</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JavaScript Practice">
+      <created>1420789635268</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1420789635268</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59852000" />
+    <option name="totallyTimeSpent" value="99660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -534,6 +523,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -541,21 +531,20 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258427" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19667171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24432677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39871383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5939005" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -580,11 +569,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
-        <watch expression="star.toAreaX().indexOf(normandy.x)" language="JavaScript" />
+        <watch expression="maxCol" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>
@@ -593,13 +582,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Practice/crutch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73015875" vertical-offset="1934" max-vertical-offset="2312">
-          <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/MyExam-24-Nov-2014/Problem-1/01EwoksFans.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08695652" vertical-offset="0" max-vertical-offset="969">
@@ -670,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/examples.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45888594" vertical-offset="1578" max-vertical-offset="1955">
-          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3-To-The-Stars!/toTheStars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30512822" vertical-offset="0" max-vertical-offset="918">
@@ -705,47 +680,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43589744" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4/04CloudManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7871795" vertical-offset="0" max-vertical-offset="969">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4-Cloud-Manager/cloudManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26153848" vertical-offset="153" max-vertical-offset="1139">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-1-Daggers and Swords-Yana/test.000.001.in.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="1" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-28-July-2014/Problem-2-String-Matrix-Rotation/matrixRotation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-29-July-2014/Problem-2-Tetris-Figures/countTetrisFigures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-1/01DaggersAndSwords.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35978836" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
+        <state vertical-scroll-proportion="0.76455027" vertical-offset="306" max-vertical-offset="1003">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-2/02XRemove.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+        <state vertical-scroll-proportion="0.3478261" vertical-offset="0" max-vertical-offset="1462">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4-Cloud-Manager/cloudManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3043478" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-3-Query-Strings-Yulia/test.009.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-3-Query-Strings-Yulia/query-strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3478261" vertical-offset="238" max-vertical-offset="680">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-22-November/Problem-3/03QueryStringsMess.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1734694" vertical-offset="0" max-vertical-offset="952">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-3/03ToTheStars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7176781" vertical-offset="102" max-vertical-offset="1054">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-4-September-2014/Problem-4/04CloudManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1037">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-1/01TheTetevenTrip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6974359" vertical-offset="459" max-vertical-offset="1054">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-2/02Parachute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86734694" vertical-offset="0" max-vertical-offset="663">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-4/04AllThatLuggage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6020408" vertical-offset="1173" max-vertical-offset="1785">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/MyExam-9-January-2014/Problem-3/03UseYourChainsBuddy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9419525" vertical-offset="510" max-vertical-offset="1088">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/Exam-27-July-2014/Problem-2-Reveal-Triangles/revealTriangles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33163264" vertical-offset="346" max-vertical-offset="901">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
         </state>
       </provider>

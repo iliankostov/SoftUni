@@ -1,4 +1,5 @@
 function solve(arr) {
+
     function Coordinates(star, x, y) {
         return {
             obj: star,

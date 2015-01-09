@@ -1,6 +1,6 @@
 function solve(arr) {
 
-    var collection = [];
+    var collection = { }; // Assoc array
 
     for (var i = 0; i < arr.length; i++) {
         var elements = arr[i].split(" ");
@@ -15,6 +15,10 @@ function solve(arr) {
         collection[ext].memory.push(siz);
     }
 
+    //console.log(collection);
+    //console.log(collection[ext]);
+    //console.log(Object.keys(collection));
+
     for (var key in collection) {
         if (collection.hasOwnProperty(key)) {
             collection[key].files.sort();
@@ -23,6 +27,7 @@ function solve(arr) {
     }
 
     var output = { };
+
     var keys = Object.keys(collection);
     keys.sort();
 
@@ -38,7 +43,6 @@ function solve(arr) {
         }
         return sum.toFixed(2);
     }
-
 }
 
 solve([
