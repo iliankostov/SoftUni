@@ -63,4 +63,7 @@ if ($types_weight['bags'] < $minWeight || $types_weight['bags'] > $maxWeight) {
 
 foreach ($types as $key => $value) {
     echo "<ul><li>" . $key . "</li></ul>";
+    foreach ($value as $a => $b) {
+        echo "<ul><li>" . $a . "</li></ul>";
+    }
 }
