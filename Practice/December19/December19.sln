@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpyHard", "SpyHard\SpyHard.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Headphones", "Headphones\Headphones.csproj", "{C2DC6A8A-6439-49EC-816E-0A94EBA8D4B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralMatrix", "SpiralMatrix\SpiralMatrix.csproj", "{A215A407-3D88-41DE-BA86-6D7E503D8DEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C2DC6A8A-6439-49EC-816E-0A94EBA8D4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2DC6A8A-6439-49EC-816E-0A94EBA8D4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2DC6A8A-6439-49EC-816E-0A94EBA8D4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A215A407-3D88-41DE-BA86-6D7E503D8DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A215A407-3D88-41DE-BA86-6D7E503D8DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A215A407-3D88-41DE-BA86-6D7E503D8DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A215A407-3D88-41DE-BA86-6D7E503D8DEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
