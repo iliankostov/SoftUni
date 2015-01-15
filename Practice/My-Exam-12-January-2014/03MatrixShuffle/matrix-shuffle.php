@@ -1,10 +1,10 @@
 <?php
 
 $size = intval($_GET['size']);
-$text = $_GET['text'];
+$text = "hahahahahahahaha"; //$_GET['text'];
 
 $ma3x = [];
-$n = $size;
+$n = 4; //$size;
 
 for($y = 0; $y<$n; $y++){
     for($x = 0; $x<$n; $x++)
