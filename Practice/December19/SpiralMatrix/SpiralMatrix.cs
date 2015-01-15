@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 
 class SpiralMatrix
 {
@@ -7,17 +7,38 @@ class SpiralMatrix
     {
         int size = int.Parse(Console.ReadLine());
         string input = Console.ReadLine();
-        char[] chars = new char[size*size];
+        char[] inputs = new char[size * size];       
+        List<int> spiral = new List<int>();
 
-        for (int a = 0, b = 0; a < size*size; a++, b++)
+        // Create char array
+        for (int a = 0, b = 0; a < size * size; a++, b++)
         {
             if (b > input.Length - 1)
             {
                 b = 0;
             }
-            chars[a] = input[b];
-
+            inputs[a] = input[b];
         }
-        Console.WriteLine(string.Join(", ", chars.Select(v => v.ToString())));
+
+        // Create spiral array
+        for (int y = 0; y < size; y++)
+        {
+            for (int x = 0; x < size; x++)
+            {
+                spiral.Add(f(size, size, x, y));  
+            }
+        }
+        int[] ma3x = spiral.ToArray();
+
+        // Test print
+        Console.WriteLine(String.Join(", ", ma3x));
+                
+
+    }
+
+    private static int f(int w, int h, int x, int y)
+    {
+        return (y != 0) ? w + f(h - 1, w, y - 1, w - x - 1) : x;
     }
 }
+
