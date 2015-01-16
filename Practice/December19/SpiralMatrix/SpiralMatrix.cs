@@ -7,7 +7,7 @@ class SpiralMatrix
     {
         int size = int.Parse(Console.ReadLine());
         string input = Console.ReadLine();
-        char[] inputs = new char[size * size];       
+        char[] chars = new char[size * size];       
         List<int> spiral = new List<int>();
 
         // Create char array
@@ -17,7 +17,7 @@ class SpiralMatrix
             {
                 b = 0;
             }
-            inputs[a] = input[b];
+            chars[a] = input[b];
         }
 
         // Create spiral array
@@ -25,20 +25,40 @@ class SpiralMatrix
         {
             for (int x = 0; x < size; x++)
             {
-                spiral.Add(f(size, size, x, y));  
+                spiral.Add( spiralMatrix(size, size, x, y) );  
             }
         }
-        int[] ma3x = spiral.ToArray();
+        int[] matrix = spiral.ToArray();
 
-        // Test print
-        Console.WriteLine(String.Join(", ", ma3x));
-                
+        // Calculate weight by rows
 
+        int rowSum = 0;
+        int maxSum = 0;
+        int rowNum = 0;
+        int maxNum = 0;
+        for (int c = 0, d = 0; c < size*size; c++, d++)
+        {
+            if (d == size)
+            {
+                if (rowSum > maxSum)
+                {
+                    maxSum = rowSum;
+                    maxNum = rowNum;
+                }
+                rowNum++;
+                rowSum = 0;
+                d = 0;
+            }
+            int rowIndex = (char.ToLower(chars[matrix[c]]) - 96) * 10;
+            rowSum += rowIndex;
+                       
+        }
+        Console.WriteLine(maxNum + " - " + maxSum);
     }
 
-    private static int f(int width, int heigth, int x, int y)
+    private static int spiralMatrix(int width, int heigth, int x, int y)
     {
-        return (y != 0) ? width + f(heigth - 1, width, y - 1, width - x - 1) : x;
+        return (y != 0) ? width + spiralMatrix(heigth - 1, width, y - 1, width - x - 1) : x;
     }
 }
 
