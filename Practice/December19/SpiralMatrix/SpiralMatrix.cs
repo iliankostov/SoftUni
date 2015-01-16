@@ -36,9 +36,9 @@ class SpiralMatrix
 
     }
 
-    private static int f(int w, int h, int x, int y)
+    private static int f(int width, int heigth, int x, int y)
     {
-        return (y != 0) ? w + f(h - 1, w, y - 1, w - x - 1) : x;
+        return (y != 0) ? width + f(heigth - 1, width, y - 1, width - x - 1) : x;
     }
 }
 
