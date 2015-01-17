@@ -1,1 +1,5 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\Boat\bin\Debug\Boat.exe.config
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\Boat\bin\Debug\Boat.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\Boat\bin\Debug\Boat.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\Boat\obj\Debug\Boat.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\Boat\obj\Debug\Boat.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\Boat\obj\Debug\Boat.pdb
