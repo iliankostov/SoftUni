@@ -1,1 +1,5 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\CheatSheet\bin\Debug\CheatSheet.exe.config
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\CheatSheet\bin\Debug\CheatSheet.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\CheatSheet\bin\Debug\CheatSheet.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\CheatSheet\obj\Debug\CheatSheet.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\CheatSheet\obj\Debug\CheatSheet.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\CheatSheet\obj\Debug\CheatSheet.pdb
