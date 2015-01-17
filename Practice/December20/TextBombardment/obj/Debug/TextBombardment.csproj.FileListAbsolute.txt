@@ -1,1 +1,5 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\TextBombardment\bin\Debug\TextBombardment.exe.config
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\TextBombardment\bin\Debug\TextBombardment.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\TextBombardment\bin\Debug\TextBombardment.pdb
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\TextBombardment\obj\Debug\TextBombardment.csprojResolveAssemblyReference.cache
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\TextBombardment\obj\Debug\TextBombardment.exe
+C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December20\TextBombardment\obj\Debug\TextBombardment.pdb
