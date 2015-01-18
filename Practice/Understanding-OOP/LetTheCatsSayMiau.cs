@@ -5,9 +5,9 @@ public class Cat    // Beginning of class definition
     private string name;    // Field 1
     private string owner;   // Field 2
 
-    public Cat(string name = null, string owner = null)     // Beginning of constructor definition.
-    {                                                       // If we equal property to null it won't be required.
-        this.name = name;       // Constructor's property 1
+    public Cat(string name, string owner = null)     // Beginning of constructor definition.
+    {                                                // If we equal property to null it won't be required.
+        this.Name = name;       // Constructor's property 1 validate it !!!
         this.owner = owner;     // Constructor's property 2
     }
 
@@ -16,13 +16,13 @@ public class Cat    // Beginning of class definition
         get { return this.name; }       // get the name of the cat
         set
         {
-            if (true)    // Here we can validate the input. For example String.IsNullOrEmpty(value)
+            if (string.IsNullOrEmpty(value))    // Here we can validate the input. For example 
             {
-                this.name = value;              // set a string value to name property.
+                throw new ArgumentNullException("The name of cat can't be empty"); 
             }
             else
             {
-                throw new ArgumentNullException("The name of cat can't be empty");
+                this.name = value;      // set a string value to name property.
             }
         }
     }
@@ -60,7 +60,7 @@ class LetTheCatsSayMiau
         catOne.Name = "Kitty";     // Change the name of the cat
         catOne.Owner = "George";   // Change the owner of the cat
 
-        Cat[] cats = new Cat[] { catOne, catTwo }; // Why when validte name we get ArgumentNullException ?
+        Cat[] cats = new Cat[] { catOne, catTwo };
 
         // Let the cats say Miauuuuuu
         foreach (Cat cat in cats)
