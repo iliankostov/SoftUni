@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "My Practice", "My Practice", "{27F08CE5-2CA2-410E-8461-71221B0F8A14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exams Practice", "Exams Practice", "{1EF82734-D6DB-4A33-9871-1DCE64028C27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Understanding-OOP", "Understanding-OOP\Understanding-OOP.csproj", "{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D} = {27F08CE5-2CA2-410E-8461-71221B0F8A14}
+	EndGlobalSection
+EndGlobal
