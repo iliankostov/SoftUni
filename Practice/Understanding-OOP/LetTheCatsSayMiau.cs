@@ -5,8 +5,8 @@ public class Cat    // Beginning of class definition
     private string name;    // Field 1
     private string owner;   // Field 2
 
-    public Cat(string name = null, string owner = null)   // Beginning of constructor definition.
-    {                                                     // If we equal property to null it won't be required.
+    public Cat(string name = null, string owner = null)     // Beginning of constructor definition.
+    {                                                       // If we equal property to null it won't be required.
         this.name = name;       // Constructor's property 1
         this.owner = owner;     // Constructor's property 2
     }
@@ -16,13 +16,13 @@ public class Cat    // Beginning of class definition
         get { return this.name; }       // get the name of the cat
         set
         {
-            if (true)                   // Here we can validate the input.
+            if (true)    // Here we can validate the input. For example String.IsNullOrEmpty(value)
             {
-                this.name = value;      // set a string value to name property.
+                this.name = value;              // set a string value to name property.
             }
             else
             {
-                throw new IndexOutOfRangeException("The name is out of range");
+                throw new ArgumentNullException("The name of cat can't be empty");
             }
         }
     }
@@ -54,21 +54,21 @@ class LetTheCatsSayMiau
 {
     static void Main()
     {
-        Cat catOne = new Cat();    // Create a new cat
+        Cat catOne = new Cat("a");    // Create a new cat. It's name is required.
         Cat catTwo = new Cat("Pursy", "Andrew");    // Create another cat
 
         catOne.Name = "Kitty";     // Change the name of the cat
         catOne.Owner = "George";   // Change the owner of the cat
 
-        // Let the cat One says Miauuuuuu
-        Console.WriteLine("{0}'s cat called {1} says:", catOne.Owner, catOne.Name);
-        catOne.SayMiau();
-        Console.WriteLine();
+        Cat[] cats = new Cat[] { catOne, catTwo }; // Why when validte name we get ArgumentNullException ?
 
-        // Let the cat Two say Miauuuuuuu twice
-        Console.WriteLine("{0}'s cat called {1} says:", catTwo.Owner, catTwo.Name);
-        catTwo.SayMiau();
-        catTwo.SayMiau();
-        Console.WriteLine();
+        // Let the cats say Miauuuuuu
+        foreach (Cat cat in cats)
+        {
+            Console.WriteLine("{0}'s cat called {1} says:", cat.Owner, cat.Name);
+            cat.SayMiau();
+            cat.SayMiau();
+            Console.WriteLine();
+        }
     }
 }
