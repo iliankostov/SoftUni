@@ -5,7 +5,7 @@ class Person
     // Create fields
     private string name;
     private int age;
-    private string email;  
+    private string email;
 
     // Create first constructor
     public Person(string name, int age, string email)
@@ -27,7 +27,7 @@ class Person
         get { return this.name; }
         set
         {
-            if (string.IsNullOrEmpty(value) || string.IsNullOrWhiteSpace(value))
+            if (string.IsNullOrEmpty(value))
             {
                 throw new ArgumentNullException("The name can't be empty");
             }
@@ -35,7 +35,7 @@ class Person
         }
     }
 
-    // Create and Validate property Age
+    // Create and validate property Age
     public int Age
     {
         get { return this.age; }
@@ -77,7 +77,7 @@ class Person
         {
             return string.Format("Name: {0}\nAge: {1}\n", Name, Age);
         }
-        
+
     }
 
     static void Main()
@@ -93,5 +93,3 @@ class Person
         }
     }
 }
-
-// Why VS2015 wants to remove "this" from constructors and properties ?
