@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-01-Persons", "Probl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-02-Laptop-Shop", "Problem-02-Laptop-Shop\Problem-02-Laptop-Shop.csproj", "{0A0327F3-52AA-4B2B-87E3-1A276D9B8FF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-03-PC-Catalog", "Problem-03-PC-Catalog\Problem-03-PC-Catalog.csproj", "{F140C9BC-0C4B-498C-B9E2-6FAA92FF1B95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0A0327F3-52AA-4B2B-87E3-1A276D9B8FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A0327F3-52AA-4B2B-87E3-1A276D9B8FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A0327F3-52AA-4B2B-87E3-1A276D9B8FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F140C9BC-0C4B-498C-B9E2-6FAA92FF1B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F140C9BC-0C4B-498C-B9E2-6FAA92FF1B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F140C9BC-0C4B-498C-B9E2-6FAA92FF1B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F140C9BC-0C4B-498C-B9E2-6FAA92FF1B95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
