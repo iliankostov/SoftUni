@@ -26,6 +26,20 @@ class Component
         this.details = details;
     }
 
+    // Create and validate property Name
+    public string Name
+    {
+        get { return this.name; }
+        set
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentNullException("The name can't be empty.");
+            }
+            this.name = value;
+        }
+    }
+
     // Create and validate property Price
     public decimal Price
     {
@@ -37,20 +51,6 @@ class Component
                 throw new IndexOutOfRangeException("The price can not be negative.");
             }
             this.price = value;
-        }
-    }
-
-    // Create and validate property Name
-    public string Name
-    {
-        get { return this.name; }
-        set
-        {
-            if (value == "")
-            {
-                throw new ArgumentNullException("The name can't be empty.");
-            }
-            this.name = value;
         }
     }
 
