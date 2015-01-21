@@ -13,6 +13,12 @@ class Computer
     {
         this.Name = name;
         this.Components = components;
+        decimal sum = 0M;
+        foreach (Component component in Components)
+        {
+            sum += component.Price;
+        }
+        this.TotalPrice = sum;
     }
 
     // Create and validate property Name
@@ -37,17 +43,7 @@ class Computer
     }
 
     // Create and calculate property TotalPrice
-    public decimal TotalPrice
-    {
-        get {
-            decimal sum = 0M;
-            foreach (Component component in Components)
-            {
-                sum += component.Price;
-            }
-            return sum;
-        }
-    }
+    public decimal TotalPrice { get; private set; }
 
     // Override ToString() method
     public override string ToString()
@@ -122,6 +118,7 @@ class Component
             {
                 throw new ArgumentNullException("The details can't be empty.");
             }
+            this.details = value;
         }
     }
 
@@ -131,8 +128,13 @@ class Component
         StringBuilder componentsStringBuild = new StringBuilder();
         if (this.Name != null)
         {
-            componentsStringBuild.Append("Name: " + this.Name + "; ");
+            componentsStringBuild.Append(this.Name + "; ");
         }
+        // If you want to display Details uncomment the next 4 lines.
+        //if (this.Details != null)
+        //{
+        //    componentsStringBuild.Append("Details: " + this.Details + "; ");
+        //}
         componentsStringBuild.Append("Price: " + this.Price + " BGN");
         return componentsStringBuild.ToString();
     }
@@ -144,16 +146,16 @@ class Catalog
     static void Main()
     {
         // Creating components
-        Component processorIntel = new Component("Intel® Core™ i7-5550U", 250.99M, "4M Cache, up to 3.00 GHz");
+        Component processorIntel = new Component("Intel Core i7-5550U", 250.99M, "4M Cache, up to 3.00 GHz");
         Component processorAMD = new Component("AMD FX Processors", 100.99M);
 
         Component gpuNvidia = new Component("Nvidia GeForce GTX990", 199.99M);
         Component gpuAMD = new Component("AMD Radeon R9", 149.99M);
 
         Component mbAsRock = new Component( "Motherboard AsRock H81M-DG4", 96.99M,
-            "Supports New 4th and 4th Generation Intel® Core™ i7/i5/i3/Xeon®/Pentium®/Celeron® Processors (Socket 1150)");
+            "Supports Intel Core i7/i5/i3/Xeon/Pentium/Celeron");
         Component mbAsus = new Component( "Motherboard Asus MAXIMUS VII IMPACT", 125.99M,
-            "LGA 1150 socket for the 4th-, new 4th- and 5th-generation Intel® Core™ i3, i5, i7, Pentium® and Celeron® processors");
+            "Supports Intel Core i3, i5, i7, Pentium and Celeron");
         Component mbMSI = new Component( "MSI AM1I Socket AM1", 77.99M);
 
         Component ram4GB = new Component( "4GB DDR3", 56.99M);
@@ -169,14 +171,14 @@ class Catalog
         Computer asrock = new Computer("Desktop PC AsRock", optimizedPC);
         Computer msi = new Computer("Desktop PC MSI", cheapPC);
 
-        // Put coputers in the catalog
+        // Put computers in the catalog
         Computer[] allPC = new Computer[] { asus, msi, asrock };
 
-        // Sort by total price
+        // Sort computers by total price
         // OrderBy sort ascending acording to a key. If you need descending use OrderByDescending !
-        Computer[] sorted = allPC.OrderBy(c => c.TotalPrice).ToArray();
+        Computer[] sortedPC = allPC.OrderBy(d => d.TotalPrice).ToArray();
 
-        foreach (Computer computer in sorted)
+        foreach (Computer computer in sortedPC)
         {
             Console.WriteLine(computer);
         }
