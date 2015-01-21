@@ -156,7 +156,7 @@ class Laptop
         set { this.battery = value; }
     }
 
-    // Create override the ToString() method
+    // Override the ToString() method
     public override string ToString()
     {
         StringBuilder laptopStringBuild = new StringBuilder();
