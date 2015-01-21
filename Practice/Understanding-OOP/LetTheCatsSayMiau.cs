@@ -54,7 +54,12 @@ class LetTheCatsSayMiau
 {
     static void Main()
     {
+        // The arguments which I give on the new object depend from the constructors.
+        // After that the constructor put the data in properties which validate it.
+        // After that the properties set the value to the field of the class.
+
         Cat catOne = new Cat("a");    // Create a new cat. It's name is required.
+        
         Cat catTwo = new Cat("Pursy", "Andrew");    // Create another cat
 
         catOne.Name = "Kitty";     // Change the name of the cat
