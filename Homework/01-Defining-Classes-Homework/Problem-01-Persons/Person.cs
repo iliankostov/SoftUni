@@ -1,95 +1,84 @@
 ﻿using System;
 
-class Person
+namespace Problem01Persons
 {
-    // Create fields
-    private string name;
-    private int age;
-    private string email;
-
-    // Create first constructor
-    public Person(string name, int age, string email)
+    class Person
     {
-        this.Name = name;
-        this.Age = age;
-        this.Email = email;
-    }
+        // Create fields
+        private string name;
+        private int age;
+        private string email;
 
-    // Create second constructor
-    public Person(string name, int age)
-            : this(name, age, null)
-    {
-    }
-
-    // Create and validate property Name
-    public string Name
-    {
-        get { return this.name; }
-        set
+        // Create first constructor
+        public Person(string name, int age, string email)
         {
-            if (string.IsNullOrEmpty(value))
-            {
-                throw new ArgumentNullException("The name can't be empty");
-            }
-            this.name = value;
+            this.Name = name;
+            this.Age = age;
+            this.Email = email;
         }
-    }
 
-    // Create and validate property Age
-    public int Age
-    {
-        get { return this.age; }
-        set
+        // Create second constructor
+        public Person(string name, int age)
+                : this(name, age, null)
         {
-            if (value < 1 || value > 100)
-            {
-                throw new IndexOutOfRangeException("The age can be in range [1...100]");
-            }
-            this.age = value;
         }
-    }
 
-    // Create and validate property Email
-    public string Email
-    {
-        get { return this.email; }
-        set
+        // Create and validate property Name
+        public string Name
         {
-            if (value == null || value.Contains("@"))
+            get { return this.name; }
+            set
             {
-                this.email = value;
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("The name can't be empty");
+                }
+                this.name = value;
+            }
+        }
+
+        // Create and validate property Age
+        public int Age
+        {
+            get { return this.age; }
+            set
+            {
+                if (value < 1 || value > 100)
+                {
+                    throw new IndexOutOfRangeException("The age can be in range [1...100]");
+                }
+                this.age = value;
+            }
+        }
+
+        // Create and validate property Email
+        public string Email
+        {
+            get { return this.email; }
+            set
+            {
+                if (value == null || value.Contains("@"))
+                {
+                    this.email = value;
+                }
+                else
+                {
+                    throw new Exception("The email is not valid");
+                }
+            }
+        }
+
+        // Implementing the ToString() method to enable printing persons at the console
+        public override string ToString()
+        {
+            if (Email != null)
+            {
+                return string.Format("Name: {0}\nAge: {1}\nEmail: {2}\n", Name, Age, Email);
             }
             else
             {
-                throw new Exception("The email is not valid");
+                return string.Format("Name: {0}\nAge: {1}\n", Name, Age);
             }
-        }
-    }
-
-    // Implementing the ToString() method to enable printing persons at the console
-    public override string ToString()
-    {
-        if (Email != null)
-        {
-            return string.Format("Name: {0}\nAge: {1}\nEmail: {2}\n", Name, Age, Email);
-        }
-        else
-        {
-            return string.Format("Name: {0}\nAge: {1}\n", Name, Age);
-        }
-
-    }
-
-    static void Main()
-    {
-        Person george = new Person("George", 25, "george@gmail.com");
-        Person henry = new Person("Henry", 30, "@");
-        Person michael = new Person("Michael", 35);
-
-        Person[] persons = new Person[] { george, henry, michael };
-        foreach (Person person in persons)
-        {
-            Console.WriteLine(person);
         }
     }
 }
