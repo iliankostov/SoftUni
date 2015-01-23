@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.22310.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-01-Persons", "Problem-01-Persons\Problem-01-Persons.csproj", "{898C5EC7-262D-468E-B166-BB92BDFDD157}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem.01.Persons", "Problem-01-Persons\Problem.01.Persons.csproj", "{898C5EC7-262D-468E-B166-BB92BDFDD157}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem-02-Laptop-Shop", "Problem-02-Laptop-Shop\Problem-02-Laptop-Shop.csproj", "{0A0327F3-52AA-4B2B-87E3-1A276D9B8FF5}"
 EndProject
