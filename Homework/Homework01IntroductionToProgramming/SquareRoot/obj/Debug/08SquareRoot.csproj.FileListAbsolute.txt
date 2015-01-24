@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\SquareRoot\obj\Debug\SquareRoot.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\SquareRoot\obj\Debug\SquareRoot.pdb

@@ -1,1 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\LongestWordInAText\bin\Debug\LongestWordInAText.exe.config

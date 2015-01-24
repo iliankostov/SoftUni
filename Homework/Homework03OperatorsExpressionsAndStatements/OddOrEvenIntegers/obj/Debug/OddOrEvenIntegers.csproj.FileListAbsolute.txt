@@ -1,8 +1,0 @@
-C:\Users\Ilian\Desktop\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\bin\Debug\OddOrEvenIntegers.exe.config
-C:\Users\Ilian\Desktop\Lecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\bin\Debug\OddOrEvenIntegers.exe
-C:\Users\Ilian\Desktop\Lecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\bin\Debug\OddOrEvenIntegers.pdb
-C:\Users\Ilian\Desktop\Lecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\Lecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.exe
-C:\Users\Ilian\Desktop\Lecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.pdb
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.exe
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.pdb

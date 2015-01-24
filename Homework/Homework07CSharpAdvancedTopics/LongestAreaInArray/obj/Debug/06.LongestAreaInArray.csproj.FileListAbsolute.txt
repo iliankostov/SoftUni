@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\LongestAreaInArray\bin\Debug\LongestAreaInArray.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\LongestAreaInArray\bin\Debug\LongestAreaInArray.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\LongestAreaInArray\obj\Debug\LongestAreaInArray.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\LongestAreaInArray\obj\Debug\LongestAreaInArray.pdb

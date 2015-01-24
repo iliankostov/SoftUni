@@ -1,4 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\SumOfElements\bin\Debug\SumOfElements.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\SumOfElements\bin\Debug\SumOfElements.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\SumOfElements\obj\Debug\SumOfElements.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Morning\SumOfElements\obj\Debug\SumOfElements.pdb

@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersNotDivisibleByThreeAnd Seven\bin\Debug\NumbersNotDivisibleByThreeAnd Seven.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersNotDivisibleByThreeAnd Seven\bin\Debug\NumbersNotDivisibleByThreeAnd Seven.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersNotDivisibleByThreeAnd Seven\obj\Debug\02.NumbersNotDivisibleByThreeAnd Seven.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersNotDivisibleByThreeAnd Seven\obj\Debug\NumbersNotDivisibleByThreeAnd Seven.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\NumbersNotDivisibleByThreeAnd Seven\obj\Debug\NumbersNotDivisibleByThreeAnd Seven.pdb

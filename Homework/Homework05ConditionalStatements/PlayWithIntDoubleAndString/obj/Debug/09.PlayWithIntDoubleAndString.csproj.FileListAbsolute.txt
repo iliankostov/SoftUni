@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\PlayWithIntDoubleAndString\bin\Debug\PlayWithIntDoubleAndString.exe
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\PlayWithIntDoubleAndString\bin\Debug\PlayWithIntDoubleAndString.pdb
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\PlayWithIntDoubleAndString\obj\Debug\PlayWithIntDoubleAndString.exe
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\PlayWithIntDoubleAndString\obj\Debug\PlayWithIntDoubleAndString.pdb

@@ -1,4 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\HalfSum\bin\Debug\HalfSum.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\HalfSum\bin\Debug\HalfSum.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\HalfSum\obj\Debug\HalfSum.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\HalfSum\obj\Debug\HalfSum.pdb

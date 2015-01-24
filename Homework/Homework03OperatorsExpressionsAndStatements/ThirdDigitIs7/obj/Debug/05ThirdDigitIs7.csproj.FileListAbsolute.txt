@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ThirdDigitIs7\obj\Debug\ThirdDigitIs7.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ThirdDigitIs7\obj\Debug\ThirdDigitIs7.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ThirdDigitIs7\bin\Debug\ThirdDigitIs7.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ThirdDigitIs7\bin\Debug\ThirdDigitIs7.pdb

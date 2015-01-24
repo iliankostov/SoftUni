@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\SpiralMatrix\obj\Debug\SpiralMatrix.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\SpiralMatrix\bin\Debug\SpiralMatrix.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\SpiralMatrix\bin\Debug\SpiralMatrix.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\SpiralMatrix\obj\Debug\SpiralMatrix.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\SpiralMatrix\obj\Debug\SpiralMatrix.pdb

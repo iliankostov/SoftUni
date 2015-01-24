@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\August22\BookOrders\bin\Debug\BookOrders.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\August22\BookOrders\bin\Debug\BookOrders.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\August22\BookOrders\obj\Debug\02BookOrders.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\August22\BookOrders\obj\Debug\BookOrders.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\August22\BookOrders\obj\Debug\BookOrders.pdb

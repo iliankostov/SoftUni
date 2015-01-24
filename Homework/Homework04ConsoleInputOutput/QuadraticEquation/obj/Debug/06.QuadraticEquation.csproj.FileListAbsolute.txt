@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\QuadraticEquation.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\QuadraticEquation.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\QuadraticEquation.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\QuadraticEquation\obj\Debug\QuadraticEquation.pdb

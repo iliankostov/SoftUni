@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\OddAndEvenProduct\obj\Debug\OddAndEvenProduct.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture6\Homework06Loops\OddAndEvenProduct\obj\Debug\OddAndEvenProduct.pdb

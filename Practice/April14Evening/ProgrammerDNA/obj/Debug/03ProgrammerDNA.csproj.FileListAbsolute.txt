@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\ProgrammerDNA\bin\Debug\ProgrammerDNA.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\ProgrammerDNA\bin\Debug\ProgrammerDNA.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\ProgrammerDNA\obj\Debug\03ProgrammerDNA.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\ProgrammerDNA\obj\Debug\ProgrammerDNA.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\ProgrammerDNA\obj\Debug\ProgrammerDNA.pdb

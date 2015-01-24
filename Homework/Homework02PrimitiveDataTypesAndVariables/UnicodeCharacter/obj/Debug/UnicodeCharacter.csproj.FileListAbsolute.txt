@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\UnicodeCharacter\bin\Debug\UnicodeCharacter.exe
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\UnicodeCharacter\bin\Debug\UnicodeCharacter.pdb
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\UnicodeCharacter\obj\Debug\UnicodeCharacter.exe
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\UnicodeCharacter\obj\Debug\UnicodeCharacter.pdb

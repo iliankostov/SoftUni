@@ -1,1 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\RandomNumbersInGivenRange\bin\Debug\RandomNumbersInGivenRange.exe.config

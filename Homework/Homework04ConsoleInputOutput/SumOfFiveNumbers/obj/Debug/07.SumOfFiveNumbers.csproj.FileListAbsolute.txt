@@ -1,8 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\bin\Debug\SumOfFiveNumbers.exe.config
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\bin\Debug\SumOfFiveNumbers.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\bin\Debug\SumOfFiveNumbers.pdb
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\obj\Debug\07.SumOfFiveNumbers.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\obj\Debug\SumOfFiveNumbers.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\obj\Debug\SumOfFiveNumbers.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\obj\Debug\SumOfFiveNumbers.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\SumOfFiveNumbers\obj\Debug\SumOfFiveNumbers.pdb

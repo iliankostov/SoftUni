@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\PointInsideACircleAndOutsideOfARectangle\obj\Debug\PointInsideACircleAndOutsideOfARectangle.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\PointInsideACircleAndOutsideOfARectangle\obj\Debug\PointInsideACircleAndOutsideOfARectangle.pdb

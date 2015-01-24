@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\VariableInHexadecimalFormat\bin\Debug\VariableInHexadecimalFormat.exe
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\VariableInHexadecimalFormat\bin\Debug\VariableInHexadecimalFormat.pdb
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\VariableInHexadecimalFormat\obj\Debug\VariableInHexadecimalFormat.exe
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\VariableInHexadecimalFormat\obj\Debug\VariableInHexadecimalFormat.pdb

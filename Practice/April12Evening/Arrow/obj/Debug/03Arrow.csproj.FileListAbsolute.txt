@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\Arrow\bin\Debug\Arrow.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\Arrow\bin\Debug\Arrow.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\Arrow\obj\Debug\03Arrow.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\Arrow\obj\Debug\Arrow.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Evening\Arrow\obj\Debug\Arrow.pdb

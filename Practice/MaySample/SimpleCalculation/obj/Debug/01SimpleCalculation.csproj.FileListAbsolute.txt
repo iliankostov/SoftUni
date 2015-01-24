@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleCalculation\bin\Debug\SimpleCalculation.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleCalculation\bin\Debug\SimpleCalculation.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleCalculation\obj\Debug\01SimpleCalculation.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleCalculation\obj\Debug\SimpleCalculation.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleCalculation\obj\Debug\SimpleCalculation.pdb

@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\DecimalToBinaryNumber\bin\Debug\DecimalToBinaryNumber.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\DecimalToBinaryNumber\bin\Debug\DecimalToBinaryNumber.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\DecimalToBinaryNumber\obj\Debug\14.DecimalToBinaryNumber.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\DecimalToBinaryNumber\obj\Debug\DecimalToBinaryNumber.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\DecimalToBinaryNumber\obj\Debug\DecimalToBinaryNumber.pdb

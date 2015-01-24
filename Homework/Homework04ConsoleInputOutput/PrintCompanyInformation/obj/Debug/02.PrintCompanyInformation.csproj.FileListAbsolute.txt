@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\PrintCompanyInformation\bin\Debug\PrintCompanyInformation.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\PrintCompanyInformation\bin\Debug\PrintCompanyInformation.pdb
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\PrintCompanyInformation\obj\Debug\PrintCompanyInformation.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\PrintCompanyInformation\obj\Debug\PrintCompanyInformation.pdb
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\PrintCompanyInformation\obj\Debug\02.PrintCompanyInformation.csprojResolveAssemblyReference.cache

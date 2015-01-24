@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\NineDigitMagicNumbers\bin\Debug\NineDigitMagicNumbers.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\NineDigitMagicNumbers\bin\Debug\NineDigitMagicNumbers.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\NineDigitMagicNumbers\obj\Debug\04NineDigitMagicNumbers.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\NineDigitMagicNumbers\obj\Debug\NineDigitMagicNumbers.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\NineDigitMagicNumbers\obj\Debug\NineDigitMagicNumbers.pdb

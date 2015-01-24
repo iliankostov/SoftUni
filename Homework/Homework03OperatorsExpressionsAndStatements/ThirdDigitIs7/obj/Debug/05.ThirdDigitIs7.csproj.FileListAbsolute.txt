@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\ThirdDigitIs7\bin\Debug\ThirdDigitIs7.exe
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\ThirdDigitIs7\bin\Debug\ThirdDigitIs7.pdb
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\ThirdDigitIs7\obj\Debug\05.ThirdDigitIs7.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\ThirdDigitIs7\obj\Debug\ThirdDigitIs7.exe
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\ThirdDigitIs7\obj\Debug\ThirdDigitIs7.pdb

@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\JoroTheFootballPlayer\bin\Debug\JoroTheFootballPlayer.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\JoroTheFootballPlayer\bin\Debug\JoroTheFootballPlayer.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\JoroTheFootballPlayer\obj\Debug\01JoroTheFootballPlayer.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\JoroTheFootballPlayer\obj\Debug\JoroTheFootballPlayer.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\JoroTheFootballPlayer\obj\Debug\JoroTheFootballPlayer.pdb

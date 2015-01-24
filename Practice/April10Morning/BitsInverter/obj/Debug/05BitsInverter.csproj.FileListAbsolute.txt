@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\BitsInverter\bin\Debug\BitsInverter.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\BitsInverter\bin\Debug\BitsInverter.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\BitsInverter\obj\Debug\05BitsInverter.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\BitsInverter\obj\Debug\BitsInverter.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Morning\BitsInverter\obj\Debug\BitsInverter.pdb

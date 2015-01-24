@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Cinema\bin\Debug\Cinema.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Cinema\bin\Debug\Cinema.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Cinema\obj\Debug\01Cinema.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Cinema\obj\Debug\Cinema.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April11Evening\Cinema\obj\Debug\Cinema.pdb

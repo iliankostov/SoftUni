@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\RandomizeTheNumbersOneToN\bin\Debug\RandomizeTheNumbersOneToN.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\RandomizeTheNumbersOneToN\bin\Debug\RandomizeTheNumbersOneToN.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\RandomizeTheNumbersOneToN\obj\Debug\12.RandomizeTheNumbersOneToN.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\RandomizeTheNumbersOneToN\obj\Debug\RandomizeTheNumbersOneToN.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\RandomizeTheNumbersOneToN\obj\Debug\RandomizeTheNumbersOneToN.pdb

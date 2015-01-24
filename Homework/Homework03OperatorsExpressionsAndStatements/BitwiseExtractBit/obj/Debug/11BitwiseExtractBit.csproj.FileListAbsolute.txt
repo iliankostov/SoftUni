@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitwiseExtractBit\bin\Debug\BitwiseExtractBit.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitwiseExtractBit\bin\Debug\BitwiseExtractBit.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitwiseExtractBit\obj\Debug\11BitwiseExtractBit.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitwiseExtractBit\obj\Debug\BitwiseExtractBit.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\BitwiseExtractBit\obj\Debug\BitwiseExtractBit.pdb

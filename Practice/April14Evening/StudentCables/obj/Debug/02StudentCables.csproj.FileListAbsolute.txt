@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\StudentCables\bin\Debug\StudentCables.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\StudentCables\bin\Debug\StudentCables.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\StudentCables\obj\Debug\02StudentCables.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\StudentCables\obj\Debug\StudentCables.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\StudentCables\obj\Debug\StudentCables.pdb

@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateTheNumberOfCombination\bin\Debug\CalculateTheNumberOfCombination.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateTheNumberOfCombination\bin\Debug\CalculateTheNumberOfCombination.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateTheNumberOfCombination\obj\Debug\CalculateTheNumberOfCombination.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\CalculateTheNumberOfCombination\obj\Debug\CalculateTheNumberOfCombination.pdb

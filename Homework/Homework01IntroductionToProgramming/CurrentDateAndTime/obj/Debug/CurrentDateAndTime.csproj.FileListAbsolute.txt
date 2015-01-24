@@ -1,6 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\CurrentDateAndTime\bin\Debug\CurrentDateAndTime.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\CurrentDateAndTime\bin\Debug\CurrentDateAndTime.pdb
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\CurrentDateAndTime\obj\Debug\CurrentDateAndTime.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\CurrentDateAndTime\obj\Debug\CurrentDateAndTime.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\CurrentDateAndTime\obj\Debug\CurrentDateAndTime.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\CurrentDateAndTime\obj\Debug\CurrentDateAndTime.pdb

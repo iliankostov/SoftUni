@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\OddOrEvenIntegers\obj\Debug\OddOrEvenIntegers.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\OddOrEvenIntegers\bin\Debug\OddOrEvenIntegers.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\OddOrEvenIntegers\bin\Debug\OddOrEvenIntegers.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\OddOrEvenIntegers\obj\Debug\01OddOrEvenIntegers.csprojResolveAssemblyReference.cache

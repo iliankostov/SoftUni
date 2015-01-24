@@ -1,4 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\DrawFigure\bin\Debug\DrawFigure.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\DrawFigure\bin\Debug\DrawFigure.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\DrawFigure\obj\Debug\DrawFigure.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\DrawFigure\obj\Debug\DrawFigure.pdb

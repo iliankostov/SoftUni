@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimesInGivenRange\bin\Debug\PrimesInGivenRange.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimesInGivenRange\bin\Debug\PrimesInGivenRange.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimesInGivenRange\obj\Debug\PrimesInGivenRange.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimesInGivenRange\obj\Debug\PrimesInGivenRange.pdb

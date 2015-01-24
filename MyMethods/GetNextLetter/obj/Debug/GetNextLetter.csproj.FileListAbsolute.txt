@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\GetNextLetter\bin\Debug\GetNextLetter.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\GetNextLetter\bin\Debug\GetNextLetter.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\GetNextLetter\obj\Debug\GetNextLetter.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\GetNextLetter\obj\Debug\GetNextLetter.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MyMethods\GetNextLetter\obj\Debug\GetNextLetter.pdb

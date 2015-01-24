@@ -1,1 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\DecimalToBinaryNumber\bin\Debug\DecimalToBinaryNumber.exe.config

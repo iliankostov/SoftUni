@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Pairs\bin\Debug\Pairs.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Pairs\bin\Debug\Pairs.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Pairs\obj\Debug\02Pairs.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Pairs\obj\Debug\Pairs.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Pairs\obj\Debug\Pairs.pdb

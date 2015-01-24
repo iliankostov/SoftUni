@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\Electricity\bin\Debug\Electricity.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\Electricity\bin\Debug\Electricity.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\Electricity\obj\Debug\01Electricity.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\Electricity\obj\Debug\Electricity.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\Electricity\obj\Debug\Electricity.pdb

@@ -1,7 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\bin\Debug\ComparingFloats.exe
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\bin\Debug\ComparingFloats.pdb
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\obj\Debug\ComparingFloats.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\obj\Debug\ComparingFloats.exe
-C:\Users\Ilian\Desktop\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\obj\Debug\ComparingFloats.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\obj\Debug\ComparingFloats.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture2\2-Primitive-Data-Types-and-Variables-Homework\ComparingFloats\obj\Debug\ComparingFloats.pdb

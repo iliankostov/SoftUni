@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\CheckABitAtGivenPosition\bin\Debug\CheckABitAtGivenPosition.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\CheckABitAtGivenPosition\bin\Debug\CheckABitAtGivenPosition.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\CheckABitAtGivenPosition\obj\Debug\CheckABitAtGivenPosition.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\CheckABitAtGivenPosition\obj\Debug\CheckABitAtGivenPosition.pdb

@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\FruitMarket\bin\Debug\FruitMarket.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\FruitMarket\bin\Debug\FruitMarket.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\FruitMarket\obj\Debug\01FruitMarket.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\FruitMarket\obj\Debug\FruitMarket.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\FruitMarket\obj\Debug\FruitMarket.pdb

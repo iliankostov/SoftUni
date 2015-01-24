@@ -1,4 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\HouseWithAWindow\bin\Debug\HouseWithAWindow.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\HouseWithAWindow\bin\Debug\HouseWithAWindow.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\HouseWithAWindow\obj\Debug\HouseWithAWindow.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\July25Evening\HouseWithAWindow\obj\Debug\HouseWithAWindow.pdb

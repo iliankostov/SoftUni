@@ -1,6 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\Headphones\bin\Debug\Headphones.exe.config
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\Headphones\bin\Debug\Headphones.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\Headphones\bin\Debug\Headphones.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\Headphones\obj\Debug\Headphones.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\Headphones\obj\Debug\Headphones.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\Practice\December19\Headphones\obj\Debug\Headphones.pdb

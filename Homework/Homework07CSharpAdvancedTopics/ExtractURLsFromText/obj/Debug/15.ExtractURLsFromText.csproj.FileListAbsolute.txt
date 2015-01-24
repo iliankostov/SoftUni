@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\ExtractURLsFromText\bin\Debug\ExtractURLsFromText.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\ExtractURLsFromText\bin\Debug\ExtractURLsFromText.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\ExtractURLsFromText\obj\Debug\ExtractURLsFromText.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\ExtractURLsFromText\obj\Debug\ExtractURLsFromText.pdb

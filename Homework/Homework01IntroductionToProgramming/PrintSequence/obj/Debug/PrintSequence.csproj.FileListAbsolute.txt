@@ -1,8 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintSequence\bin\Debug\PrintSequence.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintSequence\bin\Debug\PrintSequence.pdb
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintSequence\obj\Debug\PrintSequence.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintSequence\obj\Debug\PrintSequence.pdb

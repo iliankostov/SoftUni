@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\MatrixOfNumbers\bin\Debug\MatrixOfNumbers.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\MatrixOfNumbers\bin\Debug\MatrixOfNumbers.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\MatrixOfNumbers\obj\Debug\MatrixOfNumbers.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture6\6-Loops-Homework\MatrixOfNumbers\obj\Debug\MatrixOfNumbers.pdb

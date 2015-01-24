@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfLetters\bin\Debug\CountOfLetters.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfLetters\bin\Debug\CountOfLetters.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfLetters\obj\Debug\CountOfLetters.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\CountOfLetters\obj\Debug\CountOfLetters.pdb

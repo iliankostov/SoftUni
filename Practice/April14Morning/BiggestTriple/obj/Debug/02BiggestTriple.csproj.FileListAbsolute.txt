@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\BiggestTriple\bin\Debug\BiggestTriple.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\BiggestTriple\bin\Debug\BiggestTriple.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\BiggestTriple\obj\Debug\BiggestTriple.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\BiggestTriple\obj\Debug\BiggestTriple.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Morning\BiggestTriple\obj\Debug\02BiggestTriple.csprojResolveAssemblyReference.cache

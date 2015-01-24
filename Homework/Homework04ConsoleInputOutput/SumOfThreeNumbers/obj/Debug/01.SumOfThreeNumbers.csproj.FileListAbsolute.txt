@@ -1,9 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\bin\Debug\SumOfThreeNumbers.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\bin\Debug\SumOfThreeNumbers.pdb
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\obj\Debug\01.SumOfThreeNumbers.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\obj\Debug\SumOfThreeNumbers.exe
-C:\Users\Ilian\Desktop\MayLecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\obj\Debug\SumOfThreeNumbers.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\obj\Debug\SumOfThreeNumbers.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture4\4-Console-Input-Output-Homework\SumOfThreeNumbers\obj\Debug\SumOfThreeNumbers.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture4\Homework04ConsoleInputOutput\SumOfThreeNumbers\obj\Debug\SumOfThreeNumbers.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture4\Homework04ConsoleInputOutput\SumOfThreeNumbers\obj\Debug\SumOfThreeNumbers.pdb

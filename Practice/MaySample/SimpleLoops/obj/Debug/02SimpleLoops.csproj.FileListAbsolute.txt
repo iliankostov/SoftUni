@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleLoops\bin\Debug\SimpleLoops.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleLoops\bin\Debug\SimpleLoops.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleLoops\obj\Debug\02SimpleLoops.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleLoops\obj\Debug\SimpleLoops.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleLoops\obj\Debug\SimpleLoops.pdb

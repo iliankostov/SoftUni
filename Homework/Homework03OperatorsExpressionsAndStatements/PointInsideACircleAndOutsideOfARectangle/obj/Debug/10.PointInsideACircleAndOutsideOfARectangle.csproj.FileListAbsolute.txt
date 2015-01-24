@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PointInsideACircleAndOutsideOfARectangle\bin\Debug\PointInsideACircleAndOutsideOfARectangle.exe
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PointInsideACircleAndOutsideOfARectangle\bin\Debug\PointInsideACircleAndOutsideOfARectangle.pdb
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PointInsideACircleAndOutsideOfARectangle\obj\Debug\PointInsideACircleAndOutsideOfARectangle.exe
-C:\Users\Ilian\Desktop\MayLecture3\3-Operators-Expressions-and-Statements-Homework\PointInsideACircleAndOutsideOfARectangle\obj\Debug\PointInsideACircleAndOutsideOfARectangle.pdb

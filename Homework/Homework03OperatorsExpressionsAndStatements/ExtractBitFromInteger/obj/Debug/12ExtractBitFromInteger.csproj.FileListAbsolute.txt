@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ExtractBitFromInteger\obj\Debug\ExtractBitFromInteger.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\ExtractBitFromInteger\obj\Debug\ExtractBitFromInteger.pdb

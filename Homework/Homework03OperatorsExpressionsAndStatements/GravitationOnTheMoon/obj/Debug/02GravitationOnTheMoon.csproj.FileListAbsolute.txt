@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\GravitationOnTheMoon\obj\Debug\GravitationOnTheMoon.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\GravitationOnTheMoon\obj\Debug\GravitationOnTheMoon.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\GravitationOnTheMoon\bin\Debug\GravitationOnTheMoon.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture3\Homework03OperatorsExpressionsAndStatements\GravitationOnTheMoon\bin\Debug\GravitationOnTheMoon.pdb

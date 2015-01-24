@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Volleyball\bin\Debug\Volleyball.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Volleyball\bin\Debug\Volleyball.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Volleyball\obj\Debug\Volleyball.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Volleyball\obj\Debug\Volleyball.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Volleyball\obj\Debug\Volleyball.pdb

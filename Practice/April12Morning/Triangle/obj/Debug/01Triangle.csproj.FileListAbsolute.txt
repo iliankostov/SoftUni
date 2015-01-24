@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Triangle\bin\Debug\Triangle.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Triangle\bin\Debug\Triangle.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Triangle\obj\Debug\01Triangle.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Triangle\obj\Debug\Triangle.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April12Morning\Triangle\obj\Debug\Triangle.pdb

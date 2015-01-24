@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimeChecker\bin\Debug\PrimeChecker.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimeChecker\bin\Debug\PrimeChecker.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimeChecker\obj\Debug\02.PrimeChecker.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimeChecker\obj\Debug\PrimeChecker.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture7\7-CSharp-Advanced-Topics-Homework\PrimeChecker\obj\Debug\PrimeChecker.pdb

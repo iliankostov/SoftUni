@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\CurrentDateAndTime\obj\Debug\CurrentDateAndTime.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\CurrentDateAndTime\obj\Debug\CurrentDateAndTime.pdb

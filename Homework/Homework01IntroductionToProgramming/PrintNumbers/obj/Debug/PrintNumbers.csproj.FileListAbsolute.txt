@@ -1,8 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.pdb
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintNumbers\obj\Debug\PrintNumbers.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\PrintNumbers\obj\Debug\PrintNumbers.pdb

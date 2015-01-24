@@ -1,8 +1,0 @@
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\SquareRoot\bin\Debug\SquareRoot.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\SquareRoot\bin\Debug\SquareRoot.pdb
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\SquareRoot\obj\Debug\SquareRoot.exe
-C:\Users\Ilian\Desktop\Lecture1\1-Introduction-to-Programming-Homework\SquareRoot\obj\Debug\SquareRoot.pdb
-C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\SquareRoot\obj\Debug\SquareRoot.exe
-C:\Users\Ilian\Desktop\CSharpMay\Lecture1\1-Introduction-to-Programming-Homework\SquareRoot\obj\Debug\SquareRoot.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\SquareRoot\obj\Debug\SquareRoot.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\SquareRoot\obj\Debug\SquareRoot.pdb

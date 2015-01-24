@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\ZeroSubset\bin\Debug\ZeroSubset.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\ZeroSubset\bin\Debug\ZeroSubset.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\ZeroSubset\obj\Debug\12ZeroSubset.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\ZeroSubset\obj\Debug\ZeroSubset.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\ZeroSubset\obj\Debug\ZeroSubset.pdb

@@ -1,1 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\MaySample\SimpleCalculation\bin\Debug\SimpleCalculation.exe.config

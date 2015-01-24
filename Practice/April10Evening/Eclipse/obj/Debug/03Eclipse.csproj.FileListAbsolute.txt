@@ -1,4 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Eclipse\bin\Debug\Eclipse.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Eclipse\bin\Debug\Eclipse.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Eclipse\obj\Debug\Eclipse.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April10Evening\Eclipse\obj\Debug\Eclipse.pdb

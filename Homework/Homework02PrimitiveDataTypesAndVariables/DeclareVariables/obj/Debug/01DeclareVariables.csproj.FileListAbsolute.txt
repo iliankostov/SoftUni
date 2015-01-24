@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\DeclareVariables\obj\Debug\DeclareVariables.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\DeclareVariables\obj\Debug\DeclareVariables.pdb

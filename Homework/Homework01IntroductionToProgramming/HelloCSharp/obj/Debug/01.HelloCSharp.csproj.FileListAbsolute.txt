@@ -1,2 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\HelloCSharp\obj\Debug\HelloCSharp.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture1\Homework01IntroductionToProgramming\HelloCSharp\obj\Debug\HelloCSharp.pdb

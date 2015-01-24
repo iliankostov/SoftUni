@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\InsideTheBuilding\obj\Debug\01InsideTheBuilding.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\InsideTheBuilding\bin\Debug\InsideTheBuilding.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\InsideTheBuilding\bin\Debug\InsideTheBuilding.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\InsideTheBuilding\obj\Debug\InsideTheBuilding.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April14Evening\InsideTheBuilding\obj\Debug\InsideTheBuilding.pdb

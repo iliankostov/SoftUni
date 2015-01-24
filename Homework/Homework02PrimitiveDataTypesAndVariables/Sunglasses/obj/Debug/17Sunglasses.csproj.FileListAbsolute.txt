@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\Sunglasses\bin\Debug\Sunglasses.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\Sunglasses\bin\Debug\Sunglasses.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\Sunglasses\obj\Debug\17Sunglasses.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\Sunglasses\obj\Debug\Sunglasses.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture2\Homework02PrimitiveDataTypesAndVariables\Sunglasses\obj\Debug\Sunglasses.pdb

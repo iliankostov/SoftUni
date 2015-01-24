@@ -1,5 +1,0 @@
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\SequenceOfKNumbers\bin\Debug\SequenceOfKNumbers.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\SequenceOfKNumbers\bin\Debug\SequenceOfKNumbers.pdb
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\SequenceOfKNumbers\obj\Debug\02SequenceOfKNumbers.csprojResolveAssemblyReference.cache
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\SequenceOfKNumbers\obj\Debug\SequenceOfKNumbers.exe
-C:\Users\Ilian\Documents\GitHub\CSharpBasics\April28\SequenceOfKNumbers\obj\Debug\SequenceOfKNumbers.pdb

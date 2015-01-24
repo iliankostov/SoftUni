@@ -1,4 +1,0 @@
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\BonusScore\bin\Debug\BonusScore.exe
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\BonusScore\bin\Debug\BonusScore.pdb
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\BonusScore\obj\Debug\BonusScore.exe
-C:\Users\Ilian\Desktop\MayLecture5\5-Conditional-Statements-Homework\BonusScore\obj\Debug\BonusScore.pdb

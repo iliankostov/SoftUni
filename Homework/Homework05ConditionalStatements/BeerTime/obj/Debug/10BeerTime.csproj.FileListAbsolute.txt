@@ -1,5 +1,0 @@
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\BeerTime\bin\Debug\BeerTime.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\BeerTime\bin\Debug\BeerTime.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\BeerTime\obj\Debug\BeerTime.exe
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\BeerTime\obj\Debug\BeerTime.pdb
-C:\Users\Ilian\Desktop\CSharpJuly\Lecture5\Homework05ConditionalStatements\BeerTime\obj\Debug\10BeerTime.csprojResolveAssemblyReference.cache
