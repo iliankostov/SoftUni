@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace Problem03PCCatalog
+﻿namespace Catalog
 {
-    class Catalog
+    using System;
+    using System.Linq;
+    class CatalogMain
     {
         static void Main()
         {

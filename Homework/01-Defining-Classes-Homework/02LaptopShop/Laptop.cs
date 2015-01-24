@@ -1,8 +1,7 @@
-﻿using System;
-using System.Text;
-
-namespace Problem02LaptopShop
+﻿namespace LaptopShop
 {
+    using System;
+    using System.Text;
     class Laptop
     {
         // Create fields

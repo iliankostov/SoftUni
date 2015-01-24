@@ -1,8 +1,7 @@
-﻿using System;
-
-namespace Problem02LaptopShop
+﻿namespace LaptopShop
 {
-    class LaptopShop
+    using System;
+    class LaptopShopMain
     {
         static void Main()
         {

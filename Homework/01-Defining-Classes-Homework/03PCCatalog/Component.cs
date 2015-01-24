@@ -1,8 +1,7 @@
-﻿using System;
-using System.Text;
-
-namespace Problem03PCCatalog
+﻿namespace Catalog
 {
+    using System;
+    using System.Text;
     class Component
     {
         // Create fields
