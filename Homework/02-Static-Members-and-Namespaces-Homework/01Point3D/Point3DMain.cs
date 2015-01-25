@@ -1,4 +1,4 @@
-﻿namespace Point3D
+﻿namespace Points3D
 {
     using System;
     class Point3DMain

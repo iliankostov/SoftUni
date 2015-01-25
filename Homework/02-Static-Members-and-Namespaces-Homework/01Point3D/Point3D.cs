@@ -1,7 +1,7 @@
-﻿namespace Point3D
+﻿namespace Points3D
 {
     using System;
-    class Point3D
+    public class Point3D
     {
         // Create fields
         private double x;
