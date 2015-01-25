@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Point3D.cs" />
     <Compile Include="Point3DMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
