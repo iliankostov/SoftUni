@@ -21,7 +21,7 @@
                     Console.WriteLine("Invalid integer number.");
                     i--;
                 }
-                catch (ArgumentException)
+                catch (ArgumentOutOfRangeException)
                 {
                     Console.WriteLine("Your number is not in range.");
                     i--;
@@ -45,7 +45,7 @@
                 number = int.Parse(input);
                 if (number <= start || number > end)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentOutOfRangeException();
                 }
             }
             catch (FormatException)
