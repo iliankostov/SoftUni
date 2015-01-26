@@ -27,7 +27,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Your first name cannot be empty");
+                    throw new ArgumentNullException("Your first name cannot be empty.");
                 }
                 this.firstName = value;
             }
@@ -44,7 +44,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Your last name cannot be empty");
+                    throw new ArgumentNullException("Your last name cannot be empty.");
                 }
                 this.lastName = value;
             }
@@ -61,14 +61,16 @@
             {
                 if (value < 5)
                 {
-                    throw new IndexOutOfRangeException("Your age cannot be under 5 years");
+                    throw new IndexOutOfRangeException("Your age cannot be under 5 years.");
                 }
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Your age cannot be empty");
+                    throw new ArgumentNullException("Your age cannot be empty.");
                 }
                 this.age = value;
             }
         }
+
+        // TODO Overrite toString()
     }
 }

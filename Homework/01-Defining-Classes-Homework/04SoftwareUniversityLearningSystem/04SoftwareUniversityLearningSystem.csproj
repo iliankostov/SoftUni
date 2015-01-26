@@ -41,7 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentStudent.cs" />
+    <Compile Include="DropoutStudent.cs" />
+    <Compile Include="GraduateStudent.cs" />
+    <Compile Include="JuniorTrainer.cs" />
+    <Compile Include="OnlineStudent.cs" />
+    <Compile Include="OnsiteStudent.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="SeniorTrainer.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="SULSTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

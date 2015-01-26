@@ -14,5 +14,7 @@
         {
             Console.WriteLine("Course {0} has been created.", courseName);
         }
+
+        // TODO Overrite toString()
     }
 }

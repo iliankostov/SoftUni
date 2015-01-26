@@ -43,9 +43,11 @@
             {
                 if (value < 2.0 || value > 6.0)
                 {
-                    throw new IndexOutOfRangeException("The average grade is out of range [2.0 ... 6.0]");
+                    throw new IndexOutOfRangeException("The average grade is out of range [2.0 ... 6.0].");
                 }
             }
         }
+
+        // TODO Overrite toString()
     }
 }
