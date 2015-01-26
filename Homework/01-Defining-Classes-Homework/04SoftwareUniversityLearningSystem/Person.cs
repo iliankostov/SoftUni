@@ -1,19 +1,19 @@
 ﻿namespace SoftwareUniversityLearningSystem
 {
     using System;
-    class Person
+    public class Person
     {
         // Create fields
         private string firstName;
         private string lastName;
         private int age;
 
-        // Create constructor
+        // Create constructor for class Person
         public Person(string firstName, string lastName, int age)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Age = age;
         }
 
         // Create and validate property FirstName
@@ -27,7 +27,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Please fill first name");
+                    throw new ArgumentNullException("Your first name cannot be empty");
                 }
                 this.firstName = value;
             }
@@ -44,7 +44,7 @@
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Please fill last name");
+                    throw new ArgumentNullException("Your last name cannot be empty");
                 }
                 this.lastName = value;
             }
@@ -65,7 +65,7 @@
                 }
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Please fill your age");
+                    throw new ArgumentNullException("Your age cannot be empty");
                 }
                 this.age = value;
             }
