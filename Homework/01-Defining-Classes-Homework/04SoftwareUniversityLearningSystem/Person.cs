@@ -63,14 +63,15 @@
                 {
                     throw new IndexOutOfRangeException("Your age cannot be under 5 years.");
                 }
-                if (value == null)
-                {
-                    throw new ArgumentNullException("Your age cannot be empty.");
-                }
                 this.age = value;
             }
         }
 
-        // TODO Overrite toString()
+        // Overrite toString()
+        public override string ToString()
+        {
+            return String.Format("Student name: {0} {1}\nAge: {2}\n", FirstName, LastName, Age);
+        }
+
     }
 }

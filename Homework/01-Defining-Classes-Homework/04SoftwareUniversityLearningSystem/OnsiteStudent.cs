@@ -31,6 +31,11 @@
             }
         }
 
-        // TODO Overrite toString()
+        // Overrite toString()
+        public override string ToString()
+        {
+            return String.Format("Student name: {0} {1}\nAge: {2}\nStudent number: {3}\nAverage grade: {4}\nCurrent course: {5}\nNumber of visits: {6}\n",
+                FirstName, LastName, Age, StudentNumber, AverageGrade, CurrentCourse, numberOfVisits);
+        }
     }
 }

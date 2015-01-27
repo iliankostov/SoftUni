@@ -15,6 +15,10 @@
             Console.WriteLine("Course {0} has been created.", courseName);
         }
 
-        // TODO Overrite toString()
+        // Overrite toString()
+        public override string ToString()
+        {
+            return String.Format("Student name: {0} {1}\nAge: {2}\n", FirstName, LastName, Age);
+        }
     }
 }
