@@ -2,7 +2,8 @@
 {
     using System;
     using Points3D;
-    static class DistanceCalculator
+
+    public static class DistanceCalculator
     {
         // Create static method to calculate distance in the 3D space.
         public static double CalcDist(Point3D pointOne, Point3D pointTwo)

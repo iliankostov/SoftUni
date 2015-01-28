@@ -1,20 +1,30 @@
 ﻿namespace Points3D
 {
     using System;
+
     public class Point3D
     {
         // Create fields
+        private static readonly Point3D startingPoint3D = new Point3D(0, 0, 0);
         private double x;
         private double y;
         private double z;
-        private static readonly Point3D startingPoint3D = new Point3D(0, 0, 0);
-
+        
         // Create constructor
         public Point3D(double x, double y, double z)
         {
             this.X = x;
             this.Y = y;
             this.Z = z;
+        }
+
+        // Create static property StartingPoint3D
+        public static Point3D StartingPoint3D
+        {
+            get
+            {
+                return startingPoint3D;
+            }
         }
 
         // Create property X
@@ -24,6 +34,7 @@
             {
                 return this.x;
             }
+
             set
             {
                 this.x = value;
@@ -37,6 +48,7 @@
             {
                 return this.y;
             }
+
             set
             {
                 this.y = value;
@@ -50,18 +62,10 @@
             {
                 return this.z;
             }
+
             set
             {
                 this.z = value;
-            }
-        }
-
-        // Create static property StartingPoint3D
-        public static Point3D StartingPoint3D
-        {
-            get
-            {
-                return startingPoint3D;
             }
         }
 

@@ -2,9 +2,10 @@
 {
     using System;
     using Points3D;
-    class DistanceCalculatorMain
+
+    internal class DistanceCalculatorMain
     {
-        static void Main()
+        internal static void Main()
         {
             Point3D pointZero = Point3D.StartingPoint3D;
             Point3D pointOne = new Point3D(1, 1, 1);

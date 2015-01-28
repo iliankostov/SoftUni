@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02DistanceCalculator", "02D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06Namespaces", "06Namespaces\06Namespaces.csproj", "{A76FCABF-16FD-4BDC-826D-4D9A29FAB01A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03Paths", "03Paths\03Paths.csproj", "{D12B8A35-B9B6-4F59-92BE-4D8C0E49F02D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A76FCABF-16FD-4BDC-826D-4D9A29FAB01A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A76FCABF-16FD-4BDC-826D-4D9A29FAB01A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A76FCABF-16FD-4BDC-826D-4D9A29FAB01A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12B8A35-B9B6-4F59-92BE-4D8C0E49F02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12B8A35-B9B6-4F59-92BE-4D8C0E49F02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12B8A35-B9B6-4F59-92BE-4D8C0E49F02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12B8A35-B9B6-4F59-92BE-4D8C0E49F02D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

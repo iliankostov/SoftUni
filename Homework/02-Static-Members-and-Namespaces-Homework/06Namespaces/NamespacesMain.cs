@@ -5,9 +5,9 @@
     using Geometry.Geometry3D;
     using Geometry.Storage;
     using Geometry.UI;
-    class NamespacesMain
+    internal class NamespacesMain
     {
-        static void Main()
+        internal static void Main()
         {
 
         }

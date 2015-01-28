@@ -1,9 +1,10 @@
 ﻿namespace Points3D
 {
     using System;
-    class Point3DMain
+
+    internal class Point3DMain
     {
-        static void Main()
+        internal static void Main()
         {
             Point3D pointZero = Point3D.StartingPoint3D;
 
