@@ -2,15 +2,15 @@
 {
     using System;
     using System.Collections.Generic;
-    class EnterNumbersMain
+
+    internal class EnterNumbersMain
     {
-        static void Main()
+        internal static void Main()
         {
             int start = 0;
             List<int> numbers = new List<int>();
             for (int i = 1; i <= 10; i++)
-            {
-                
+            {               
                 try
                 { 
                     numbers.Add(ReadNumber(start, 100));    
@@ -27,11 +27,13 @@
                     i--;
                 }
             }
+
             Console.Write("Your list is: ");
             foreach (int number in numbers)
             {
                 Console.Write(number + " ");
             }
+
             Console.WriteLine();
         }
 

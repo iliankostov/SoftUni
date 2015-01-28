@@ -1,9 +1,10 @@
 ﻿namespace SquareRoot
 {
     using System;
-    class SquareRootMain
+
+    internal class SquareRootMain
     {
-        static void Main()
+        internal static void Main()
         {
             Console.Write("Please enter positive integer number: ");
             string input = Console.ReadLine();
@@ -14,8 +15,9 @@
                 {
                     throw new ArgumentOutOfRangeException();
                 }
+
                 double sqrtNum = Math.Sqrt(number);
-                Console.WriteLine("The square root of {0} is {1:0.00}",number, sqrtNum);
+                Console.WriteLine("The square root of {0} is {1:0.00}", number, sqrtNum);
             }
             catch (FormatException)
             {
