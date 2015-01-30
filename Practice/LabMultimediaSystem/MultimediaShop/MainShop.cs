@@ -1,14 +1,14 @@
 ﻿namespace MultimediaShop
 {
     using System;
+    using System.Collections.Generic;
     using CoreLogic;
     using Interfaces;
     using Models;
-    using System.Collections.Generic;
 
-    class MainShop
+    internal class MainShop
     {
-        static void Main()
+        internal static void Main()
         {
             Item sallingerBook = new Book("4adwlj4", "Catcher in the Rye", 20.00m, "J. D. Salinger", "fiction");
             Item threeManBook = new Book("84djesd", "Three Men in a Boat", 39.99m, "Jerome K. Jerome", new List<string> { "comedy" });
@@ -23,7 +23,6 @@
             Console.WriteLine(dieHardSale.SaleDate); // 1/30/2015 2:31:55 PM (today)
             Sale acSale = new Sale(acGame);
             Console.WriteLine(acSale.SaleDate); // 1/30/2010 2:31:55 PM
-
 
             DateTime afterOneWeek = today.AddDays(30);
             Rent bookRent = new Rent(sallingerBook, today, afterOneWeek);

@@ -1,15 +1,12 @@
 ﻿namespace MultimediaShop.Models
 {
     using System;
-    using Interfaces;
+    using MultimediaShop.Interfaces;
 
     public class Rent : IRenntable
     {
         private Item rentItem;
-        public DateTime RentDate { get; set; }
-        public DateTime Deadline { get; set; }
-        public DateTime ReturnDate { get; set; }
-
+       
         public Rent(Item rentItem, DateTime rentDate, DateTime deadline)
         {
             this.RentItem = rentItem;
@@ -19,13 +16,19 @@
 
         public Rent(Item rentItem, DateTime rentDate)
             : this(rentItem, rentDate, rentDate.AddDays(30))
-        {           
+        {
         }
 
         public Rent(Item rentItem)
             : this(rentItem, DateTime.Now, DateTime.Now.AddDays(30))
         {
         }
+
+        public DateTime RentDate { get; set; }
+
+        public DateTime Deadline { get; set; }
+
+        public DateTime ReturnDate { get; set; }
 
         public RentStatus RentState
         {
@@ -45,7 +48,16 @@
                 {
                     return RentStatus.Pending;
                 }
+            }
+        }
 
+        public decimal RentFine
+        {
+            get
+            {
+                double diff = (this.ReturnDate - this.Deadline).TotalDays;
+                decimal fine = (decimal)(diff * 0.01) * this.rentItem.Price;
+                return fine;
             }
         }
 
@@ -55,32 +67,26 @@
             {
                 return this.rentItem;
             }
+
             set
             {
                 if (value == null)
                 {
                     throw new ArgumentNullException("Rent Item cannot be null");
                 }
+
                 this.rentItem = value;
             }
-        }
-        private bool IsSetDate(DateTime dateTime)
-        {
-            return dateTime.Year > 1;
-        }
-
-        public decimal RentFine
-        {
-            get {
-                double diff = (this.ReturnDate - this.Deadline).TotalDays;
-                decimal fine = (decimal)(diff * 0.01) * this.rentItem.Price;
-                return fine;
-            }    
         }
 
         public void ReturnItem()
         {
             this.ReturnDate = DateTime.Now;
+        }
+
+        private bool IsSetDate(DateTime dateTime)
+        {
+            return dateTime.Year > 1;
         }
     }
 }

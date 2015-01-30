@@ -1,26 +1,14 @@
 ﻿namespace MultimediaShop.Models
 {
     using System;
-    using Interfaces;
     using System.Collections.Generic;
+    using MultimediaShop.Interfaces;
 
     public abstract class Item : IItem
     {
         private string id;
         private string title;
         private decimal price;
-
-        public List<string> Genres
-        {
-            get;
-            private set;
-        }
-
-        public string Genre 
-        { 
-            get; 
-            private set; 
-        }
 
         public Item(string id, string title, decimal price)
         {
@@ -41,23 +29,37 @@
             this.Genre = genre;
         }
 
+        public List<string> Genres
+        {
+            get;
+            private set;
+        }
+
+        public string Genre
+        {
+            get;
+            private set;
+        }
+
         public string Id
         {
             get
             { 
                 return this.id;
             }
+
             set
             {
-                if (value == "")
+                if (value == string.Empty)
                 {
                     throw new ArgumentNullException("Item Id cannot be empty.");
                 }
+
                 if (value.Length < 4)
                 {
                     throw new ArgumentOutOfRangeException("Item Id must be at least 4 symbols long.");
-
                 }
+
                 this.id = value;
             }
         }
@@ -68,12 +70,14 @@
             {
                 return this.title;
             }
+
             set
             {
-                if (value == "")
+                if (value == string.Empty)
                 {
                     throw new ArgumentNullException("Item Title cannot be empty.");
                 }
+
                 this.title = value;
             }
         }
@@ -84,12 +88,14 @@
             {
                 return this.price;
             }
+
             set
             {
                 if (value < 0M)
                 {
                     throw new IndexOutOfRangeException("Item Price cannot be negative.");
                 }
+
                 this.price = value;
             }
         }

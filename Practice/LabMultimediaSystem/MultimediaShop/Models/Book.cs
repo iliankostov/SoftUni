@@ -25,12 +25,14 @@
             {
                 return this.author;
             }
+
             set
             {
                 if (value.Length < 3)
                 {
                     throw new ArgumentOutOfRangeException("The Author must be at least 3 symbols.");
                 }
+
                 this.author = value;
             }
         }

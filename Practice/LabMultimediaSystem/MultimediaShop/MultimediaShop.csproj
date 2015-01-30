@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreLogic\ShopEngine.cs" />
     <Compile Include="Models\AgeRestriction.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Game.cs" />

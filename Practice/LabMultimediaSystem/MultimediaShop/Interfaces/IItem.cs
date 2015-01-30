@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace MultimediaShop.Interfaces
 {
     using System;
     using System.Collections.Generic;
