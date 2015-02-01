@@ -9,7 +9,7 @@
 
         public override string ToString()
         {
-            return string.Format("Full name: {0} {1}\nID: {2}\n Department: {3}\nSalary: {4:0.00}", this.FirstName, this.LastName, this.Id, this.Department, this.Salary);
+            return string.Format("Full name: {0} {1}\nID: {2}\n Department: {3}\nSalary: {4:0.00}s", this.FirstName, this.LastName, this.Id, this.Department, this.Salary);
         }
     }
 }

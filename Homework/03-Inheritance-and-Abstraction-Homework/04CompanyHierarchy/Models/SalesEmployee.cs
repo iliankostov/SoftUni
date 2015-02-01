@@ -40,6 +40,8 @@
                 text.Append(sale);
             }
 
+            text.AppendLine("\n");
+
             return text.ToString();
         }
     }

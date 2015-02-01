@@ -37,7 +37,7 @@
             text.AppendLine("Set of employees:");
             foreach (var employee in this.setOfEmployees)
             {
-                text.Append(employee);
+                text.Append(employee);               
             }
 
             return text.ToString();

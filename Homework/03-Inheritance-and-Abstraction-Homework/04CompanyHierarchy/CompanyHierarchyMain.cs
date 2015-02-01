@@ -60,6 +60,7 @@
                 foreach (var employee in employees)
                 {
                     Console.WriteLine(employee);
+                    Console.WriteLine(new string('*', 60));
                 }
             }
             catch (ArgumentNullException ane)
