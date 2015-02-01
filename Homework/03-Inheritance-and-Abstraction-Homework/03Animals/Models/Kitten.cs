@@ -1,6 +1,7 @@
 ﻿namespace Animals
 {
     using System;
+    using Contracts;
 
     public class Kitten : Cat, ISound
     {

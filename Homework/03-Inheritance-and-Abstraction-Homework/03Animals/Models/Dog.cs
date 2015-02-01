@@ -1,17 +1,18 @@
 ﻿namespace Animals
 {
     using System;
+    using Contracts;
 
-    public class Frog : Animal, ISound
+    public class Dog : Animal, ISound
     {
-        public Frog(string name, int age, Gender gender)
+        public Dog(string name, int age, Gender gender)
             : base(name, age, gender)
         {
         }
 
         public void ProduceSound()
         {
-            Console.WriteLine("kra kra kra");
+            Console.WriteLine("bark bark bark");
         }
     }
 }
