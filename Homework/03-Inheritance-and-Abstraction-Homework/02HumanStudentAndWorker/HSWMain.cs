@@ -22,6 +22,7 @@
                 new Student("Kalin", "Mandaliev", "007")
             };
             List<Student> ascendingStudents = students.OrderBy(a => a.FacultyNumber).ToList();
+            Console.WriteLine("Ascending ordered students by faculty number:\n");
             foreach (var student in ascendingStudents)
             {
                 Console.WriteLine(student);
@@ -33,16 +34,17 @@
             {
                 new Worker("Veselin", "Hristov", 250M, 8),
                 new Worker("Maria", "Hristova", 200M, 10),
-                new Worker("Asen", "Hristov", 300M, 10),
+                new Worker("Asen", "Kostov", 300M, 10),
                 new Worker("Ivaylo", "Angelov", 150M, 7.5),
-                new Worker("Biser", "Kostov", 188M, 6.75),
-                new Worker("Georgi", "Ivanov", 2000M, 5.25),
+                new Worker("Biser", "Hristov", 188M, 6.75),
+                new Worker("Georgi", "Georgiev", 2000M, 5.25),
                 new Worker("Evgeni", "Minchev", 10000M, 2.5),
-                new Worker("Rosen", "Elenkov", 50M, 1),
-                new Worker("Ivan", "Georgiev", 60M, 2),
-                new Worker("Kalin", "Mandaliev", 400M, 8)
+                new Worker("Rosen", "Mandaliev", 50M, 1),
+                new Worker("Ivan", "Ivanov", 60M, 2),
+                new Worker("Kalin", "Elenkov", 400M, 8)
             };
             List<Worker> descendingWorkers = workers.OrderByDescending(b => b.MoneyPerHour()).ToList();
+            Console.WriteLine("Descending ordered workers by payment per hour:\n");
             foreach (var worker in descendingWorkers)
             {
                 Console.WriteLine(worker);
@@ -53,6 +55,7 @@
             List<Human> allHuman = new List<Human>();
             allHuman.AddRange(students);
             allHuman.AddRange(workers);
+            Console.WriteLine("Sorted humans by first name and last name:\n");
             List<Human> sortedHuman = allHuman.OrderBy(c => c.FirstName).ThenBy(d => d.LastName).ToList();
             foreach (var human in sortedHuman)
             {
