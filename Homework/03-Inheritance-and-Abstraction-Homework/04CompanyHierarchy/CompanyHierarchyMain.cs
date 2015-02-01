@@ -64,7 +64,7 @@
             }
             catch (ArgumentNullException ane)
             {
-                Console.Error.WriteLine("Error: " + ane.Message);
+                Console.Error.WriteLine("Error: " + ane.ParamName);
             }
             catch (ArgumentException ae)
             {
