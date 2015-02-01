@@ -3,13 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "My Practice", "My Practice", "{27F08CE5-2CA2-410E-8461-71221B0F8A14}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exams Practice", "Exams Practice", "{1EF82734-D6DB-4A33-9871-1DCE64028C27}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Understanding-OOP", "Understanding-OOP\Understanding-OOP.csproj", "{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game Practice", "Game Practice", "{31955D23-0D36-4DFD-AC37-8542A09C3BBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +18,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{492F0E7F-C0FD-4125-ADEE-8341EF6A3E7D} = {27F08CE5-2CA2-410E-8461-71221B0F8A14}
 	EndGlobalSection
 EndGlobal
