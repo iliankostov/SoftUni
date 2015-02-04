@@ -10,7 +10,7 @@
         public Healer(string id, int x, int y, int healthPoints, int defensePoints, int healingPoints, Team team, int range)
             : base(id, x, y, healthPoints, defensePoints, team, range)
         {
-            this.HealingPoints = healthPoints;
+            this.HealingPoints = healingPoints;
         }
 
         public int HealingPoints { get; set; }
@@ -18,7 +18,7 @@
         public override Character GetTarget(IEnumerable<Character> targetsList)
         {
             var targets = from target in targetsList
-                         where target.IsAlive && target.Team == this.Team && target.IsAlive
+                         where target.IsAlive && target.Team == this.Team && target.Id != this.Id
                          orderby target.HealthPoints
                          select target;
             return targets.FirstOrDefault() as Character;

@@ -5,9 +5,9 @@ namespace TheSlum
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Engine engine = new Engine();
+            EngineTurbo engine = new EngineTurbo();
             engine.Run();
         }
     }

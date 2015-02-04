@@ -1,76 +1,80 @@
-﻿namespace TheSlum.GameEngine
+﻿namespace TheSlum
 {
     using System;
+    using GameEngine;
     using TheSlum.Models.Characters;
     using TheSlum.Models.Items;
 
     public class EngineTurbo : Engine
     {
-        public EngineTurbo()
-            : base()
-        {
-        }
-
         protected override void ExecuteCommand(string[] inputParams)
         {
             switch (inputParams[0])
             {
-                case "create":
-                    CreateCharacter(inputParams);
+                case "status":
+                    this.PrintCharactersStatus(this.characterList);
                     break;
-
+                case "create":
+                    this.CreateCharacter(inputParams);
+                    break;
                 case "add":
-                    AddItem(inputParams);
+                    this.AddItem(inputParams);
                     break;
                 default:
-                    base.ExecuteCommand(inputParams);
                     break;
             }
         }
 
         protected override void CreateCharacter(string[] inputParams)
         {
-            Character newCharacter;
-            switch (inputParams[1].ToLower())
+            string id = inputParams[2];
+            int x = int.Parse(inputParams[3]);
+            int y = int.Parse(inputParams[4]);
+            Team team = (Team)Enum.Parse(typeof(Team), inputParams[5]);
+
+            switch (inputParams[1])
             {
                 case "warrior":
-                    newCharacter = new Warrior(inputParams[2], int.Parse(inputParams[3]), int.Parse(inputParams[4]), 200, 100, 150, (Team)Enum.Parse(typeof(Team), inputParams[5], true), 2);
+                    characterList.Add(new Warrior(id, x, y, 200, 100, 150, team, 2));
                     break;
                 case "mage":
-                    newCharacter = new Mage(inputParams[2], int.Parse(inputParams[3]), int.Parse(inputParams[4]), 150, 50, 300, (Team)Enum.Parse(typeof(Team), inputParams[5], true), 5);
+                    characterList.Add(new Mage(id, x, y, 150, 50, 300, team, 5));
                     break;
                 case "healer":
-                    newCharacter = new Healer(inputParams[2], int.Parse(inputParams[3]), int.Parse(inputParams[4]), 75, 50, 60, (Team)Enum.Parse(typeof(Team), inputParams[5], true), 6);
+                    characterList.Add(new Healer(id, x, y, 75, 50, 60, team, 6));
                     break;
                 default:
                     break;
-            }            
+            }
         }
 
         protected new void AddItem(string[] inputParams)
         {
-            Character characterItem = GetCharacterById(inputParams[1]);
-            Item itemToAdd;
-            switch (inputParams[2].ToLower())
+            string recipientId = inputParams[1];
+            string itemId = inputParams[3];
+
+            foreach (var character in this.characterList)
             {
-                case "axe":
-                    itemToAdd = new Axe(inputParams[3]);
-                    characterItem.AddToInventory(itemToAdd);
-                    break;
-                case "shield":
-                    itemToAdd = new Shield(inputParams[3]);
-                    characterItem.AddToInventory(itemToAdd);
-                    break;
-                case "injection":
-                    itemToAdd = new InjectionBonus(inputParams[3]);
-                    characterItem.AddToInventory(itemToAdd);
-                    break;
-                case "pill":
-                    itemToAdd = new PillBonus(inputParams[3]);
-                    characterItem.AddToInventory(itemToAdd);
-                    break;
-                default:
-                    break;
+                if (character.Id == recipientId)
+                {
+                    switch (inputParams[2])
+                    {
+                        case "axe":
+                            character.AddToInventory(new Axe(itemId));
+                            break;
+                        case "injection":
+                            character.AddToInventory(new InjectionBonus(itemId));
+                            break;
+                        case "pill":
+                            character.AddToInventory(new PillBonus(itemId));
+                            break;
+                        case "shield":
+                            character.AddToInventory(new Shield(itemId));
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
         }
     }
