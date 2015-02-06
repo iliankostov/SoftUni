@@ -45,9 +45,9 @@
     <Compile Include="Models\AgeRestriction.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Game.cs" />
-    <Compile Include="Interfaces\IItem.cs" />
-    <Compile Include="Interfaces\IRenntable.cs" />
-    <Compile Include="Interfaces\ISellable.cs" />
+    <Compile Include="Contracts\IItem.cs" />
+    <Compile Include="Contracts\IRenntable.cs" />
+    <Compile Include="Contracts\ISellable.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="MainShop.cs" />
     <Compile Include="Models\RentStatus.cs" />

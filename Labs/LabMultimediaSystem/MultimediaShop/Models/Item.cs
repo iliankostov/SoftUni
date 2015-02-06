@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using MultimediaShop.Interfaces;
+    using MultimediaShop.Contracts;
 
     public abstract class Item : IItem
     {

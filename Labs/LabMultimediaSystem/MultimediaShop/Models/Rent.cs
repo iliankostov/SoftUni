@@ -1,7 +1,7 @@
 ﻿namespace MultimediaShop.Models
 {
     using System;
-    using MultimediaShop.Interfaces;
+    using MultimediaShop.Contracts;
 
     public class Rent : IRenntable
     {

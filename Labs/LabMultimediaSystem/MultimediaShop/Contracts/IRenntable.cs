@@ -1,4 +1,4 @@
-﻿namespace MultimediaShop.Interfaces
+﻿namespace MultimediaShop.Contracts
 {
     using System;
     using MultimediaShop.Models;
