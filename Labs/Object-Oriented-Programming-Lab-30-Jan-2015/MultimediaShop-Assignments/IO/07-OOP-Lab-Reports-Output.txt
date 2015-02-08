@@ -1,0 +1,15 @@
+- Rent Overdue
+Book 4fd332
+Title: Razkazi
+Price: 7.99
+Genres: story
+Author: Elin_Pelin
+Rent fine: 0.72
+- Rent Overdue
+Game 9fkj332
+Title: Empire_Earth
+Price: 17.60
+Genres: strategy
+Age Restriction: Minor
+Rent fine: 4.58 
+35.20

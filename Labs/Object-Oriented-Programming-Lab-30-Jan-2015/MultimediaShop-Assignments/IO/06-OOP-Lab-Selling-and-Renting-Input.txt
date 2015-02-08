@@ -1,0 +1,11 @@
+supply book 5 id=4fd332&title=Razkazi&price=7.99&author=Elin_Pelin&genre=story
+supply game 19 id=9fkj332&title=Empire_Earth&price=17.60&ageRestriction=Minor&genre=strategy
+sell 4fd332 24-12-2014
+sell 9fkj332 13-01-2015
+sell 9fkj332 14-01-2015
+
+supply book 5 id=4fd332&title=Razkazi&price=7.99&author=Elin_Pelin&genre=story
+supply game 19 id=9fkj332&title=Empire_Earth&price=17.60&ageRestriction=Minor&genre=strategy
+rent 4fd332 24-12-2014 24-01-2015
+rent 9fkj332 13-01-2015 23-02-2015
+rent 9fkj332 14-01-2015 14-05-2015
