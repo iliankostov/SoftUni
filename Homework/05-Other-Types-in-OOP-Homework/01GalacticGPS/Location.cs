@@ -1,9 +1,9 @@
 ﻿namespace GalacticGPS
 {
-    struct Location
+    internal struct Location
     {
         public Location(double latitude, double longtitude, Planet planet)
-            :this()
+            : this()
         {
             this.Latitude = latitude;
             this.Longitude = longtitude;
