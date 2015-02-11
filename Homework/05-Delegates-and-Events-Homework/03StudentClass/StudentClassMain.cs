@@ -9,11 +9,9 @@
             Student firstStudent = new Student("Slavin", 25);
             Student secondStudent = new Student("Nevena", 22);
 
-            firstStudent.PropertyChanged += (sender, eventArgs) => 
-                Console.WriteLine("Property  cnaged: {0} (from {1} to {2})", eventArgs.Property, eventArgs.OldValue, eventArgs.NewValue);
+            firstStudent.PropertyChanged += (sender, eventArgs) => Console.WriteLine("Property  cnaged: {0} (from {1} to {2})", eventArgs.Property, eventArgs.OldValue, eventArgs.NewValue);
 
-            secondStudent.PropertyChanged += (sender, eventArgs) => 
-                Console.WriteLine("Property  cnaged: {0} (from {1} to {2})", eventArgs.Property, eventArgs.OldValue, eventArgs.NewValue);
+            secondStudent.PropertyChanged += (sender, eventArgs) => Console.WriteLine("Property  cnaged: {0} (from {1} to {2})", eventArgs.Property, eventArgs.OldValue, eventArgs.NewValue);
 
             firstStudent.Name = "Slavcho faktora";
             firstStudent.Age = 26;
