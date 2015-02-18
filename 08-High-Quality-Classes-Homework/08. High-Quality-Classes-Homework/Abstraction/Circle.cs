@@ -3,13 +3,31 @@
     using System;
 
     internal class Circle : Figure
-    {      
+    {
+        private double radius;
+
         public Circle(double radius)
         {
             this.Radius = radius;
         }
 
-        public virtual double Radius { get; set; }
+        public double Radius
+        {
+            get
+            {
+                return this.radius;
+            }
+
+            private set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("The radius should be bigger than 0.");
+                }
+
+                this.radius = value;
+            }
+        }
 
         public override double CalcPerimeter()
         {

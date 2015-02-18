@@ -1,16 +1,53 @@
 ﻿namespace Abstraction
 {
+    using System;
+
     internal class Rectangle : Figure
     {
+        private double width;
+        private double height;
+
         public Rectangle(double width, double height)
         {
             this.Width = width;
             this.Height = height;
         }
 
-        public virtual double Width { get; set; }
+        public double Width
+        {
+            get
+            {
+                return this.width;
+            }
 
-        public virtual double Height { get; set; }
+            private set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("The width should be bigger than 0.");
+                }
+
+                this.width = value;
+            }
+        }
+
+        public double Height
+        {
+            get
+            {
+                return this.height;
+            }
+
+            private set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("The height should be bigger than 0.");
+                }
+
+                this.height = value;
+            }
+        }
 
         public override double CalcPerimeter()
         {
