@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{268AEC63-DABA-4607-8E60-997E09EB5F2C}</ProjectGuid>
+    <ProjectGuid>{CC40B053-CC90-4956-8591-01AC016C3188}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CohesionAndCoupling</RootNamespace>
-    <AssemblyName>Cohesion-and-Coupling</AssemblyName>
+    <RootNamespace>InheritanceAndPolymorphism</RootNamespace>
+    <AssemblyName>Inheritance-and-Polymorphism</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,10 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MathUtils\DistanceCalculator.cs" />
-    <Compile Include="SpaceFigures.cs" />
-    <Compile Include="StringUtils\FileNameUtils.cs" />
-    <Compile Include="UtilsExamples.cs" />
+    <Compile Include="Contracts\ICourse.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\OffsiteCourse.cs" />
+    <Compile Include="Models\LocalCourse.cs" />
+    <Compile Include="CoursesExamples.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
