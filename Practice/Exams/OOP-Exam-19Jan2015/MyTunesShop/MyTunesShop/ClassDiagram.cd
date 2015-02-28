@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyTunesShop.Song" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAUAAIABQACAAABAgIBAAACAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Song.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.145" />
+  </Class>
+  <Class Name="MyTunesShop.MyTunesEngine" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAgAQAAAAAQQAIAAAAAAAAJAAEAAQAASAAABgBAEAM=</HashCode>
+      <FileName>MyTunesEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTunesShop.MyTunesShopProgram" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAA=</HashCode>
+      <FileName>MyTunesShopProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTunesShop.Performer" Collapsed="true">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAEAAQAAAAEAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Performer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyTunesShop.Printer" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Printer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTunesShop.SalesInfo" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>SalesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTunesShop.Media" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAQQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Media.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyTunesShop.Album">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAIEAAAEAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Album.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.117" />
+  </Class>
+  <Class Name="MyTunesShop.Band">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAEAAAAAAA=</HashCode>
+      <FileName>Band.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MyTunesShop.Singer">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Singer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MyTunesShop.IAlbum" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAIEAAAEAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IAlbum.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyTunesShop.IBand" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>IBand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyTunesShop.IMedia" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMedia.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyTunesShop.IPerformer" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IPerformer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyTunesShop.IRateable" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRateable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyTunesShop.ISong" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAACAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISong.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MyTunesShop.PerformerType" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>PerformerType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
