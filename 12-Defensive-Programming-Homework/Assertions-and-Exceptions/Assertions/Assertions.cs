@@ -39,7 +39,6 @@ public class Assertions
     {
         Debug.Assert(startIndex < endIndex, "startIndex should be less than the endIndex.");
         Debug.Assert(arr.Length >= endIndex, "endIndex should be less than the array length.");
-        Debug.Assert((startIndex >= 0) && (endIndex >= 0), "startIndex and endIndex should be positive integer numbers.");
         int minElementIndex = startIndex;
         for (int i = startIndex + 1; i <= endIndex; i++)
         {
@@ -57,7 +56,6 @@ public class Assertions
     {
         Debug.Assert(startIndex < endIndex, "startIndex should be less than the endIndex.");
         Debug.Assert(arr.Length >= endIndex, "endIndex should be less than the array length.");
-        Debug.Assert((startIndex >= 0) && (endIndex >= 0), "startIndex and endIndex should be positive integer numbers.");
         while (startIndex <= endIndex)
         {
             int midIndex = (startIndex + endIndex) / 2;
