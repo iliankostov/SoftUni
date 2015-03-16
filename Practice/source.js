@@ -9,7 +9,7 @@ var Field = (function () {
             return this._name
         },
         set name(name) {
-            if (typeof  name === 'number' || name.length < 3) {
+            if (typeof name === 'number' || name.length < 3) {
                 throw  {
                     name: "Invalid name",
                     message: "name must be greater than 3 symbols."
