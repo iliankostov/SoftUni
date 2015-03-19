@@ -1,7 +1,8 @@
 var Geometry2D = Geometry2D || {};
-// how to add it in a module?
+
 Geometry2D.triangle = (function () {
-    var triangle = Geometry2D.shape.extend({
+    var triangle;
+    triangle = Geometry2D.shape.extend({
         init: function init(startPointX, startPointY, color,
                             secondPointX, secondPointY, thirdPointX, thirdPointY) {
             this._super.init.call(this, startPointX, startPointY, color);
@@ -11,7 +12,7 @@ Geometry2D.triangle = (function () {
             this.thirdPointY = thirdPointY;
             return this;
         },
-        toString: function(){
+        toString: function () {
             return this._super.toString.call(this) +
                 " secondPointX: " + this.secondPointX + " secondPointY " + this.secondPointY +
                 " thirdPointX: " + this.thirdPointX + " thirdPointY " + this.thirdPointY;
