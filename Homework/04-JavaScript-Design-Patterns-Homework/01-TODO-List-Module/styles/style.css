@@ -1,0 +1,15 @@
+body #container {
+  margin: 20px auto;
+  width: 500px;
+  border: 1px solid black; }
+  body #container h1 {
+    text-align: center; }
+  body #container #inner-container {
+    margin: 10px;
+    border: 1px solid black; }
+  body #container form {
+    margin: 10px; }
+    body #container form button {
+      margin-left: 10px; }
+
+/*# sourceMappingURL=style.css.map */
