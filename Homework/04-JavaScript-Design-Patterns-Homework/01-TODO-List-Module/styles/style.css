@@ -1,15 +1,39 @@
-body #container {
-  margin: 20px auto;
-  width: 500px;
-  border: 1px solid black; }
-  body #container h1 {
-    text-align: center; }
-  body #container #inner-container {
-    margin: 10px;
+body #listWrapper {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 2px solid black; }
+  body #listWrapper h1 {
+    text-align: center;
+    font-size: 2rem; }
+  body #listWrapper #sectionWrapper {
+    padding: 5px;
+    margin: 15px;
     border: 1px solid black; }
-  body #container form {
+    body #listWrapper #sectionWrapper section {
+      margin: 5px;
+      padding: 5px; }
+      body #listWrapper #sectionWrapper section .listContainer {
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 5px; }
+        body #listWrapper #sectionWrapper section .listContainer h2 {
+          text-align: right;
+          margin: 0; }
+        body #listWrapper #sectionWrapper section .listContainer div {
+          margin: 3px 0; }
+          body #listWrapper #sectionWrapper section .listContainer div input[type='checkbox']:checked + label {
+            background-color: lightgreen; }
+          body #listWrapper #sectionWrapper section .listContainer div label {
+            display: inline-block;
+            border-bottom: 1px solid black;
+            width: 90%;
+            height: 100%; }
+      body #listWrapper #sectionWrapper section input[name='itemName'], body #listWrapper #sectionWrapper section button[name='addItemButton'] {
+        position: relative;
+        left: 335px;
+        margin: 2px; }
+  body #listWrapper input, body #listWrapper button {
     margin: 10px; }
-    body #container form button {
-      margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */
