@@ -4,9 +4,9 @@
     using System.Collections.Generic;
     using System.Diagnostics;
 
-    class SortTests
+    internal class SortTests
     {
-        static void Main()
+        private static void Main()
         {
             Console.WriteLine("Generating collections ... Please wait!");
             int i;
@@ -48,17 +48,17 @@
             {
                 randomDoubles.Add(randDoubles.Next(1, 10000000));
             }
-            
+
             var sortedStrings = new List<string>();
             for (i = 0; i <= 9999999; i += 26)
             {
                 for (int j = 97; j < 123; j++)
                 {
-                    letter = (char) j + "";
+                    letter = (char)j + "";
                     sortedStrings.Add(letter);
                 }
             }
-            
+
             var reversedStrings = new List<string>();
             for (i = 0; i <= 9999999; i += 26)
             {
@@ -76,7 +76,7 @@
                 letter = (char)randStrings.Next(97, 123) + "";
                 randomStrings.Add(letter);
             }
-            
+
             Console.WriteLine("\nTest sort for ints:");
 
             Stopwatch sortedIntStopwatchIs = new Stopwatch();
@@ -136,6 +136,8 @@
             randomStrings.Sort();
             randomStringStopwatchIs.Stop();
             Console.WriteLine("Sort random strings:       {0}", randomStringStopwatchIs.Elapsed);
+
+            // TODO: test another sort algoritms
         }
     }
 }
