@@ -1,12 +1,7 @@
 // TODO: Implement popup function constructors
 var poppy = poppy || {};
 
-Object.prototype.extends = function (parent) {
-    this.prototype = Object.create(parent.prototype);
-    this.prototype.constructor = this;
-};
-
-var Popup = (function () {
+poppy.Popup = (function () {
     // define function constructor Popup
     var Popup;
     Popup = function (title, message) {
@@ -17,24 +12,24 @@ var Popup = (function () {
     return Popup;
 })();
 
-var Success = (function () {
+poppy.Success = (function () {
     // define function constructor Success
     var Success;
     Success = function (title, message) {
-        Popup.call(this, title, message);
+        poppy.Popup.call(this, title, message);
         this._popupData.type = 'success';
         this._popupData.position = 'bottomLeft';
     };
     // extend base
-    Success.extends(Popup);
+    Success.extends(poppy.Popup);
     return Success;
 })();
 
-var Info = (function () {
+poppy.Info = (function () {
     // define function constructor Success
     var Info;
     Info = function (title, message) {
-        Popup.call(this, title, message);
+        poppy.Popup.call(this, title, message);
         this._popupData.type = 'info';
         this._popupData.position = 'topLeft';
         this._popupData.closeButton = true;
@@ -42,35 +37,35 @@ var Info = (function () {
         this._popupData.timeout = 3000;
     };
     // extend base
-    Info.extends(Popup);
+    Info.extends(poppy.Popup);
     return Info;
 })();
 
-var Error = (function () {
+poppy.Error = (function () {
     // define function constructor Success
     var Error;
     Error = function (title, message) {
-        Popup.call(this, title, message);
+        poppy.Popup.call(this, title, message);
         this._popupData.type = 'error';
         this._popupData.position = 'topRight';
         this._popupData.autoHide = true;
         this._popupData.timeout = 3000;
     };
     // extend base
-    Error.extends(Popup);
+    Error.extends(poppy.Popup);
     return Error;
 })();
 
-var Warning = (function () {
+poppy.Warning = (function () {
     // define function constructor Success
     var Warning;
     Warning = function (title, message, callback) {
-        Popup.call(this, title, message);
+        poppy.Popup.call(this, title, message);
         this._popupData.type = 'warning';
         this._popupData.position = 'bottomRight';
         this._popupData.callback = callback;
     };
     // extend base
-    Warning.extends(Popup);
+    Warning.extends(poppy.Popup);
     return Warning;
 })();
