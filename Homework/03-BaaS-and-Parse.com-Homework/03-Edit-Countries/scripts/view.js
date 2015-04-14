@@ -32,6 +32,17 @@ world.View = (function() {
             }
         )
     };
+
+    View.prototype.editCountry = function (countryId, country) {
+        this.model.countries.editCountry(countryId, {name:country},
+            function (data) {
+                $('#wrapper').find($('[data-id=' + countryId + '] > p')).text(country);
+            },
+            function (error) {
+                console.log(error.responseText);
+            }
+        );
+    };
     
     View.prototype.deleteCountry = function (countryId) {
         this.model.countries.deleteCountry(countryId,
@@ -57,8 +68,12 @@ world.View = (function() {
         var countryName = $('<p/>').text(country);
         var editInput = $('<input/>');
         var editButton = $('<button class="edit-country">Edit</button>');
-        var deleteButton = $('<button class="delete-country">Delete</button>');
+        editButton.click(function () {
+            var newCountryName = editInput.val();
+            _this.editCountry(countryId, newCountryName);
+        });
 
+        var deleteButton = $('<button class="delete-country">Delete</button>');
         deleteButton.click(function () {
             _this.deleteCountry(countryId);
         });
