@@ -6,6 +6,7 @@ world.View = (function() {
     }
 
     View.prototype.showAllCountries = function () {
+        var _this = this;
         this.model.countries.loadCountries(
             function (countryData) {
                 countryData.results.forEach(function (country) {
@@ -14,7 +15,8 @@ world.View = (function() {
                     var countryName = $('<p/>').text(country.name);
                     countryWrapper.append(countryName);
                     $("#wrapper").append(countryWrapper);
-                })
+                });
+                _this.showTownsByCountries();
             },
             function (error) {
                 console.error(error.responseText);
