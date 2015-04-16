@@ -62,7 +62,7 @@ app.view = (function() {
             _this.createBook();
         });
         $('#edit-btn').click(function () {
-            var bookId = $('#edit-btn').data('id');
+            var bookId = $('#edit-btn').attr('data-id');
             _this.editBook(bookId);
         })
     };
