@@ -3,7 +3,7 @@ requirejs.config({
 
     paths: {
         // libs
-        noty: '../jquery.noty.packaged.min',
+        noty: '../libs/jquery.noty.packaged.min',
         jquery: '../libs/jquery-2.1.3.min',
         mustache: '../libs/mustache.min',
         q: '../libs/q.min',
