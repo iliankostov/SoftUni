@@ -1,0 +1,13 @@
+<h2>Students</h2>
+
+<div>{{message}} <a href="#/home">home</a></div>
+
+<ul ng-repeat="student in students">
+    <li>
+        <div>Student name: {{student.name}}</div>
+        <div>Student photo: <img ng-src="{{student.photo}}"/></div>
+        <div>Student grade: {{student.grade}}</div>
+        <div>Student school: {{student.school}}</div>
+        <div>Student teacher: {{student.teacher}}</div>
+    </li>
+</ul>
