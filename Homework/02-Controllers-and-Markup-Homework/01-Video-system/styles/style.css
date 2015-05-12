@@ -1,0 +1,22 @@
+body .video_container {
+  display: inline-block;
+  margin: 10px;
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 10px; }
+  body .video_container img {
+    width: 150px;
+    height: 150px; }
+body .comments_container {
+  margin: 5px;
+  padding: 5px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 5px; }
+body .add_video {
+  margin: 20px; }
+  body .add_video label, body .add_video input {
+    margin: 10px;
+    padding: 3px; }
+
+/*# sourceMappingURL=style.css.map */

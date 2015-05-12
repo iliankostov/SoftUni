@@ -1,0 +1,47 @@
+<h2>Videos</h2>
+
+<div>{{message}} <a href="#/home">home</a></div>
+
+<form class="add_video" name="addForm">
+    <label for="title">Title:</label>
+    <input id="title" type="text" name="title" required ng-model="add.title" />
+    <span ng-show="addForm.title.$error.required">*</span><br/>
+    <label for="cover">Cover url:</label>
+    <input id="cover" type="text" name="cover" required ng-pattern="regex" ng-model="add.pictureUrl"/>
+    <span ng-show="addForm.cover.$error.required || addForm.cover.$error.pattern">*</span><br/>
+    <label for="category">Category:</label>
+    <input id="category" type="text" name="category" required ng-model="add.category"/>
+    <span ng-show="addForm.category.$error.required">*</span><br/>
+    <label for="length">Length:</label>
+    <input id="length" type="time" ng-model="add.length"/><br/>
+    <label for="date">Date:</label>
+    <input id="date" type="date" ng-model="add.date"/><br/>
+    <label for="haveSubtitles">Subtitles:</label>
+    <input id="haveSubtitles" type="checkbox" ng-model="add.haveSubtitles"/><br/>
+    <input type="submit"
+           ng-disabled="addForm.title.$error.required || addForm.cover.$error.required || addForm.category.$error.required || addForm.cover.$error.pattern"
+           ng-click="addVideo(add)" onclick="window.location.href = '#/videos'"/>
+</form>
+
+<ul class="video_container" ng-repeat="video in videos">
+    <li>
+        <div>Video title: {{video.title}}</div>
+        <div>Video cover: <img ng-src="{{video.pictureUrl}}"/></div>
+        <div>Video length: {{video.length}}</div>
+        <div>Video category: {{video.category}}</div>
+        <div>Video subscribers: {{video.subscribers}}</div>
+        <div>Video date: {{video.date | date :'dd.MMM.yyyy'}}</div>
+        <div>Video haveSubtitles: {{video.haveSubtitles}}</div>
+        <div>Comments:
+            <ul ng-repeat="comment in video.comments">
+                <li class="comments_container">
+                    <div>Username: {{comment.username}}</div>
+                    <div>content: {{comment.content}}</div>
+                    <div>date: {{comment.date | date :'dd.MMM.yyyy'}}</div>
+                    <div>likes: {{comment.likes}}</div>
+                    <div>websiteUrl: <a href="{{comment.websiteUrl}}">{{comment.websiteUrl}}</a></div>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>
