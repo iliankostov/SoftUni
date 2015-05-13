@@ -8,7 +8,8 @@
     <span ng-show="addForm.title.$error.required">*</span><br/>
     <label for="cover">Cover url:</label>
     <input id="cover" type="text" name="cover" required ng-pattern="regex" ng-model="add.pictureUrl"/>
-    <span ng-show="addForm.cover.$error.required || addForm.cover.$error.pattern">*</span><br/>
+    <span ng-show="addForm.cover.$error.required">*</span>
+    <span ng-show="addForm.cover.$error.pattern">Invalid cover url</span><br/>
     <label for="category">Category:</label>
     <input id="category" type="text" name="category" required ng-model="add.category"/>
     <span ng-show="addForm.category.$error.required">*</span><br/>
