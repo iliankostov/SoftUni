@@ -2,7 +2,8 @@
 
 <div>{{message}} <a href="#/home">home</a></div>
 
-<form class="add_video" name="addForm">
+<div class="add">
+    <form class="add_video" name="addForm">
     <label for="title">Title:</label>
     <input id="title" type="text" name="title" required ng-model="add.title" />
     <span ng-show="addForm.title.$error.required">*</span><br/>
@@ -11,20 +12,42 @@
     <span ng-show="addForm.cover.$error.required">*</span>
     <span ng-show="addForm.cover.$error.pattern">Invalid cover url</span><br/>
     <label for="category">Category:</label>
-    <input id="category" type="text" name="category" required ng-model="add.category"/>
+    <select name="category" id="category" required ng-model="add.category">
+        <option value="IT">IT</option>
+        <option value="English">English</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Logical">Logical</option>
+    </select>
     <span ng-show="addForm.category.$error.required">*</span><br/>
     <label for="length">Length:</label>
     <input id="length" type="text" ng-model="add.length"/><br/>
     <label for="date">Date:</label>
     <input id="date" type="date" ng-model="add.date"/><br/>
     <label for="haveSubtitles">Subtitles:</label>
-    <input id="haveSubtitles" type="checkbox" ng-model="add.haveSubtitles" ng-true-value="'Yes'" ng-false-value="'No'"/><br/>
+    <input id="haveSubtitles" type="checkbox" ng-model="add.haveSubtitles" ng-true-value="true" ng-false-value="false"/><br/>
     <input type="submit"
            ng-disabled="addForm.title.$error.required || addForm.cover.$error.required || addForm.category.$error.required || addForm.cover.$error.pattern"
            ng-click="addVideo(add)" onclick="window.location.href = '#/videos'"/>
 </form>
+</div>
 
-<ul class="video_container" ng-repeat="video in videos">
+<div class="filters">
+    <label for="filterByCategory">Show by category:</label>
+    <select id="filterByCategory" ng-model="filterBy.category">
+        <option selected value="">All</option>
+        <option value="IT">IT</option>
+        <option value="English">English</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Logical">Logical</option>
+    </select>
+    <label for="filterByDate">Show by date:</label>
+    <input id="filterByDate" type="date" ng-model="filterBy.date">
+    <label for="filterByHavingSubtitles">Subtitles:</label>
+    <input id="filterByHavingSubtitles" type="checkbox" ng-model="filterBy.haveSubtitles">
+</div>
+
+<div class="view">
+    <ul class="video_container" ng-repeat="video in videos | filter:filterBy">
     <li>
         <div>Title: {{video.title}}</div>
         <div>Cover: <img ng-src="{{video.pictureUrl}}"/></div>
@@ -46,3 +69,4 @@
         </div>
     </li>
 </ul>
+</div>

@@ -3,6 +3,7 @@ define(['app', 'videoData'], function (app) {
 
         $scope.message = 'Return to ';
         $scope.regex = /(https?:\/\/.*\.(?:png|jpg|gif))/i;
+
         $scope.addVideo = function addVideo(add) {
             var newVideo = {
                 title: add.title,
@@ -16,6 +17,8 @@ define(['app', 'videoData'], function (app) {
             };
 
             videoData.push(newVideo);
+
+            console.log(videoData);
         };
 
         $scope.videos = videoData;
