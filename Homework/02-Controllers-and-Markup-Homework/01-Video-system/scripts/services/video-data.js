@@ -4,7 +4,7 @@ define(['app'], function (app) {
             {
                 title: 'Course introduction',
                 pictureUrl: 'http://phfwc.org/wp-content/uploads/2015/01/example.jpg',
-                length: '3:32',
+                length: new Date(2015, 4, 14, 3, 32, 0),
                 category: 'IT',
                 subscribers: 3,
                 date: new Date(2015, 4, 14),
@@ -22,7 +22,7 @@ define(['app'], function (app) {
             {
                 title: 'Mathematics fundamentals',
                 pictureUrl: 'http://phfwc.org/wp-content/uploads/2015/01/example.jpg',
-                length: '13:32',
+                length: new Date(2015, 4, 14, 13, 32, 0),
                 category: 'Mathematics',
                 subscribers: 20,
                 date: new Date(2015, 4, 13),
@@ -32,7 +32,7 @@ define(['app'], function (app) {
             {
                 title: 'Advanced Algorithms',
                 pictureUrl: 'http://phfwc.org/wp-content/uploads/2015/01/example.jpg',
-                length: '33:30',
+                length: new Date(2015, 4, 14, 23, 30, 0),
                 category: 'Logical',
                 subscribers: 15,
                 date: new Date(2015, 4, 12),

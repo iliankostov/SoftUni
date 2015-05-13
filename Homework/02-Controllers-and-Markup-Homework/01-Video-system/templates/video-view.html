@@ -20,7 +20,7 @@
         </select>
         <span ng-show="addForm.category.$error.required">*</span><br/>
         <label for="length">Length:</label>
-        <input id="length" type="text" ng-model="add.length"/><br/>
+        <input id="length" type="time" ng-model="add.length"/><br/>
         <label for="date">Date:</label>
         <input id="date" type="date" ng-model="add.date"/><br/>
         <label for="haveSubtitles">Subtitles:</label>
@@ -60,7 +60,7 @@
             <div>Title: {{video.title}}</div>
             <div>Cover: <img ng-src="{{video.pictureUrl}}"/></div>
             <div>Category: {{video.category}}</div>
-            <div>Length: {{video.length}}</div>
+            <div>Length: {{video.length | date :'HH:mm'}}</div>
             <div>Subscribers: {{video.subscribers}}</div>
             <div>Date: {{video.date | date :'dd.MMM.yyyy'}}</div>
             <div>Subtitles: {{video.haveSubtitles}}</div>

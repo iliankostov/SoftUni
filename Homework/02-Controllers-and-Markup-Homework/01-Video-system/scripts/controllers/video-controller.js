@@ -33,8 +33,6 @@ define(['app', 'videoData'], function (app) {
             };
 
             videoData.push(newVideo);
-            console.log(videoData);
-            console.log($scope.date);
         };
 
         $scope.videos = videoData;
