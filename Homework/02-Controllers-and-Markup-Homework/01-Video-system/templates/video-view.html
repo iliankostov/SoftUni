@@ -13,11 +13,11 @@
     <input id="category" type="text" name="category" required ng-model="add.category"/>
     <span ng-show="addForm.category.$error.required">*</span><br/>
     <label for="length">Length:</label>
-    <input id="length" type="time" ng-model="add.length"/><br/>
+    <input id="length" type="text" ng-model="add.length"/><br/>
     <label for="date">Date:</label>
     <input id="date" type="date" ng-model="add.date"/><br/>
     <label for="haveSubtitles">Subtitles:</label>
-    <input id="haveSubtitles" type="checkbox" ng-model="add.haveSubtitles"/><br/>
+    <input id="haveSubtitles" type="checkbox" ng-model="add.haveSubtitles" ng-true-value="'Yes'" ng-false-value="'No'"/><br/>
     <input type="submit"
            ng-disabled="addForm.title.$error.required || addForm.cover.$error.required || addForm.category.$error.required || addForm.cover.$error.pattern"
            ng-click="addVideo(add)" onclick="window.location.href = '#/videos'"/>
@@ -25,13 +25,13 @@
 
 <ul class="video_container" ng-repeat="video in videos">
     <li>
-        <div>Video title: {{video.title}}</div>
-        <div>Video cover: <img ng-src="{{video.pictureUrl}}"/></div>
-        <div>Video length: {{video.length}}</div>
-        <div>Video category: {{video.category}}</div>
-        <div>Video subscribers: {{video.subscribers}}</div>
-        <div>Video date: {{video.date | date :'dd.MMM.yyyy'}}</div>
-        <div>Video haveSubtitles: {{video.haveSubtitles}}</div>
+        <div>Title: {{video.title}}</div>
+        <div>Cover: <img ng-src="{{video.pictureUrl}}"/></div>
+        <div>Category: {{video.category}}</div>
+        <div>Length: {{video.length}}</div>
+        <div>Subscribers: {{video.subscribers}}</div>
+        <div>Date: {{video.date | date :'dd.MMM.yyyy'}}</div>
+        <div>Subtitles: {{video.haveSubtitles}}</div>
         <div>Comments:
             <ul ng-repeat="comment in video.comments">
                 <li class="comments_container">

@@ -11,7 +11,7 @@ define(['app', 'videoData'], function (app) {
                 category: add.category,
                 subscribers: 0,
                 date: add.date,
-                haveSubtitles: app.haveSubtitles,
+                haveSubtitles: add.haveSubtitles,
                 comments: []
             };
 

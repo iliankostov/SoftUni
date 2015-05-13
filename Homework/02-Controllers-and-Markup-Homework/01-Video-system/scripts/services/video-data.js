@@ -8,12 +8,12 @@ define(['app'], function (app) {
                 category: 'IT',
                 subscribers: 3,
                 date: new Date(2014, 12, 15),
-                haveSubtitles: false,
+                haveSubtitles: 'No',
                 comments: [
                     {
                         username: 'Pesho Peshev',
                         content: 'Congratulations Nakov',
-                        date: new Date(2014, 12, 15, 12, 30, 0),
+                        date: new Date(2014, 12, 15),
                         likes: 3,
                         websiteUrl: 'http://pesho.com/'
                     }
