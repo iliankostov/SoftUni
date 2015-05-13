@@ -24,7 +24,7 @@ define(['app'], function (app) {
                 pictureUrl: 'http://phfwc.org/wp-content/uploads/2015/01/example.jpg',
                 length: '13:32',
                 category: 'Mathematics',
-                subscribers: 3,
+                subscribers: 20,
                 date: new Date(2015, 4, 13),
                 haveSubtitles: true,
                 comments: []
