@@ -1,29 +1,46 @@
-body .add {
-  display: inline-block; }
-  body .add .add_video {
-    margin: 20px; }
-    body .add .add_video label, body .add .add_video input {
-      margin: 10px;
-      padding: 3px; }
-body .filter {
-  display: inline-block; }
-body .view {
-  display: block; }
-  body .view .video_container {
-    vertical-align: top;
+body .wrapper {
+  margin: 0 auto;
+  width: 1200px; }
+  body .wrapper .nav {
+    margin: 10px;
+    padding: 10px; }
+  body .wrapper .add {
     display: inline-block;
     margin: 10px;
+    padding: 10px;
+    width: 700px;
+    border: 1px solid black;
+    border-radius: 10px; }
+    body .wrapper .add .add_video {
+      margin: 20px; }
+      body .wrapper .add .add_video label, body .wrapper .add .add_video input {
+        margin: 10px;
+        padding: 3px; }
+  body .wrapper .filters {
+    float: right;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
     width: 350px;
     border: 1px solid black;
     border-radius: 10px; }
-    body .view .video_container img {
-      width: 150px;
-      height: 150px; }
-  body .view .comments_container {
-    margin: 5px;
-    padding: 5px;
-    width: 250px;
-    border: 1px solid black;
-    border-radius: 5px; }
+  body .wrapper .view {
+    display: block; }
+    body .wrapper .view .video_container {
+      vertical-align: top;
+      display: inline-block;
+      margin: 10px;
+      width: 335px;
+      border: 1px solid black;
+      border-radius: 10px; }
+      body .wrapper .view .video_container img {
+        width: 150px;
+        height: 150px; }
+    body .wrapper .view .comments_container {
+      margin: 5px;
+      padding: 5px;
+      width: 250px;
+      border: 1px solid black;
+      border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */

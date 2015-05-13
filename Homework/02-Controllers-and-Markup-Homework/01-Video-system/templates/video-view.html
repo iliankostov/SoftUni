@@ -1,8 +1,9 @@
-<h2>Videos</h2>
+<h1>Video system</h1>
 
-<div>{{message}} <a href="#/home">home</a></div>
+<div class="nav">{{message}} <a href="#/home">home</a></div>
 
 <div class="add">
+    <h2>Add video</h2>
     <form class="add_video" name="addForm">
         <label for="title">Title:</label>
         <input id="title" type="text" name="title" required ng-model="add.title"/>
@@ -33,6 +34,7 @@
 </div>
 
 <div class="filters">
+    <h2>Filters:</h2>
     <label for="filterByCategory">Show by category:</label>
     <select id="filterByCategory" ng-model="filterBy.category">
         <option selected value="">All</option>
@@ -40,11 +42,12 @@
         <option value="English">English</option>
         <option value="Mathematics">Mathematics</option>
         <option value="Logical">Logical</option>
-    </select>
+    </select><br/>
     <label for="filterByDate">Show by date:</label>
-    <input id="filterByDate" type="date" ng-model="date">
+    <input id="filterByDate" type="date" ng-model="date"><br/>
     <label for="filterByHavingSubtitles">Subtitles:</label>
-    <input id="filterByHavingSubtitles" type="checkbox" ng-model="filterBy.haveSubtitles">
+    <input id="filterByHavingSubtitles" type="checkbox" ng-model="filterBy.haveSubtitles"><br/>
+    <h2>Sort:</h2>
     <label for="orderBy">OrderBy:</label>
     <select id="orderBy" ng-model="sortOrder">
         <option selected value="title">Title</option>
