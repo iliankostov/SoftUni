@@ -1,21 +1,5 @@
-define(['app', 'videoData'], function (app) {
+define(['app', 'videoData', 'dateFilter'], function (app) {
     app.controller('VideoCtrl', function VideoCtrl($scope, videoData) {
-
-        app.filter('dateFilter', function () {
-            return function (videos) {
-                var filteredVideos = [];
-                angular.forEach(videos, function (video) {
-                    if ($scope.date) {
-                        if (video.date.toDateString() == $scope.date.toDateString()) {
-                            filteredVideos.push(video);
-                        }
-                    } else {
-                        filteredVideos.push(video);
-                    }
-                });
-                return filteredVideos;
-            }
-        });
 
         $scope.message = 'Return to ';
         $scope.regex = /(https?:\/\/.*\.(?:png|jpg|gif))/i;

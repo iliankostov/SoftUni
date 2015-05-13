@@ -42,7 +42,14 @@ define(['app'], function (app) {
                         username: 'Gosho Goshov',
                         content: 'Bravo',
                         date: new Date(2015, 4, 12),
-                        likes: 3,
+                        likes: 1,
+                        websiteUrl: 'http://gosho.com/'
+                    },
+                    {
+                        username: 'Penka Ivanova',
+                        content: 'Super',
+                        date: new Date(2015, 4, 11),
+                        likes: 2,
                         websiteUrl: 'http://gosho.com/'
                     }
                 ]

@@ -48,14 +48,14 @@
     <label for="orderBy">OrderBy:</label>
     <select id="orderBy" ng-model="sortOrder">
         <option selected value="title">Title</option>
-        <option value="length">Length</option>
-        <option value="date">Date</option>
-        <option value="subscribers">Subscribers</option>
+        <option value="-length">Length</option>
+        <option value="-date">Date</option>
+        <option value="-subscribers">Subscribers</option>
     </select>
 </div>
 
 <div class="view">
-    <ul class="video_container" ng-repeat="video in videos | orderBy:sortOrder | filter:filterBy | dateFilter">
+    <ul class="video_container" ng-repeat="video in videos | orderBy:sortOrder | filter:filterBy | filterByDate:date">
         <li>
             <div>Title: {{video.title}}</div>
             <div>Cover: <img ng-src="{{video.pictureUrl}}"/></div>

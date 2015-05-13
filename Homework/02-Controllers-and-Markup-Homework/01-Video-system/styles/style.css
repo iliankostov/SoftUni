@@ -10,6 +10,7 @@ body .filter {
 body .view {
   display: block; }
   body .view .video_container {
+    vertical-align: top;
     display: inline-block;
     margin: 10px;
     width: 350px;
