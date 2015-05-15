@@ -5,47 +5,55 @@
     <article id="signUp" class="container 75%">
         <header>
             <h2>Sign Up</h2>
+            <p>* required fields</p>
         </header>
         <div>
             <div class="row">
                 <div class="12u">
-                    <form method="post" action="#">
+                    <form name="registerForm">
                         <div>
                             <div class="row">
                                 <div class="6u">
-                                    <input type="text" name="username" id="username" placeholder="Username"/>
+                                    <input type="text" name="username" id="username" placeholder="Username *"
+                                           required ng-model="registerData.username" />
                                 </div>
                                 <div class="6u">
-                                    <input type="text" name="email" id="email" placeholder="Email"/>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="6u">
-                                    <input type="text" name="password" id="password" placeholder="Password"/>
-                                </div>
-                                <div class="6u">
-                                    <input type="text" name="passwordConfirmation" id="passwordConfirmation"
-                                           placeholder="Confirm Password"/>
+                                    <input type="text" name="email" id="email" placeholder="Email *"
+                                           required ng-model="registerData.email" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
-                                    <input type="text" name="name" id="name" placeholder="Name"/>
+                                    <input type="password" name="password" id="password" placeholder="Password *"
+                                           required ng-model="registerData.password" />
+                                </div>
+                                <div class="6u">
+                                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password *"
+                                            required ng-model="registerData.confirmPassword"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="name" id="name" placeholder="Name *"
+                                           required ng-model="registerData.name" />
                                 </div>
                                 <div class="6u radio">
                                     <legend>Gender:</legend>
                                     <label for="male">Male</label>
-                                    <input type="radio" name="gender" id="male"/>
-                                    <label for="male">Female</label>
-                                    <input type="radio" name="gender" id="female"/>
-                                    <label for="male">Other</label>
-                                    <input type="radio" name="gender" id="other"/>
+                                    <input type="radio" name="gender" id="male" value="male" ng-model="registerData.gender"/>
+                                    <label for="female">Female</label>
+                                    <input type="radio" name="gender" id="female" value="female" ng-model="registerData.gender"/>
+                                    <label for="other">Other</label>
+                                    <input type="radio" name="gender" id="other" value="other" ng-model="registerData.gender"/>
                                 </div>
                             </div>
                             <div class="row 200%">
                                 <div class="12u">
                                     <ul class="actions">
-                                        <li><input type="submit" value="Sign Up"/></li>
+                                        <li><input type="button" value="Sign Up" ng-click="validateWhenSignUp()"
+                                                   ng-disabled="registerForm.username.$error.required || registerForm.email.$error.required ||
+                                                   registerForm.password.$error.required || registerForm.confirmPassword.$error.required ||
+                                                   registerForm.name.$error.required"/></li>
                                         <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
                                     </ul>
                                 </div>
@@ -55,6 +63,8 @@
                 </div>
             </div>
         </div>
+
+
 
     </article>
 </div>

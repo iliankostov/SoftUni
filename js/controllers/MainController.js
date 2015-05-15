@@ -2,10 +2,10 @@ define(['app', 'authentication', 'notifyService'], function (app) {
     app.controller('MainController', function ($scope, $location, $route, authentication, notifyService) {
 
         var ClearData = function () {
-            $scope.loginData = "";
-            $scope.registerData = "";
-            $scope.userData = "";
-            $scope.passwordData = "";
+            $scope.loginData = '';
+            $scope.registerData = '';
+            $scope.userData = '';
+            $scope.passwordData = '';
         };
 
         if (!authentication.isLoggedIn()) {
@@ -16,29 +16,83 @@ define(['app', 'authentication', 'notifyService'], function (app) {
             $scope.isLoggedIn = true;
         }
 
-        $scope.login = function () {
-            authentication.Login($scope.loginData,
-                function(serverData) {
-                    notifyService.showInfo("Successful Login!");
-                    authentication.SetCredentials(serverData);
-                    ClearData();
-                    $location.path('/ilian');
-                },
-                function (serverError) {
-                    notifyService.showError("Unsuccessful Login!", serverError)
-                });
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        $scope.validateWhenSignUp = function () {
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if ($scope.registerData.username.length < 2) {
+                notifyService.showError("The username must be at least 2 characters long.");
+            } else if (!emailPattern.test($scope.registerData.email)) {
+                notifyService.showError("Incorrect email address.");
+            } else if ($scope.registerData.password.length < 6) {
+                notifyService.showError("The password must be at least 6 characters long.");
+            } else if ($scope.registerData.password !== $scope.registerData.confirmPassword) {
+                notifyService.showError("The password and confirmation password do not match.");
+            } else {
+                var registerData = {
+                    username: escapeHtml($scope.registerData.username),
+                    email: escapeHtml($scope.registerData.email),
+                    password: escapeHtml($scope.registerData.password),
+                    confirmPassword: escapeHtml($scope.registerData.confirmPassword),
+                    name: escapeHtml($scope.registerData.name),
+                    gender: escapeHtml($scope.registerData.gender)
+                };
+
+                $scope.register(registerData);
+            }
         };
 
-        $scope.register = function () {
-            authentication.Register($scope.registerData,
-                function(serverData) {
+        $scope.register = function (registerData) {
+            authentication.Register(registerData,
+                function (serverData) {
                     notifyService.showInfo("Successful Register!");
                     authentication.SetCredentials(serverData);
                     ClearData();
-                    $location.path('/user/home');
+                    $route.reload();
+                    $location.path('/');
                 },
                 function (serverError) {
                     notifyService.showError("Unsuccessful Register!", serverError)
+                });
+        };
+
+        $scope.validateWhenLogIn = function () {
+            if ($scope.loginData.username.length < 2) {
+                notifyService.showError("The username must be at least 2 characters long.");
+            } else if ($scope.loginData.password.length < 6) {
+                notifyService.showError("The password must be at least 6 characters long.");
+            } else {
+                var loginData = {
+                    username: escapeHtml($scope.loginData.username),
+                    password: escapeHtml($scope.loginData.password)
+                };
+                $scope.login(loginData);
+            }
+        };
+
+        $scope.login = function (loginData) {
+            authentication.Login(loginData,
+                function (serverData) {
+                    notifyService.showInfo("Successful Login!");
+                    authentication.SetCredentials(serverData);
+                    ClearData();
+                    $route.reload();
+                    $location.path('/');
+                },
+                function (serverError) {
+                    notifyService.showError("Unsuccessful Login!", serverError)
                 });
         };
 
@@ -48,13 +102,12 @@ define(['app', 'authentication', 'notifyService'], function (app) {
                     notifyService.showInfo("Successful Logout!");
                     ClearData();
                     authentication.ClearCredentials();
-                    $location.path('/');
+                    $route.reload();
                 },
                 function (serverError) {
                     notifyService.showError("Unsuccessful Logout!", serverError)
                 }
             )
-
         };
 
         $scope.cancel = function () {

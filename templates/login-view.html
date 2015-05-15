@@ -13,16 +13,20 @@
                         <div>
                             <div class="row">
                                 <div class="6u">
-                                    <input type="text" name="username" id="loginUsername" ng-model="loginData.userName" placeholder="Username"/>
+                                    <input type="text" name="username" id="loginUsername" required
+                                           ng-model="loginData.username" placeholder="Username"/>
                                 </div>
                                 <div class="6u">
-                                    <input type="password" name="password" id="loginPassword" ng-model="loginData.password" placeholder="Password"/>
+                                    <input type="password" name="password" id="loginPassword" required
+                                           ng-model="loginData.password" placeholder="Password"/>
                                 </div>
                             </div>
                             <div class="row 200%">
                                 <div class="12u">
                                     <ul class="actions">
-                                        <li><input type="button" ng-click="login()" value="Log In"/></li>
+                                        <li><input type="button" value="Log In" ng-click="validateWhenLogIn()"
+                                                   ng-disabled="loginForm.username.$error.required ||
+                                                   loginForm.password.$error.required" /></li>
                                         <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
                                     </ul>
                                 </div>
