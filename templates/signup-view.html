@@ -1,0 +1,62 @@
+<div ng-include="'templates/header-view.html'"></div>
+
+<!-- Sign Up -->
+<div class="wrapper style4">
+    <article id="signUp" class="container 75%">
+        <header>
+            <h2>Sign Up</h2>
+        </header>
+        <div>
+            <div class="row">
+                <div class="12u">
+                    <form method="post" action="#">
+                        <div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="username" id="username" placeholder="Username"/>
+                                </div>
+                                <div class="6u">
+                                    <input type="text" name="email" id="email" placeholder="Email"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="password" id="password" placeholder="Password"/>
+                                </div>
+                                <div class="6u">
+                                    <input type="text" name="passwordConfirmation" id="passwordConfirmation"
+                                           placeholder="Confirm Password"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="name" id="name" placeholder="Name"/>
+                                </div>
+                                <div class="6u radio">
+                                    <legend>Gender</legend>
+                                    <label for="male">Male</label>
+                                    <input type="radio" name="gender" id="male"/>
+                                    <label for="male">Female</label>
+                                    <input type="radio" name="gender" id="female"/>
+                                    <label for="male">Other</label>
+                                    <input type="radio" name="gender" id="other"/>
+                                </div>
+                            </div>
+                            <div class="row 200%">
+                                <div class="12u">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Sign Up"/></li>
+                                        <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </article>
+</div>
+
+<div ng-include="'templates/footer-view.html'"></div>

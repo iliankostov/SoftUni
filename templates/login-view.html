@@ -1,0 +1,38 @@
+<div ng-include="'templates/header-view.html'"></div>
+
+<!-- Login -->
+<div class="wrapper style4">
+    <article id="logIn" class="container 75%">
+        <header>
+            <h2>Log In</h2>
+        </header>
+        <div>
+            <div class="row">
+                <div class="12u">
+                    <form method="post" action="#">
+                        <div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="name" id="loginEmail" placeholder="Email"/>
+                                </div>
+                                <div class="6u">
+                                    <input type="text" name="email" id="loginPassword" placeholder="Password"/>
+                                </div>
+                            </div>
+                            <div class="row 200%">
+                                <div class="12u">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Log In"/></li>
+                                        <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<div ng-include="'templates/footer-view.html'"></div>
