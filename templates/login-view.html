@@ -9,20 +9,20 @@
         <div>
             <div class="row">
                 <div class="12u">
-                    <form method="post" action="#">
+                    <form name="loginForm">
                         <div>
                             <div class="row">
                                 <div class="6u">
-                                    <input type="text" name="name" id="loginEmail" placeholder="Email"/>
+                                    <input type="text" name="username" id="loginUsername" ng-model="loginData.userName" placeholder="Username"/>
                                 </div>
                                 <div class="6u">
-                                    <input type="text" name="email" id="loginPassword" placeholder="Password"/>
+                                    <input type="password" name="password" id="loginPassword" ng-model="loginData.password" placeholder="Password"/>
                                 </div>
                             </div>
                             <div class="row 200%">
                                 <div class="12u">
                                     <ul class="actions">
-                                        <li><input type="submit" value="Log In"/></li>
+                                        <li><input type="button" ng-click="login()" value="Log In"/></li>
                                         <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
                                     </ul>
                                 </div>

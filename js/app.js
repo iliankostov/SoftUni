@@ -2,7 +2,7 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
 
     var app = angular.module('app', ['ngRoute']);
 
-    app.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net/api');
+    app.constant('baseServiceUrl', 'http://softuni-social-network.azurewebsites.net/api');
 
     app.config(function ($routeProvider) {
         $routeProvider
@@ -18,6 +18,11 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
             }))
             .when('/signup', angularAMD.route({
                 templateUrl: 'templates/signup-view.html',
+                controller: 'MainController',
+                controllerUrl: 'controllers/MainController'
+            }))
+            .when('/ilian', angularAMD.route({
+                templateUrl: 'templates/wall-view.html',
                 controller: 'MainController',
                 controllerUrl: 'controllers/MainController'
             }))

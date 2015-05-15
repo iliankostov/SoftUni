@@ -6,7 +6,7 @@ define(['app', 'noty'], function (app, noty) {
                     noty({
                             text: msg,
                             type: 'success',
-                            layout: 'topCenter',
+                            layout: 'bottomCenter',
                             timeout: 1000}
                     );
                 },
@@ -33,7 +33,7 @@ define(['app', 'noty'], function (app, noty) {
                     noty({
                             text: msg,
                             type: 'error',
-                            layout: 'topCenter',
+                            layout: 'bottomCenter',
                             timeout: 5000}
                     );
                 }

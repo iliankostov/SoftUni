@@ -14,7 +14,8 @@ requirejs.config({
         app: 'app',
 
         // services
-        notifyService: 'services/notifyService'
+        notifyService: 'services/notifyService',
+        authentication: 'services/authentication'
     },
 
     shim: {

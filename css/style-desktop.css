@@ -142,21 +142,21 @@
 /* Nav                                                                           */
 /*********************************************************************************/
 
-	#nav
+	.nav
 	{
 	}
 
-		#nav a:hover
+		.nav a:hover
 		{
 			background: #383838;
 		}
 		
-		#nav a:active
+		.nav a:active
 		{
 			background: #484848;
 		}
 	
-		#nav a
+		.nav a
 		{
 			padding: 0.2em 1em 0.2em 1em;
 			margin: 0.6em 0.2em 0.6em 0.2em;
