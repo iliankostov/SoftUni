@@ -1,7 +1,6 @@
 ﻿namespace CustomerService
 {
     using Data;
-    using Models;
     using Visitor.Models.Visitors;
 
     public class Program
@@ -17,14 +16,14 @@
 
             foreach (var premiumCustomer in premiumCustomers)
             {
-                discountRaiseVisitor.Visit(premiumCustomer);
+                premiumCustomer.Accept(discountRaiseVisitor);
             }
 
             var allCustomers = repository.GetAll();
 
             foreach (var customer in allCustomers)
             {
-                freePurchaseVisitor.Visit(customer);
+                customer.Accept(freePurchaseVisitor);
             }
         }
     }
