@@ -8,9 +8,9 @@ define(['app', 'requestService', 'notifyService'], function (app) {
             var url = serviceUrl + '/register';
             var headers = null;
             return requestService.PostRequest(url, headers, registerData).then(
-                function (serverData) {
-                    notifyService.showInfo("Successful Register!");
-                    setCredentials(serverData);
+                function (serverResponse) {
+                    notifyService.showInfo(serverResponse.message);
+                    setCredentials(serverResponse);
                     $route.reload();
                     $location.path('/');
                 },
@@ -25,7 +25,7 @@ define(['app', 'requestService', 'notifyService'], function (app) {
             var headers = null;
             return requestService.PostRequest(url, headers, loginData).then(
                 function (serverResponse) {
-                    notifyService.showInfo("Successful Login!");
+                    notifyService.showInfo("Login successful.");
                     setCredentials(serverResponse);
                     $route.reload();
                     $location.path('/');
@@ -36,12 +36,27 @@ define(['app', 'requestService', 'notifyService'], function (app) {
             )
         };
 
+        service.ChangePassword = function (changePasswordData) {
+            var url = baseServiceUrl + '/me/changepassword';
+            var headers = getHeaders();
+            return requestService.PutRequest(url, headers, changePasswordData).then(
+                function (serverResponse) {
+                    notifyService.showInfo(serverResponse.message);
+                    $route.reload();
+                    $location.path('/');
+                },
+                function (serverError) {
+                    notifyService.showError("Unsuccessful change password!", serverError)
+                }
+            )
+        };
+
         service.Logout = function () {
             var url = serviceUrl + '/logout';
             var headers = getHeaders();
             return requestService.PostRequest(url, headers).then(
-                function () {
-                    notifyService.showInfo("Successful Logout!");
+                function (serverResponse) {
+                    notifyService.showInfo(serverResponse.message);
                     clearCredentials();
                     $route.reload();
                     $location.path('/');

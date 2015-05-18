@@ -9,7 +9,9 @@
 <!-- User Nav-->
 <nav class="nav" ng-if="isLoggedIn">
     <ul class="container">
-        <li><a href="" class="icon fa-newspaper-o"></a></li>
-        <li><a href="" class="icon fa-sign-out" ng-click="logout()"></a></li>
+        <li><a href="#/" class="icon fa-newspaper-o" title="News Feed"></a></li>
+        <li><a href="#/edit/profile" class="icon fa-cogs" title="Edit Profile"></a></li>
+        <li><a href="#/edit/password" class="icon fa-key" title="Change Password"></a></li>
+        <li><a href="#/" class="icon fa-sign-out" title="Log Out" ng-click="logout()"></a></li>
     </ul>
 </nav>

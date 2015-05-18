@@ -21,6 +21,16 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
                 controller: 'MainController',
                 controllerUrl: 'controllers/MainController'
             }))
+            .when('/edit/password', angularAMD.route({
+                templateUrl: 'templates/change-password-view.html',
+                controller: 'MainController',
+                controllerUrl: 'controllers/MainController'
+            }))
+            .when('/edit/profile', angularAMD.route({
+                templateUrl: 'templates/edit-profile-view.html',
+                controller: 'MainController',
+                controllerUrl: 'controllers/MainController'
+            }))
             .when('/ilian', angularAMD.route({
                 templateUrl: 'templates/wall-view.html',
                 controller: 'MainController',

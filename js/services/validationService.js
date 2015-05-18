@@ -21,6 +21,10 @@ define(['app', 'notifyService'], function (app) {
             validatePassword(password) && validateConfirmPasswordMatch(password, confirmPassword));
         };
 
+        service.ValidateChangePasswordForm = function (newPassword, confirmPassword) {
+            return (validatePassword(newPassword) && validateConfirmPasswordMatch(newPassword, confirmPassword))
+        };
+
         function validateUsername(username) {
             if (username.length < 4 || username.length > 32) {
                 notifyService.showError("The username must be from 4 to 32 characters long.");
