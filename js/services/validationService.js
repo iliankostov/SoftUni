@@ -17,8 +17,8 @@ define(['app', 'notifyService'], function (app) {
         };
 
         service.ValidateRegisterForm = function (username, email, password, confirmPassword) {
-            return (validateUsername(username) && validateUsername(password) &&
-            validateEmailAddress(email) && validateConfirmPasswordMatch(password, confirmPassword));
+            return (validateUsername(username) && validateEmailAddress(email) &&
+            validatePassword(password) && validateConfirmPasswordMatch(password, confirmPassword));
         };
 
         function validateUsername(username) {
@@ -31,7 +31,7 @@ define(['app', 'notifyService'], function (app) {
 
         function validateEmailAddress(email) {
             var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailPattern.test($scope.registerData.email)) {
+            if (!emailPattern.test(email)) {
                 notifyService.showError("Incorrect email address.");
                 return false;
             }
