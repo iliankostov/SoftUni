@@ -7,14 +7,7 @@ define(['app', 'authentication', 'notifyService'], function (app) {
             $scope.userData = '';
             $scope.passwordData = '';
         };
-
-        if (!authentication.isLoggedIn()) {
-            $scope.isNotLoggedIn = true;
-            $scope.isLoggedIn = false;
-        } else {
-            $scope.isNotLoggedIn = false;
-            $scope.isLoggedIn = true;
-        }
+        $scope.isLoggedIn = authentication.isLoggedIn();
 
         function escapeHtml(text) {
             var map = {
@@ -32,12 +25,12 @@ define(['app', 'authentication', 'notifyService'], function (app) {
 
             var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-            if ($scope.registerData.username.length < 2) {
-                notifyService.showError("The username must be at least 2 characters long.");
+            if ($scope.registerData.username.length < 4 || $scope.registerData.username.length > 32) {
+                notifyService.showError("The username must be from 4 to 32 characters long.");
             } else if (!emailPattern.test($scope.registerData.email)) {
                 notifyService.showError("Incorrect email address.");
-            } else if ($scope.registerData.password.length < 6) {
-                notifyService.showError("The password must be at least 6 characters long.");
+            } else if ($scope.registerData.password.length < 6 || $scope.registerData.password.length > 32) {
+                notifyService.showError("The password must be from 6 to 32 characters long.");
             } else if ($scope.registerData.password !== $scope.registerData.confirmPassword) {
                 notifyService.showError("The password and confirmation password do not match.");
             } else {
@@ -69,10 +62,10 @@ define(['app', 'authentication', 'notifyService'], function (app) {
         };
 
         $scope.validateWhenLogIn = function () {
-            if ($scope.loginData.username.length < 2) {
-                notifyService.showError("The username must be at least 2 characters long.");
-            } else if ($scope.loginData.password.length < 6) {
-                notifyService.showError("The password must be at least 6 characters long.");
+            if ($scope.loginData.username.length < 4 || $scope.loginData.username.length > 32) {
+                notifyService.showError("The username must be from 4 to 32 characters long.");
+            } else if ($scope.loginData.password.length < 6 || $scope.loginData.password.length > 32) {
+                notifyService.showError("The password must be from 6 to 32 characters long.");
             } else {
                 var loginData = {
                     username: escapeHtml($scope.loginData.username),

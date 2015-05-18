@@ -45,7 +45,7 @@ define(['app'], function (app) {
 
         service.isLoggedIn = function () {
             var isLoggedIn = false;
-            if (localStorage['accessToken'] && localStorage['accessToken'].length == 512 && localStorage['isLogged']) {
+            if (localStorage['accessToken'] && localStorage['accessToken'].length > 490 && localStorage['isLogged']) {
                 isLoggedIn = true;
             }
             return isLoggedIn;
