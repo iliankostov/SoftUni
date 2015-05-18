@@ -27,12 +27,8 @@ define(['app'], function (app) {
                 headers: headers,
                 data: data
             })
-                .success(function (data, status, headers, config) {
-                    deferred.resolve(data, status, headers, config)
-                })
-                .error(function (data, status, headers, config) {
-                    deferred.resolve(data, status, headers, config)
-                });
+            .success(deferred.resolve)
+            .error(deferred.reject);
 
             return deferred.promise;
         }
