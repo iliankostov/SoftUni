@@ -14,6 +14,7 @@ requirejs.config({
         app: 'app',
 
         // services
+        requestService: 'services/requestService',
         notifyService: 'services/notifyService',
         authentication: 'services/authentication'
     },
