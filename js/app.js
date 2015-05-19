@@ -37,6 +37,11 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
                 controllerUrl: 'controllers/MainController'
             }))
             .otherwise({redirectTo: "/"});
+
+        //$locationProvider.html5Mode({
+        //    enabled: true,
+        //    requireBase: true
+        //});
     });
 
     return angularAMD.bootstrap(app);

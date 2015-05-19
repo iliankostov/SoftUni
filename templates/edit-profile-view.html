@@ -1,10 +1,14 @@
 <div ng-include="'templates/header-view.html'"></div>
 
-<!-- News Feed -->
+<!-- Edit Profile -->
 <div class="wrapper style1 first" ng-if="isLoggedIn">
-    <article class="container">
+    <article class="container" id="top">
         <div class="row">
-            <div class="12u">
+            <div class="4u">
+                <span class="image fit"><img src="images/logo.jpg" alt=""/></span>
+                <input type="file"/>
+            </div>
+            <div class="8u">
                 <header>
                     <h1>Edit Profile</h1>
                 </header>
