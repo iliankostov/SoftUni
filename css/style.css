@@ -430,6 +430,17 @@
 					background-color: #3f3f3f;
 				}
 
+        input[type="file"] {
+            margin-left: 2em;
+        }
+        input[type="file"].button {
+            /* Note: display:none on the input won't trigger the click event in WebKit.
+               Setting visibility to hidden and width 0 works.*/
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
 	/* List */
 
 		ul
