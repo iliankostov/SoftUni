@@ -1,0 +1,82 @@
+<div ng-include="'templates/partial/head.html'"></div>
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- User Edit Profile -->
+<div class="wrapper style1 first" ng-if="isLoggedIn">
+    <article class="container">
+        <div class="12u">
+            <header>
+                <h1>Edit Profile</h1>
+            </header>
+            <form name="editProfileForm">
+                <div class="12u">
+                    <div class="row">
+                        <div class="4u" id="top">
+                            <span class="image fit"><img ng-src="{{editProfileData.facePicture}}"/></span>
+                            <label for="photo-upload" class="button browse">Browse photo</label>
+                            <input id="photo-upload" type="file" ng-file-select="onFileSelect($files)"
+                                   ng-model="editProfileData.facePicture"/>
+                        </div>
+                        <div class="8u">
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="username" id="username" placeholder="Username"
+                                           required ng-model="editProfileData.username"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="email" id="email" placeholder="Email"
+                                           required ng-model="editProfileData.email"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u radio">
+                                    <legend>Gender:</legend>
+                                    <label for="male">Male</label>
+                                    <input type="radio" name="gender" id="male" value="male"
+                                           ng-model="editProfileData.gender"/>
+                                    <label for="female">Female</label>
+                                    <input type="radio" name="gender" id="female" value="female"
+                                           ng-model="editProfileData.gender"/>
+                                    <label for="other">Other</label>
+                                    <input type="radio" name="gender" id="other" value="other"
+                                           ng-model="editProfileData.gender"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <span class="image"><img ng-src="{{editProfileData.coverPicture}}"/></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <label for="cover-upload" class="button">Browse cover</label>
+                                    <input id="cover-upload" type="file" ng-file-select="onFileSelect($files)"
+                                           ng-model="editProfileData.coverPicture"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="12u">
+                        <input type="button" value="Save Changes" ng-click="saveEditProfile()"
+                                   ng-disabled="!logInForm.$valid" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </article>
+</div>
+
+<!-- Guest Edit Profile -->
+<div class="wrapper style1 first" ng-if="!isLoggedIn">
+    <article class="container 75%">
+        <header>
+            <h1>Access denied. Please log in!</h1>
+        </header>
+    </article>
+</div>
+
+<div ng-include="'templates/partial/footer-view.html'"></div>

@@ -1,96 +1,51 @@
-define(['app', 'requestService', 'notifyService'], function (app) {
-    app.factory('authenticationService', function ($route, $location, baseServiceUrl, requestService, notifyService) {
+define(['app', 'requestService', 'notifyService', 'navigationService'], function (app) {
+    app.factory('authenticationService', function (baseServiceUrl, requestService, notifyService, navigationService) {
         var service = {};
 
         var serviceUrl = baseServiceUrl + '/users';
 
-        service.Register = function (registerData) {
+        service.SignUp = function (registerData) {
             var url = serviceUrl + '/register';
             var headers = null;
             return requestService.PostRequest(url, headers, registerData).then(
                 function (serverResponse) {
                     notifyService.showInfo(serverResponse.message);
                     setCredentials(serverResponse);
-                    $route.reload();
-                    $location.path('/');
+                    navigationService.loadHome();
                 },
                 function (serverError) {
-                    notifyService.showError("Unsuccessful Register!", serverError)
+                    notifyService.showError("Unsuccessful Sign Up!", serverError)
                 }
             );
         };
 
-        service.Login = function (loginData) {
+        service.LogIn = function (loginData) {
             var url = serviceUrl + '/login';
             var headers = null;
             return requestService.PostRequest(url, headers, loginData).then(
                 function (serverResponse) {
-                    notifyService.showInfo("Login successful.");
+                    notifyService.showInfo("Log In successful.");
                     setCredentials(serverResponse);
-                    $route.reload();
-                    $location.path('/');
+                    navigationService.loadHome();
                 },
                 function (serverError) {
-                    notifyService.showError("Unsuccessful Login!", serverError)
-                }
-            )
-        };
-
-        service.ChangePassword = function (changePasswordData) {
-            var url = baseServiceUrl + '/me/changepassword';
-            var headers = getHeaders();
-            return requestService.PutRequest(url, headers, changePasswordData).then(
-                function (serverResponse) {
-                    notifyService.showInfo(serverResponse.message);
-                    $route.reload();
-                    $location.path('/');
-                },
-                function (serverError) {
-                    notifyService.showError("Unsuccessful change password!", serverError)
-                }
-            )
-        };
-
-        service.Logout = function () {
-            var url = serviceUrl + '/logout';
-            var headers = getHeaders();
-            return requestService.PostRequest(url, headers).then(
-                function (serverResponse) {
-                    notifyService.showInfo(serverResponse.message);
-                    clearCredentials();
-                    $route.reload();
-                    $location.path('/');
-                },
-                function (serverError) {
-                    notifyService.showError("Unsuccessful Logout!", serverError)
+                    notifyService.showError("Unsuccessful Log In!", serverError)
                 }
             )
         };
 
         service.isLoggedIn = function () {
             var isLoggedIn = false;
-            if (localStorage['accessToken'] && localStorage['accessToken'].length > 490 && localStorage['isLogged']) {
+            if (sessionStorage['accessToken'] && sessionStorage['accessToken'].length > 490 && sessionStorage['isLogged']) {
                 isLoggedIn = true;
             }
             return isLoggedIn;
         };
 
         function setCredentials(serverData) {
-            localStorage['accessToken'] = serverData.access_token;
-            localStorage['userName'] = serverData.userName;
-            localStorage['isLogged'] = true;
-        }
-
-        function clearCredentials() {
-            delete localStorage['accessToken'];
-            delete localStorage['userName'];
-            delete localStorage['isLogged'];
-        }
-
-        function getHeaders() {
-            return {
-                Authorization: "Bearer " + localStorage['accessToken']
-            };
+            sessionStorage['accessToken'] = serverData.access_token;
+            sessionStorage['userName'] = serverData.userName;
+            sessionStorage['isLogged'] = true;
         }
 
         return service;

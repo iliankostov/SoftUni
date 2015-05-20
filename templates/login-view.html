@@ -1,7 +1,8 @@
-<div ng-include="'templates/header-view.html'"></div>
+<div ng-include="'templates/partial/head.html'"></div>
+<div ng-include="'templates/partial/header-view.html'"></div>
 
-<!-- Login -->
-<div class="wrapper style1">
+<!-- LogIn Guest -->
+<div class="wrapper style1" ng-if="!isLoggedIn">
     <article id="logIn" class="container 75%">
         <header>
             <h2>Log In</h2>
@@ -9,23 +10,23 @@
         <div>
             <div class="row">
                 <div class="12u">
-                    <form name="loginForm">
+                    <form name="logInForm">
                         <div>
                             <div class="row">
                                 <div class="6u">
                                     <input type="text" name="username" id="loginUsername" required
-                                           ng-model="loginData.username" placeholder="Username"/>
+                                           ng-model="logInData.username" placeholder="Username"/>
                                 </div>
                                 <div class="6u">
                                     <input type="password" name="password" id="loginPassword" required
-                                           ng-model="loginData.password" placeholder="Password"/>
+                                           ng-model="logInData.password" placeholder="Password"/>
                                 </div>
                             </div>
                             <div class="row 200%">
                                 <div class="12u">
                                     <ul class="actions">
-                                        <li><input type="button" value="Log In" ng-click="login()"
-                                                   ng-disabled="!loginForm.$valid" /></li>
+                                        <li><input type="button" value="Log In" ng-click="logIn()"
+                                                   ng-disabled="!logInForm.$valid" /></li>
                                         <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
                                     </ul>
                                 </div>
@@ -38,4 +39,13 @@
     </article>
 </div>
 
-<div ng-include="'templates/footer-view.html'"></div>
+<!-- LogIn User -->
+<div class="wrapper style1 first" ng-if="isLoggedIn">
+    <article class="container 75%">
+        <header>
+            <h1>Access denied. Please log out!</h1>
+        </header>
+    </article>
+</div>
+
+<div ng-include="'templates/partial/footer-view.html'"></div>

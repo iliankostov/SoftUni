@@ -1,6 +1,7 @@
-<div ng-include="'templates/header-view.html'"></div>
+<div ng-include="'templates/partial/head.html'"></div>
+<div ng-include="'templates/partial/header-view.html'"></div>
 
-<!-- Sign Up -->
+<!-- Sign Up Guest -->
 <div class="wrapper style1">
     <article id="signUp" class="container 75%">
         <header>
@@ -15,42 +16,42 @@
                             <div class="row">
                                 <div class="6u">
                                     <input type="text" name="username" id="username" placeholder="Username *"
-                                           required ng-model="registerData.username" />
+                                           required ng-model="signUpData.username" />
                                 </div>
                                 <div class="6u">
                                     <input type="text" name="email" id="email" placeholder="Email *"
-                                           required ng-model="registerData.email" />
+                                           required ng-model="signUpData.email" />
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <input type="password" name="password" id="password" placeholder="Password *"
-                                           required ng-model="registerData.password" />
+                                           required ng-model="signUpData.password" />
                                 </div>
                                 <div class="6u">
                                     <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password *"
-                                            required ng-model="registerData.confirmPassword"/>
+                                            required ng-model="signUpData.confirmPassword"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <input type="text" name="name" id="name" placeholder="Name *"
-                                           required ng-model="registerData.name" />
+                                           required ng-model="signUpData.name" />
                                 </div>
                                 <div class="6u radio">
                                     <legend>Gender:</legend>
                                     <label for="male">Male</label>
-                                    <input type="radio" name="gender" id="male" value="male" ng-model="registerData.gender"/>
+                                    <input type="radio" name="gender" id="male" value="male" ng-model="signUpData.gender"/>
                                     <label for="female">Female</label>
-                                    <input type="radio" name="gender" id="female" value="female" ng-model="registerData.gender"/>
+                                    <input type="radio" name="gender" id="female" value="female" ng-model="signUpData.gender"/>
                                     <label for="other">Other</label>
-                                    <input type="radio" name="gender" id="other" value="other" ng-model="registerData.gender"/>
+                                    <input type="radio" name="gender" id="other" value="other" ng-model="signUpData.gender"/>
                                 </div>
                             </div>
                             <div class="row 200%">
                                 <div class="12u">
                                     <ul class="actions">
-                                        <li><input type="button" value="Sign Up" ng-click="register()"
+                                        <li><input type="button" value="Sign Up" ng-click="signUp()"
                                                    ng-disabled="!registerForm.$valid"/></li>
                                         <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
                                     </ul>
@@ -61,10 +62,16 @@
                 </div>
             </div>
         </div>
-
-
-
     </article>
 </div>
 
-<div ng-include="'templates/footer-view.html'"></div>
+<!-- Sign Up User -->
+<div class="wrapper style1 first" ng-if="isLoggedIn">
+    <article class="container 75%">
+        <header>
+            <h1>Access denied. Please log out!</h1>
+        </header>
+    </article>
+</div>
+
+<div ng-include="'templates/partial/footer-view.html'"></div>

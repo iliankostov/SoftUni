@@ -1,6 +1,7 @@
-<div ng-include="'templates/header-view.html'"></div>
+<div ng-include="'templates/partial/head.html'"></div>
+<div ng-include="'templates/partial/header-view.html'"></div>
 
-<!-- Welcome -->
+<!-- Welcome Guest -->
 <div class="wrapper style1 first" ng-if="!isLoggedIn">
     <article class="container" id="top">
         <div class="row">
@@ -19,7 +20,7 @@
     </article>
 </div>
 
-<!-- News Feed -->
+<!-- User News Feed -->
 <div class="wrapper style1 first" ng-if="isLoggedIn">
     <article class="container">
         <div class="row">
@@ -33,4 +34,4 @@
 </div>
 
 
-<div ng-include="'templates/footer-view.html'"></div>
+<div ng-include="'templates/partial/footer-view.html'"></div>

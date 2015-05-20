@@ -3733,7 +3733,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#provider
  * @description
  *
- * Register a **provider function** with the {@link auto.$injector $injector}. Provider functions
+ * SignUp a **provider function** with the {@link auto.$injector $injector}. Provider functions
  * are constructor functions, whose instances are responsible for "providing" a factory for a
  * service.
  *
@@ -3797,7 +3797,7 @@ function annotate(fn, strictDi, name) {
  *    var postSpy;
  *
  *    beforeEach(module(function($provide) {
- *      // Register the eventTracker provider
+ *      // SignUp the eventTracker provider
  *      $provide.provider('eventTracker', EventTrackerProvider);
  *    }));
  *
@@ -3829,7 +3829,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#factory
  * @description
  *
- * Register a **service factory**, which will be called to return the service instance.
+ * SignUp a **service factory**, which will be called to return the service instance.
  * This is short for registering a service where its provider consists of only a `$get` property,
  * which is the given service factory function.
  * You should use {@link auto.$provide#factory $provide.factory(getFn)} if you do not need to
@@ -3863,7 +3863,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#service
  * @description
  *
- * Register a **service constructor**, which will be invoked with `new` to create the service
+ * SignUp a **service constructor**, which will be invoked with `new` to create the service
  * instance.
  * This is short for registering a service where its provider's `$get` property is the service
  * constructor function that will be used to instantiate the service instance.
@@ -3904,7 +3904,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#value
  * @description
  *
- * Register a **value service** with the {@link auto.$injector $injector}, such as a string, a
+ * SignUp a **value service** with the {@link auto.$injector $injector}, such as a string, a
  * number, an array, an object or a function.  This is short for registering a service where its
  * provider's `$get` property is a factory function that takes no arguments and returns the **value
  * service**.
@@ -3937,7 +3937,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#constant
  * @description
  *
- * Register a **constant service**, such as a string, a number, an array, an object or a function,
+ * SignUp a **constant service**, such as a string, a number, an array, an object or a function,
  * with the {@link auto.$injector $injector}. Unlike {@link auto.$provide#value value} it can be
  * injected into a module configuration function (see {@link angular.Module#config}) and it cannot
  * be overridden by an Angular {@link auto.$provide#decorator decorator}.
@@ -3965,7 +3965,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#decorator
  * @description
  *
- * Register a **service decorator** with the {@link auto.$injector $injector}. A service decorator
+ * SignUp a **service decorator** with the {@link auto.$injector $injector}. A service decorator
  * intercepts the creation of a service, allowing it to override or modify the behaviour of the
  * service. The object returned by the decorator may be the original service, or a new service
  * object which replaces or wraps and delegates to the original service.
@@ -5146,7 +5146,7 @@ function Browser(window, document, $log, $sniffer) {
    * @name $browser#onUrlChange
    *
    * @description
-   * Register callback function that will be called, when url changes.
+   * SignUp callback function that will be called, when url changes.
    *
    * It's only called when the url is changed from outside of angular:
    * - user types different url into address bar
@@ -6501,7 +6501,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * @kind function
    *
    * @description
-   * Register a new directive with the compiler.
+   * SignUp a new directive with the compiler.
    *
    * @param {string|Object} name Name of the directive in camel-case (i.e. <code>ngBind</code> which
    *    will match as <code>ng-bind</code>), or an object map of directives where the keys are the
@@ -10357,7 +10357,7 @@ function $IntervalProvider() {
       *             $scope.stopFight();
       *           });
       *         }])
-      *       // Register the 'myCurrentTime' directive factory method.
+      *       // SignUp the 'myCurrentTime' directive factory method.
       *       // We inject $interval and dateFilter service since the factory method is DI.
       *       .directive('myCurrentTime', ['$interval', 'dateFilter',
       *         function($interval, dateFilter) {
@@ -18367,7 +18367,7 @@ function FormController(element, attrs, $scope, $animate, $interpolate) {
    * @name form.FormController#$addControl
    *
    * @description
-   * Register a control with the form.
+   * SignUp a control with the form.
    *
    * Input elements using ngModelController do this automatically when they are linked.
    */

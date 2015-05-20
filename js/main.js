@@ -16,6 +16,8 @@ requirejs.config({
         // services
         validationService: 'services/validationService',
         authenticationService: 'services/authenticationService',
+        navigationService: 'services/navigationService',
+        userService: 'services/userService',
         requestService: 'services/requestService',
         fileReaderService: 'services/fileReaderService',
         notifyService: 'services/notifyService',
