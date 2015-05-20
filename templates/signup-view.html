@@ -51,9 +51,7 @@
                                 <div class="12u">
                                     <ul class="actions">
                                         <li><input type="button" value="Sign Up" ng-click="register()"
-                                                   ng-disabled="registerForm.username.$error.required || registerForm.email.$error.required ||
-                                                   registerForm.password.$error.required || registerForm.confirmPassword.$error.required ||
-                                                   registerForm.name.$error.required"/></li>
+                                                   ng-disabled="!registerForm.$valid"/></li>
                                         <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
                                     </ul>
                                 </div>

@@ -17,7 +17,11 @@ requirejs.config({
         validationService: 'services/validationService',
         authenticationService: 'services/authenticationService',
         requestService: 'services/requestService',
-        notifyService: 'services/notifyService'
+        fileReaderService: 'services/fileReaderService',
+        notifyService: 'services/notifyService',
+
+        // directives
+        ngFileSelect: 'directives/ngFileSelect'
     },
 
     shim: {

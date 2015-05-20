@@ -1,8 +1,12 @@
-define(['app', 'authenticationService', 'validationService'], function (app) {
-    app.controller('MainController', function ($scope, $location, authenticationService, validationService) {
+define(['app', 'authenticationService', 'validationService', 'ngFileSelect'], function (app) {
+    app.controller('MainController', function ($scope, $location, baseFacePicture, authenticationService, validationService) {
         $scope.registerData = {};
         $scope.loginData = {};
         $scope.changePasswordData = {};
+        $scope.editProfileData = {};
+        $scope.editProfileData.facePicture = baseFacePicture;
+
+
         $scope.isLoggedIn = authenticationService.isLoggedIn();
 
         $scope.register = function () {
