@@ -26,8 +26,9 @@ requirejs.config({
         notifyService: 'services/notifyService',
 
         // directives
-        ngFacePictureSelect: 'directives/ngFacePictureSelect',
-        ngCoverPictureSelect: 'directives/ngCoverPictureSelect'
+        ngPictureSelect: 'directives/ngPictureSelect',
+        ngCoverSelect: 'directives/ngCoverSelect',
+        ngCoverBackground: 'directives/ngCoverBackground'
     },
 
     shim: {

@@ -19,7 +19,7 @@
                                 <img ng-src="{{userData.profileImageData}}"/>
                             </span>
                             <label for="photo-upload" class="button browse">Browse Photo</label>
-                            <input id="photo-upload" type="file" ng-face-picture-select="onFileSelect($files)"
+                            <input id="photo-upload" type="file" ng-picture-select="onFileSelect($files)"
                                    ng-model="userData.profileImageData"/>
                         </div>
                         <div class="8u">
@@ -57,7 +57,7 @@
                             <div class="row">
                                 <div class="6u">
                                     <label for="cover-upload" class="button">Browse Cover</label>
-                                    <input id="cover-upload" type="file" ng-cover-picture-select="onFileSelect($files)"
+                                    <input id="cover-upload" type="file" ng-cover-select="onFileSelect($files)"
                                            ng-model="userData.coverImageData"/>
                                 </div>
                             </div>

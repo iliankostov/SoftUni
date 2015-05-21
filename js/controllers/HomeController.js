@@ -31,8 +31,9 @@ define(['app', 'constants', 'validationService', 'authenticationService', 'userS
             function setTitle() {
                 if ($scope.isLoggedIn) {
                     $scope.title = $scope.userData.name + ' - News Feed';
+                } else {
+                    $scope.title = "Welcome to iBook";
                 }
-                $scope.title = "Welcome to iBook";
             }
         })
     }

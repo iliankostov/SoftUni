@@ -1,4 +1,4 @@
-define(['app', 'constants', 'validationService', 'authenticationService', 'navigationService', 'userService'],
+define(['app', 'constants', 'validationService', 'authenticationService', 'navigationService', 'userService', 'ngCoverBackground'],
     function (app) {
         app.controller('WallController', function ($scope, $location, validationService, authenticationService,
                                                    navigationService, userService) {

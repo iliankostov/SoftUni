@@ -1,5 +1,5 @@
 define(['app', 'fileReaderService', 'validationService'], function (app) {
-    app.directive("ngCoverPictureSelect", function (fileReaderService, validationService, $timeout) {
+    app.directive("ngCoverSelect", function (fileReaderService, validationService, $timeout) {
         return {
             scope: {
                 ngModel: '='

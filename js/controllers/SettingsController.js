@@ -1,5 +1,5 @@
 define(['app', 'constants', 'validationService', 'authenticationService', 'navigationService', 'userService',
-        'ngFacePictureSelect', 'ngCoverPictureSelect'],
+        '../directives/ngPictureSelect', '../directives/ngCoverSelect'],
     function (app) {
         app.controller('SettingsController', function ($scope, $location, validationService, authenticationService,
                                                    navigationService, userService) {
