@@ -8,7 +8,7 @@ define(['app', 'validationService', 'authenticationService', 'navigationService'
             $scope.signUp = function () {
                 var registerData = $scope.signUpData;
                 if (validationService.validateRegisterForm(registerData.username, registerData.email,
-                        registerData.password, registerData.confirmPassword)) {
+                        registerData.password, registerData.confirmPassword, registerData.name)) {
                     registerData = validationService.escapeHtmlSpecialChars(registerData);
                     authenticationService.SignUp(registerData);
                 }

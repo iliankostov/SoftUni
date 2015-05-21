@@ -1,6 +1,8 @@
-define(['app', 'requestService', 'notifyService', 'navigationService'], function (app) {
-    app.factory('userService', function (baseServiceUrl, requestService, notifyService, navigationService) {
+define(['app', 'constants', 'requestService', 'notifyService', 'navigationService'], function (app) {
+    app.factory('userService', function ($rootScope, constants, requestService, notifyService, navigationService) {
         var service = {};
+
+        var baseServiceUrl = constants.baseServiceUrl;
 
         service.GetUser = function () {
             var url = baseServiceUrl + '/me';
@@ -28,6 +30,7 @@ define(['app', 'requestService', 'notifyService', 'navigationService'], function
             return requestService.PutRequest(url, headers, editProfileData).then(
                 function (serverResponse) {
                     notifyService.showInfo(serverResponse.message);
+                    $rootScope.$broadcast('userDataUpdate');
                     navigationService.loadHome();
                 },
                 function (serverError) {

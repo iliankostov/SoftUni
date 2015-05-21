@@ -13,6 +13,9 @@ requirejs.config({
         // app
         app: 'app',
 
+        // constants
+        constants: 'constants',
+
         // services
         validationService: 'services/validationService',
         authenticationService: 'services/authenticationService',

@@ -2,8 +2,6 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
 
     var app = angular.module('app', ['ngRoute']);
 
-    app.constant('baseServiceUrl', 'http://softuni-social-network.azurewebsites.net/api');
-
     app.config(function ($routeProvider) {
         $routeProvider
             .when('/', angularAMD.route({

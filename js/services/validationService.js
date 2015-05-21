@@ -20,17 +20,17 @@ define(['app', 'notifyService'], function (app) {
             return (validateUsername(username) && validatePassword(password));
         };
 
-        service.validateRegisterForm = function (username, email, password, confirmPassword) {
-            return (validateUsername(username) && validateEmailAddress(email) &&
-            validatePassword(password) && validateConfirmPasswordMatch(password, confirmPassword));
+        service.validateRegisterForm = function (username, email, password, confirmPassword, name) {
+            return (validateUsername(username) && validateEmailAddress(email) && validatePassword(password) &&
+            validateConfirmPasswordMatch(password, confirmPassword) && validateName(name));
         };
 
         service.validateChangePasswordForm = function (newPassword, confirmPassword) {
             return (validatePassword(newPassword) && validateConfirmPasswordMatch(newPassword, confirmPassword));
         };
 
-        service.validateEditProfileForm = function (email) {
-            return (validateEmailAddress(email));
+        service.validateEditProfileForm = function (name, email) {
+            return (validateName(name) && validateEmailAddress(email));
         };
 
         service.validatePictureType = function (picture) {
@@ -77,6 +77,14 @@ define(['app', 'notifyService'], function (app) {
         function validateConfirmPasswordMatch(password, confirmPassword) {
             if (password !== confirmPassword) {
                 notifyService.showError("The password and confirmation password do not match.");
+                return false;
+            }
+            return true;
+        }
+
+        function validateName(name) {
+            if (name.length < 4 || name.length > 32) {
+                notifyService.showError("The name must be from 4 to 32 characters long.");
                 return false;
             }
             return true;

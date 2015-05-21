@@ -1,19 +1,12 @@
-define(['app', 'validationService', 'authenticationService', 'userService', 'ngFacePictureSelect', 'ngCoverPictureSelect'],
+define(['app', 'constants', 'validationService', 'authenticationService', 'userService',
+        'ngFacePictureSelect', 'ngCoverPictureSelect'],
     function (app) {
-        app.controller('UserController', function ($scope, validationService, authenticationService, userService) {
+        app.controller('UserController', function ($scope, $location, validationService,
+                                                   authenticationService, userService) {
             $scope.title = "Edit settings";
             $scope.changePasswordData = {};
+            $scope.userData = getUserData();
             $scope.isLoggedIn = authenticationService.isLoggedIn();
-
-            userService.GetUser().then(
-                function (serverData) {
-                    $scope.userData = serverData;
-                },
-                function (serverError) {
-                    $scope.userData = {};
-                    console.error(serverError);
-                }
-            );
 
             $scope.changePassword = function () {
                 var changePasswordData = $scope.changePasswordData;
@@ -34,6 +27,20 @@ define(['app', 'validationService', 'authenticationService', 'userService', 'ngF
             $scope.logout = function () {
                 userService.Logout();
             };
+
+            $scope.redirect = function () {
+                $location.path('/');
+            };
+
+            function getUserData() {
+                var data = {};
+                for (var d in sessionStorage) {
+                    if (sessionStorage.hasOwnProperty(d)) {
+                        data[d] = sessionStorage[d];
+                    }
+                }
+                return data;
+            }
         })
     }
 );
