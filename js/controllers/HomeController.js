@@ -2,7 +2,6 @@ define(['app', 'constants', 'validationService', 'authenticationService', 'userS
     function (app) {
         app.controller('HomeController', function ($scope, $rootScope, constants, validationService,
                                                    authenticationService, userService) {
-            $scope.title = "Welcome to iBook";
             $scope.isLoggedIn = authenticationService.isLoggedIn();
 
             $rootScope.$on('userDataUpdate', function () {
@@ -30,7 +29,10 @@ define(['app', 'constants', 'validationService', 'authenticationService', 'userS
             };
 
             function setTitle() {
-                $scope.title = $scope.userData.name + ' - News Feed';
+                if ($scope.isLoggedIn) {
+                    $scope.title = $scope.userData.name + ' - News Feed';
+                }
+                $scope.title = "Welcome to iBook";
             }
         })
     }

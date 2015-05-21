@@ -79,7 +79,11 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
         };
 
         function clearCredentials() {
-            delete sessionStorage['accessToken'];
+            for (var key in sessionStorage) {
+                if (sessionStorage.hasOwnProperty(key)) {
+                    delete sessionStorage[key];
+                }
+            }
         }
 
         function getHeaders() {

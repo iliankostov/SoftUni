@@ -21,18 +21,18 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
             }))
             .when('/wall', angularAMD.route({
                 templateUrl: 'templates/user/wall-view.html',
-                controller: 'UserController',
-                controllerUrl: 'controllers/UserController'
+                controller: 'WallController',
+                controllerUrl: 'controllers/WallController'
             }))
             .when('/edit/password', angularAMD.route({
                 templateUrl: 'templates/user/change-password-view.html',
-                controller: 'UserController',
-                controllerUrl: 'controllers/UserController'
+                controller: 'SettingsController',
+                controllerUrl: 'controllers/SettingsController'
             }))
             .when('/edit/profile', angularAMD.route({
                 templateUrl: 'templates/user/edit-profile-view.html',
-                controller: 'UserController',
-                controllerUrl: 'controllers/UserController'
+                controller: 'SettingsController',
+                controllerUrl: 'controllers/SettingsController'
             }))
             .otherwise({redirectTo: "/"});
     });
