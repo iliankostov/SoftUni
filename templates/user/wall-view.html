@@ -1,4 +1,7 @@
+<!-- Head -->
 <div ng-include="'templates/partial/head.html'"></div>
+
+<!-- Header -->
 <div ng-include="'templates/partial/header-view.html'"></div>
 
 <!-- User Wall -->
@@ -6,7 +9,7 @@
     <article class="container" id="top">
         <div class="row">
             <div class="4u">
-                <span class="image fit"><img src="images/base-user.jpg" ng-src="{{userData.profileImageData}}"/></span>
+                <span class="image fit"><img ng-src="{{userData.profileImageData}}"/></span>
             </div>
             <div class="8u">
                 <header>
@@ -17,4 +20,8 @@
     </article>
 </div>
 
+<!-- Guest Wall -->
+<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="redirect()"></div>
+
+<!-- Footer -->
 <div ng-include="'templates/partial/footer-view.html'"></div>

@@ -1,4 +1,7 @@
+<!-- Head -->
 <div ng-include="'templates/partial/head.html'"></div>
+
+<!-- Header -->
 <div ng-include="'templates/partial/header-view.html'"></div>
 
 <!-- User Edit Profile -->
@@ -73,12 +76,7 @@
 </div>
 
 <!-- Guest Edit Profile -->
-<div class="wrapper style1 first" ng-if="!isLoggedIn">
-    <article class="container 75%">
-        <header>
-            <h1>Access denied. Please log in!</h1>
-        </header>
-    </article>
-</div>
+<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="redirect()"></div>
 
+<!-- Footer -->
 <div ng-include="'templates/partial/footer-view.html'"></div>
