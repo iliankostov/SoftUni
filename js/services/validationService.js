@@ -6,7 +6,11 @@ define(['app', 'notifyService'], function (app) {
             var outputObject = {};
             for (var key in inputObject) {
                 if (inputObject.hasOwnProperty(key)) {
-                    outputObject[key] = escapeHtmlSpecialChars(inputObject[key])
+                    if (key !== 'gender' && key !== 'profileImageData' && key !== 'coverImageData') {
+                        outputObject[key] = escapeHtmlSpecialChars(inputObject[key]);
+                    } else {
+                        outputObject[key] = inputObject[key];
+                    }
                 }
             }
             return outputObject;
@@ -25,8 +29,8 @@ define(['app', 'notifyService'], function (app) {
             return (validatePassword(newPassword) && validateConfirmPasswordMatch(newPassword, confirmPassword));
         };
 
-        service.validateEditProfileForm = function (username, email) {
-            return (validateUsername(username) && validateEmailAddress(email));
+        service.validateEditProfileForm = function (email) {
+            return (validateEmailAddress(email));
         };
 
         service.validatePictureType = function (picture) {

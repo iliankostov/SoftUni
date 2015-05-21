@@ -3,9 +3,17 @@ define(['app', 'validationService', 'authenticationService', 'userService', 'ngF
         app.controller('UserController', function ($scope, validationService, authenticationService, userService) {
             $scope.title = "Edit settings";
             $scope.changePasswordData = {};
-            $scope.editProfileFormData = {};
-            $scope.editProfilePicturesData = {};
             $scope.isLoggedIn = authenticationService.isLoggedIn();
+
+            userService.GetUser().then(
+                function (serverData) {
+                    $scope.userData = serverData;
+                },
+                function (serverError) {
+                    $scope.userData = {};
+                    console.error(serverError);
+                }
+            );
 
             $scope.changePassword = function () {
                 var changePasswordData = $scope.changePasswordData;
@@ -16,15 +24,10 @@ define(['app', 'validationService', 'authenticationService', 'userService', 'ngF
             };
 
             $scope.editProfile = function () {
-                var editProfileFormData = $scope.editProfileFormData;
-                if (validationService.validateEditProfileForm(editProfileFormData.username, editProfileFormData.email)) {
-                    editProfileFormData = validationService.escapeHtmlSpecialChars(editProfileFormData);
-                    for (var picture in $scope.editProfilePicturesData) {
-                        if ($scope.editProfilePicturesData.hasOwnProperty(picture)) {
-                            editProfileFormData[picture] = $scope.editProfilePicturesData[picture];
-                        }
-                    }
-                    //userService.EditProfile(editProfileFormData);
+                var userData = $scope.userData;
+                if (validationService.validateEditProfileForm(userData.email)) {
+                    userData = validationService.escapeHtmlSpecialChars(userData);
+                    userService.EditProfile(userData);
                 }
             };
             

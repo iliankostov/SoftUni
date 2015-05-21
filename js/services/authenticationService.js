@@ -9,7 +9,7 @@ define(['app', 'requestService', 'notifyService', 'navigationService'], function
             var headers = null;
             return requestService.PostRequest(url, headers, registerData).then(
                 function (serverResponse) {
-                    notifyService.showInfo(serverResponse.message);
+                    notifyService.showInfo("Sign Up successful.");
                     setCredentials(serverResponse);
                     navigationService.loadHome();
                 },

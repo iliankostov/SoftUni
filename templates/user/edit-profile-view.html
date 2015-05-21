@@ -13,23 +13,23 @@
                     <div class="row">
                         <div class="4u" id="top">
                             <span class="image fit">
-                                <img src="images/base-user.jpg" ng-src="{{editProfilePicturesData.profileImageData}}"/>
+                                <img ng-src="{{userData.profileImageData}}"/>
                             </span>
                             <label for="photo-upload" class="button browse">Browse Photo</label>
                             <input id="photo-upload" type="file" ng-face-picture-select="onFileSelect($files)"
-                                   ng-model="editProfilePicturesData.profileImageData"/>
+                                   ng-model="userData.profileImageData"/>
                         </div>
                         <div class="8u">
                             <div class="row">
                                 <div class="6u">
-                                    <input type="text" name="username" id="username" placeholder="Username"
-                                           required ng-model="editProfileFormData.username"/>
+                                    <input type="text" name="name" id="name" placeholder="Name"
+                                           required ng-model="userData.name"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <input type="text" name="email" id="email" placeholder="Email"
-                                           required ng-model="editProfileFormData.email"/>
+                                           required ng-model="userData.email"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -37,26 +37,26 @@
                                     <legend>Gender:</legend>
                                     <label for="male">Male</label>
                                     <input type="radio" name="gender" id="male" value=1
-                                           ng-model="editProfileFormData.gender"/>
+                                           ng-model="userData.gender"/>
                                     <label for="female">Female</label>
                                     <input type="radio" name="gender" id="female" value=2
-                                           ng-model="editProfileFormData.gender"/>
+                                           ng-model="userData.gender"/>
                                     <label for="other">Other</label>
                                     <input type="radio" name="gender" id="other" value=0
-                                           ng-model="editProfileFormData.gender"/>
+                                           ng-model="userData.gender"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <span class="image"><img src="images/base-cover.jpg"
-                                                             ng-src="{{editProfilePicturesData.coverImageData}}"/></span>
+                                                             ng-src="{{userData.coverImageData}}"/></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <label for="cover-upload" class="button">Browse Cover</label>
                                     <input id="cover-upload" type="file" ng-cover-picture-select="onFileSelect($files)"
-                                           ng-model="editProfilePicturesData.coverImageData"/>
+                                           ng-model="userData.coverImageData"/>
                                 </div>
                             </div>
                         </div>

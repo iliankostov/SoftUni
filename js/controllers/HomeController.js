@@ -9,6 +9,15 @@ define(['app', 'validationService', 'authenticationService', 'userService'],
                 $scope.title = "News Feed";
             }
 
+            userService.GetUser().then(
+                function (serverData) {
+                    $scope.userData = serverData;
+                },
+                function (serverError) {
+                    $scope.userData = {};
+                    console.error(serverError);
+                }
+            );
 
             $scope.logout = function () {
                 userService.Logout();

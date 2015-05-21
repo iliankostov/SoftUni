@@ -9,6 +9,12 @@
 <!-- User Nav-->
 <nav class="nav" ng-if="isLoggedIn">
     <ul class="container">
+        <li>
+            <a href="#/wall" title="{{userData.name}}">
+                <img class="profile-image" ng-show="userData.profileImageData" ng-src="{{userData.profileImageData}}"/>
+                <span>{{userData.name}}</span>
+            </a>
+        </li>
         <li><a href="#/" class="icon fa-newspaper-o" title="News Feed"></a></li>
         <li><a href="#/edit/profile" class="icon fa-cogs" title="Edit Profile"></a></li>
         <li><a href="#/edit/password" class="icon fa-key" title="Change Password"></a></li>

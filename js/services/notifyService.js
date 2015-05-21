@@ -14,7 +14,8 @@ define(['app', 'noty'], function (app, noty) {
                 showError: function (msg, serverError) {
                     // Collect errors to display from the server response
                     var errors = [];
-                    if (serverError && serverError.error_description) {
+                    if (serverError && (serverError.error_description || serverError.message)) {
+                        errors.push(serverError.message);
                         errors.push(serverError.error_description);
                     }
                     if (serverError && serverError.modelState) {
