@@ -10,6 +10,30 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
             return requestService.GetRequest(url, headers);
         };
 
+        service.saveUserData = function(data) {
+            for (var d in data) {
+                if (data.hasOwnProperty(d)) {
+                    if (d == 'profileImageData') {
+                        sessionStorage[d] = data[d] || constants.baseProfilePicture;
+                    } else if (d == 'coverImageData') {
+                        sessionStorage[d] = data[d] || constants.baseCoverPicture;
+                    } else {
+                        sessionStorage[d] = data[d];
+                    }
+                }
+            }
+        };
+
+        service.loadUserData = function () {
+            var data = {};
+            for (var d in sessionStorage) {
+                if (sessionStorage.hasOwnProperty(d)) {
+                    data[d] = sessionStorage[d];
+                }
+            }
+            return data;
+        };
+
         service.ChangePassword = function (changePasswordData) {
             var url = baseServiceUrl + '/me/changepassword';
             var headers = getHeaders();
@@ -56,8 +80,6 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
 
         function clearCredentials() {
             delete sessionStorage['accessToken'];
-            delete sessionStorage['userName'];
-            delete sessionStorage['isLogged'];
         }
 
         function getHeaders() {

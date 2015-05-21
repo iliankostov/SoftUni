@@ -11,6 +11,7 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
                 return requestService.PostRequest(url, headers, registerData).then(
                     function (serverResponse) {
                         notifyService.showInfo("Sign Up successful.");
+                        $rootScope.$broadcast('userDataUpdate');
                         setCredentials(serverResponse);
                         navigationService.loadHome();
                     },
@@ -37,11 +38,7 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
             };
 
             service.isLoggedIn = function () {
-                var isLoggedIn = false;
-                if (sessionStorage['accessToken'] && sessionStorage['accessToken'].length > 490 && sessionStorage['isLogged']) {
-                    isLoggedIn = true;
-                }
-                return isLoggedIn;
+                return !!(sessionStorage['accessToken'] && sessionStorage['accessToken'].length > 490);
             };
 
             function setCredentials(serverData) {

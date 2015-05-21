@@ -1,6 +1,7 @@
 define(['app', 'validationService', 'authenticationService', 'navigationService'],
     function (app) {
-        app.controller('SignupController', function ($scope, validationService, authenticationService, navigationService) {
+        app.controller('SignupController', function ($scope, validationService, authenticationService,
+                                                     navigationService) {
             $scope.title = "Sign up to iBook";
             $scope.signUpData = {};
             $scope.isLoggedIn = authenticationService.isLoggedIn();
