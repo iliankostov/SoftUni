@@ -7,15 +7,15 @@ define(['app'], function (app) {
         };
 
         service.PostRequest = function (url, headers, data) {
-            return MakeRequest('POST',url, headers, data)
+            return MakeRequest('POST', url, headers, data)
         };
 
         service.PutRequest = function (url, headers, data) {
-            return MakeRequest('PUT',url, headers, data)
+            return MakeRequest('PUT', url, headers, data)
         };
 
         service.DeleteRequest = function (url, headers, data) {
-            return MakeRequest('DELETE',url, headers, data)
+            return MakeRequest('DELETE', url, headers, data)
         };
 
         function MakeRequest(method, url, headers, data) {
@@ -27,8 +27,8 @@ define(['app'], function (app) {
                 headers: headers,
                 data: data
             })
-            .success(deferred.resolve)
-            .error(deferred.reject);
+                .success(deferred.resolve)
+                .error(deferred.reject);
 
             return deferred.promise;
         }

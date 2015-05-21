@@ -16,6 +16,8 @@ define(['app', 'requestService', 'notifyService', 'navigationService'], function
             )
         };
 
+
+
         service.Logout = function () {
             var url = baseServiceUrl + '/users/logout';
             var headers = getHeaders();

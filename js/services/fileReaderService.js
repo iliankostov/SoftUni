@@ -1,8 +1,8 @@
 define(['app'], function (app) {
-    app.factory("fileReaderService", function($q, $log) {
+    app.factory("fileReaderService", function ($q) {
         var service = {};
-        
-        service.readAsDataURL = function(file, scope) {
+
+        service.readAsDataURL = function (file, scope) {
             var deferred = $q.defer();
 
             var reader = getReader(deferred, scope);
@@ -12,16 +12,16 @@ define(['app'], function (app) {
         };
 
         function onLoad(reader, deferred, scope) {
-            return function() {
-                scope.$apply(function() {
+            return function () {
+                scope.$apply(function () {
                     deferred.resolve(reader.result);
                 });
             };
         }
 
         function onError(reader, deferred, scope) {
-            return function() {
-                scope.$apply(function() {
+            return function () {
+                scope.$apply(function () {
                     deferred.reject(reader.result);
                 });
             };

@@ -2,15 +2,16 @@ define(['app', 'noty'], function (app, noty) {
     app.factory('notifyService',
         function () {
             return {
-                showInfo: function(msg) {
+                showInfo: function (msg) {
                     noty({
                             text: msg,
                             type: 'success',
                             layout: 'bottomCenter',
-                            timeout: 1000}
+                            timeout: 1000
+                        }
                     );
                 },
-                showError: function(msg, serverError) {
+                showError: function (msg, serverError) {
                     // Collect errors to display from the server response
                     var errors = [];
                     if (serverError && serverError.error_description) {
@@ -34,7 +35,8 @@ define(['app', 'noty'], function (app, noty) {
                             text: msg,
                             type: 'error',
                             layout: 'bottomCenter',
-                            timeout: 5000}
+                            timeout: 5000
+                        }
                     );
                 }
             }

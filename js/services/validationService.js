@@ -2,7 +2,7 @@ define(['app', 'notifyService'], function (app) {
     app.factory('validationService', function (notifyService) {
         var service = {};
 
-        service.EscapeHtmlSpecialChars = function (inputObject) {
+        service.escapeHtmlSpecialChars = function (inputObject) {
             var outputObject = {};
             for (var key in inputObject) {
                 if (inputObject.hasOwnProperty(key)) {
@@ -12,25 +12,37 @@ define(['app', 'notifyService'], function (app) {
             return outputObject;
         };
 
-        service.ValidateLogInForm = function (username, password) {
+        service.validateLogInForm = function (username, password) {
             return (validateUsername(username) && validatePassword(password));
         };
 
-        service.ValidateRegisterForm = function (username, email, password, confirmPassword) {
+        service.validateRegisterForm = function (username, email, password, confirmPassword) {
             return (validateUsername(username) && validateEmailAddress(email) &&
             validatePassword(password) && validateConfirmPasswordMatch(password, confirmPassword));
         };
 
-        service.ValidateChangePasswordForm = function (newPassword, confirmPassword) {
-            return (validatePassword(newPassword) && validateConfirmPasswordMatch(newPassword, confirmPassword))
+        service.validateChangePasswordForm = function (newPassword, confirmPassword) {
+            return (validatePassword(newPassword) && validateConfirmPasswordMatch(newPassword, confirmPassword));
         };
 
-        service.ValidateFacePicture = function (picture) {
-            return (validatePictureType(picture) && validatePictureSize(picture, 128*1024));
+        service.validateEditProfileForm = function (username, email) {
+            return (validateUsername(username) && validateEmailAddress(email));
         };
 
-        service.ValidateCoverPicture = function (picture) {
-            return (validatePictureType(picture) && validatePictureSize(picture, 1024*1024));
+        service.validatePictureType = function (picture) {
+            if (picture.type !== 'image/jpeg') {
+                notifyService.showError("The picture format must be .jpg!");
+                return false;
+            }
+            return true;
+        };
+
+        service.validatePictureSize = function (picture, maxSize) {
+            if (picture.size > maxSize) {
+                notifyService.showError('The picture size cannot be more than ' + (maxSize / 1024) + 'KB');
+                return false;
+            }
+            return true;
         };
 
         function validateUsername(username) {
@@ -61,22 +73,6 @@ define(['app', 'notifyService'], function (app) {
         function validateConfirmPasswordMatch(password, confirmPassword) {
             if (password !== confirmPassword) {
                 notifyService.showError("The password and confirmation password do not match.");
-                return false;
-            }
-            return true;
-        }
-
-        function validatePictureType(picture) {
-            if (picture.type !== 'image/jpeg') {
-                notifyService.showError("The picture format must be .jpg!");
-                return false;
-            }
-            return true;
-        }
-
-        function validatePictureSize(picture, maxSize) {
-            if (picture.size > maxSize) {
-                notifyService.showError('The picture size cannot be more than ' + (maxSize / 1024) + 'KB');
                 return false;
             }
             return true;

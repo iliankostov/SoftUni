@@ -1,5 +1,5 @@
 define(['app', 'fileReaderService', 'validationService'], function (app) {
-    app.directive("ngFileSelect", function (fileReaderService, validationService, $timeout) {
+    app.directive("ngCoverPictureSelect", function (fileReaderService, validationService, $timeout) {
         return {
             scope: {
                 ngModel: '='
@@ -16,7 +16,9 @@ define(['app', 'fileReaderService', 'validationService'], function (app) {
 
                 el.bind("change", function (e) {
                     var file = (e.srcElement || e.target).files[0];
-                    getFile(file);
+                    if (validationService.validatePictureSize(file, 1024*1024)) {
+                        getFile(file);
+                    }
                 });
             }
         };
