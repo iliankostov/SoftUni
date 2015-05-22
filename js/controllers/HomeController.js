@@ -2,6 +2,22 @@ define(['app', 'userService', 'profileService'],
     function (app) {
         app.controller('HomeController', function ($scope, $rootScope, userService, profileService) {
             $scope.isLoggedIn = userService.isLoggedIn();
+            $scope.feedsData = {};
+
+            if ($scope.isLoggedIn) {
+                profileService.loadFeeds().then(
+                    function (serverData) {
+                        $scope.feedsData = serverData;
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            }
+
+            $scope.logout = function () {
+                userService.Logout();
+            };
 
             $rootScope.$on('userDataUpdate', function () {
                 $rootScope.userDataUpdate = true;
@@ -22,10 +38,6 @@ define(['app', 'userService', 'profileService'],
                 $scope.userData = profileService.loadUserData();
                 setTitle();
             }
-
-            $scope.logout = function () {
-                userService.Logout();
-            };
 
             function setTitle() {
                 if ($scope.isLoggedIn) {

@@ -4,6 +4,13 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
 
         var serviceUrl = constants.baseServiceUrl + '/me';
 
+        service.loadFeeds = function () {
+            var lastPost = '';
+            var url = serviceUrl + '/feed?StartPostId='+ lastPost +'&PageSize=5';
+            var headers = requestService.getHeaders();
+            return requestService.GetRequest(url, headers);
+        };
+
         service.GetUser = function () {
             var url = serviceUrl;
             var headers = requestService.getHeaders();

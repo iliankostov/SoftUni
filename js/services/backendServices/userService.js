@@ -37,7 +37,6 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
 
         service.setCredentials = function(serverData) {
             sessionStorage['accessToken'] = serverData.access_token;
-            sessionStorage['isLogged'] = true;
         };
 
         function clearCredentials() {

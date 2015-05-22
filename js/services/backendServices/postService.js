@@ -10,8 +10,10 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
             return requestService.PostRequest(url, headers, postData);
         };
 
-        service.loadPosts = function () {
-
+        service.loadPosts = function (id) {
+            var url = serviceUrl + '/' + id;
+            var headers = requestService.getHeaders();
+            return requestService.GetRequest(url, headers)
         };
 
         return service;
