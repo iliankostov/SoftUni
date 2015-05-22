@@ -1,12 +1,26 @@
-define(['app', 'constants', 'validationService', 'authenticationService', 'navigationService', 'userService', 'ngCoverBackground'],
+define(['app', 'userService', 'profileService', 'postService', 'navigationService', 'ngCoverBackground'],
     function (app) {
-        app.controller('WallController', function ($scope, $location, validationService, authenticationService,
-                                                   navigationService, userService) {
-            $scope.isLoggedIn = authenticationService.isLoggedIn();
-            $scope.userData = userService.loadUserData();
+        app.controller('WallController', function ($scope, userService, profileService, postService, navigationService) {
+            $scope.isLoggedIn = userService.isLoggedIn();
+            $scope.userData = profileService.loadUserData();
             $scope.title = $scope.userData.name + ' - Wall';
+            $scope.postData = {};
 
-            //TODO: load wall
+            $scope.createPost = function () {
+                var postData = $scope.postData;
+                postData.username = $scope.userData.username;
+                postService.createPost(postData).then(
+                    function (serverData) {
+                        console.log(serverData);
+                        $scope.postData.postContent = '';
+                    },
+                    function (serverError) {
+                        console.log(serverError);
+                    }
+                );
+            };
+
+            //TODO: get wall posts
 
             $scope.logout = function () {
                 userService.Logout();

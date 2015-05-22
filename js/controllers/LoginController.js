@@ -1,16 +1,26 @@
-define(['app', 'validationService', 'authenticationService', 'navigationService'],
+define(['app', 'validationService', 'userService', 'navigationService', 'notifyService'],
     function (app) {
-        app.controller('LoginController', function ($scope, validationService, authenticationService,
-                                                    navigationService) {
+        app.controller('LoginController', function ($scope, $rootScope, validationService, userService,
+                                                    navigationService, notifyService) {
             $scope.title = "Log in to iBook";
             $scope.logInData = {};
-            $scope.isLoggedIn = authenticationService.isLoggedIn();
+            $scope.isLoggedIn = userService.isLoggedIn();
 
             $scope.logIn = function () {
                 var loginData = $scope.logInData;
                 if (validationService.validateLogInForm(loginData.username, loginData.password)) {
                     loginData = validationService.escapeHtmlSpecialChars(loginData);
-                    authenticationService.LogIn(loginData);
+                    userService.LogIn(loginData).then(
+                        function (serverResponse) {
+                            $rootScope.$broadcast('userDataUpdate');
+                            userService.setCredentials(serverResponse);
+                            navigationService.loadHome();
+                            notifyService.showInfo("Log In successful.");
+                        },
+                        function (serverError) {
+                            notifyService.showError("Unsuccessful Log In!", serverError)
+                        }
+                    )
                 }
             };
 

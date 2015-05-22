@@ -1,10 +1,9 @@
-define(['app', 'constants', 'validationService', 'authenticationService', 'navigationService', 'userService',
-        '../directives/ngPictureSelect', '../directives/ngCoverSelect'],
-    function (app) {
-        app.controller('SettingsController', function ($scope, $location, validationService, authenticationService,
-                                                   navigationService, userService) {
-            $scope.isLoggedIn = authenticationService.isLoggedIn();
-            $scope.userData = userService.loadUserData();
+define(['app', 'validationService', 'userService', 'profileService', 'navigationService', 'notifyService',
+        'ngPictureSelect', 'ngCoverSelect'], function (app) {
+        app.controller('SettingsController', function ($scope, validationService, userService,
+                                                   navigationService, notifyService, profileService ) {
+            $scope.isLoggedIn = userService.isLoggedIn();
+            $scope.userData = profileService.loadUserData();
             $scope.title = $scope.userData.name + ' - Edit settings';
             $scope.changePasswordData = {};
 
@@ -12,7 +11,16 @@ define(['app', 'constants', 'validationService', 'authenticationService', 'navig
                 var userData = $scope.userData;
                 if (validationService.validateEditProfileForm(userData.name, userData.email)) {
                     userData = validationService.escapeHtmlSpecialChars(userData);
-                    userService.EditProfile(userData);
+                    profileService.EditProfile(userData).then(
+                        function (serverResponse) {
+                            $rootScope.$broadcast('userDataUpdate');
+                            navigationService.loadHome();
+                            notifyService.showInfo(serverResponse.message);
+                        },
+                        function (serverError) {
+                            notifyService.showError("Unsuccessful edit profile", serverError);
+                        }
+                    )
                 }
             };
 
@@ -20,7 +28,15 @@ define(['app', 'constants', 'validationService', 'authenticationService', 'navig
                 var changePasswordData = $scope.changePasswordData;
                 if (validationService.validateChangePasswordForm(changePasswordData.newPassword, changePasswordData.confirmPassword)) {
                     changePasswordData = validationService.escapeHtmlSpecialChars(changePasswordData);
-                    userService.ChangePassword(changePasswordData);
+                    profileService.ChangePassword(changePasswordData).then(
+                        function (serverResponse) {
+                            notifyService.showInfo(serverResponse.message);
+                            navigationService.loadHome();
+                        },
+                        function (serverError) {
+                            notifyService.showError("Unsuccessful change password!", serverError);
+                        }
+                    )
                 }
             };
 

@@ -18,6 +18,12 @@ define(['app'], function (app) {
             return MakeRequest('DELETE', url, headers, data)
         };
 
+        service.getHeaders = function() {
+            return {
+                Authorization: 'Bearer ' + sessionStorage['accessToken']
+            };
+        };
+
         function MakeRequest(method, url, headers, data) {
             var deferred = $q.defer();
 

@@ -16,14 +16,17 @@ requirejs.config({
         // constants
         constants: 'constants',
 
+        // back-end services
+        postService: 'services/backendServices/postService',
+        profileService: 'services/backendServices/profileService',
+        userService: 'services/backendServices/userService',
+
         // services
-        validationService: 'services/validationService',
-        authenticationService: 'services/authenticationService',
-        navigationService: 'services/navigationService',
-        userService: 'services/userService',
-        requestService: 'services/requestService',
         fileReaderService: 'services/fileReaderService',
+        navigationService: 'services/navigationService',
         notifyService: 'services/notifyService',
+        requestService: 'services/requestService',
+        validationService: 'services/validationService',
 
         // directives
         ngPictureSelect: 'directives/ngPictureSelect',
