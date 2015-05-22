@@ -4,7 +4,7 @@ define(['app', 'constants', 'requestService'], function (app) {
 
         var serviceUrl = constants.baseServiceUrl + '/me';
 
-        service.loadFeeds = function (startPost) {
+        service.loadNewsFeed = function (startPost) {
             if (!startPost) {
                 startPost = '';
             }

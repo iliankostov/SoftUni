@@ -58,8 +58,8 @@
                     </section>
                 </div>
             </div>
-            <div class="8u">
-                <h1>Wall Posts</h1>
+            <div class="8u" ng-infinite-scroll="loadWallFeed()" ng-infinite-scroll-disabled="wallFeedBusy" ng-infinite-scroll-distance="0">
+                <div ng-include="'templates/partial/posts-view.html'"></div>
             </div>
         </div>
     </article>

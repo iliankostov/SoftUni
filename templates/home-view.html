@@ -51,41 +51,8 @@
                     </div>
                 </section>
             </div>
-            <div class="8u" ng-infinite-scroll="loadFeeds()" ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
-                <section class="box style1" ng-repeat="news in feedsData">
-                    <div class="row">
-                        <div class="4u">
-                            <img ng-src="{{news.author.profileImageData}}"/>
-                        </div>
-                        <div class="8u">
-                            <div class="row">
-                                <div class="8u">
-                                    {{news.author.name}}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="8u">
-                                    {{news.date | date:'dd MMM yyyy HH:mm:ss'}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="12u">
-                            {{news.postContent}}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="6u">
-                            {{news.likesCount}}
-                            <a class="icon fa-thumbs-o-up"> Like</a>
-                        </div>
-                        <div class="6u">
-                            {{news.totalCommentsCount}}
-                            <a class="icon fa-comments-o"> Comment</a>
-                        </div>
-                    </div>
-                </section>
+            <div class="8u" ng-infinite-scroll="loadNewsFeed()" ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
+                <div ng-include="'templates/partial/posts-view.html'"></div>
             </div>
         </div>
     </article>

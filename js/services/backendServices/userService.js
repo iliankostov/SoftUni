@@ -16,6 +16,15 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
             return requestService.PostRequest(url, headers, loginData);
         };
 
+        service.loadWallFeed = function (username, startPost) {
+            if (!startPost) {
+                startPost = '';
+            }
+            var url = serviceUrl + '/' + username + '/wall?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            var headers = requestService.getHeaders();
+            return requestService.GetRequest(url, headers);
+        };
+
         service.Logout = function () {
             var url = serviceUrl + '/logout';
             var headers = requestService.getHeaders();

@@ -1,9 +1,12 @@
-define(['app', 'userService', 'profileService', 'postService', 'navigationService', 'ngCoverBackground'],
+define(['app', 'userService', 'profileService', 'postService', 'navigationService', 'ngCoverBackground', 'ngInfiniteScroll'],
     function (app) {
         app.controller('WallController', function ($scope, userService, profileService, postService, navigationService) {
+            var wallFeedStartPost;
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.userData = profileService.loadUserData();
             $scope.title = $scope.userData.name + ' - Wall';
+            $scope.wallFeedBusy = false;
+            $scope.feedData = [];
             $scope.postData = {};
 
             $scope.createPost = function () {
@@ -20,7 +23,27 @@ define(['app', 'userService', 'profileService', 'postService', 'navigationServic
                 );
             };
 
-            //TODO: get wall posts
+            $scope.loadWallFeed = function () {
+                if ($scope.isLoggedIn) {
+                    if ($scope.wallFeedBusy){
+                        return;
+                    }
+                    $scope.wallFeedBusy = true;
+
+                    userService.loadWallFeed($scope.userData.username, wallFeedStartPost).then(
+                        function (serverData) {
+                            $scope.feedData = $scope.feedData.concat(serverData);
+                            if($scope.feedData.length > 0){
+                                wallFeedStartPost = $scope.feedData[$scope.feedData.length - 1].id;
+                                $scope.wallFeedBusy = false;
+                            }
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
+            };
 
             $scope.logout = function () {
                 userService.Logout();
