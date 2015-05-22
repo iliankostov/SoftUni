@@ -31,13 +31,15 @@ requirejs.config({
         // directives
         ngPictureSelect: 'directives/ngPictureSelect',
         ngCoverSelect: 'directives/ngCoverSelect',
-        ngCoverBackground: 'directives/ngCoverBackground'
+        ngCoverBackground: 'directives/ngCoverBackground',
+        ngInfiniteScroll: 'directives/ngInfiniteScroll'
     },
 
     shim: {
+        noty: ['jquery'],
+        angular: ['jquery'],
         angularAMD: ['angular'],
-        angularRouter: ['angular'],
-        noty: ['jquery']
+        angularRouter: ['angular']
     }
 });
 

@@ -1,12 +1,14 @@
-define(['app', 'constants', 'requestService', 'notifyService', 'navigationService'], function (app) {
-    app.factory('profileService', function ($rootScope, constants, requestService, notifyService, navigationService) {
+define(['app', 'constants', 'requestService'], function (app) {
+    app.factory('profileService', function ($rootScope, constants, requestService) {
         var service = {};
 
         var serviceUrl = constants.baseServiceUrl + '/me';
 
-        service.loadFeeds = function () {
-            var lastPost = '';
-            var url = serviceUrl + '/feed?StartPostId='+ lastPost +'&PageSize=5';
+        service.loadFeeds = function (startPost) {
+            if (!startPost) {
+                startPost = '';
+            }
+            var url = serviceUrl + '/feed?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
             var headers = requestService.getHeaders();
             return requestService.GetRequest(url, headers);
         };

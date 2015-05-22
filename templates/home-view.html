@@ -51,7 +51,7 @@
                     </div>
                 </section>
             </div>
-            <div class="8u">
+            <div class="8u" ng-infinite-scroll="loadFeeds()" ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
                 <section class="box style1" ng-repeat="news in feedsData">
                     <div class="row">
                         <div class="4u">

@@ -1,19 +1,33 @@
-define(['app', 'userService', 'profileService'],
+define(['app', 'userService', 'profileService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('HomeController', function ($scope, $rootScope, userService, profileService) {
+            var newsFeedStartPost;
             $scope.isLoggedIn = userService.isLoggedIn();
-            $scope.feedsData = {};
+            $scope.newsFeedBusy = false;
+            $scope.feedsData = [];
 
-            if ($scope.isLoggedIn) {
-                profileService.loadFeeds().then(
-                    function (serverData) {
-                        $scope.feedsData = serverData;
-                    },
-                    function (serverError) {
-                        console.error(serverError);
+            $scope.loadFeeds = function () {
+                if ($scope.isLoggedIn) {
+                    if ($scope.newsFeedBusy){
+                        return;
                     }
-                );
-            }
+                    $scope.newsFeedBusy = true;
+
+                    profileService.loadFeeds(newsFeedStartPost).then(
+                        function (serverData) {
+                            console.log(serverData);
+                            $scope.feedsData = $scope.feedsData.concat(serverData);
+                            if($scope.feedsData.length > 0){
+                                newsFeedStartPost = $scope.feedsData[$scope.feedsData.length - 1].id;
+                                $scope.newsFeedBusy = false;
+                            }
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
+            };
 
             $scope.logout = function () {
                 userService.Logout();
