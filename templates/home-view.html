@@ -32,25 +32,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="4u 12u(mobile)">
-                <section class="box style1">
-                    <div class="row">
-                        <div class="12u">
-                            Friends - 33 total
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="12u">
-                            <a href=""><img src="images/testFriend.jpg"/></a>
-                            <a href=""><img src="images/testFriend.jpg"/></a>
-                            <a href=""><img src="images/testFriend.jpg"/></a>
-                            <a href=""><img src="images/testFriend.jpg"/></a>
-                            <a href=""><img src="images/testFriend.jpg"/></a>
-                            <a href=""><img src="images/testFriend.jpg"/></a>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            <div class="4u" ng-include="'templates/partial/friends-preview-view.html'"></div>
             <div class="8u" ng-infinite-scroll="loadNewsFeed()" ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
                 <div ng-include="'templates/partial/posts-view.html'"></div>
             </div>
