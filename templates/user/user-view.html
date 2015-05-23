@@ -5,21 +5,23 @@
 <div ng-include="'templates/partial/header-view.html'"></div>
 
 <!-- User Wall -->
-<div class="wrapper style1 first" ng-if="isLoggedIn">
+<div class="wrapper style1 first" ng-if="isLoggedIn" ng-init="loadUserFullData()">
     <article class="container" id="top">
-        <section class="box style1" ng-cover-background="{{userData.coverImageData}}">
+        <section class="box style1" ng-style="{'background-image':'url(' + userData.coverImageData + ')'}">
             <div class="row" >
                 <div class="4u">
                     <span class="image fit"><img ng-src="{{userData.profileImageData}}"/></span>
                 </div>
                 <div class="8u">
                     <h1>{{userData.name}}</h1>
+                    <!-- todo show friend button -->
                     <input ng-if="false" type="button" value="Friend"/>
                 </div>
             </div>
         </section>
         <div class="row">
             <div class="4u">
+                <!-- todo check if user is my friend to show message textarea-->
                 <div class="row">
                     <div class="12u">
                         <section class="box style1">
@@ -32,9 +34,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="12u">
-                                        <img class="profile-image" ng-show="userData.profileImageData"
-                                             ng-src="{{userData.profileImageData}}"/>
-                                        <span>as {{userData.name}}</span>
+                                        <img class="profile-image" ng-show="myData.profileImageData"
+                                             ng-src="{{myData.profileImageData}}"/>
+                                        <span>as {{myData.name}}</span>
                                         <input type="button" value="Post" ng-click="createPost()"/>
                                     </div>
                                 </div>
@@ -42,6 +44,7 @@
                         </section>
                     </div>
                 </div>
+                <!-- todo get user friends preview-->
                 <div class="row">
                     <div class="12u" ng-include="'templates/partial/friends-preview-view.html'"></div>
                 </div>

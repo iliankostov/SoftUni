@@ -16,17 +16,23 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.postRequest(url, headers, loginData);
         };
 
+        service.searchUsersByName = function (searchData) {
+            var url = serviceUrl + '/search?searchTerm=' + searchData;
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers);
+        };
+
+        service.loadUserFullData = function (username) {
+            var url = serviceUrl + '/' + username;
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers);
+        };
+
         service.loadWallFeed = function (username, startPost) {
             if (!startPost) {
                 startPost = '';
             }
             var url = serviceUrl + '/' + username + '/wall?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
-            var headers = requestService.getHeaders();
-            return requestService.getRequest(url, headers);
-        };
-
-        service.searchUsersByName = function (searchData) {
-            var url = serviceUrl + '/search?searchTerm=' + searchData;
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };

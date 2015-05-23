@@ -2,8 +2,8 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
     function (app) {
         app.controller('FriendsController', function ($scope, constants, userService, profileService, navigationService) {
             $scope.isLoggedIn = userService.isLoggedIn();
-            $scope.userData = profileService.loadUserData();
-            $scope.title = $scope.userData.name +  ' - Friends';
+            $scope.myData = profileService.loadMyData();
+            $scope.title = $scope.myData.name +  ' - Friends';
             $scope.friendsData = [];
 
             profileService.getOwnFriends().then(

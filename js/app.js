@@ -19,7 +19,7 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
                 controller: 'SignupController',
                 controllerUrl: 'controllers/SignupController'
             }))
-            .when('/user', angularAMD.route({
+            .when('/:username', angularAMD.route({
                 templateUrl: 'templates/user/user-view.html',
                 controller: 'UserController',
                 controllerUrl: 'controllers/UserController'

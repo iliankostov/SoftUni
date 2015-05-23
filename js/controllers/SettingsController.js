@@ -3,15 +3,15 @@ define(['app', 'HeaderController', 'validationService', 'userService', 'profileS
         app.controller('SettingsController', function ($scope, validationService, userService,
                                                    navigationService, notifyService, profileService ) {
             $scope.isLoggedIn = userService.isLoggedIn();
-            $scope.userData = profileService.loadUserData();
-            $scope.title = $scope.userData.name + ' - Edit settings';
+            $scope.myData = profileService.loadMyData();
+            $scope.title = $scope.myData.name + ' - Edit settings';
             $scope.changePasswordData = {};
 
             $scope.editProfile = function () {
-                var userData = $scope.userData;
-                if (validationService.validateEditProfileForm(userData.name, userData.email)) {
-                    userData = validationService.escapeHtmlSpecialChars(userData);
-                    profileService.editProfile(userData).then(
+                var userData = $scope.myData;
+                if (validationService.validateEditProfileForm(myData.name, myData.email)) {
+                    myData = validationService.escapeHtmlSpecialChars(myData);
+                    profileService.editProfile(myData).then(
                         function (serverResponse) {
                             $rootScope.$broadcast('userDataUpdate');
                             navigationService.loadHome();

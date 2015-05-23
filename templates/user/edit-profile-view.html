@@ -16,23 +16,23 @@
                     <div class="row">
                         <div class="4u" id="top">
                             <span class="image fit">
-                                <img ng-src="{{userData.profileImageData}}"/>
+                                <img ng-src="{{myData.profileImageData}}"/>
                             </span>
                             <label for="photo-upload" class="button browse">Browse Photo</label>
                             <input id="photo-upload" type="file" ng-picture-select="onFileSelect($files)"
-                                   ng-model="userData.profileImageData"/>
+                                   ng-model="myData.profileImageData"/>
                         </div>
                         <div class="8u">
                             <div class="row">
                                 <div class="6u">
                                     <input type="text" name="name" id="name" placeholder="Name"
-                                           required ng-model="userData.name"/>
+                                           required ng-model="myData.name"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <input type="text" name="email" id="email" placeholder="Email"
-                                           required ng-model="userData.email"/>
+                                           required ng-model="myData.email"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -40,25 +40,25 @@
                                     <legend>Gender:</legend>
                                     <label for="male">Male</label>
                                     <input type="radio" name="gender" id="male" value=1
-                                           ng-model="userData.gender"/>
+                                           ng-model="myData.gender"/>
                                     <label for="female">Female</label>
                                     <input type="radio" name="gender" id="female" value=2
-                                           ng-model="userData.gender"/>
+                                           ng-model="myData.gender"/>
                                     <label for="other">Other</label>
                                     <input type="radio" name="gender" id="other" value=0
-                                           ng-model="userData.gender"/>
+                                           ng-model="myData.gender"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
-                                    <span class="image"><img ng-src="{{userData.coverImageData}}"/></span>
+                                    <span class="image"><img ng-src="{{myData.coverImageData}}"/></span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="6u">
                                     <label for="cover-upload" class="button">Browse Cover</label>
                                     <input id="cover-upload" type="file" ng-cover-select="onFileSelect($files)"
-                                           ng-model="userData.coverImageData"/>
+                                           ng-model="myData.coverImageData"/>
                                 </div>
                             </div>
                         </div>

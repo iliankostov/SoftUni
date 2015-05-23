@@ -2,21 +2,38 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
         'postService', 'navigationService',
         'ngCoverBackground', 'ngInfiniteScroll'],
     function (app) {
-        app.controller('UserController', function ($scope, constants, userService, profileService, postService,
-                                                   navigationService) {
+        app.controller('UserController', function ($scope, $routeParams, constants, userService, profileService,
+                                                   postService, navigationService) {
             var wallFeedStartPost;
-            $scope.isLoggedIn = userService.isLoggedIn();
-            $scope.userData = profileService.loadUserData();
-            $scope.title = $scope.userData.name + ' - Wall';
             $scope.wallFeedBusy = false;
-            $scope.postData = {};
+            $scope.isLoggedIn = userService.isLoggedIn();
+            $scope.myData = profileService.loadMyData();
+            $scope.userData = {};
             $scope.feedData = [];
+            $scope.postData = {};
+
+
+            $scope.loadUserFullData = function () {
+                var username = $routeParams.username;
+                userService.loadUserFullData(username).then(
+                    function (serverData) {
+                        // todo check if user has pictures
+                        console.log(serverData);
+                        $scope.userData = serverData;
+                        $scope.title = $scope.userData.name + ' - Wall';
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            };
 
             $scope.createPost = function () {
                 var postData = $scope.postData;
-                postData.username = $scope.userData.username;
+                postData.username = $scope.myData.username;
                 postService.createPost(postData).then(
                     function (serverData) {
+                        // todo check server data for message
                         console.log(serverData);
                         $scope.postData.postContent = '';
                     },

@@ -29,9 +29,9 @@
         </div>
     </div>
     <ul class="container">
-        <li><a href="#/user" title="{{userData.name}}">
-            <img class="profile-image" ng-show="userData.profileImageData" ng-src="{{userData.profileImageData}}"/>
-            <span>{{userData.name}}</span></a>
+        <li><a href="#/{{myData.username}}" title="{{myData.name}}">
+            <img class="profile-image" ng-show="myData.profileImageData" ng-src="{{myData.profileImageData}}"/>
+            <span>{{myData.name}}</span></a>
         </li>
         <li><a href="#/" class="icon fa-comments" title="News Feed"></a></li>
         <li><a href="" class="icon fa-users" title="Friends" ng-click="expandFriendRequests()">
@@ -49,7 +49,7 @@
     <div class="6u search-response" ng-if="searchResults">
         <div class="row" ng-repeat="user in searchResults">
             <div class="12u search-element">
-                <a class="row">
+                <a href="#/{{user.username}}" class="row">
                     <div class="4u">
                         <img class="small-thumb-image" ng-src="{{user.profileImageData}}"/>
                     </div>

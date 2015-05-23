@@ -4,11 +4,11 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
         app.controller('HomeController', function ($scope, $rootScope, constants, userService, profileService) {
             var newsFeedStartPost;
             $scope.isLoggedIn = userService.isLoggedIn();
-            $scope.userData = profileService.loadUserData();
+            $scope.myData = profileService.loadMyData();
             $scope.newsFeedBusy = false;
             $scope.feedData = [];
             if ($scope.isLoggedIn) {
-                $scope.title = $scope.userData.name + ' - News Feed';
+                $scope.title = $scope.myData.name + ' - News Feed';
             } else {
                 $scope.title = "Welcome to iBook";
             }
@@ -20,15 +20,15 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
             if ($rootScope.userDataUpdate) {
                 profileService.getUser().then(
                     function (data) {
-                        profileService.saveUserData(data);
+                        profileService.saveMyData(data);
                         $rootScope.userDataUpdate = false;
-                        $scope.userData = profileService.loadUserData();
+                        $scope.myData = profileService.loadMyData();
                     },
                     function (error) {
                         console.error(error);
                     });
             } else {
-                $scope.userData = profileService.loadUserData();
+                $scope.myData = profileService.loadMyData();
             }
 
             $scope.loadNewsFeed = function () {

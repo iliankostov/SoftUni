@@ -19,7 +19,7 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
-        service.saveUserData = function(data) {
+        service.saveMyData = function(data) {
             for (var d in data) {
                 if (data.hasOwnProperty(d)) {
                     switch (d) {
@@ -37,7 +37,7 @@ define(['app', 'constants', 'requestService'], function (app) {
             }
         };
 
-        service.loadUserData = function () {
+        service.loadMyData = function () {
             var data = {};
             for (var d in sessionStorage) {
                 if (sessionStorage.hasOwnProperty(d)) {
