@@ -1,6 +1,7 @@
-define(['app', 'userService', 'profileService', 'postService', 'navigationService', 'ngCoverBackground', 'ngInfiniteScroll'],
+define(['app', 'HeaderController', 'userService', 'profileService', 'postService', 'navigationService',
+        'ngCoverBackground', 'ngInfiniteScroll'],
     function (app) {
-        app.controller('WallController', function ($scope, userService, profileService, postService, navigationService) {
+        app.controller('UserController', function ($scope, userService, profileService, postService, navigationService) {
             var wallFeedStartPost;
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.userData = profileService.loadUserData();
@@ -43,10 +44,6 @@ define(['app', 'userService', 'profileService', 'postService', 'navigationServic
                         }
                     );
                 }
-            };
-
-            $scope.logout = function () {
-                userService.Logout();
             };
 
             $scope.cancel = function () {

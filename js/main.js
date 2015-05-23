@@ -16,6 +16,9 @@ requirejs.config({
         // constants
         constants: 'constants',
 
+        // nested controllers
+        HeaderController: 'controllers/HeaderController',
+
         // back-end services
         postService: 'services/backendServices/postService',
         profileService: 'services/backendServices/profileService',

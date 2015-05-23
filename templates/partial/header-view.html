@@ -7,10 +7,10 @@
 </nav>
 
 <!-- User Nav-->
-<nav class="nav" ng-if="isLoggedIn">
+<nav class="nav" ng-if="isLoggedIn" ng-controller="HeaderController">
     <ul class="container">
         <li>
-            <a href="#/wall" title="{{userData.name}}">
+            <a href="#/user" title="{{userData.name}}">
                 <img class="profile-image" ng-show="userData.profileImageData" ng-src="{{userData.profileImageData}}"/>
                 <span>{{userData.name}}</span>
             </a>

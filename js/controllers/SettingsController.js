@@ -1,4 +1,4 @@
-define(['app', 'validationService', 'userService', 'profileService', 'navigationService', 'notifyService',
+define(['app', 'HeaderController', 'validationService', 'userService', 'profileService', 'navigationService', 'notifyService',
         'ngPictureSelect', 'ngCoverSelect'], function (app) {
         app.controller('SettingsController', function ($scope, validationService, userService,
                                                    navigationService, notifyService, profileService ) {
@@ -38,10 +38,6 @@ define(['app', 'validationService', 'userService', 'profileService', 'navigation
                         }
                     )
                 }
-            };
-
-            $scope.logout = function () {
-                userService.Logout();
             };
 
             $scope.cancel = function () {

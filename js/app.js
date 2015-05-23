@@ -19,10 +19,10 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
                 controller: 'SignupController',
                 controllerUrl: 'controllers/SignupController'
             }))
-            .when('/wall', angularAMD.route({
-                templateUrl: 'templates/user/wall-view.html',
-                controller: 'WallController',
-                controllerUrl: 'controllers/WallController'
+            .when('/user', angularAMD.route({
+                templateUrl: 'templates/user/user-view.html',
+                controller: 'UserController',
+                controllerUrl: 'controllers/UserController'
             }))
             .when('/edit/password', angularAMD.route({
                 templateUrl: 'templates/user/change-password-view.html',
