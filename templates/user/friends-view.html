@@ -1,0 +1,32 @@
+<!-- Head -->
+<div ng-include="'templates/partial/head.html'"></div>
+
+<!-- Header -->
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- User Friends -->
+<div class="wrapper style1 first" ng-if="isLoggedIn">
+    <article class="container">
+        <div class="12u">
+            <header>
+                <h1>{{userData.name}} - Friends ({{friendsData.length}} total)</h1>
+            </header>
+            <section class="box style1">
+                <div class="12u">
+                    <div class="box 4u" ng-repeat="friend in friendsData">
+                        <div class="row">
+                            <div class="4u"><img ng-src="{{friend.profileImageData}}" class="thumb-image"/></div>
+                            <div class="8u">{{friend.name}}</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+</div>
+
+<!-- Guest Friends -->
+<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="cancel()"></div>
+
+<!-- Footer -->
+<div ng-include="'templates/partial/footer-view.html'"></div>

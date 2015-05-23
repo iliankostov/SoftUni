@@ -47,6 +47,12 @@ define(['app', 'constants', 'requestService'], function (app) {
             return data;
         };
 
+        service.getOwnFriends = function () {
+            var url = serviceUrl + '/friends';
+            var headers = requestService.getHeaders();
+            return requestService.GetRequest(url, headers)
+        };
+
         service.EditProfile = function (editProfileData) {
             var url = serviceUrl;
             var headers = requestService.getHeaders();

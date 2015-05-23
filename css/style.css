@@ -358,6 +358,10 @@
 					margin: 0 auto;
 					width: auto;
 				}
+		.thumb-image {
+			width: 100px;
+			height: 100px;
+		}
 
 	/* Button */
 

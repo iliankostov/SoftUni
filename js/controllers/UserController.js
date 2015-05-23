@@ -1,14 +1,16 @@
-define(['app', 'HeaderController', 'userService', 'profileService', 'postService', 'navigationService',
+define(['app', 'constants', 'HeaderController', 'FriendsController', 'userService', 'profileService',
+        'postService', 'navigationService',
         'ngCoverBackground', 'ngInfiniteScroll'],
     function (app) {
-        app.controller('UserController', function ($scope, userService, profileService, postService, navigationService) {
+        app.controller('UserController', function ($scope, constants, userService, profileService, postService,
+                                                   navigationService) {
             var wallFeedStartPost;
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.userData = profileService.loadUserData();
             $scope.title = $scope.userData.name + ' - Wall';
             $scope.wallFeedBusy = false;
-            $scope.feedData = [];
             $scope.postData = {};
+            $scope.feedData = [];
 
             $scope.createPost = function () {
                 var postData = $scope.postData;
