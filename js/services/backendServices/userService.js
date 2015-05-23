@@ -25,6 +25,12 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
+        service.searchUsersByName = function (searchData) {
+            var url = serviceUrl + '/search?searchTerm=' + searchData;
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers);
+        };
+
         service.logout = function () {
             var url = serviceUrl + '/logout';
             var headers = requestService.getHeaders();

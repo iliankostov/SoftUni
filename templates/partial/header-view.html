@@ -8,38 +8,56 @@
 
 <!-- User Nav-->
 <nav class="nav" ng-if="isLoggedIn" ng-controller="HeaderController">
-    <ul class="container">
-        <li>
-            <a href="#/user" title="{{userData.name}}">
-                <img class="profile-image" ng-show="userData.profileImageData" ng-src="{{userData.profileImageData}}"/>
-                <span>{{userData.name}}</span>
-            </a>
-        </li>
-        <li><a href="#/" class="icon fa-comments" title="News Feed"></a></li>
-        <li>
-            <a href="" class="icon fa-users" title="Friends" ng-click="expandFriendRequests()">
-                <div class="red-dot" ng-if="friendRequestsData.length != 0">{{friendRequestsData.length}}</div>
-            </a>
-
-            <div class="box 12u friend-requests" ng-if="friendRequestsData.expanded">
-                <div class="row" ng-repeat="friendRequest in friendRequestsData">
-                    <div class="row"><img class="thumb-image" ng-src="{{friendRequest.user.profileImageData}}"/></div>
-                    <div class="row">
-                        <div class="12u">{{friendRequest.user.name}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="6u">
-                            <input type="button" value="Accept" ng-click="acceptFriendRequest(friendRequest.id)"/>
-                        </div>
-                        <div class="6u">
-                            <input type="button" value="Reject" ng-click="rejectFriendRequest(friendRequest.id)"/>
-                        </div>
-                    </div>
+    <div class="box 6u friend-requests" ng-if="friendRequestsData.expanded">
+        <div class="row" ng-repeat="friendRequest in friendRequestsData">
+            <div class="row">
+                <div class="12u">
+                    <img class="thumb-image" ng-src="{{friendRequest.user.profileImageData}}"/>
                 </div>
             </div>
+            <div class="row">
+                <div class="6u">{{friendRequest.user.name}}</div>
+            </div>
+            <div class="row">
+                <div class="6u">
+                    <input type="button" value="Accept" ng-click="acceptFriendRequest(friendRequest.id)"/>
+                </div>
+                <div class="6u">
+                    <input type="button" value="Reject" ng-click="rejectFriendRequest(friendRequest.id)"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="container">
+        <li><a href="#/user" title="{{userData.name}}">
+            <img class="profile-image" ng-show="userData.profileImageData" ng-src="{{userData.profileImageData}}"/>
+            <span>{{userData.name}}</span></a>
+        </li>
+        <li><a href="#/" class="icon fa-comments" title="News Feed"></a></li>
+        <li><a href="" class="icon fa-users" title="Friends" ng-click="expandFriendRequests()">
+            <div class="red-dot" ng-if="friendRequestsData.length != 0">{{friendRequestsData.length}}</div>
+        </a>
         </li>
         <li><a href="#/edit/profile" class="icon fa-cogs" title="Edit Profile"></a></li>
         <li><a href="#/edit/password" class="icon fa-key" title="Change Password"></a></li>
         <li><a href="" class="icon fa-sign-out" title="Log Out" ng-click="logout()"></a></li>
+        <li>
+            <form><input class="search-box" type="text" placeholder="Search..." ng-model="searchDataWord"
+                         ng-change="searchUsersByName(searchDataWord)" ng-blur="clearDropDown()"/></form>
+        </li>
     </ul>
+    <div class="6u search-response" ng-if="searchResults">
+        <div class="row" ng-repeat="user in searchResults">
+            <div class="12u search-element">
+                <a class="row">
+                    <div class="4u">
+                        <img class="small-thumb-image" ng-src="{{user.profileImageData}}"/>
+                    </div>
+                    <div class="4u">
+                        {{user.name}}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </nav>

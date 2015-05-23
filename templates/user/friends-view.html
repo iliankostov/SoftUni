@@ -11,16 +11,14 @@
             <header>
                 <h1>{{userData.name}} - Friends ({{friendsData.length}} total)</h1>
             </header>
-            <section class="box style1">
-                <div class="12u">
-                    <div class="box 4u" ng-repeat="friend in friendsData">
-                        <div class="row">
-                            <div class="4u"><img ng-src="{{friend.profileImageData}}" class="thumb-image"/></div>
-                            <div class="8u">{{friend.name}}</div>
-                        </div>
+            <div class="12u">
+                <div class="box style1 4u 12u(mobile)" ng-repeat="friend in friendsData">
+                    <div class="row">
+                        <div class="4u"><img ng-src="{{friend.profileImageData}}" class="thumb-image"/></div>
+                        <div class="8u">{{friend.name}}</div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </article>
 </div>

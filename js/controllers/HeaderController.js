@@ -1,6 +1,6 @@
 define(['app', 'constants', 'userService', 'profileService', 'navigationService', 'notifyService'],
     function (app) {
-        app.controller('HeaderController', function ($scope, constants, userService, profileService,
+        app.controller('HeaderController', function ($scope, $timeout, constants, userService, profileService,
                                                      navigationService, notifyService) {
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.friendRequestsData = {};
@@ -40,6 +40,31 @@ define(['app', 'constants', 'userService', 'profileService', 'navigationService'
                         notifyService.showError("Unsuccessful Logout!", serverError);
                     }
                 )
+            };
+
+            $scope.searchUsersByName = function (searchDataWord) {
+                if (searchDataWord !== '') {
+                    userService.searchUsersByName(searchDataWord).then(
+                        function (serverData) {
+                            $scope.searchResults = serverData;
+                            $scope.searchResults.forEach(function (user) {
+                                if (!user.profileImageData) {
+                                    user.profileImageData = constants.baseProfilePicture;
+                                }
+                            });
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
+            };
+
+            $scope.clearDropDown = function(){
+                $timeout(function() {
+                    $scope.searchResults = undefined;
+                    $scope.searchDataWord = '';
+                }, 300);
             };
         })
     }
