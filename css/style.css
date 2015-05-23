@@ -620,6 +620,28 @@
 				font-size: 6em;
 			}
 
+	.red-dot
+	{
+		position: absolute;
+		width: 1em;
+		height: 1em;
+		line-height: 1em;
+		margin-top: -1em;
+		color: white;
+		background-color: red;
+		-moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+		border-radius: 1em;
+	}
+
+	.friend-requests
+	{
+		position: absolute;
+		border: 1px solid black;
+		border-radius: 5px;
+		background-color: #2a2a2a;
+	}
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/

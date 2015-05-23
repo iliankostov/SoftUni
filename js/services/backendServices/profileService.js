@@ -59,6 +59,18 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
+        service.acceptFriendRequest = function (requestId) {
+            var url = serviceUrl + '/requests/' + requestId + '?status=approved';
+            var headers = requestService.getHeaders();
+            return requestService.putRequest(url, headers);
+        };
+
+        service.rejectFriendRequest = function (requestId) {
+            var url = serviceUrl + '/requests/' + requestId + '?status=rejected';
+            var headers = requestService.getHeaders();
+            return requestService.putRequest(url, headers);
+        };
+
         service.editProfile = function (editProfileData) {
             var url = serviceUrl;
             var headers = requestService.getHeaders();
