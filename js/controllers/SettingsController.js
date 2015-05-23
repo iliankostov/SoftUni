@@ -11,7 +11,7 @@ define(['app', 'HeaderController', 'validationService', 'userService', 'profileS
                 var userData = $scope.userData;
                 if (validationService.validateEditProfileForm(userData.name, userData.email)) {
                     userData = validationService.escapeHtmlSpecialChars(userData);
-                    profileService.EditProfile(userData).then(
+                    profileService.editProfile(userData).then(
                         function (serverResponse) {
                             $rootScope.$broadcast('userDataUpdate');
                             navigationService.loadHome();
@@ -28,7 +28,7 @@ define(['app', 'HeaderController', 'validationService', 'userService', 'profileS
                 var changePasswordData = $scope.changePasswordData;
                 if (validationService.validateChangePasswordForm(changePasswordData.newPassword, changePasswordData.confirmPassword)) {
                     changePasswordData = validationService.escapeHtmlSpecialChars(changePasswordData);
-                    profileService.ChangePassword(changePasswordData).then(
+                    profileService.changePassword(changePasswordData).then(
                         function (serverResponse) {
                             notifyService.showInfo(serverResponse.message);
                             navigationService.loadHome();

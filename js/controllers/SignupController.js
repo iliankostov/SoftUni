@@ -11,7 +11,7 @@ define(['app', 'validationService', 'userService', 'navigationService', 'notifyS
                 if (validationService.validateRegisterForm(registerData.username, registerData.email,
                         registerData.password, registerData.confirmPassword, registerData.name)) {
                     registerData = validationService.escapeHtmlSpecialChars(registerData);
-                    userService.SignUp(registerData).then(
+                    userService.signUp(registerData).then(
                         function (serverResponse) {
                             $rootScope.$broadcast('userDataUpdate');
                             userService.setCredentials(serverResponse);

@@ -10,7 +10,7 @@ define(['app', 'validationService', 'userService', 'navigationService', 'notifyS
                 var loginData = $scope.logInData;
                 if (validationService.validateLogInForm(loginData.username, loginData.password)) {
                     loginData = validationService.escapeHtmlSpecialChars(loginData);
-                    userService.LogIn(loginData).then(
+                    userService.logIn(loginData).then(
                         function (serverResponse) {
                             $rootScope.$broadcast('userDataUpdate');
                             userService.setCredentials(serverResponse);

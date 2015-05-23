@@ -2,20 +2,20 @@ define(['app'], function (app) {
     app.factory('requestService', function ($http, $q) {
         var service = {};
 
-        service.GetRequest = function (url, headers, data) {
-            return MakeRequest('GET', url, headers, data)
+        service.getRequest = function (url, headers, data) {
+            return makeRequest('GET', url, headers, data)
         };
 
-        service.PostRequest = function (url, headers, data) {
-            return MakeRequest('POST', url, headers, data)
+        service.postRequest = function (url, headers, data) {
+            return makeRequest('POST', url, headers, data)
         };
 
-        service.PutRequest = function (url, headers, data) {
-            return MakeRequest('PUT', url, headers, data)
+        service.putRequest = function (url, headers, data) {
+            return makeRequest('PUT', url, headers, data)
         };
 
-        service.DeleteRequest = function (url, headers, data) {
-            return MakeRequest('DELETE', url, headers, data)
+        service.deleteRequest = function (url, headers, data) {
+            return makeRequest('DELETE', url, headers, data)
         };
 
         service.getHeaders = function() {
@@ -24,7 +24,7 @@ define(['app'], function (app) {
             };
         };
 
-        function MakeRequest(method, url, headers, data) {
+        function makeRequest(method, url, headers, data) {
             var deferred = $q.defer();
 
             $http({

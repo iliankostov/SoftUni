@@ -1,43 +1,33 @@
-define(['app', 'constants', 'requestService', 'notifyService', 'navigationService'], function (app) {
-    app.factory('userService', function ($rootScope, constants, requestService, notifyService, navigationService) {
-        var service = {};
+define(['app', 'constants', 'requestService'], function (app) {
+    app.factory('userService', function ($rootScope, constants, requestService) {
+        var headers, service, url, serviceUrl;
+        service = {};
+        headers = requestService.getHeaders();
+        serviceUrl = constants.baseServiceUrl + '/users';
 
-        var serviceUrl = constants.baseServiceUrl + '/users';
-
-        service.SignUp = function (registerData) {
-            var url = serviceUrl + '/register';
-            var headers = null;
-            return requestService.PostRequest(url, headers, registerData);
+        service.signUp = function (registerData) {
+            url = serviceUrl + '/register';
+            headers = null;
+            return requestService.postRequest(url, headers, registerData);
         };
 
-        service.LogIn = function (loginData) {
-            var url = serviceUrl + '/login';
-            var headers = null;
-            return requestService.PostRequest(url, headers, loginData);
+        service.logIn = function (loginData) {
+            url = serviceUrl + '/login';
+            headers = null;
+            return requestService.postRequest(url, headers, loginData);
         };
 
         service.loadWallFeed = function (username, startPost) {
             if (!startPost) {
                 startPost = '';
             }
-            var url = serviceUrl + '/' + username + '/wall?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
-            var headers = requestService.getHeaders();
-            return requestService.GetRequest(url, headers);
+            url = serviceUrl + '/' + username + '/wall?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            return requestService.getRequest(url, headers);
         };
 
-        service.Logout = function () {
-            var url = serviceUrl + '/logout';
-            var headers = requestService.getHeaders();
-            return requestService.PostRequest(url, headers).then(
-                function (serverResponse) {
-                    notifyService.showInfo(serverResponse.message);
-                    clearCredentials();
-                    navigationService.loadHome(true);
-                },
-                function (serverError) {
-                    notifyService.showError("Unsuccessful Logout!", serverError);
-                }
-            )
+        service.logout = function () {
+            url = serviceUrl + '/logout';
+            return requestService.postRequest(url, headers);
         };
 
         service.isLoggedIn = function () {
@@ -48,13 +38,13 @@ define(['app', 'constants', 'requestService', 'notifyService', 'navigationServic
             sessionStorage['accessToken'] = serverData.access_token;
         };
 
-        function clearCredentials() {
+        service.clearCredentials = function() {
             for (var key in sessionStorage) {
                 if (sessionStorage.hasOwnProperty(key)) {
                     delete sessionStorage[key];
                 }
             }
-        }
+        };
 
         return service;
     });

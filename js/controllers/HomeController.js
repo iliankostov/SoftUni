@@ -18,7 +18,7 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
             });
 
             if ($rootScope.userDataUpdate) {
-                profileService.GetUser().then(
+                profileService.getUser().then(
                     function (data) {
                         profileService.saveUserData(data);
                         $rootScope.userDataUpdate = false;

@@ -1,22 +1,21 @@
 define(['app', 'constants', 'requestService'], function (app) {
     app.factory('profileService', function ($rootScope, constants, requestService) {
-        var service = {};
-
-        var serviceUrl = constants.baseServiceUrl + '/me';
+        var headers, service, url, serviceUrl;
+        service = {};
+        headers = requestService.getHeaders();
+        serviceUrl = constants.baseServiceUrl + '/me';
 
         service.loadNewsFeed = function (startPost) {
             if (!startPost) {
                 startPost = '';
             }
-            var url = serviceUrl + '/feed?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
-            var headers = requestService.getHeaders();
-            return requestService.GetRequest(url, headers);
+            url = serviceUrl + '/feed?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            return requestService.getRequest(url, headers);
         };
 
-        service.GetUser = function () {
-            var url = serviceUrl;
-            var headers = requestService.getHeaders();
-            return requestService.GetRequest(url, headers);
+        service.getUser = function () {
+            url = serviceUrl;
+            return requestService.getRequest(url, headers);
         };
 
         service.saveUserData = function(data) {
@@ -48,21 +47,23 @@ define(['app', 'constants', 'requestService'], function (app) {
         };
 
         service.getOwnFriends = function () {
-            var url = serviceUrl + '/friends';
-            var headers = requestService.getHeaders();
-            return requestService.GetRequest(url, headers)
+            url = serviceUrl + '/friends';
+            return requestService.getRequest(url, headers)
         };
 
-        service.EditProfile = function (editProfileData) {
-            var url = serviceUrl;
-            var headers = requestService.getHeaders();
-            return requestService.PutRequest(url, headers, editProfileData);
+        service.getFriendRequests = function () {
+            url = serviceUrl + '/requests';
+            return requestService.getRequest(url, headers);
         };
 
-        service.ChangePassword = function (changePasswordData) {
-            var url = serviceUrl + '/changepassword';
-            var headers = requestService.getHeaders();
-            return requestService.PutRequest(url, headers, changePasswordData);
+        service.editProfile = function (editProfileData) {
+            url = serviceUrl;
+            return requestService.putRequest(url, headers, editProfileData);
+        };
+
+        service.changePassword = function (changePasswordData) {
+            url = serviceUrl + '/changepassword';
+            return requestService.putRequest(url, headers, changePasswordData);
         };
 
         return service;

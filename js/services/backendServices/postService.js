@@ -1,19 +1,18 @@
 define(['app', 'constants', 'requestService', 'notifyService', 'navigationService'], function (app) {
     app.factory('postService', function ($rootScope, constants, requestService, notifyService, navigationService) {
-        var service = {};
-
-        var serviceUrl = constants.baseServiceUrl + '/Posts';
+        var headers, service, url, serviceUrl;
+        service = {};
+        headers = requestService.getHeaders();
+        serviceUrl = constants.baseServiceUrl + '/Posts';
 
         service.createPost = function (postData) {
-            var url = serviceUrl;
-            var headers = requestService.getHeaders();
-            return requestService.PostRequest(url, headers, postData);
+            url = serviceUrl;
+            return requestService.postRequest(url, headers, postData);
         };
 
         service.loadPosts = function (id) {
-            var url = serviceUrl + '/' + id;
-            var headers = requestService.getHeaders();
-            return requestService.GetRequest(url, headers)
+            url = serviceUrl + '/' + id;
+            return requestService.getRequest(url, headers)
         };
 
         return service;
