@@ -1,20 +1,21 @@
 define(['app', 'constants', 'requestService'], function (app) {
     app.factory('profileService', function ($rootScope, constants, requestService) {
-        var headers, service, url, serviceUrl;
+        var service, serviceUrl;
         service = {};
-        headers = requestService.getHeaders();
         serviceUrl = constants.baseServiceUrl + '/me';
 
         service.loadNewsFeed = function (startPost) {
             if (!startPost) {
                 startPost = '';
             }
-            url = serviceUrl + '/feed?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            var url = serviceUrl + '/feed?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
 
         service.getUser = function () {
-            url = serviceUrl;
+            var url = serviceUrl;
+            var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
 
@@ -47,22 +48,26 @@ define(['app', 'constants', 'requestService'], function (app) {
         };
 
         service.getOwnFriends = function () {
-            url = serviceUrl + '/friends';
+            var url = serviceUrl + '/friends';
+            var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers)
         };
 
         service.getFriendRequests = function () {
-            url = serviceUrl + '/requests';
+            var url = serviceUrl + '/requests';
+            var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
 
         service.editProfile = function (editProfileData) {
-            url = serviceUrl;
+            var url = serviceUrl;
+            var headers = requestService.getHeaders();
             return requestService.putRequest(url, headers, editProfileData);
         };
 
         service.changePassword = function (changePasswordData) {
-            url = serviceUrl + '/changepassword';
+            var url = serviceUrl + '/changepassword';
+            var headers = requestService.getHeaders();
             return requestService.putRequest(url, headers, changePasswordData);
         };
 

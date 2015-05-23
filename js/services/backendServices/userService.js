@@ -1,19 +1,18 @@
 define(['app', 'constants', 'requestService'], function (app) {
     app.factory('userService', function ($rootScope, constants, requestService) {
-        var headers, service, url, serviceUrl;
+        var service, serviceUrl;
         service = {};
-        headers = requestService.getHeaders();
         serviceUrl = constants.baseServiceUrl + '/users';
 
         service.signUp = function (registerData) {
-            url = serviceUrl + '/register';
-            headers = null;
+            var url = serviceUrl + '/register';
+            var headers = null;
             return requestService.postRequest(url, headers, registerData);
         };
 
         service.logIn = function (loginData) {
-            url = serviceUrl + '/login';
-            headers = null;
+            var url = serviceUrl + '/login';
+            var headers = null;
             return requestService.postRequest(url, headers, loginData);
         };
 
@@ -21,12 +20,14 @@ define(['app', 'constants', 'requestService'], function (app) {
             if (!startPost) {
                 startPost = '';
             }
-            url = serviceUrl + '/' + username + '/wall?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            var url = serviceUrl + '/' + username + '/wall?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
 
         service.logout = function () {
-            url = serviceUrl + '/logout';
+            var url = serviceUrl + '/logout';
+            var headers = requestService.getHeaders();
             return requestService.postRequest(url, headers);
         };
 
