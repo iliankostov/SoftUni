@@ -14,8 +14,7 @@
                 </div>
                 <div class="8u">
                     <h1>{{userData.name}}</h1>
-                    <!-- todo show friend button -->
-                    <input ng-if="false" type="button" value="Friend"/>
+                    <input ng-if="!userData.isFriend && userData.username != myData.username" type="button" value="Friend"/>
                 </div>
             </div>
         </section>

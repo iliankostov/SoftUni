@@ -6,6 +6,7 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.title = $scope.myData.name +  ' - Friends';
             $scope.friendsData = [];
 
+            //todo get user friends
             profileService.getOwnFriends().then(
                 function (serverData) {
                     $scope.friendsData = serverData;
