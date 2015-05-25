@@ -5,7 +5,7 @@
 <div ng-include="'templates/partial/header-view.html'"></div>
 
 <!-- User Friends -->
-<div class="wrapper style1 first" ng-if="isLoggedIn">
+<div class="wrapper style1 first" ng-if="isLoggedIn && userData.isFriend" ng-init="loadFriends()">
     <article class="container">
         <div class="12u">
             <header>
@@ -24,7 +24,7 @@
 </div>
 
 <!-- Guest Friends -->
-<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="cancel()"></div>
+<div class="wrapper style1 first" ng-if="!isLoggedIn || !userData.isFriend" ng-bind="cancel()"></div>
 
 <!-- Footer -->
 <div ng-include="'templates/partial/footer-view.html'"></div>

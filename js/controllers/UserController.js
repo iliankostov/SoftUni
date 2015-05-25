@@ -29,31 +29,33 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                 }
             );
 
-            if ($scope.userData.username == $scope.myData.username) {
-                profileService.getOwnFriends().then(
-                    function (serverData) {
-                        $scope.friendsData = serverData;
-                        $scope.friendsData.forEach(function (friend) {
-                            if (!friend.profileImageData) {
-                                friend.profileImageData = constants.baseProfilePicture;
-                            }
-                        })
+            $scope.loadFriends = function () {
+                if ($scope.userData.username != $scope.myData.username) {
+                    userService.getUserFriendsPreview($routeParams.username).then(
+                        function (serverData) {
+                            $scope.friendsData = serverData.friends;
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                } else {
+                    profileService.getOwnFriends().then(
+                        function (serverData) {
+                            $scope.friendsData = serverData;
+                            $scope.friendsData.forEach(function (friend) {
+                                if (!friend.profileImageData) {
+                                    friend.profileImageData = constants.baseProfilePicture;
+                                }
+                            })
 
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                );
-            } else {
-                userService.getUserFriendsPreview($routeParams.username).then(
-                    function (serverData) {
-                        $scope.friendsData = serverData.friends;
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                );
-            }
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
+            };
 
             $scope.loadWallFeed = function () {
                 if ($scope.isLoggedIn) {
