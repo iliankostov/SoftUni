@@ -6,24 +6,6 @@ define(['app', 'constants', 'userService', 'profileService', 'navigationService'
             $scope.friendRequestsData = {};
             $scope.friendRequestsData.expanded = false;
 
-            $rootScope.$on('userDataUpdate', function () {
-                $rootScope.userDataUpdate = true;
-            });
-
-            if ($rootScope.userDataUpdate) {
-                profileService.getUser().then(
-                    function (data) {
-                        profileService.saveMyData(data);
-                        $rootScope.userDataUpdate = false;
-                        $scope.myData = profileService.loadMyData();
-                    },
-                    function (error) {
-                        console.error(error);
-                    });
-            } else {
-                $scope.myData = profileService.loadMyData();
-            }
-
             profileService.getFriendRequests().then(
                 function (serverData) {
                     $scope.friendRequestsData = serverData;

@@ -6,14 +6,49 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.myData = profileService.loadMyData();
             $scope.newsFeedBusy = false;
+            $scope.friendsData = [];
             $scope.feedData = [];
             if ($scope.isLoggedIn) {
-                $scope.title = $scope.myData.name + ' - News Feed';
+                $scope.title = 'News Feed';
+                profileService.getOwnFriends().then(
+                    function (serverData) {
+                        $scope.friendsData = serverData;
+                        $scope.friendsData.forEach(function (friend) {
+                            if (!friend.profileImageData) {
+                                friend.profileImageData = constants.baseProfilePicture;
+                            }
+                        })
+
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
             } else {
                 $scope.title = "Welcome to iBook";
             }
 
+            $rootScope.$on('userDataUpdate', function () {
+                $rootScope.userDataUpdate = true;
+            });
 
+            if ($rootScope.userDataUpdate) {
+                profileService.getUser().then(
+                    function (data) {
+                        profileService.saveMyData(data);
+                        $rootScope.userDataUpdate = false;
+                        $scope.myData = profileService.loadMyData();
+                        $scope.title = $scope.myData.name + ' - ' + $scope.title;
+                    },
+                    function (error) {
+                        console.error(error);
+                    });
+            } else {
+                $scope.myData = profileService.loadMyData();
+                if ($scope.isLoggedIn) {
+                    $scope.title = $scope.myData.name + ' - ' + $scope.title;
+                }
+            }
 
             $scope.loadNewsFeed = function () {
                 if ($scope.isLoggedIn) {

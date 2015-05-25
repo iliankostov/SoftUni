@@ -28,6 +28,18 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
+        service.getUserFriends = function (username) {
+            var url = serviceUrl + '/' + username + '/friends';
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers)
+        };
+
+        service.getUserFriendsPreview = function (username) {
+            var url = serviceUrl + '/' + username + '/friends/preview';
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers)
+        };
+
         service.loadWallFeed = function (username, startPost) {
             if (!startPost) {
                 startPost = '';

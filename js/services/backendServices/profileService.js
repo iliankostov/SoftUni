@@ -59,6 +59,12 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
+        service.sendFriendRequest = function (username) {
+            var url = serviceUrl + '/requests/' + username;
+            var headers = requestService.getHeaders();
+            return requestService.postRequest(url, headers);
+        };
+
         service.acceptFriendRequest = function (requestId) {
             var url = serviceUrl + '/requests/' + requestId + '?status=approved';
             var headers = requestService.getHeaders();
