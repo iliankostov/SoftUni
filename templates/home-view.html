@@ -1,5 +1,5 @@
-<!-- Head -->
-<div ng-include="'templates/partial/head.html'"></div>
+<!-- Title -->
+<title ng-bind="title"></title>
 
 <!-- Header -->
 <div ng-include="'templates/partial/header-view.html'"></div>
@@ -33,8 +33,8 @@
         </div>
         <div class="row">
             <div class="4u" ng-include="'templates/partial/friends-preview-view.html'"></div>
-            <div class="8u" ng-infinite-scroll="loadNewsFeed()" ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
-                <div ng-include="'templates/partial/posts-view.html'"></div>
+            <div ng-include="'templates/partial/posts-view.html'" class="8u" ng-infinite-scroll="loadNewsFeed()"
+                 ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
             </div>
         </div>
     </article>

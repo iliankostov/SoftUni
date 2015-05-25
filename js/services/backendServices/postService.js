@@ -1,5 +1,5 @@
-define(['app', 'constants', 'requestService', 'notifyService', 'navigationService'], function (app) {
-    app.factory('postService', function ($rootScope, constants, requestService, notifyService, navigationService) {
+define(['app', 'constants', 'requestService'], function (app) {
+    app.factory('postService', function ($rootScope, constants, requestService) {
         var service, serviceUrl;
         service = {};
         serviceUrl = constants.baseServiceUrl + '/Posts';

@@ -8,12 +8,12 @@ define(['app', 'validationService', 'userService', 'navigationService', 'notifyS
 
             $scope.signUp = function () {
                 var registerData = $scope.signUpData;
-                if (validationService.validateRegisterForm(registerData.username, registerData.email,
+                if (validationService.validateSignUpForm(registerData.username, registerData.email,
                         registerData.password, registerData.confirmPassword, registerData.name)) {
                     registerData = validationService.escapeHtmlSpecialChars(registerData);
                     userService.signUp(registerData).then(
                         function (serverResponse) {
-                            $rootScope.$broadcast('userDataUpdate');
+                            $rootScope.$broadcast('myDataUpdate');
                             userService.setCredentials(serverResponse);
                             navigationService.loadHome();
                             notifyService.showInfo("Sign Up successful.");

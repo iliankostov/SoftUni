@@ -12,7 +12,7 @@ define(['app', 'validationService', 'userService', 'navigationService', 'notifyS
                     loginData = validationService.escapeHtmlSpecialChars(loginData);
                     userService.logIn(loginData).then(
                         function (serverResponse) {
-                            $rootScope.$broadcast('userDataUpdate');
+                            $rootScope.$broadcast('myDataUpdate');
                             userService.setCredentials(serverResponse);
                             navigationService.loadHome();
                             notifyService.showInfo("Log In successful.");

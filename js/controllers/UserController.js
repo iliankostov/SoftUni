@@ -1,5 +1,5 @@
-define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
-        'postService', 'navigationService', 'notifyService', 'ngCoverBackground', 'ngInfiniteScroll'],
+define(['app', 'constants', 'HeaderController', 'userService', 'profileService', 'postService',
+        'navigationService', 'notifyService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('UserController', function ($scope, $routeParams, constants, userService, profileService,
                                                    postService, navigationService, notifyService) {
@@ -7,11 +7,12 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.wallFeedBusy = false;
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.myData = profileService.loadMyData();
+            $scope.postData = {};
             $scope.userData = {};
             $scope.userData.username = $routeParams.username;
             $scope.friendsData = [];
             $scope.feedData = [];
-            $scope.postData = {};
+
 
             userService.loadUserFullData($scope.userData.username).then(
                 function (serverData) {
@@ -58,13 +59,13 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.getUserFriendsPreview = function () {
                 userService.getUserFriendsPreview($scope.userData.username).then(
                     function (serverData) {
-                        $scope.friendsData = serverData.friends;
-                        $scope.friendsData.totalCount = serverData.totalCount;
-                        $scope.friendsData.forEach(function (friend) {
+                        serverData.friends.forEach(function (friend) {
                             if (!friend.profileImageData) {
                                 friend.profileImageData = constants.baseProfilePicture;
                             }
-                        })
+                        });
+                        $scope.friendsData = serverData.friends;
+                        $scope.friendsDataTotalCount = serverData.totalCount;
                     },
                     function (serverError) {
                         console.error(serverError);
@@ -75,14 +76,13 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.getUserFriends = function () {
                 userService.getUserFriends($scope.userData.username).then(
                     function (serverData) {
-                        $scope.friendsData = serverData;
-                        $scope.friendsData.totalCount = serverData.length;
-                        $scope.friendsData.forEach(function (friend) {
+                        serverData.forEach(function (friend) {
                             if (!friend.profileImageData) {
                                 friend.profileImageData = constants.baseProfilePicture;
                             }
-                        })
-
+                        });
+                        $scope.friendsData = serverData;
+                        $scope.friendsDataTotalCount = serverData.length;
                     },
                     function (serverError) {
                         console.error(serverError);
@@ -93,14 +93,13 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.getMyFriendsPreview = function () {
                 profileService.getMyFriendsPreview().then(
                     function (serverData) {
-                        $scope.friendsData = serverData.friends;
-                        $scope.friendsData.totalCount = serverData.totalCount;
-                        $scope.friendsData.forEach(function (friend) {
+                        serverData.friends.forEach(function (friend) {
                             if (!friend.profileImageData) {
                                 friend.profileImageData = constants.baseProfilePicture;
                             }
-                        })
-
+                        });
+                        $scope.friendsData = serverData.friends;
+                        $scope.friendsDataTotalCount = serverData.totalCount;
                     },
                     function (serverError) {
                         console.error(serverError);
@@ -111,14 +110,13 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.getMyFriends = function () {
                 profileService.getMyFriends().then(
                     function (serverData) {
-                        $scope.friendsData = serverData;
-                        $scope.friendsData.totalCount = serverData.length;
-                        $scope.friendsData.forEach(function (friend) {
+                        serverData.forEach(function (friend) {
                             if (!friend.profileImageData) {
                                 friend.profileImageData = constants.baseProfilePicture;
                             }
-                        })
-
+                        });
+                        $scope.friendsData = serverData;
+                        $scope.friendsDataTotalCount = serverData.length;
                     },
                     function (serverError) {
                         console.error(serverError);
@@ -151,6 +149,11 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
 
                     userService.loadWallFeed($scope.userData.username, wallFeedStartPost).then(
                         function (serverData) {
+                            serverData.forEach(function (post) {
+                                if (!post.author.profileImageData) {
+                                    post.author.profileImageData = constants.baseProfilePicture;
+                                }
+                            });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if ($scope.feedData.length > 0) {
                                 wallFeedStartPost = $scope.feedData[$scope.feedData.length - 1].id;

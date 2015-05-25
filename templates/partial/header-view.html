@@ -8,7 +8,7 @@
 
 <!-- User Nav-->
 <nav class="nav" ng-if="isLoggedIn" ng-controller="HeaderController">
-    <div class="box 6u friend-requests" ng-if="friendRequestsData.expanded">
+    <div class="box 6u friend-requests" ng-if="friendRequestsDataExpanded">
         <div class="row" ng-repeat="friendRequest in friendRequestsData">
             <div class="row">
                 <div class="12u">

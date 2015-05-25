@@ -1,5 +1,6 @@
-define(['app', 'HeaderController', 'validationService', 'userService', 'profileService', 'navigationService', 'notifyService',
-        'ngPictureSelect', 'ngCoverSelect'], function (app) {
+define(['app', 'HeaderController', 'validationService', 'userService', 'profileService', 'navigationService',
+        'notifyService', 'ngPictureSelect', 'ngCoverSelect'],
+    function (app) {
         app.controller('SettingsController', function ($scope, $rootScope, validationService, userService,
                                                    navigationService, notifyService, profileService ) {
             $scope.isLoggedIn = userService.isLoggedIn();
@@ -13,7 +14,7 @@ define(['app', 'HeaderController', 'validationService', 'userService', 'profileS
                     myData = validationService.escapeHtmlSpecialChars(myData);
                     profileService.editProfile(myData).then(
                         function (serverResponse) {
-                            $rootScope.$broadcast('userDataUpdate');
+                            $rootScope.$broadcast('myDataUpdate');
                             navigationService.loadHome();
                             notifyService.showInfo(serverResponse.message);
                         },

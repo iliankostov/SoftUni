@@ -4,6 +4,10 @@ define(['app', 'constants', 'requestService'], function (app) {
         service = {};
         serviceUrl = constants.baseServiceUrl + '/users';
 
+        service.isLoggedIn = function () {
+            return !!(sessionStorage['accessToken'] && sessionStorage['accessToken'].length > constants.accessTokenMinLength);
+        };
+
         service.signUp = function (registerData) {
             var url = serviceUrl + '/register';
             var headers = null;
@@ -14,6 +18,10 @@ define(['app', 'constants', 'requestService'], function (app) {
             var url = serviceUrl + '/login';
             var headers = null;
             return requestService.postRequest(url, headers, loginData);
+        };
+
+        service.setCredentials = function(serverData) {
+            sessionStorage['accessToken'] = serverData.access_token;
         };
 
         service.searchUsersByName = function (searchData) {
@@ -28,14 +36,14 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
-        service.getUserFriends = function (username) {
-            var url = serviceUrl + '/' + username + '/friends';
+        service.getUserFriendsPreview = function (username) {
+            var url = serviceUrl + '/' + username + '/friends/preview';
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers)
         };
 
-        service.getUserFriendsPreview = function (username) {
-            var url = serviceUrl + '/' + username + '/friends/preview';
+        service.getUserFriends = function (username) {
+            var url = serviceUrl + '/' + username + '/friends';
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers)
         };
@@ -53,14 +61,6 @@ define(['app', 'constants', 'requestService'], function (app) {
             var url = serviceUrl + '/logout';
             var headers = requestService.getHeaders();
             return requestService.postRequest(url, headers);
-        };
-
-        service.isLoggedIn = function () {
-            return !!(sessionStorage['accessToken'] && sessionStorage['accessToken'].length > 490);
-        };
-
-        service.setCredentials = function(serverData) {
-            sessionStorage['accessToken'] = serverData.access_token;
         };
 
         service.clearCredentials = function() {

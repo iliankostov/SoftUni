@@ -1,5 +1,5 @@
-define(['app', 'fileReaderService', 'validationService'], function (app) {
-    app.directive("ngPictureSelect", function (fileReaderService, validationService, $timeout) {
+define(['app', 'constants', 'fileReaderService', 'validationService'], function (app) {
+    app.directive("ngPictureSelect", function (constants, fileReaderService, validationService, $timeout) {
         return {
             scope: {
                 ngModel: '='
@@ -16,7 +16,8 @@ define(['app', 'fileReaderService', 'validationService'], function (app) {
 
                 el.bind("change", function (e) {
                     var file = (e.srcElement || e.target).files[0];
-                    if (validationService.validatePictureType(file) && validationService.validatePictureSize(file, 128*1024)) {
+                    if (validationService.validatePictureType(file) &&
+                        validationService.validatePictureSize(file, constants.profilePictureMaxSize)) {
                         getFile(file);
                     }
                 });

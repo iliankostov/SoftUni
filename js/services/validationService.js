@@ -20,7 +20,7 @@ define(['app', 'notifyService'], function (app) {
             return (validateUsername(username) && validatePassword(password));
         };
 
-        service.validateRegisterForm = function (username, email, password, confirmPassword, name) {
+        service.validateSignUpForm = function (username, email, password, confirmPassword, name) {
             return (validateUsername(username) && validateEmailAddress(email) && validatePassword(password) &&
             validateConfirmPasswordMatch(password, confirmPassword) && validateName(name));
         };

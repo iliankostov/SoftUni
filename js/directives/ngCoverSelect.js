@@ -1,5 +1,5 @@
-define(['app', 'fileReaderService', 'validationService'], function (app) {
-    app.directive("ngCoverSelect", function (fileReaderService, validationService, $timeout) {
+define(['app', 'constants', 'fileReaderService', 'validationService'], function (app) {
+    app.directive("ngCoverSelect", function (constants, fileReaderService, validationService, $timeout) {
         return {
             scope: {
                 ngModel: '='
@@ -16,7 +16,7 @@ define(['app', 'fileReaderService', 'validationService'], function (app) {
 
                 el.bind("change", function (e) {
                     var file = (e.srcElement || e.target).files[0];
-                    if (validationService.validatePictureSize(file, 1024*1024)) {
+                    if (validationService.validatePictureSize(file, constants.coverPictureMaxSize)) {
                         getFile(file);
                     }
                 });

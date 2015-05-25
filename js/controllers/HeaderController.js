@@ -1,24 +1,24 @@
 define(['app', 'constants', 'userService', 'profileService', 'navigationService', 'notifyService'],
     function (app) {
-        app.controller('HeaderController', function ($scope, $rootScope, $timeout, constants, userService, profileService,
+        app.controller('HeaderController', function ($scope, $timeout, constants, userService, profileService,
                                                      navigationService, notifyService) {
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.friendRequestsData = {};
-            $scope.friendRequestsData.expanded = false;
+            $scope.friendRequestsDataExpanded = false;
 
             profileService.getFriendRequests().then(
                 function (serverData) {
-                    $scope.friendRequestsData = serverData;
-                    $scope.friendRequestsData.forEach(function (request) {
+                    serverData.forEach(function (request) {
                         if (!request.user.profileImageData) {
                             request.user.profileImageData = constants.baseProfilePicture;
                         }
-                    })
+                    });
+                    $scope.friendRequestsData = serverData;
                 }
             );
 
             $scope.expandFriendRequests = function () {
-                $scope.friendRequestsData.expanded = !$scope.friendRequestsData.expanded;
+                $scope.friendRequestsDataExpanded = !$scope.friendRequestsDataExpanded;
             };
 
             $scope.acceptFriendRequest = function (requestId) {
@@ -76,9 +76,9 @@ define(['app', 'constants', 'userService', 'profileService', 'navigationService'
 
             $scope.clearDropDown = function(){
                 $timeout(function() {
-                    $scope.searchResults = undefined;
+                    $scope.searchResults = null;
                     $scope.searchDataWord = '';
-                }, 300);
+                }, 250);
             };
         })
     }

@@ -1,5 +1,4 @@
-define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
-        'ngInfiniteScroll'],
+define(['app', 'constants', 'HeaderController', 'userService', 'profileService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('HomeController', function ($scope, $rootScope, constants, userService, profileService) {
             var newsFeedStartPost;
@@ -10,34 +9,19 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.feedData = [];
             if ($scope.isLoggedIn) {
                 $scope.title = 'News Feed';
-                profileService.getMyFriendsPreview().then(
-                    function (serverData) {
-                        $scope.friendsData = serverData.friends;
-                        $scope.friendsData.totalCount = serverData.totalCount;
-                        $scope.friendsData.forEach(function (friend) {
-                            if (!friend.profileImageData) {
-                                friend.profileImageData = constants.baseProfilePicture;
-                            }
-                        })
-
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                );
             } else {
                 $scope.title = "Welcome to iBook";
             }
 
-            $rootScope.$on('userDataUpdate', function () {
-                $rootScope.userDataUpdate = true;
+            $rootScope.$on('myDataUpdate', function () {
+                $rootScope.myDataUpdate = true;
             });
 
-            if ($rootScope.userDataUpdate) {
-                profileService.getUser().then(
+            if ($rootScope.myDataUpdate) {
+                profileService.getMe().then(
                     function (data) {
                         profileService.saveMyData(data);
-                        $rootScope.userDataUpdate = false;
+                        $rootScope.myDataUpdate = false;
                         $scope.myData = profileService.loadMyData();
                         $scope.title = $scope.myData.name + ' - ' + $scope.title;
                     },
@@ -51,6 +35,23 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                 }
             }
 
+            $scope.loadFriendsPreview = function () {
+                profileService.getMyFriendsPreview().then(
+                    function (serverData) {
+                        serverData.friends.forEach(function (friend) {
+                            if (!friend.profileImageData) {
+                                friend.profileImageData = constants.baseProfilePicture;
+                            }
+                        });
+                        $scope.friendsData = serverData.friends;
+                        $scope.friendsDataTotalCount = serverData.totalCount;
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            };
+
             $scope.loadNewsFeed = function () {
                 if ($scope.isLoggedIn) {
                     if ($scope.newsFeedBusy){
@@ -60,6 +61,11 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
 
                     profileService.loadNewsFeed(newsFeedStartPost).then(
                         function (serverData) {
+                            serverData.forEach(function (post) {
+                                if (!post.author.profileImageData) {
+                                    post.author.profileImageData = constants.baseProfilePicture;
+                                }
+                            });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if($scope.feedData.length > 0){
                                 newsFeedStartPost = $scope.feedData[$scope.feedData.length - 1].id;

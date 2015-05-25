@@ -8,29 +8,29 @@ define(['app', 'constants', 'requestService'], function (app) {
             if (!startPost) {
                 startPost = '';
             }
-            var url = serviceUrl + '/feed?StartPostId='+ startPost +'&PageSize=' + constants.pageSize;
+            var url = serviceUrl + '/feed?StartPostId=' + startPost + '&PageSize=' + constants.pageSize;
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
 
-        service.getUser = function () {
+        service.getMe = function () {
             var url = serviceUrl;
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
 
-        service.saveMyData = function(data) {
-            for (var d in data) {
-                if (data.hasOwnProperty(d)) {
-                    switch (d) {
+        service.saveMyData = function (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property)) {
+                    switch (property) {
                         case 'profileImageData':
-                            sessionStorage[d] = data[d] || constants.baseProfilePicture;
+                            sessionStorage[property] = data[property] || constants.baseProfilePicture;
                             break;
                         case 'coverImageData':
-                            sessionStorage[d] = data[d] || constants.baseCoverPicture;
+                            sessionStorage[property] = data[property] || constants.baseCoverPicture;
                             break;
                         default:
-                            sessionStorage[d] = data[d];
+                            sessionStorage[property] = data[property];
                             break;
                     }
                 }
@@ -39,18 +39,12 @@ define(['app', 'constants', 'requestService'], function (app) {
 
         service.loadMyData = function () {
             var data = {};
-            for (var d in sessionStorage) {
-                if (sessionStorage.hasOwnProperty(d)) {
-                    data[d] = sessionStorage[d];
+            for (var property in sessionStorage) {
+                if (sessionStorage.hasOwnProperty(property)) {
+                    data[property] = sessionStorage[property];
                 }
             }
             return data;
-        };
-
-        service.getMyFriends = function () {
-            var url = serviceUrl + '/friends';
-            var headers = requestService.getHeaders();
-            return requestService.getRequest(url, headers);
         };
 
         service.getMyFriendsPreview = function () {
@@ -59,8 +53,8 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
-        service.getFriendRequests = function () {
-            var url = serviceUrl + '/requests';
+        service.getMyFriends = function () {
+            var url = serviceUrl + '/friends';
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);
         };
@@ -69,6 +63,12 @@ define(['app', 'constants', 'requestService'], function (app) {
             var url = serviceUrl + '/requests/' + username;
             var headers = requestService.getHeaders();
             return requestService.postRequest(url, headers);
+        };
+
+        service.getFriendRequests = function () {
+            var url = serviceUrl + '/requests';
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers);
         };
 
         service.acceptFriendRequest = function (requestId) {

@@ -34,7 +34,6 @@ requirejs.config({
         // directives
         ngPictureSelect: 'directives/ngPictureSelect',
         ngCoverSelect: 'directives/ngCoverSelect',
-        ngCoverBackground: 'directives/ngCoverBackground',
         ngInfiniteScroll: 'directives/ngInfiniteScroll'
     },
 
