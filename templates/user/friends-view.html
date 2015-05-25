@@ -5,26 +5,27 @@
 <div ng-include="'templates/partial/header-view.html'"></div>
 
 <!-- User Friends -->
-<div class="wrapper style1 first" ng-if="isLoggedIn && userData.isFriend" ng-init="loadFriends()">
+<div class="wrapper style1 first" ng-if="isLoggedIn && (userData.isFriend || userData.username == myData.username)"
+     ng-init="loadFriends()">
     <article class="container">
         <div class="12u">
             <header>
-                <h1>{{userData.name}} - Friends ({{friendsData.length}} total)</h1>
+                <h1>{{userData.name}} - Friends ({{friendsData.totalCount}} total)</h1>
             </header>
             <div class="12u">
-                <div class="box style1 4u 12u(mobile)" ng-repeat="friend in friendsData">
+                <section class="4u box style1" ng-repeat="friend in friendsData">
                     <div class="row">
                         <div class="4u"><img ng-src="{{friend.profileImageData}}" class="thumb-image"/></div>
                         <div class="8u">{{friend.name}}</div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </article>
 </div>
 
 <!-- Guest Friends -->
-<div class="wrapper style1 first" ng-if="!isLoggedIn || !userData.isFriend" ng-bind="cancel()"></div>
+<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="cancel()"></div>
 
 <!-- Footer -->
 <div ng-include="'templates/partial/footer-view.html'"></div>

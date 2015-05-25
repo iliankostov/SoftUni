@@ -47,10 +47,16 @@ define(['app', 'constants', 'requestService'], function (app) {
             return data;
         };
 
-        service.getOwnFriends = function () {
+        service.getMyFriends = function () {
             var url = serviceUrl + '/friends';
             var headers = requestService.getHeaders();
-            return requestService.getRequest(url, headers)
+            return requestService.getRequest(url, headers);
+        };
+
+        service.getMyFriendsPreview = function () {
+            var url = serviceUrl + '/friends/preview';
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers);
         };
 
         service.getFriendRequests = function () {

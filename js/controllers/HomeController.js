@@ -10,9 +10,10 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.feedData = [];
             if ($scope.isLoggedIn) {
                 $scope.title = 'News Feed';
-                profileService.getOwnFriends().then(
+                profileService.getMyFriendsPreview().then(
                     function (serverData) {
-                        $scope.friendsData = serverData;
+                        $scope.friendsData = serverData.friends;
+                        $scope.friendsData.totalCount = serverData.totalCount;
                         $scope.friendsData.forEach(function (friend) {
                             if (!friend.profileImageData) {
                                 friend.profileImageData = constants.baseProfilePicture;

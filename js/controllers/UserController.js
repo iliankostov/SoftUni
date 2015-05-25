@@ -29,56 +29,6 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                 }
             );
 
-            $scope.loadFriends = function () {
-                if ($scope.userData.username != $scope.myData.username) {
-                    userService.getUserFriendsPreview($routeParams.username).then(
-                        function (serverData) {
-                            $scope.friendsData = serverData.friends;
-                        },
-                        function (serverError) {
-                            console.error(serverError);
-                        }
-                    );
-                } else {
-                    profileService.getOwnFriends().then(
-                        function (serverData) {
-                            $scope.friendsData = serverData;
-                            $scope.friendsData.forEach(function (friend) {
-                                if (!friend.profileImageData) {
-                                    friend.profileImageData = constants.baseProfilePicture;
-                                }
-                            })
-
-                        },
-                        function (serverError) {
-                            console.error(serverError);
-                        }
-                    );
-                }
-            };
-
-            $scope.loadWallFeed = function () {
-                if ($scope.isLoggedIn) {
-                    if ($scope.wallFeedBusy) {
-                        return;
-                    }
-                    $scope.wallFeedBusy = true;
-
-                    userService.loadWallFeed($scope.userData.username, wallFeedStartPost).then(
-                        function (serverData) {
-                            $scope.feedData = $scope.feedData.concat(serverData);
-                            if ($scope.feedData.length > 0) {
-                                wallFeedStartPost = $scope.feedData[$scope.feedData.length - 1].id;
-                                $scope.wallFeedBusy = false;
-                            }
-                        },
-                        function (serverError) {
-                            console.error(serverError);
-                        }
-                    );
-                }
-            };
-
             $scope.sendFriendRequest = function () {
                 var username = $scope.userData.username;
                 profileService.sendFriendRequest(username).then(
@@ -103,6 +53,115 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                         console.log(serverError);
                     }
                 );
+            };
+
+            $scope.getUserFriendsPreview = function () {
+                userService.getUserFriendsPreview($scope.userData.username).then(
+                    function (serverData) {
+                        $scope.friendsData = serverData.friends;
+                        $scope.friendsData.totalCount = serverData.totalCount;
+                        $scope.friendsData.forEach(function (friend) {
+                            if (!friend.profileImageData) {
+                                friend.profileImageData = constants.baseProfilePicture;
+                            }
+                        })
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            };
+
+            $scope.getUserFriends = function () {
+                userService.getUserFriends($scope.userData.username).then(
+                    function (serverData) {
+                        $scope.friendsData = serverData;
+                        $scope.friendsData.totalCount = serverData.length;
+                        $scope.friendsData.forEach(function (friend) {
+                            if (!friend.profileImageData) {
+                                friend.profileImageData = constants.baseProfilePicture;
+                            }
+                        })
+
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            };
+
+            $scope.getMyFriendsPreview = function () {
+                profileService.getMyFriendsPreview().then(
+                    function (serverData) {
+                        $scope.friendsData = serverData.friends;
+                        $scope.friendsData.totalCount = serverData.totalCount;
+                        $scope.friendsData.forEach(function (friend) {
+                            if (!friend.profileImageData) {
+                                friend.profileImageData = constants.baseProfilePicture;
+                            }
+                        })
+
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            };
+
+            $scope.getMyFriends = function () {
+                profileService.getMyFriends().then(
+                    function (serverData) {
+                        $scope.friendsData = serverData;
+                        $scope.friendsData.totalCount = serverData.length;
+                        $scope.friendsData.forEach(function (friend) {
+                            if (!friend.profileImageData) {
+                                friend.profileImageData = constants.baseProfilePicture;
+                            }
+                        })
+
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                );
+            };
+
+            $scope.loadFriendsPreview = function () {
+                if ($scope.userData.username != $scope.myData.username) {
+                    $scope.getUserFriendsPreview();
+                } else {
+                    $scope.getMyFriendsPreview();
+                }
+            };
+
+            $scope.loadFriends = function () {
+                if ($scope.userData.username != $scope.myData.username) {
+                    $scope.getUserFriends();
+                } else {
+                    $scope.getMyFriends();
+                }
+            };
+
+            $scope.loadWallFeed = function () {
+                if ($scope.isLoggedIn) {
+                    if ($scope.wallFeedBusy) {
+                        return;
+                    }
+                    $scope.wallFeedBusy = true;
+
+                    userService.loadWallFeed($scope.userData.username, wallFeedStartPost).then(
+                        function (serverData) {
+                            $scope.feedData = $scope.feedData.concat(serverData);
+                            if ($scope.feedData.length > 0) {
+                                wallFeedStartPost = $scope.feedData[$scope.feedData.length - 1].id;
+                                $scope.wallFeedBusy = false;
+                            }
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
             };
 
             $scope.cancel = function () {
