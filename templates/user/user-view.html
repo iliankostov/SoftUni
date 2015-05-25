@@ -20,8 +20,7 @@
         </section>
         <div class="row">
             <div class="4u">
-                <!-- todo check if user is my friend to show message textarea-->
-                <div class="row">
+                <div class="row" ng-if="userData.isFriend || userData.username == myData.username">
                     <div class="12u">
                         <section class="box style1">
                             <form>

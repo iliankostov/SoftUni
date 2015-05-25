@@ -1,4 +1,4 @@
-define(['app', 'constants', 'HeaderController', 'FriendsController', 'userService', 'profileService',
+define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
         'postService', 'navigationService',
         'ngCoverBackground', 'ngInfiniteScroll'],
     function (app) {
@@ -17,10 +17,14 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
                 var username = $routeParams.username;
                 userService.loadUserFullData(username).then(
                     function (serverData) {
-                        // todo check if user has pictures
-                        console.log(serverData);
                         $scope.userData = serverData;
-                        $scope.title = $scope.userData.name + ' - Wall';
+                        if (!$scope.userData.profileImageData) {
+                            $scope.userData.profileImageData = constants.baseProfilePicture;
+                        }
+                        if (!$scope.userData.coverImageData) {
+                            $scope.userData.coverImageData = constants.baseCoverPicture;
+                        }
+                        $scope.title = $scope.userData.name;
                     },
                     function (serverError) {
                         console.error(serverError);
@@ -30,11 +34,10 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
 
             $scope.createPost = function () {
                 var postData = $scope.postData;
-                postData.username = $scope.myData.username;
+                postData.username = $scope.userData.username;
                 postService.createPost(postData).then(
                     function (serverData) {
-                        // todo check server data for message
-                        console.log(serverData);
+                        $scope.feedData.unshift(serverData);
                         $scope.postData.postContent = '';
                     },
                     function (serverError) {
@@ -42,6 +45,21 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
                     }
                 );
             };
+
+            profileService.getOwnFriends().then(
+                function (serverData) {
+                    $scope.friendsData = serverData;
+                    $scope.friendsData.forEach(function (friend) {
+                        if (!friend.profileImageData) {
+                            friend.profileImageData = constants.baseProfilePicture;
+                        }
+                    })
+
+                },
+                function (serverError) {
+                    console.error(serverError);
+                }
+            );
 
             $scope.loadWallFeed = function () {
                 if ($scope.isLoggedIn) {

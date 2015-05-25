@@ -1,4 +1,4 @@
-define(['app', 'constants', 'HeaderController', 'FriendsController', 'userService', 'profileService',
+define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
         'ngInfiniteScroll'],
     function (app) {
         app.controller('HomeController', function ($scope, $rootScope, constants, userService, profileService) {
@@ -13,23 +13,7 @@ define(['app', 'constants', 'HeaderController', 'FriendsController', 'userServic
                 $scope.title = "Welcome to iBook";
             }
 
-            $rootScope.$on('userDataUpdate', function () {
-                $rootScope.userDataUpdate = true;
-            });
 
-            if ($rootScope.userDataUpdate) {
-                profileService.getUser().then(
-                    function (data) {
-                        profileService.saveMyData(data);
-                        $rootScope.userDataUpdate = false;
-                        $scope.myData = profileService.loadMyData();
-                    },
-                    function (error) {
-                        console.error(error);
-                    });
-            } else {
-                $scope.myData = profileService.loadMyData();
-            }
 
             $scope.loadNewsFeed = function () {
                 if ($scope.isLoggedIn) {

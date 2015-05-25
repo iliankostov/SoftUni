@@ -24,11 +24,10 @@ define(['angularAMD', 'angularRouter'], function (angularAMD) {
                 controller: 'UserController',
                 controllerUrl: 'controllers/UserController'
             }))
-            .when('/friends', angularAMD.route({
+            .when('/:username/friends', angularAMD.route({
                 templateUrl: 'templates/user/friends-view.html',
-                controller: 'FriendsController'
-                // todo replace friends controller with user controller and DI it in the view
-                //controllerUrl: 'controllers/FriendsController'
+                controller: 'UserController',
+                controllerUrl: 'controllers/UserController'
             }))
             .when('/edit/password', angularAMD.route({
                 templateUrl: 'templates/user/change-password-view.html',

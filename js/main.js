@@ -18,7 +18,6 @@ requirejs.config({
 
         // nested controllers
         HeaderController: 'controllers/HeaderController',
-        FriendsController: 'controllers/FriendsController',
 
         // back-end services
         postService: 'services/backendServices/postService',
