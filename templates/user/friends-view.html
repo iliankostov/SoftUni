@@ -13,7 +13,7 @@
                 <h1>{{userData.name}} - Friends ({{friendsDataTotalCount}} total)</h1>
             </header>
             <div class="12u">
-                <section class="4u box style1" ng-repeat="friend in friendsData">
+                <section class="12u box style1" ng-repeat="friend in friendsData">
                     <div class="row">
                         <div class="4u"><img ng-src="{{friend.profileImageData}}" class="thumb-image"/></div>
                         <div class="8u">{{friend.name}}</div>
@@ -24,7 +24,7 @@
     </article>
 </div>
 
-<!-- Guest Friends -->
+<!-- Friends Security-->
 <div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="cancel()"></div>
 
 <!-- Footer -->
