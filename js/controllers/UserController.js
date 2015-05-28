@@ -24,6 +24,21 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                         $scope.userData.coverImageData = constants.baseCoverPicture;
                     }
                     $scope.title = $scope.userData.name;
+
+                    $scope.friendsSecurity = function () {
+                        var isMe = $scope.userData.username === $scope.myData.username;
+
+                        if (!$scope.isLoggedIn) {
+                            return true;
+                        }else if (isMe) {
+                            return false;
+                        } else if ($scope.userData.isFriend) {
+                            return false;
+                        }
+                        else {
+                            return true;
+                        }
+                    };
                 },
                 function (serverError) {
                     console.error(serverError);
@@ -169,22 +184,6 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
 
             $scope.cancel = function () {
                 navigationService.loadHome();
-            };
-
-            $scope.friendsSecurity = function () {
-                if (!$scope.isLoggedIn) {
-                    $scope.cancel();
-                }
-
-                // I try to secure non-friends friends
-                var isMe = $scope.userData.username == $scope.myData.username;
-                var isFriend = $scope.userData.isFriend;
-                //var xor = (isMe ^ isFriend)
-                var xor = (( isMe && !isFriend ) || ( !isMe && isFriend ));
-
-                if (!xor) {
-                    $scope.cancel();
-                }
             };
         })
     }

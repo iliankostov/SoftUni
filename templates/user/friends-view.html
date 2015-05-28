@@ -25,7 +25,7 @@
 </div>
 
 <!-- Friends Security-->
-<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="cancel()"></div>
+<div class="wrapper style1 first" ng-if="friendsSecurity()" ng-bind="cancel()"></div>
 
 <!-- Footer -->
 <div ng-include="'templates/partial/footer-view.html'"></div>
