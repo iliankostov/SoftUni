@@ -24,7 +24,8 @@ define(['app', 'constants', 'userService', 'profileService', 'navigationService'
             $scope.acceptFriendRequest = function (requestId) {
                 profileService.acceptFriendRequest(requestId).then(
                     function (serverData) {
-                        notifyService.showInfo(serverData.message)
+                        notifyService.showInfo(serverData.message);
+                        $scope.expandFriendRequests();
                     },
                     function (serverError) {
                         notifyService.showError("Cannot accept friend request.", serverError)
@@ -35,7 +36,8 @@ define(['app', 'constants', 'userService', 'profileService', 'navigationService'
             $scope.rejectFriendRequest = function (requestId) {
                 profileService.rejectFriendRequest(requestId).then(
                     function (serverData) {
-                        notifyService.showInfo(serverData.message)
+                        notifyService.showInfo(serverData.message);
+                        $scope.expandFriendRequests();
                     },
                     function (serverError) {
                         notifyService.showError("Cannot reject friend request.", serverError)
