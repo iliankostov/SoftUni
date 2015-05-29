@@ -168,6 +168,7 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                                 if (!post.author.profileImageData) {
                                     post.author.profileImageData = constants.baseProfilePicture;
                                 }
+                                post.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
                             });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if ($scope.feedData.length > 0) {

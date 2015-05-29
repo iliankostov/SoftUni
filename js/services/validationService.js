@@ -2,18 +2,22 @@ define(['app', 'notifyService'], function (app) {
     app.factory('validationService', function (notifyService) {
         var service = {};
 
-        service.escapeHtmlSpecialChars = function (inputObject) {
-            var outputObject = {};
-            for (var key in inputObject) {
-                if (inputObject.hasOwnProperty(key)) {
-                    if (key !== 'gender' && key !== 'profileImageData' && key !== 'coverImageData') {
-                        outputObject[key] = escapeHtmlSpecialChars(inputObject[key]);
-                    } else {
-                        outputObject[key] = inputObject[key];
+        service.escapeHtmlSpecialChars = function (input, isString) {
+            if (isString) {
+                return escapeHtmlSpecialChars(input);
+            } else {
+                var outputObject = {};
+                for (var key in input) {
+                    if (input.hasOwnProperty(key)) {
+                        if (key !== 'gender' && key !== 'profileImageData' && key !== 'coverImageData') {
+                            outputObject[key] = escapeHtmlSpecialChars(input[key]);
+                        } else {
+                            outputObject[key] = input[key];
+                        }
                     }
                 }
+                return outputObject;
             }
-            return outputObject;
         };
 
         service.validateLogInForm = function (username, password) {

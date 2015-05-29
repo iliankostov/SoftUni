@@ -1,6 +1,6 @@
-define(['app', 'constants', 'HeaderController', 'userService', 'profileService', 'ngInfiniteScroll'],
+define(['app', 'constants', 'HeaderController', 'validationService', 'userService', 'profileService', 'ngInfiniteScroll'],
     function (app) {
-        app.controller('HomeController', function ($scope, $rootScope, constants, userService, profileService) {
+        app.controller('HomeController', function ($scope, $rootScope, constants, validationService, userService, profileService) {
             var newsFeedStartPost;
             $scope.isLoggedIn = userService.isLoggedIn();
             $scope.myData = profileService.loadMyData();
@@ -65,6 +65,7 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                                 if (!post.author.profileImageData) {
                                     post.author.profileImageData = constants.baseProfilePicture;
                                 }
+                                post.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
                             });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if($scope.feedData.length > 0){
