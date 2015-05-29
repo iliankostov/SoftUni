@@ -24,10 +24,10 @@
                 <div class="row" ng-if="userData.isFriend || userData.username == myData.username">
                     <div class="12u">
                         <section class="box style1">
-                            <form>
+                            <form name="postForm">
                                 <div class="row">
                                     <div class="12u">
-                                    <textarea name="post" id="post" placeholder="Message..."
+                                    <textarea name="post" id="post" placeholder="Message..." required
                                               ng-model="postData.postContent"></textarea>
                                     </div>
                                 </div>
@@ -36,7 +36,7 @@
                                         <img class="profile-image" ng-show="myData.profileImageData"
                                              ng-src="{{myData.profileImageData}}"/>
                                         <span>as {{myData.name}}</span>
-                                        <input type="button" value="Post" ng-click="createPost()"/>
+                                        <input type="button" ng-disabled="!postForm.$valid" value="Post" ng-click="createPost()"/>
                                     </div>
                                 </div>
                             </form>

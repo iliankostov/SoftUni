@@ -2,12 +2,16 @@
 <section class="box style1" ng-repeat="data in feedData">
     <div class="row">
         <div class="4u">
-            <img class="thumb-image" ng-src="{{data.author.profileImageData}}"/>
+            <a href="#/{{data.author.username}}">
+                <img class="thumb-image" title="{{data.author.name}}" ng-src="{{data.author.profileImageData}}"/>
+            </a>
         </div>
         <div class="8u">
             <div class="row">
                 <div class="8u">
-                    {{data.author.name}}
+                    <a href="#/{{data.author.username}}" title="{{data.author.name}}">
+                        {{data.author.name}}
+                    </a>
                 </div>
             </div>
             <div class="row">

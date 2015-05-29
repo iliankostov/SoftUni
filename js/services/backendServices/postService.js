@@ -16,6 +16,18 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers)
         };
 
+        service.likePost = function (postId) {
+            var url = serviceUrl + '/' + postId + '/likes';
+            var headers = requestService.getHeaders();
+            return requestService.postRequest(url, headers);
+        };
+
+        service.unlikePost = function (postId) {
+            var url = serviceUrl + '/' + postId + '/likes';
+            var headers = requestService.getHeaders();
+            return requestService.deleteRequest(url, headers);
+        };
+
         return service;
     });
 });

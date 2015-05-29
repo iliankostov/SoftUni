@@ -15,8 +15,14 @@
             <div class="12u">
                 <section class="12u box style1" ng-repeat="friend in friendsData">
                     <div class="row">
-                        <div class="4u"><img ng-src="{{friend.profileImageData}}" class="thumb-image"/></div>
-                        <div class="8u">{{friend.name}}</div>
+                        <div class="4u">
+                            <a href="#/{{friend.username}}">
+                                <img ng-src="{{friend.profileImageData}}" class="thumb-image"/>
+                            </a>
+                        </div>
+                        <div class="8u">
+                            <a href="#/{{friend.username}}">{{friend.name}}</a>
+                        </div>
                     </div>
                 </section>
             </div>

@@ -1,8 +1,8 @@
 define(['app', 'constants', 'HeaderController', 'userService', 'profileService', 'postService',
-        'navigationService', 'notifyService', 'ngInfiniteScroll'],
+        'validationService', 'navigationService', 'notifyService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('UserController', function ($scope, $routeParams, constants, userService, profileService,
-                                                   postService, navigationService, notifyService) {
+                                                   postService, validationService, navigationService, notifyService) {
             var wallFeedStartPost;
             $scope.wallFeedBusy = false;
             $scope.isLoggedIn = userService.isLoggedIn();
@@ -58,7 +58,7 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             };
 
             $scope.createPost = function () {
-                var postData = $scope.postData;
+                var postData = validationService.escapeHtmlSpecialChars($scope.postData);
                 postData.username = $scope.userData.username;
                 postService.createPost(postData).then(
                     function (serverData) {
@@ -66,7 +66,7 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                         $scope.postData.postContent = '';
                     },
                     function (serverError) {
-                        console.log(serverError);
+                        console.error(serverError);
                     }
                 );
             };

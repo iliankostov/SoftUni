@@ -48,6 +48,14 @@ define(['app', 'notifyService'], function (app) {
             }
             return true;
         };
+        
+        service.validatePostData = function (postDataContent) {
+            if (postDataContent === '') {
+                notifyService.showError("The post content cannot be empty.");
+                return false;
+            }
+            return true;
+        };
 
         function validateUsername(username) {
             if (username.length < 4 || username.length > 32) {

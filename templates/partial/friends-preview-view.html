@@ -9,8 +9,8 @@
     </div>
     <div class="row">
         <div class="12u">
-            <a href="" ng-repeat="friend in friendsData">
-                <img ng-src="{{friend.profileImageData}}" class="thumb-image"/>
+            <a href="#/{{friend.username}}" ng-repeat="friend in friendsData">
+                <img ng-src="{{friend.profileImageData}}" title="{{friend.name}}" class="thumb-image"/>
             </a>
         </div>
     </div>

@@ -12,11 +12,15 @@
         <div class="row" ng-repeat="friendRequest in friendRequestsData">
             <div class="row">
                 <div class="12u">
-                    <img class="thumb-image" ng-src="{{friendRequest.user.profileImageData}}"/>
+                    <a href="#/{{friendRequest.user.username}}">
+                        <img class="thumb-image" ng-src="{{friendRequest.user.profileImageData}}"/>
+                    </a>
                 </div>
             </div>
             <div class="row">
-                <div class="6u">{{friendRequest.user.name}}</div>
+                <a href="#/{{friendRequest.user.username}}">
+                    <div class="12u">{{friendRequest.user.name}}</div>
+                </a>
             </div>
             <div class="row">
                 <div class="6u">
