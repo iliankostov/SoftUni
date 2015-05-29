@@ -18,6 +18,7 @@ requirejs.config({
 
         // nested controllers
         HeaderController: 'controllers/HeaderController',
+        PostController: 'controllers/PostController',
 
         // back-end services
         postService: 'services/backendServices/postService',

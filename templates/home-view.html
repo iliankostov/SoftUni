@@ -34,7 +34,7 @@
         <div class="row">
             <div class="4u" ng-include="'templates/partial/friends-preview-view.html'"></div>
             <div ng-include="'templates/partial/posts-view.html'" class="8u" ng-infinite-scroll="loadNewsFeed()"
-                 ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0">
+                 ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0" ng-controller="PostController">
             </div>
         </div>
     </article>

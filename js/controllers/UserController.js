@@ -1,4 +1,4 @@
-define(['app', 'constants', 'HeaderController', 'userService', 'profileService', 'postService',
+define(['app', 'constants', 'HeaderController', 'PostController', 'userService', 'profileService', 'postService',
         'validationService', 'navigationService', 'notifyService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('UserController', function ($scope, $routeParams, constants, userService, profileService,
@@ -12,8 +12,7 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
             $scope.userData.username = $routeParams.username;
             $scope.friendsData = [];
             $scope.feedData = [];
-
-
+            
             userService.loadUserFullData($scope.userData.username).then(
                 function (serverData) {
                     $scope.userData = serverData;
@@ -55,20 +54,6 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                         notifyService.showError("Cannot send friend request.", serverError);
                     }
                 )
-            };
-
-            $scope.createPost = function () {
-                var postData = validationService.escapeHtmlSpecialChars($scope.postData);
-                postData.username = $scope.userData.username;
-                postService.createPost(postData).then(
-                    function (serverData) {
-                        $scope.feedData.unshift(serverData);
-                        $scope.postData.postContent = '';
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                );
             };
 
             $scope.getUserFriendsPreview = function () {
@@ -181,28 +166,6 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                         }
                     );
                 }
-            };
-
-            $scope.likePost = function (post) {
-                postService.likePost(post.id).then(
-                    function (serverData) {
-                        post.likesCount++
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                )
-            };
-
-            $scope.unlikePost = function (post) {
-                postService.unlikePost(post.id).then(
-                    function (serverData) {
-                        post.likesCount--;
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                )
             };
 
             $scope.cancel = function () {

@@ -1,4 +1,4 @@
-define(['app', 'constants', 'HeaderController', 'validationService', 'userService', 'profileService', 'ngInfiniteScroll'],
+define(['app', 'constants', 'HeaderController', 'PostController', 'validationService', 'userService', 'profileService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('HomeController', function ($scope, $rootScope, constants, validationService, userService, profileService) {
             var newsFeedStartPost;
