@@ -183,6 +183,28 @@ define(['app', 'constants', 'HeaderController', 'userService', 'profileService',
                 }
             };
 
+            $scope.likePost = function (post) {
+                postService.likePost(post.id).then(
+                    function (serverData) {
+                        post.likesCount++
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                )
+            };
+
+            $scope.unlikePost = function (post) {
+                postService.unlikePost(post.id).then(
+                    function (serverData) {
+                        post.likesCount--;
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                )
+            };
+
             $scope.cancel = function () {
                 navigationService.loadHome();
             };
