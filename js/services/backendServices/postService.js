@@ -13,7 +13,19 @@ define(['app', 'constants', 'requestService'], function (app) {
         service.loadPosts = function (id) {
             var url = serviceUrl + '/' + id;
             var headers = requestService.getHeaders();
-            return requestService.getRequest(url, headers)
+            return requestService.getRequest(url, headers);
+        };
+
+        service.editPost = function (newPostData) {
+            var url = serviceUrl + '/' + newPostData.id;
+            var headers = requestService.getHeaders();
+            return requestService.putRequest(url, headers, newPostData);
+        };
+
+        service.deletePost = function (id) {
+            var url = serviceUrl + '/' + id;
+            var headers = requestService.getHeaders();
+            return requestService.deleteRequest(url, headers);
         };
 
         service.likePost = function (postId) {

@@ -1,7 +1,8 @@
-define(['app', 'validationService', 'postService'],
+define(['app', 'validationService', 'postService', 'notifyService'],
     function (app) {
-        app.controller('PostController', function ($scope, validationService, postService) {
+        app.controller('PostController', function ($scope, validationService, postService, notifyService) {
             $scope.postData = {};
+            $scope.editPostDataExpanded = false;
 
             $scope.likeSecurity = function (post) {
                 var isMe = post.wallOwner.username === $scope.myData.username;
@@ -29,9 +30,43 @@ define(['app', 'validationService', 'postService'],
                 );
             };
 
+            $scope.editPost = function (post) {
+                var newPostData = {};
+                newPostData.id = post.id;
+                newPostData.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
+                postService.editPost(newPostData).then(
+                    function (serverData) {
+                        post.postContent = newPostData.postContent;
+                        $scope.editPostDataExpanded = false;
+                        notifyService.showInfo("Your post has been successfully edited.");
+                    },
+                    function (serverError) {
+                        notifyService.showError("Cannot edit post.", serverError);
+                    }
+                );
+            };
+
+            $scope.expandTextarea = function (postId) {
+                $scope.editPostId = postId;
+                $scope.editPostDataExpanded = !$scope.editPostDataExpanded;
+            };
+
+            $scope.deletePost = function (post) {
+                postService.deletePost(post.id).then(
+                    function () {
+                        var index =  $scope.feedData.indexOf(post);
+                        $scope.feedData.splice(index, 1);
+                        notifyService.showInfo("The post has been successfully deleted.");
+                    },
+                    function (serverError) {
+                        notifyService.showError("Cannot delete post.", serverError);
+                    }
+                );
+            };
+
             $scope.likePost = function (post) {
                 postService.likePost(post.id).then(
-                    function (serverData) {
+                    function () {
                         post.likesCount++
                     },
                     function (serverError) {
@@ -42,7 +77,7 @@ define(['app', 'validationService', 'postService'],
 
             $scope.unlikePost = function (post) {
                 postService.unlikePost(post.id).then(
-                    function (serverData) {
+                    function () {
                         post.likesCount--;
                     },
                     function (serverError) {

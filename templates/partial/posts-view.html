@@ -27,6 +27,30 @@
         </div>
     </div>
     <div class="row">
+        <div class="6u" ng-if="post.author.username == myData.username">
+            <a href="" class="icon fa-edit" ng-click="expandTextarea(post.id)">edit</a>
+        </div>
+        <div class="6u"
+             ng-if="(post.wallOwner.username == myData.username) || (post.author.username == myData.username)">
+            <a href="" class="icon fa-eraser" ng-click="deletePost(post)">delete</a>
+        </div>
+    </div>
+    <div class="row" ng-if="editPostDataExpanded && editPostId == post.id">
+        <div class="12u">
+            <form name="editPostForm">
+                <div class="row">
+                    <div class="6u">
+                        <textarea name="post" id="post" required ng-model="post.postContent"></textarea>
+                    </div>
+                    <div class="6u">
+                        <input type="button" ng-disabled="!editPostForm.$valid" value="Edit Post"
+                               ng-click="editPost(post)"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
         <div class="6u">
             {{post.likesCount}}
             <a ng-if="!likeSecurity(post)"> Likes</a>
