@@ -29,7 +29,8 @@
     <div class="row">
         <div class="6u">
             {{post.likesCount}}
-            <a href="" class="icon {{!post.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}"
+            <a ng-if="!likeSecurity(post)"> Likes</a>
+            <a href="" class="icon {{!post.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}" ng-if="likeSecurity(post)"
                ng-click="post.liked = !post.liked; !post.liked && unlikePost(post); post.liked && likePost(post);">
                 {{!post.liked && 'Like' || 'Unlike'}}</a>
         </div>

@@ -3,6 +3,18 @@ define(['app', 'validationService', 'postService'],
         app.controller('PostController', function ($scope, validationService, postService) {
             $scope.postData = {};
 
+            $scope.likeSecurity = function (post) {
+                var isMe = post.wallOwner.username === $scope.myData.username;
+                var isAuthorFriend = post.author.isFriend;
+                var isWallOwnerFriend = post.wallOwner.isFriend;
+
+                if (isWallOwnerFriend || isMe) {
+                    return true;
+                } else {
+                    return !!isAuthorFriend;
+                }
+            };
+
             $scope.createPost = function () {
                 var postData = validationService.escapeHtmlSpecialChars($scope.postData);
                 postData.username = $scope.userData.username;

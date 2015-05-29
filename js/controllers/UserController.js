@@ -12,7 +12,7 @@ define(['app', 'constants', 'HeaderController', 'PostController', 'userService',
             $scope.userData.username = $routeParams.username;
             $scope.friendsData = [];
             $scope.feedData = [];
-            
+
             userService.loadUserFullData($scope.userData.username).then(
                 function (serverData) {
                     $scope.userData = serverData;
@@ -29,13 +29,8 @@ define(['app', 'constants', 'HeaderController', 'PostController', 'userService',
 
                         if (!$scope.isLoggedIn) {
                             return true;
-                        }else if (isMe) {
-                            return false;
-                        } else if ($scope.userData.isFriend) {
-                            return false;
-                        }
-                        else {
-                            return true;
+                        } else {
+                            return !($scope.userData.isFriend || isMe);
                         }
                     };
                 },
