@@ -79,6 +79,7 @@
             </form>
         </div>
     </div>
+    <br/>
     <article class="box style1" ng-repeat="comment in post.comments">
         <div class="row">
             <div class="4u">
@@ -108,4 +109,9 @@
             </div>
         </div>
     </article>
+    <div class="row" ng-if="isMoreButtonVisible && post.totalCommentsCount > 3" ng-controller="CommentController">
+        <div class="12u">
+            <input type="button" value="More" ng-click="loadComments(post); hideMoreButton();"/>
+        </div>
+    </div>
 </section>

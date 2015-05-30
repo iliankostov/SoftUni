@@ -2,8 +2,13 @@ define(['app', 'validationService', 'postService', 'notifyService'],
     function (app) {
         app.controller('PostController', function ($scope, validationService, postService, notifyService) {
             $scope.postData = {};
+            $scope.isMoreButtonVisible = true;
             $scope.isEditPostTextareaExpanded = false;
             $scope.isNewCommentTextareaExpanded = false;
+
+            $scope.hideMoreButton = function () {
+                $scope.isMoreButtonVisible = false;
+            };
 
             $scope.expandEditPostTextarea = function (postId) {
                 $scope.editPostId = postId;

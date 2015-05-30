@@ -10,7 +10,7 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.postRequest(url, headers, commentData);
         };
 
-        service.loadComment = function (postId) {
+        service.loadComments = function (postId) {
             var url = serviceUrl + postId + '/comments';
             var headers = requestService.getHeaders();
             return requestService.getRequest(url, headers);

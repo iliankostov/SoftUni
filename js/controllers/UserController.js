@@ -149,6 +149,9 @@ define(['app', 'constants', 'HeaderController', 'PostController', 'CommentContro
                                     post.author.profileImageData = constants.baseProfilePicture;
                                 }
                                 post.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
+                                post.comments.forEach(function (comment) {
+                                    comment.commentContent = validationService.escapeHtmlSpecialChars(comment.commentContent, true);
+                                });
                             });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if ($scope.feedData.length > 0) {
