@@ -28,14 +28,14 @@
     </div>
     <div class="row">
         <div class="6u" ng-if="post.author.username == myData.username">
-            <a href="" class="icon fa-edit" ng-click="expandTextarea(post.id)">edit</a>
+            <a href="" class="icon fa-edit" ng-click="expandEditPostTextarea(post.id)">edit</a>
         </div>
         <div class="6u"
              ng-if="(post.wallOwner.username == myData.username) || (post.author.username == myData.username)">
             <a href="" class="icon fa-eraser" ng-click="deletePost(post)">delete</a>
         </div>
     </div>
-    <div class="row" ng-if="editPostDataExpanded && editPostId == post.id">
+    <div class="row" ng-if="isEditPostTextareaExpanded && editPostId == post.id">
         <div class="12u">
             <form name="editPostForm">
                 <div class="row">
@@ -60,7 +60,23 @@
         </div>
         <div class="6u">
             {{post.totalCommentsCount}}
-            <a href="" class="icon fa-comments-o"> Comment</a>
+            <a href="" class="icon fa-comments-o" ng-click="expandNewCommentTextarea(post.id)"> Comment</a>
+        </div>
+    </div>
+    <div class="row" ng-if="isNewCommentTextareaExpanded && commentPostId == post.id">
+        <div class="12u">
+            <form name="newCommentForm">
+                <div class="row">
+                    <div class="6u">
+                        <textarea name="newComment" id="newComment" required placeholder="Comment..."
+                                  ng-model="commentData.commentContent"></textarea>
+                    </div>
+                    <div class="6u">
+                        <input type="button" ng-disabled="!newCommentForm.$valid" value="Comment"
+                               ng-click="createComment(post.id, commentData)"/>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>

@@ -1,8 +1,19 @@
-define(['app', 'validationService', 'postService', 'notifyService'],
+define(['app', 'CommentsController', 'validationService', 'postService', 'notifyService'],
     function (app) {
         app.controller('PostController', function ($scope, validationService, postService, notifyService) {
             $scope.postData = {};
-            $scope.editPostDataExpanded = false;
+            $scope.isEditPostTextareaExpanded = false;
+            $scope.isNewCommentTextareaExpanded = false;
+
+            $scope.expandEditPostTextarea = function (postId) {
+                $scope.editPostId = postId;
+                $scope.isEditPostTextareaExpanded = !$scope.isEditPostTextareaExpanded;
+            };
+
+            $scope.expandNewCommentTextarea = function (postId) {
+                $scope.commentPostId = postId;
+                $scope.isNewCommentTextareaExpanded = !$scope.isNewCommentTextareaExpanded;
+            };
 
             $scope.likeSecurity = function (post) {
                 var isMe = post.wallOwner.username === $scope.myData.username;
@@ -37,18 +48,13 @@ define(['app', 'validationService', 'postService', 'notifyService'],
                 postService.editPost(newPostData).then(
                     function (serverData) {
                         post.postContent = newPostData.postContent;
-                        $scope.editPostDataExpanded = false;
+                        $scope.isEditPostTextareaExpanded = false;
                         notifyService.showInfo("Your post has been successfully edited.");
                     },
                     function (serverError) {
                         notifyService.showError("Cannot edit post.", serverError);
                     }
                 );
-            };
-
-            $scope.expandTextarea = function (postId) {
-                $scope.editPostId = postId;
-                $scope.editPostDataExpanded = !$scope.editPostDataExpanded;
             };
 
             $scope.deletePost = function (post) {
