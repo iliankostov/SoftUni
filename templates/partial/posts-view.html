@@ -63,7 +63,7 @@
             <a href="" class="icon fa-comments-o" ng-click="expandNewCommentTextarea(post.id)"> Comment</a>
         </div>
     </div>
-    <div class="row" ng-if="isNewCommentTextareaExpanded && commentPostId == post.id">
+    <div class="row" ng-if="isNewCommentTextareaExpanded && commentPostId == post.id" ng-controller="CommentController">
         <div class="12u">
             <form name="newCommentForm">
                 <div class="row">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="6u">
                         <input type="button" ng-disabled="!newCommentForm.$valid" value="Comment"
-                               ng-click="createComment(post.id, commentData)"/>
+                               ng-click="createComment(post, commentData); expandNewCommentTextarea(post.id)"/>
                     </div>
                 </div>
             </form>

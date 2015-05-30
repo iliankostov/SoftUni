@@ -1,4 +1,4 @@
-define(['app', 'CommentController', 'validationService', 'postService', 'notifyService'],
+define(['app', 'validationService', 'postService', 'notifyService'],
     function (app) {
         app.controller('PostController', function ($scope, validationService, postService, notifyService) {
             $scope.postData = {};

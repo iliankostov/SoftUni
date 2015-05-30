@@ -1,4 +1,4 @@
-define(['app', 'constants', 'HeaderController', 'PostController', 'userService', 'profileService', 'postService',
+define(['app', 'constants', 'HeaderController', 'PostController', 'CommentController', 'userService', 'profileService', 'postService',
         'validationService', 'navigationService', 'notifyService', 'ngInfiniteScroll'],
     function (app) {
         app.controller('UserController', function ($scope, $routeParams, constants, userService, profileService,
@@ -149,6 +149,7 @@ define(['app', 'constants', 'HeaderController', 'PostController', 'userService',
                                     post.author.profileImageData = constants.baseProfilePicture;
                                 }
                                 post.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
+                                console.log(post);
                             });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if ($scope.feedData.length > 0) {
