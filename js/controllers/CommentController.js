@@ -1,6 +1,12 @@
 define(['app', 'validationService', 'commentService', 'notifyService'],
     function (app) {
         app.controller('CommentController', function ($scope, validationService, commentService, notifyService) {
+            $scope.isEditCommentTextareaExpanded = false;
+
+            $scope.expandEditCommentTextarea = function (commentId) {
+                $scope.editCommentId = commentId;
+                $scope.isEditCommentTextareaExpanded = !$scope.isEditCommentTextareaExpanded;
+            };
 
             $scope.loadComments = function (post) {
                 commentService.loadComments(post.id).then(
@@ -22,6 +28,35 @@ define(['app', 'validationService', 'commentService', 'notifyService'],
                     },
                     function (serverError) {
                         console.error(serverError);
+                    }
+                );
+            };
+
+            $scope.editComment = function (post, comment) {
+                var newCommentData = {};
+                newCommentData.id = comment.id;
+                newCommentData.commentContent = validationService.escapeHtmlSpecialChars(comment.commentContent, true);
+                commentService.editComment(post.id, newCommentData).then(
+                    function () {
+                        comment.commentContent = newCommentData.commentContent;
+                        $scope.isEditCommentTextareaExpanded = false;
+                        notifyService.showInfo("Your comment has been successfully edited.");
+                    },
+                    function (serverError) {
+                        notifyService.showError("Cannot edit comment.", serverError);
+                    }
+                );
+            };
+
+            $scope.deleteComment = function (post, comment) {
+                commentService.deleteComment(post.id, comment.id).then(
+                    function () {
+                        var index =  post.comments.indexOf(comment);
+                        post.comments.splice(index, 1);
+                        notifyService.showInfo("The comment has been successfully deleted.");
+                    },
+                    function (serverError) {
+                        notifyService.showError("Cannot delete comment.", serverError);
                     }
                 );
             };
@@ -51,4 +86,3 @@ define(['app', 'validationService', 'commentService', 'notifyService'],
         })
     }
 );
-

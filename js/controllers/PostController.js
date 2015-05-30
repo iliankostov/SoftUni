@@ -51,7 +51,7 @@ define(['app', 'validationService', 'postService', 'notifyService'],
                 newPostData.id = post.id;
                 newPostData.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
                 postService.editPost(newPostData).then(
-                    function (serverData) {
+                    function () {
                         post.postContent = newPostData.postContent;
                         $scope.isEditPostTextareaExpanded = false;
                         notifyService.showInfo("Your post has been successfully edited.");

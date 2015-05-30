@@ -28,11 +28,11 @@
     </div>
     <div class="row">
         <div class="6u" ng-if="post.author.username == myData.username">
-            <a href="" class="icon fa-edit" ng-click="expandEditPostTextarea(post.id)">edit</a>
+            <a href="" class="icon fa-edit" ng-click="expandEditPostTextarea(post.id)"> Edit</a>
         </div>
         <div class="6u"
              ng-if="(post.wallOwner.username == myData.username) || (post.author.username == myData.username)">
-            <a href="" class="icon fa-eraser" ng-click="deletePost(post)">delete</a>
+            <a href="" class="icon fa-eraser" ng-click="deletePost(post)"> Delete</a>
         </div>
     </div>
     <div class="row" ng-if="isEditPostTextareaExpanded && editPostId == post.id">
