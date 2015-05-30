@@ -20,7 +20,7 @@ define(['app', 'validationService', 'postService', 'notifyService'],
                 $scope.isNewCommentTextareaExpanded = !$scope.isNewCommentTextareaExpanded;
             };
 
-            $scope.likeSecurity = function (post) {
+            $scope.authorisationSecurity = function (post) {
                 var isMe = post.wallOwner.username === $scope.myData.username;
                 var isAuthorFriend = post.author.isFriend;
                 var isWallOwnerFriend = post.wallOwner.isFriend;

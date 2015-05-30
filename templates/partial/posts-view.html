@@ -53,14 +53,16 @@
     <div class="row">
         <div class="6u">
             {{post.likesCount}}
-            <a ng-if="!likeSecurity(post)"> Likes</a>
-            <a href="" class="icon {{!post.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}" ng-if="likeSecurity(post)"
+            <span ng-if="!authorisationSecurity(post)"> Likes</span>
+            <a href="" class="icon {{!post.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}" ng-if="authorisationSecurity(post)"
                ng-click="post.liked = !post.liked; !post.liked && unlikePost(post); post.liked && likePost(post);">
                 {{!post.liked && 'Like' || 'Unlike'}}</a>
         </div>
         <div class="6u">
             {{post.totalCommentsCount}}
-            <a href="" class="icon fa-comments-o" ng-click="expandNewCommentTextarea(post.id)"> Comment</a>
+            <span ng-if="!authorisationSecurity(post)"> Comments</span>
+            <a href="" class="icon fa-comments-o" ng-if="authorisationSecurity(post)"
+               ng-click="expandNewCommentTextarea(post.id)"> Comment</a>
         </div>
     </div>
     <div class="row" ng-if="isNewCommentTextareaExpanded && commentPostId == post.id" ng-controller="CommentController">
@@ -80,7 +82,7 @@
         </div>
     </div>
     <br/>
-    <article class="box style1" ng-repeat="comment in post.comments">
+    <article class="box style1" ng-repeat="comment in post.comments" ng-controller="CommentController">
         <div class="row">
             <div class="4u">
                 <a href="#/{{comment.author.username}}">
@@ -106,6 +108,16 @@
         <div class="row">
             <div class="12u">
                 {{comment.commentContent}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+                {{comment.likesCount}}
+                <span ng-if="!authorisationSecurity(post)"> Likes</span>
+                <a href="" class="icon {{!comment.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}"
+                   ng-if="authorisationSecurity(post)"
+                   ng-click="comment.liked = !comment.liked; !comment.liked && unlikeComment(post, comment); comment.liked && likeComment(post, comment);">
+                    {{!comment.liked && 'Like' || 'Unlike'}}</a>
             </div>
         </div>
     </article>

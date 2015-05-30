@@ -25,6 +25,29 @@ define(['app', 'validationService', 'commentService', 'notifyService'],
                     }
                 );
             };
+
+            $scope.likeComment = function (post, comment) {
+                commentService.likeComment(post.id, comment.id).then(
+                    function () {
+                        comment.likesCount++
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                )
+            };
+
+            $scope.unlikeComment = function (post, comment) {
+                commentService.unlikeComment(post.id, comment.id).then(
+                    function () {
+                        comment.likesCount--;
+                    },
+                    function (serverError) {
+                        console.error(serverError);
+                    }
+                )
+            };
+
         })
     }
 );
