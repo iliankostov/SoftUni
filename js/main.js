@@ -21,6 +21,7 @@ requirejs.config({
         PostController: 'controllers/PostController',
 
         // back-end services
+        commentService: 'services/backendServices/commentService',
         postService: 'services/backendServices/postService',
         profileService: 'services/backendServices/profileService',
         userService: 'services/backendServices/userService',
