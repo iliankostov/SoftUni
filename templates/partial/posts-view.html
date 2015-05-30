@@ -79,4 +79,33 @@
             </form>
         </div>
     </div>
+    <article class="box style1" ng-repeat="comment in post.comments">
+        <div class="row">
+            <div class="4u">
+                <a href="#/{{comment.author.username}}">
+                    <img class="thumb-image" title="{{comment.author.name}}"
+                         ng-src="{{comment.author.profileImageData}}"/>
+                </a>
+            </div>
+            <div class="8u">
+                <div class="row">
+                    <div class="8u">
+                        <a href="#/{{comment.author.username}}" title="{{comment.author.name}}">
+                            {{comment.author.name}}
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="8u">
+                        {{comment.date | date:'dd MMM yyyy HH:mm:ss'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+                {{comment.commentContent}}
+            </div>
+        </div>
+    </article>
 </section>

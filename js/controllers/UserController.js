@@ -149,7 +149,6 @@ define(['app', 'constants', 'HeaderController', 'PostController', 'CommentContro
                                     post.author.profileImageData = constants.baseProfilePicture;
                                 }
                                 post.postContent = validationService.escapeHtmlSpecialChars(post.postContent, true);
-                                console.log(post);
                             });
                             $scope.feedData = $scope.feedData.concat(serverData);
                             if ($scope.feedData.length > 0) {

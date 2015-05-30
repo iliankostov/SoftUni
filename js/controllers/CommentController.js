@@ -14,12 +14,10 @@ define(['app', 'validationService', 'commentService', 'notifyService'],
             };
 
             $scope.createComment = function (post, commentData, isNewCommentTextareaExpanded) {
-                isNewCommentTextareaExpanded = false;
                 commentData = validationService.escapeHtmlSpecialChars(commentData);
                 commentService.createComment(post.id, commentData).then(
-                    function (serverData) {
+                    function () {
                         post.totalCommentsCount++;
-                        console.log(serverData);
                     },
                     function (serverError) {
                         console.error(serverError);
