@@ -13,17 +13,25 @@
                 <h1>{{userData.name}} - Friends ({{friendsDataTotalCount}} total)</h1>
             </header>
             <div class="12u">
-                <section class="12u box style1" ng-repeat="friend in friendsData">
-                    <div class="row">
-                        <div class="4u">
-                            <a href="#/{{friend.username}}">
-                                <img ng-src="{{friend.profileImageData}}" class="thumb-image"/>
-                            </a>
-                        </div>
-                        <div class="8u">
-                            <a href="#/{{friend.username}}">{{friend.name}}</a>
-                        </div>
+                <form name="friendsFilter">
+                    <div class="12u">
+                        <input type="text" placeholder="Search..." ng-model="search.name"/>
                     </div>
+                </form>
+            </div>
+            <br/>
+            <div class="12u">
+                <section class="12u box friend-link" ng-repeat="friend in friendsData | filter:search">
+                    <a href="#/{{friend.username}}" title="{{friend.name}}">
+                        <div class="row">
+                            <div class="4u">
+                                <img ng-src="{{friend.profileImageData}}" class="thumb-image"/>
+                            </div>
+                            <div class="8u">
+                                {{friend.name}}
+                            </div>
+                        </div>
+                    </a>
                 </section>
             </div>
         </div>

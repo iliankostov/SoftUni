@@ -30,7 +30,7 @@
                     <a href="#/{{comment.author.username}}" title="{{comment.author.name}}">
                         {{comment.author.name}}
                     </a>
-                    <div class="box style1 ng-popup" ng-include="'templates/partial/popup-view.html'"
+                    <div class="box ng-popup" ng-include="'templates/partial/popup-view.html'"
                          ng-controller="PopupController" ng-init="loadUserPreview(comment.author.username)"></div>
                 </div>
             </div>

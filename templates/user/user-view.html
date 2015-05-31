@@ -14,8 +14,12 @@
                 </div>
                 <div class="8u">
                     <h1>{{userData.name}}</h1>
-                    <input ng-if="!userData.isFriend && userData.username != myData.username"
-                           type="button" value="Friend" ng-click="sendFriendRequest()"/>
+                    <input ng-if="userData.username != myData.username && userData.isFriend"
+                           type="button" ng-disabled="true" value="Friend"/>
+                    <input ng-if="userData.username != myData.username && userData.hasPendingRequest"
+                           type="button" ng-disabled="true" value="Pending"/>
+                    <input ng-if="userData.username != myData.username && !userData.hasPendingRequest && !userData.isFriend"
+                           type="button" value="Invite" ng-click="sendFriendRequest(userData.username)"/>
                 </div>
             </div>
         </section>
