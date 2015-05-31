@@ -1,4 +1,4 @@
-define(['app', 'validationService', 'commentService', 'notifyService'],
+define(['app', 'PopupController', 'ngPopup', 'validationService', 'commentService', 'notifyService'],
     function (app) {
         app.controller('CommentController', function ($scope, validationService, commentService, notifyService) {
             $scope.isEditCommentTextareaExpanded = false;

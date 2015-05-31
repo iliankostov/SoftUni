@@ -16,7 +16,7 @@
     </div>
 </div>
 <br/>
-<article class="box style1" ng-repeat="comment in post.comments">
+<article class="box box-radius" ng-repeat="comment in post.comments">
     <div class="row">
         <div class="4u">
             <a href="#/{{comment.author.username}}">
@@ -30,6 +30,8 @@
                     <a href="#/{{comment.author.username}}" title="{{comment.author.name}}">
                         {{comment.author.name}}
                     </a>
+                    <div class="box style1 ng-popup" ng-include="'templates/partial/popup-view.html'"
+                         ng-controller="PopupController" ng-init="loadUserPreview(comment.author.username)"></div>
                 </div>
             </div>
             <div class="row">

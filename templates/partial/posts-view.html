@@ -12,6 +12,8 @@
                     <a href="#/{{post.author.username}}" title="{{post.author.name}}">
                         {{post.author.name}}
                     </a>
+                    <div class="box style1 ng-popup" ng-include="'templates/partial/popup-view.html'"
+                            ng-controller="PopupController" ng-init="loadUserPreview(post.author.username)"></div>
                 </div>
             </div>
             <div class="row">

@@ -30,6 +30,12 @@ define(['app', 'constants', 'requestService'], function (app) {
             return requestService.getRequest(url, headers);
         };
 
+        service.loadUserPreview = function (username) {
+            var url = serviceUrl + '/' + username + '/preview';
+            var headers = requestService.getHeaders();
+            return requestService.getRequest(url, headers);
+        };
+
         service.loadUserFullData = function (username) {
             var url = serviceUrl + '/' + username;
             var headers = requestService.getHeaders();

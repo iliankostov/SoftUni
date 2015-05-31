@@ -1,4 +1,4 @@
-define(['app', 'validationService', 'postService', 'notifyService'],
+define(['app', 'PopupController', 'ngPopup', 'validationService', 'postService', 'notifyService'],
     function (app) {
         app.controller('PostController', function ($scope, validationService, postService, notifyService) {
             $scope.postData = {};

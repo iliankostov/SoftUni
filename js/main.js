@@ -20,6 +20,7 @@ requirejs.config({
         HeaderController: 'controllers/HeaderController',
         PostController: 'controllers/PostController',
         CommentController: 'controllers/CommentController',
+        PopupController: 'controllers/PopupController',
 
         // back-end services
         commentService: 'services/backendServices/commentService',
@@ -37,7 +38,8 @@ requirejs.config({
         // directives
         ngPictureSelect: 'directives/ngPictureSelect',
         ngCoverSelect: 'directives/ngCoverSelect',
-        ngInfiniteScroll: 'directives/ngInfiniteScroll'
+        ngInfiniteScroll: 'directives/ngInfiniteScroll',
+        ngPopup: 'directives/ngPopup'
     },
 
     shim: {
