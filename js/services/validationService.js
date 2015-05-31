@@ -62,8 +62,9 @@ define(['app', 'notifyService'], function (app) {
         };
 
         function validateUsername(username) {
-            if (username.length < 4 || username.length > 32) {
-                notifyService.showError("The username must be from 4 to 32 characters long.");
+            var usernamePattern = /^[a-zA-Z0-9]{4,32}$/;
+            if (!usernamePattern.test(username)) {
+                notifyService.showError("The username can only contain letters or digits from 4 to 32 symbols.");
                 return false;
             }
             return true;
@@ -104,14 +105,11 @@ define(['app', 'notifyService'], function (app) {
 
         function escapeHtmlSpecialChars(text) {
             var map = {
-                '&': '&amp;',
                 '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#039;'
+                '>': '&gt;'
             };
 
-            return text.replace(/[&<>"']/g, function (m) {
+            return text.replace(/[<>]/g, function (m) {
                 return map[m];
             });
         }
