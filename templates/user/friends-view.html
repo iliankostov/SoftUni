@@ -5,7 +5,7 @@
 <div ng-include="'templates/partial/header-view.html'"></div>
 
 <!-- User Friends -->
-<div class="wrapper style1 first" ng-if="isLoggedIn && (userData.isFriend || userData.username == myData.username)"
+<div class="wrapper" ng-if="isLoggedIn && (userData.isFriend || userData.username == myData.username)"
      ng-init="loadFriends()">
     <article class="container">
         <div class="12u">

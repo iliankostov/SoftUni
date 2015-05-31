@@ -2,11 +2,13 @@ define(['app'], function (app) {
     app.factory('navigationService', function ($location, $route) {
         var service = {};
 
-        service.loadHome = function (routeReload) {
+        service.loadHome = function () {
             $location.path('/');
-            if (routeReload) {
-                $route.reload();
-            }
+
+        };
+
+        service.reload = function () {
+            $route.reload();
         };
 
         return service;

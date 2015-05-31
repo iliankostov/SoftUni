@@ -1,6 +1,7 @@
 define(['app'], function (app) {
     app.directive('ngInfiniteScroll', ['$rootScope', '$window', '$timeout', function($rootScope, $window, $timeout) {
             return {
+                restrict: 'AEC',
                 link: function(scope, elem, attrs) {
                     var checkWhenEnabled, handler, scrollDistance, scrollEnabled;
                     $window = angular.element($window);

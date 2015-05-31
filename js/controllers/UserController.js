@@ -39,11 +39,11 @@ define(['app', 'constants', 'HeaderController', 'PostController', 'CommentContro
                 }
             );
 
-            $scope.sendFriendRequest = function () {
-                var username = $scope.userData.username;
+            $scope.sendFriendRequest = function (username) {
                 profileService.sendFriendRequest(username).then(
                     function (serverData) {
                         notifyService.showInfo(serverData.message);
+                        navigationService.reload();
                     },
                     function (serverError) {
                         notifyService.showError("Cannot send friend request.", serverError);

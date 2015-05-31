@@ -28,7 +28,7 @@ requirejs.config({
         profileService: 'services/backendServices/profileService',
         userService: 'services/backendServices/userService',
 
-        // services
+        // help services
         fileReaderService: 'services/fileReaderService',
         navigationService: 'services/navigationService',
         notifyService: 'services/notifyService',

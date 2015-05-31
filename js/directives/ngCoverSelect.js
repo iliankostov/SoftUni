@@ -1,6 +1,7 @@
 define(['app', 'constants', 'fileReaderService', 'validationService'], function (app) {
     app.directive("ngCoverSelect", function (constants, fileReaderService, validationService, $timeout) {
         return {
+            restrict: 'AEC',
             scope: {
                 ngModel: '='
             },

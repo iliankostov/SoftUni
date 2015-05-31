@@ -50,7 +50,8 @@ define(['app', 'constants', 'userService', 'profileService', 'navigationService'
                     function (serverResponse) {
                         notifyService.showInfo(serverResponse.message);
                         userService.clearCredentials();
-                        navigationService.loadHome(true);
+                        navigationService.loadHome();
+                        navigationService.reload();
                     },
                     function (serverError) {
                         notifyService.showError("Unsuccessful Logout!", serverError);

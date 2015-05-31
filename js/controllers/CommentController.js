@@ -55,6 +55,7 @@ define(['app', 'PopupController', 'ngPopup', 'validationService', 'commentServic
                     function () {
                         var index =  post.comments.indexOf(comment);
                         post.comments.splice(index, 1);
+                        post.totalCommentsCount--;
                         notifyService.showInfo("The comment has been successfully deleted.");
                     },
                     function (serverError) {
