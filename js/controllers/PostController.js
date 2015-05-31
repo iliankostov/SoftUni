@@ -35,15 +35,17 @@ define(['app', 'PopupController', 'ngPopup', 'validationService', 'postService',
             $scope.createPost = function () {
                 var postData = validationService.escapeHtmlSpecialChars($scope.postData);
                 postData.username = $scope.userData.username;
-                postService.createPost(postData).then(
-                    function (serverData) {
-                        $scope.feedData.unshift(serverData);
-                        $scope.postData.postContent = '';
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                );
+                if (validationService.validateMessage(postData.postContent)) {
+                    postService.createPost(postData).then(
+                        function (serverData) {
+                            $scope.feedData.unshift(serverData);
+                            $scope.postData.postContent = '';
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
             };
 
             $scope.editPost = function (post) {

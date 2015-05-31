@@ -14,22 +14,24 @@ define(['app', 'PopupController', 'ngPopup', 'validationService', 'commentServic
                         post.comments = serverData;
                     },
                     function (serverError) {
-                        console.log(serverError);
+                        console.error(serverError);
                     }
                 )
             };
 
             $scope.createComment = function (post, commentData) {
                 commentData = validationService.escapeHtmlSpecialChars(commentData);
-                commentService.createComment(post.id, commentData).then(
-                    function (serverData) {
-                        post.totalCommentsCount++;
-                        post.comments.unshift(serverData);
-                    },
-                    function (serverError) {
-                        console.error(serverError);
-                    }
-                );
+                if (validationService.validateMessage(commentData.commentContent)) {
+                    commentService.createComment(post.id, commentData).then(
+                        function (serverData) {
+                            post.totalCommentsCount++;
+                            post.comments.unshift(serverData);
+                        },
+                        function (serverError) {
+                            console.error(serverError);
+                        }
+                    );
+                }
             };
 
             $scope.editComment = function (post, comment) {

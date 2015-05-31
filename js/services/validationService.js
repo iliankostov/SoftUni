@@ -53,9 +53,9 @@ define(['app', 'notifyService'], function (app) {
             return true;
         };
         
-        service.validatePostData = function (postDataContent) {
-            if (postDataContent === '') {
-                notifyService.showError("The post content cannot be empty.");
+        service.validateMessage = function (postDataContent) {
+            if (postDataContent.length < 2) {
+                notifyService.showError("The message content must be at least 2 symbols long.");
                 return false;
             }
             return true;
