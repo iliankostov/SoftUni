@@ -34,7 +34,7 @@ define(['noty'], function (Noty) {
         NoteController.prototype.loadNoteView = function(selector, noteId, action) {
             var _this = this;
             return this.model.getNoteById(noteId).then(
-                function () {
+                function (data) {
                     if(action === 'delete') {
                         _this.viewBag.deleteNote.deleteNoteView(selector, data);
                     } else {
@@ -56,24 +56,23 @@ define(['noty'], function (Noty) {
                 })
         };
 
-        NoteController.prototype.editNote = function (title, text, deadline) {
-            var authorName = sessionStorage['fullName'];
-            return this.model.editNote(authorName, title, text, deadline)
+        NoteController.prototype.editNote = function (noteId, title, text, deadline) {
+            return this.model.editNote(noteId, title, text, deadline)
                 .then(function() {
                     Noty.success("You have successfully edit your note!");
                     window.location.replace('#/myNotes/');
                 }, function() {
-                    Noty.success("You have not edit note!");
+                    Noty.error("You have not edit note!");
                 })
         };
 
         NoteController.prototype.deleteNote = function (noteId) {
             return this.model.deleteNote(noteId)
                 .then(function() {
-                    Noty.success("You have successfully edit your note!");
+                    Noty.success("You have successfully delete your note!");
                     window.location.replace('#/myNotes/');
                 }, function() {
-                    Noty.success("You have not edit note!");
+                    Noty.error("You have not delete note!");
                 })
         };
 

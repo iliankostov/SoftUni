@@ -165,7 +165,7 @@ define(['jquery', 'sammy', 'noty', 'header', 'requester', 'userModel', 'noteMode
                 });
 
                 this.bind('editNote', function(e, data) {
-                    noteControllers.editNote(data.title, data.text, data.deadline);
+                    noteControllers.editNote(data.id, data.title, data.text, data.deadline);
                 });
 
                 this.bind('deleteNote', function(e, data) {
