@@ -1,0 +1,15 @@
+<ul class="listItems">
+    {{#results}}
+    <li class="item" data-id="note_id">
+        <a href="#">
+            <h2 id="title">{{title}}</h2>
+            <p id="text">{{text}}</p>
+            <div class="author" title="author">{{authorName}}</div>
+            <div class="deadline" title="deadline">{{deadline}}</div>
+        </a>
+        <a class="edit" href="#/myNotes/edit/{{objectId}}"><input type="submit" value="Edit"/></a>
+        <a class="delete" href="#/myNotes/delete/{{objectId}}"><input type="submit" value="Delete"/></a>
+    </li>
+    {{/results}}
+</ul>
+<div id="pagination"></div>
