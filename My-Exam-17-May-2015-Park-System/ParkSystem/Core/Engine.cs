@@ -1,6 +1,7 @@
-namespace ParkSystem
+namespace ParkSystem.Core
 {
     using System;
+    using Contracts;
 
     public class Engine : IEngine
     {
@@ -21,7 +22,7 @@ namespace ParkSystem
                     break;
                 }
 
-                commandLine.Trim();
+                commandLine = commandLine.Trim();
                 if (!string.IsNullOrEmpty(commandLine))
                 {
                     try

@@ -1,8 +1,9 @@
-﻿namespace ParkSystem
+﻿namespace ParkSystem.Models
 {
     using System;
     using System.Text;
     using System.Text.RegularExpressions;
+    using Contracts;
 
     public class Motorbike : IVehicle
     {

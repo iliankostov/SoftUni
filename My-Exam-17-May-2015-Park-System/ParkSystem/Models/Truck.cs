@@ -1,8 +1,9 @@
-﻿namespace ParkSystem
+﻿namespace ParkSystem.Models
 {
     using System;
     using System.Text;
     using System.Text.RegularExpressions;
+    using Contracts;
 
     public class Truck : IVehicle
     {
@@ -17,7 +18,7 @@
             this.LicensePlate = licensePlate;
             this.Owner = owner;
             this.ReservedHours = reservedHours;
-            this.RegularRate = (decimal)((double)4.75f);
+            this.RegularRate = (decimal)4.75f;
             this.OvertimeRate = 6.2M;
         }
 

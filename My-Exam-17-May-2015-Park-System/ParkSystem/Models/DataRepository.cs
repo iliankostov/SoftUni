@@ -1,7 +1,8 @@
-namespace ParkSystem
+namespace ParkSystem.Models
 {
     using System;
     using System.Collections.Generic;
+    using Contracts;
     using Wintellect.PowerCollections;
 
     public class DataRepository

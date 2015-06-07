@@ -1,7 +1,8 @@
-﻿namespace ParkSystem
+﻿namespace ParkSystem.Core
 {
     using System.Collections.Generic;
     using System.Web.Script.Serialization;
+    using Contracts;
 
     public class Command : ICommand
     {

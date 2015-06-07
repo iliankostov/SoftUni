@@ -1,8 +1,8 @@
 ﻿namespace ParkSystemTests
 {
-    using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using ParkSystem;
+
+    using ParkSystem.Models;
 
     [TestClass]
     public class GetStatusTest
@@ -11,7 +11,7 @@
         public void TestGetStatusOutputMessage()
         {
             var vehiclePark = new VehiclePark(3, 5);
-           
+
             var output = vehiclePark.GetStatus();
 
             string expected = @"Sector 1: 0 / 5 (0% full)

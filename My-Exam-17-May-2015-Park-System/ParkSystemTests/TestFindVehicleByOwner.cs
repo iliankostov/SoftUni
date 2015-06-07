@@ -1,8 +1,10 @@
 ﻿namespace ParkSystemTests
 {
     using System;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using ParkSystem;
+
+    using ParkSystem.Models;
 
     [TestClass]
     public class TestFindVehicleByOwner

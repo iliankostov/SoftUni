@@ -1,9 +1,10 @@
-namespace ParkSystem
+namespace ParkSystem.Models
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using Contracts;
 
     public class VehiclePark : IVehiclePark
     {

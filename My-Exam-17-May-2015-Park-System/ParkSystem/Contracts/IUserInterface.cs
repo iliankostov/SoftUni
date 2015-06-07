@@ -1,4 +1,4 @@
-﻿namespace ParkSystem
+﻿namespace ParkSystem.Contracts
 {
     public interface IUserInterface
     {

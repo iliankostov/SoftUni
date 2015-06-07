@@ -1,6 +1,8 @@
-﻿namespace ParkSystem
+﻿namespace ParkSystem.Core
 {
     using System;
+    using Contracts;
+    using global::ParkSystem.Models;
 
     public class ProcessCommand
     {

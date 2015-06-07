@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ParkSystemTests")]
+[assembly: AssemblyTitle("IssueTracker")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ParkSystemTests")]
+[assembly: AssemblyProduct("IssueTracker")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("25dcb48c-2c41-4e6c-a063-9e74bcb5ecbc")]
+[assembly: Guid("67bf9a2c-c471-4198-92e6-39406b859bf8")]
 
 // Version information for an assembly consists of the following four values:
 //      Major Version

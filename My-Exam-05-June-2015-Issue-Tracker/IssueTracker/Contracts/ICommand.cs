@@ -1,10 +1,10 @@
-namespace ParkSystem.Contracts
+namespace IssueTracker.Contracts
 {
     using System.Collections.Generic;
 
     public interface ICommand
     {
-        string Name { get; }
+        string Action { get; }
 
         IDictionary<string, string> Parameters { get; }
     }
