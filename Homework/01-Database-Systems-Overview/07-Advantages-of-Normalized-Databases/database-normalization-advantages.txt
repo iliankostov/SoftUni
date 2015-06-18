@@ -1,0 +1,13 @@
+The advantages of normalization are:
+- searching, sorting, and creating indexes is faster, since tables are narrower, and more rows fit on a data page.
+- you usually have more tables.
+- you can have more clustered indexes (one per table), so you get more flexibility in tuning queries.
+- index searching is often faster, since indexes tend to be narrower and shorter.
+- more tables allow better use of segments to control physical placement of data.
+- you usually have fewer indexes per table, so data modification commands are faster.
+- fewer null values and less redundant data, making your database more compact.
+- triggers execute more quickly if you are not maintaining redundant data.
+- data modification anomalies are reduced.
+- normalization is conceptually cleaner and easier to maintain and change as your needs change.
+
+While fully normalized databases require more joins, joins are generally very fast if indexes are available on the join columns. Adaptive Server is optimized to keep higher levels of the index in cache, so each join performs only one or two physical I/Os for each matching row. The cost of finding rows already in the data cache is extremely low.
