@@ -1,1 +1,1 @@
-Select Name from Departments
+select Name from Departments

@@ -1,1 +1,1 @@
-Select * from Departments
+select * from Departments

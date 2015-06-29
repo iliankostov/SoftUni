@@ -1,1 +1,1 @@
-Select FirstName, MiddleName, LastName from Employees
+select FirstName + ' ' + LastName as FullName from Employees
