@@ -1,0 +1,1 @@
+Select Salary from Employees
