@@ -1,0 +1,1 @@
+select convert(nchar(10), getdate(), 104) + ' ' + convert(nchar(12), getdate(), 114) as [Current Date and Time]
