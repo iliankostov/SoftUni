@@ -1,0 +1,5 @@
+begin transaction DropEmployeesProjects
+
+drop table EmployeesProjects
+
+rollback transaction DropEmployeesProjects
