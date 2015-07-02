@@ -10,8 +10,10 @@ begin
 declare @OldBalance money select @OldBalance = Balance from Accounts as a where Id = @AccountId
 declare @NewBalance money set @NewBalance = @OldBalance - @Money
 
-select @NewBalance as [Balance after withdraw]
-
+update Accounts
+set Balance = @NewBalance
+where Id = @AccountId
+select Balance from Accounts where Id = @AccountId
 end
 
 exec WithdrawMoney 2, 2500
@@ -26,8 +28,10 @@ begin
 declare @OldBalance money select @OldBalance = Balance from Accounts as a where Id = @AccountId
 declare @NewBalance money set @NewBalance = @OldBalance + @Money
 
-select @NewBalance as [Balance after withdraw]
-
+update Accounts
+set Balance = @NewBalance
+where Id = @AccountId
+select Balance from Accounts where Id = @AccountId
 end
 
 exec DepositMoney 2, 2500
