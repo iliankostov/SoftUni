@@ -6,6 +6,8 @@
 
     public class Frigate : Starship
     {
+        private int projectilesFired;
+
         public Frigate(string name, StarSystem location)
             : base(name, 60, 50, 30, 220, location)
         {
@@ -13,7 +15,15 @@
 
         public override IProjectile ProduceAttack()
         {
-            return new ShieldReaver(this.Damage);
+            var projectiles = new ShieldReaver(this.Damage);
+            this.projectilesFired++;
+            return projectiles;
+        }
+
+        public override string ToString()
+        {
+            string output = string.Format("\n-Projectiles fired: {0}", this.projectilesFired);
+            return base.ToString() + output;
         }
     }
 }

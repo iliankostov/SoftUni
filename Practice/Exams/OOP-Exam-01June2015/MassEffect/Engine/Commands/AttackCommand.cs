@@ -1,7 +1,6 @@
 ﻿namespace MassEffect.Engine.Commands
 {
     using System;
-    using System.Linq;
 
     using MassEffect.Exceptions;
     using MassEffect.Interfaces;
@@ -29,9 +28,15 @@
 
             var projectiles = attacker.ProduceAttack();
             deffender.RespondToAttack(projectiles);
-            Console.WriteLine(Messages.ShipAttacked, attacker.Name, deffender.Name);
-            if (deffender.Health < 0)
+            if (deffender.Shields < 0) 
             {
+                deffender.Shields = 0;               
+            }
+
+            Console.WriteLine(Messages.ShipAttacked, attacker.Name, deffender.Name);
+            if (deffender.Health <= 0)
+            {
+                deffender.Health = 0;
                 Console.WriteLine(Messages.ShipDestroyed, deffender.Name);
             }
         }

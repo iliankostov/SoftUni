@@ -11,9 +11,16 @@
         {
         }
 
+        public override void RespondToAttack(IProjectile attack)
+        {
+            this.Shields += 50;
+            base.RespondToAttack(attack);
+            this.Shields -= 50;
+        }
+
         public override IProjectile ProduceAttack()
         {
-            return new Laser(this.Damage);
+            return new Laser(this.Damage + (this.Shields / 2));
         }
     }
 }
