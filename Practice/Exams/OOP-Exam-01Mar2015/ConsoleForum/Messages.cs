@@ -23,7 +23,8 @@
         public const string OpenQuestionSuccess = "Question {0} opened";
         public const string RoleChangeSuccess = "Role successfully changed";
         public const string BestAnswerSuccess = "Answer with Id: {0} successfully made best answer";
-
+        public const string BestAnswerDenied = "Question with Id: {0} has got best answer";
+        
         public const string GuestWelcomeMessage = "Hey stranger, care to login/register?";
         public const string UserWelcomeMessage = "Welcome, {0}!";
         public const string GeneralHeaderMessage = "Hot questions: {0}, Active users: {1}";
