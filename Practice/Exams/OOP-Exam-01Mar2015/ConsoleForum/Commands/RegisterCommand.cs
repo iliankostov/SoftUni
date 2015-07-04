@@ -1,10 +1,12 @@
 ﻿namespace ConsoleForum.Commands
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
 
-    using Entities.Users;
-    using Contracts;
-    using Utility;
+    using ConsoleForum.Entities.Users;
+    using ConsoleForum.Contracts;
+    using ConsoleForum.Utility;
 
     public class RegisterCommand : AbstractCommand
     {
@@ -39,8 +41,8 @@
                             throw new CommandException(Messages.RegAdminNotAllowed);
                         }
 
-                        user = new Administrator(users.Count + 1, username, password, email);                    
-                        break;
+                        // TODO: Implement administrator 
+                        throw new NotImplementedException();
                     default:
                         user = new User(users.Count + 1, username, password, email);
                         break;

@@ -1,8 +1,9 @@
 ﻿namespace ConsoleForum.Entities.Users
 {
+    using System;
     using System.Collections.Generic;
 
-    using Contracts;
+    using ConsoleForum.Contracts;
 
     public class User : IUser
     {
