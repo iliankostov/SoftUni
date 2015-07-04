@@ -6,7 +6,7 @@
     {
         public static void Main()
         {
-            IForum forum = new Forum();
+            IForum forum = new ExtendedForum();
             forum.Run();
         }
     }

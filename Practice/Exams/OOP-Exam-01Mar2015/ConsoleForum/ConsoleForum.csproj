@@ -63,6 +63,7 @@
     <Compile Include="Contracts\IAnswer.cs" />
     <Compile Include="Contracts\ICommand.cs" />
     <Compile Include="Contracts\IExecutable.cs" />
+    <Compile Include="ExtendedForum.cs" />
     <Compile Include="Forum.cs" />
     <Compile Include="Contracts\IForum.cs" />
     <Compile Include="Contracts\IQuestion.cs" />

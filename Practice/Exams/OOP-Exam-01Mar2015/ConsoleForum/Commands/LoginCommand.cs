@@ -1,9 +1,9 @@
 ﻿namespace ConsoleForum.Commands
 {
-    using System;
     using System.Linq;
 
     using ConsoleForum.Contracts;
+    using ConsoleForum.Entities.Users;
     using ConsoleForum.Utility;
 
     public class LoginCommand : AbstractCommand
@@ -24,7 +24,7 @@
                 this.Forum.Output.AppendLine(Messages.AlreadyLoggedIn);
             }
 
-            var currentUser = users.FirstOrDefault(u => u.Username == username && u.Password == password);
+            var currentUser = users.FirstOrDefault(u => u.Username == username && u.Password == password) as User;
             if (currentUser == null)
             {
                 throw new CommandException(Messages.InvalidLoginDetails);
