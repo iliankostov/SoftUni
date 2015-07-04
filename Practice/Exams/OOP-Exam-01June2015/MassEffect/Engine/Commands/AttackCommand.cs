@@ -6,7 +6,7 @@
     {
         public AttackCommand(IGameEngine gameEngine)
             : base(gameEngine)
-        {            
+        {
         }
     }
 }

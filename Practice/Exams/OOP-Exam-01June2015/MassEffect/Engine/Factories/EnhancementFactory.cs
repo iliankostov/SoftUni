@@ -17,7 +17,7 @@ namespace MassEffect.Engine.Factories
                 case EnhancementType.ExtendedFuelCells:
                     return new Enhancement("ExtendedFuelCells", 0, 0, 200);
                 default:
-                    throw new NotSupportedException("Enhancement type not supported.");
+                    throw new NotImplementedException();
             }
         }
     }

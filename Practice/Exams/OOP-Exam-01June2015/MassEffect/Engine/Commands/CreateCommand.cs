@@ -1,6 +1,6 @@
 ﻿namespace MassEffect.Engine.Commands
 {
-    using Interfaces;
+    using MassEffect.Interfaces;
 
     public class CreateCommand : Command
     {

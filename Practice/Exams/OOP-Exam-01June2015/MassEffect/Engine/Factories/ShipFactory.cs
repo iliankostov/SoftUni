@@ -2,9 +2,9 @@
 {
     using System;
 
-    using GameObjects.Locations;
-    using GameObjects.Ships;
-    using Interfaces;
+    using MassEffect.GameObjects.Locations;
+    using MassEffect.GameObjects.Ships;
+    using MassEffect.Interfaces;
 
     public class ShipFactory
     {
@@ -13,11 +13,11 @@
             switch (type)
             {
                 case StarshipType.Frigate:
-                    return new Ship(StarshipType.Frigate, name, 60, 50, 30, 120, location);
+                    // TODO:
                 case StarshipType.Cruiser:
-                    return new Ship(StarshipType.Cruiser, name, 100, 100, 50, 300, location);
+                    // TODO:
                 case StarshipType.Dreadnought:
-                    return new Ship(StarshipType.Dreadnought, name, 200, 300, 150, 700, location);
+                    // TODO:
                 default:
                     throw new NotSupportedException("Starship type not supported.");
             }
