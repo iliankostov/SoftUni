@@ -8,5 +8,10 @@
             : base(gameEngine)
         {
         }
+
+        public override void Execute(string[] commandArgs)
+        {
+            this.GameEngine.IsRunning = false;
+        }
     }
 }

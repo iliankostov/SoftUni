@@ -8,5 +8,10 @@
             : base(gameEngine)
         {
         }
+
+        public override void Execute(string[] commandArgs)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

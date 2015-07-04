@@ -54,6 +54,14 @@
     <Compile Include="Engine\Factories\ShipFactory.cs" />
     <Compile Include="Exceptions\ShipException.cs" />
     <Compile Include="GameObjects\Enhancements\EnhancementType.cs" />
+    <Compile Include="GameObjects\Projectiles\Laser.cs" />
+    <Compile Include="GameObjects\Projectiles\ShieldReaver.cs" />
+    <Compile Include="GameObjects\Projectiles\PenetrationShell.cs" />
+    <Compile Include="GameObjects\Projectiles\Projectiles.cs" />
+    <Compile Include="GameObjects\Ships\Dreadnought.cs" />
+    <Compile Include="GameObjects\Ships\Cruiser.cs" />
+    <Compile Include="GameObjects\Ships\Frigate.cs" />
+    <Compile Include="GameObjects\Ships\Starship.cs" />
     <Compile Include="GameObjects\Ships\StarshipType.cs" />
     <Compile Include="Exceptions\InsufficientFuelException.cs" />
     <Compile Include="Exceptions\LocationOutOfRangeException.cs" />
@@ -68,9 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameObjects\Locations\StarSystem.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameObjects\Projectiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

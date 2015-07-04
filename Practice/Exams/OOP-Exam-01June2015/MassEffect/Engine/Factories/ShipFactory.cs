@@ -13,11 +13,11 @@
             switch (type)
             {
                 case StarshipType.Frigate:
-                    // TODO:
+                    return new Frigate(name, location);
                 case StarshipType.Cruiser:
-                    // TODO:
+                    return new Cruiser(name, location);
                 case StarshipType.Dreadnought:
-                    // TODO:
+                    return new Dreadnought(name, location);
                 default:
                     throw new NotSupportedException("Starship type not supported.");
             }
