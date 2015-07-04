@@ -41,11 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\CommandManagerExtended.cs" />
     <Compile Include="Engine\Commands\AttackCommand.cs" />
     <Compile Include="Engine\Commands\Command.cs" />
     <Compile Include="Engine\CommandManager.cs" />
     <Compile Include="Engine\Commands\CreateCommand.cs" />
     <Compile Include="Engine\Commands\PlotJumpCommand.cs" />
+    <Compile Include="Engine\Commands\SystemReportCommand.cs" />
     <Compile Include="Engine\Messages.cs" />
     <Compile Include="Engine\Commands\OverCommand.cs" />
     <Compile Include="Engine\Commands\StatusReportCommand.cs" />

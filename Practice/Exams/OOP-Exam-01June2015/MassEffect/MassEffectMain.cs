@@ -12,7 +12,7 @@
             Galaxy galaxy = new Galaxy();
             SeedStarSystems(galaxy);
 
-            ICommandManager commandManager = new CommandManager();
+            ICommandManager commandManager = new CommandManagerExtended();
             IGameEngine engine = new GameEngine(commandManager, galaxy);
             engine.Run();
         }

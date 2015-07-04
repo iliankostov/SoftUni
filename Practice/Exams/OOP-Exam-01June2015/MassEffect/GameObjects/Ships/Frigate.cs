@@ -1,5 +1,7 @@
 ﻿namespace MassEffect.GameObjects.Ships
 {
+    using System;
+
     using MassEffect.GameObjects.Locations;
     using MassEffect.GameObjects.Projectiles;
     using MassEffect.Interfaces;
@@ -22,7 +24,11 @@
 
         public override string ToString()
         {
-            string output = string.Format("\n-Projectiles fired: {0}", this.projectilesFired);
+            string output = string.Empty;
+            if (this.Health > 0)
+            {
+                output = string.Format("\n-Projectiles fired: {0}", this.projectilesFired);
+            }
             return base.ToString() + output;
         }
     }
