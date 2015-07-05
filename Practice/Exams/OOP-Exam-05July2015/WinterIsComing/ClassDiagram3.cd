@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WinterIsComing.Core.CommandDispatcher" Collapsed="true">
+    <Position X="5.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAATAAAAAAAAAA=</HashCode>
+      <FileName>Core\CommandDispatcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WinterIsComing.Core.CommandDispatcherExtended" Collapsed="true">
+    <Position X="5.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Core\CommandDispatcherExtended.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.ConsoleReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ConsoleReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WinterIsComing.Core.ConsoleWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgEIAAA=</HashCode>
+      <FileName>Core\ConsoleWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WinterIsComing.Core.EmptyUnitEffector" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\EmptyUnitEffector.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WinterIsComing.Core.Engine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAgAIAAAAECAAAAQCEAAMQhAAAAwAAA=</HashCode>
+      <FileName>Core\Engine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WinterIsComing.Core.GlobalMessages" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAgAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\GlobalMessages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.MatrixContainer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAIAIAAAAAAAAAABAAAAAAAABAAAAAAAAAEAAA=</HashCode>
+      <FileName>Core\MatrixContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WinterIsComing.Core.UnitFactory" Collapsed="true">
+    <Position X="19.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\UnitFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.AbstractCommand" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\AbstractCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.FightCommand" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\FightCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.MoveCommand" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\MoveCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.SpawnCommand" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\SpawnCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.StatusCommand" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\StatusCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.ToggleEffectorCommand" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\ToggleEffectorCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Commands.WinterCameCommand" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\WinterCameCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Exceptions.GameException" Collapsed="true">
+    <Position X="1.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Exceptions\GameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Exceptions.InvalidPositionException" Collapsed="true">
+    <Position X="2.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Exceptions\InvalidPositionException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Core.Exceptions.NotEnoughEnergyException" Collapsed="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Exceptions\NotEnoughEnergyException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.CombatHandlers.CombatHandler" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\CombatHandlers\CombatHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WinterIsComing.Models.CombatHandlers.IceGiantCombatHandler" Collapsed="true">
+    <Position X="8.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\CombatHandlers\IceGiantCombatHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.CombatHandlers.MageCombatHandler" Collapsed="true">
+    <Position X="11" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\CombatHandlers\MageCombatHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.CombatHandlers.WarriorCombatHandler" Collapsed="true">
+    <Position X="13.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\CombatHandlers\WarriorCombatHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Spells.Cleave" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Spells\Blizzard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Spells.Blizzard" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Spells\Cleave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Spells.FireBreath" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Spells\FireBreath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Spells.Spell" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Spells\Spell.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WinterIsComing.Models.Spells.Stomp" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Spells\Stomp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Units.IceGiant" Collapsed="true">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAABAAgAAAAAAAAAAAAAAACAAAAAAE=</HashCode>
+      <FileName>Models\Units\IceGiant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Units.Mage" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECAAAAAAAAAAABAAgAAAAAAAAAAAAAAACAAAAAAE=</HashCode>
+      <FileName>Models\Units\Mage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.Models.Units.Unit" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAQAAACAAEAgAAAQQIAAAAAAAAAAAAAQAAYAA=</HashCode>
+      <FileName>Models\Units\Unit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WinterIsComing.Models.Units.Warrior" Collapsed="true">
+    <Position X="5.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAABAAgAAAAAAAAAAAAAAACAAAAAAE=</HashCode>
+      <FileName>Models\Units\Warrior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WinterIsComing.WinterIsComingMain" Collapsed="true">
+    <Position X="21" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAABCAAAAA=</HashCode>
+      <FileName>WinterIsComingMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="WinterIsComing.Contracts.ICombatHandler" Collapsed="true">
+    <Position X="15.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Contracts\ICombatHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.ICommand" Collapsed="true">
+    <Position X="17.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.ICommandDispatcher" Collapsed="true">
+    <Position X="19.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ICommandDispatcher.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.IEngine" Collapsed="true">
+    <Position X="21" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAIAAAAACAAAAAAAAAMAhAAAAgAAA=</HashCode>
+      <FileName>Contracts\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.IInputReader" Collapsed="true">
+    <Position X="15.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IInputReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.IOutputWriter" Collapsed="true">
+    <Position X="17.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAA=</HashCode>
+      <FileName>Contracts\IOutputWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.ISpell" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ISpell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.IUnit" Collapsed="true">
+    <Position X="21" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAACAAAAgAAAQQIAAAAAAAAAAAAAQAAYAA=</HashCode>
+      <FileName>Contracts\IUnit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.IUnitContainer" Collapsed="true">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAIAIAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IUnitContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WinterIsComing.Contracts.IUnitEffector" Collapsed="true">
+    <Position X="17.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IUnitEffector.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="WinterIsComing.Models.UnitType" Collapsed="true">
+    <Position X="15.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Models\UnitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
