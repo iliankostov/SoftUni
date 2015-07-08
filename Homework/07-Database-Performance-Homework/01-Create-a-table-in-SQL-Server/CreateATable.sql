@@ -1,20 +1,30 @@
 create database Performance
 go
 
+alter database Performance
+modify file(name=Performance_log, size=5000mb, filegrowth=1000mb)
+go
+
+alter database Performance
+modify file(name=Performance, size=5000mb, filegrowth=1000mb)
+go
+
 use Performance
 go
 
-create table Logs(EventDate datetime, EventLog text)
+create table Logs(Id int primary key identity, EventDate datetime, EventLog text)
 go
 
+-- fill 10 000 000 rows
 declare @Count int
 set @Count = 1
 while @Count <= 10000000
 begin
 	insert into Logs values
-		 (dateadd(mi, @Count, '11-26-1983'), 'I perform event number: ' + cast(@Count as varchar(10)))
+		 (dateadd(mi, @Count, '01-01-1990'), 'Event number: ' + cast(@Count as varchar(10)))
 	set @Count = @Count + 1
 end
+go
 
 -- clear the cache
 dbcc freeproccache
@@ -22,16 +32,6 @@ dbcc dropcleanbuffers
 go
 
 -- search in the table by date range 
-select EventDate, EventLog from Logs where EventDate between '11-26-1983' and '11-06-1986'
+select Id, EventDate from Logs 
+where EventDate between '01-01-1990' and '01-01-2000'
 go
-
--- check the cache
-SELECT usecounts, cacheobjtype, objtype, text, size_in_bytes
-FROM sys.dm_exec_cached_plans 
-CROSS APPLY sys.dm_exec_sql_text(plan_handle) 
-WHERE usecounts > 0 AND 
-			text like '%select EventDate, EventLog from Logs%'
-ORDER BY usecounts DESC;
-GO
-
--- TODO - check the speed and do speed comparison
