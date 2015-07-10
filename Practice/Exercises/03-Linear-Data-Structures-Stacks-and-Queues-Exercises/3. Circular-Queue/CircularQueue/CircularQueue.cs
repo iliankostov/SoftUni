@@ -2,6 +2,8 @@
 
 public class CircularQueue<T>
 {
+    private const int InitialCapacity = 16;
+
     private T[] elements;
 
     private int startIndex = 0;
@@ -10,12 +12,7 @@ public class CircularQueue<T>
 
     public int Count { get; private set; }
 
-    public CircularQueue()
-    {
-        this.elements = new T[16];
-    }
-
-    public CircularQueue(int capacity)
+    public CircularQueue(int capacity = InitialCapacity)
     {
         this.elements = new T[capacity];
     }
