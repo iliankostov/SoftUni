@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05CountOfOccurences", "05Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06ImplementReversedList", "06ImplementReversedList\06ImplementReversedList.csproj", "{0A3DB35D-4076-484B-B57B-7FA389183294}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07ImplementLinkedList", "07ImplementLinkedList\07ImplementLinkedList.csproj", "{4668D8B7-7D5C-4303-A0DC-830A476C2874}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0A3DB35D-4076-484B-B57B-7FA389183294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A3DB35D-4076-484B-B57B-7FA389183294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A3DB35D-4076-484B-B57B-7FA389183294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4668D8B7-7D5C-4303-A0DC-830A476C2874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4668D8B7-7D5C-4303-A0DC-830A476C2874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4668D8B7-7D5C-4303-A0DC-830A476C2874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4668D8B7-7D5C-4303-A0DC-830A476C2874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
