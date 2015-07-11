@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01SumAndAverage", "01SumAnd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05CountOfOccurences", "05CountOfOccurences\05CountOfOccurences.csproj", "{C00BE788-1273-4833-B816-90437A2A62B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06ImplementReversedList", "06ImplementReversedList\06ImplementReversedList.csproj", "{0A3DB35D-4076-484B-B57B-7FA389183294}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C00BE788-1273-4833-B816-90437A2A62B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C00BE788-1273-4833-B816-90437A2A62B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C00BE788-1273-4833-B816-90437A2A62B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3DB35D-4076-484B-B57B-7FA389183294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3DB35D-4076-484B-B57B-7FA389183294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3DB35D-4076-484B-B57B-7FA389183294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3DB35D-4076-484B-B57B-7FA389183294}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
