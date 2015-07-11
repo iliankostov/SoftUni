@@ -1,62 +1,96 @@
 ﻿namespace LinearDataStructures
 {
     using System;
+    using System.Collections;
     using System.Collections.Generic;
 
-    public class ReversedList<T>
+    public class ReversedList<T> : IEnumerable<T>
     {
         private const int DefaultCapacity = 16;
 
         private T[] items;
-
-        public int Counter { get; private set; }
 
         public ReversedList(int capacity = DefaultCapacity)
         {
             this.items = new T[capacity];
         }
 
+        public int Count { get; private set; }
+
+        public int Capacity
+        {
+            get
+            {
+                return this.items.Length;
+            }
+        }   
+        
+        public T this[uint index]
+        {
+            get
+            {
+                this.IsEmpty();
+                return this.items[index - 1 - index];
+            }
+
+            set
+            {
+                this.items[this.Count - 1 - index] = value;
+            }
+        }
+
         public void Add(T item)
         {
-            if (this.items.Length - this.Counter <= 0)
+            if (this.items.Length - this.Count <= 0)
             {
                 this.Grow();
             }
 
-            this.Counter++;
-
-            throw new NotImplementedException();
+            this.items[this.Count] = item;
+            this.Count++;
         }
 
-        public int Count()
+        public void Remove(uint index)
         {
-            return this.Counter;
-        }
-
-        public int Capacity()
-        {
-            return this.items.Length;
-        }
-
-        public T this[int index]
-        {
-            get
+            this.IsEmpty();
+            for (long i = this.Count - 1 - index; i < this.Count - 1; i++)
             {
-                return this.items[index];
+                this.items[i] = this.items[i + 1];
             }
-        } 
 
-        public void Remove(int index)
+            this.Count--;
+        }
+
+        public IEnumerator<T> GetEnumerator()
         {
-            var tempList = new List<T>(this.items);
-            tempList.RemoveAt(index);
-            this.items = tempList.ToArray();
-            this.Counter--;
+            for (int i = this.Count - 1; i >= 0; i--)
+            {
+                yield return this.items[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
 
         private void Grow()
         {
-            throw new NotImplementedException();
+            var newElements = new T[2 * this.Capacity];
+            for (int i = 0; i < this.Count; i++)
+            {
+                newElements[i] = this.items[i];
+            }
+
+            this.items = newElements;
+        }
+
+        private void IsEmpty()
+        {
+            if (this.Count == 0)
+            {
+                throw new InvalidOperationException("List is empty.");
+            }
         }
     }
 }
