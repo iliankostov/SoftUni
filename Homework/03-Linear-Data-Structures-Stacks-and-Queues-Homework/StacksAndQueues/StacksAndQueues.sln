@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01ReverseNumbersWithAStack"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02CalcSequenceWithAQueue", "02CalcSequenceWithAQueue\02CalcSequenceWithAQueue.csproj", "{6FD85C42-31D1-42D1-B04C-DAADA202F0BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03ImplementArrayBasedStack", "03ImplementArrayBasedStack\03ImplementArrayBasedStack.csproj", "{357508E4-99E8-4077-AB66-445F8C038588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ArrayBasedStackUnitTests", "04ArrayBasedStackUnitTests\04ArrayBasedStackUnitTests.csproj", "{1B6288E7-C456-45D1-876D-8B28299CAFC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6FD85C42-31D1-42D1-B04C-DAADA202F0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FD85C42-31D1-42D1-B04C-DAADA202F0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FD85C42-31D1-42D1-B04C-DAADA202F0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357508E4-99E8-4077-AB66-445F8C038588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357508E4-99E8-4077-AB66-445F8C038588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357508E4-99E8-4077-AB66-445F8C038588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357508E4-99E8-4077-AB66-445F8C038588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
