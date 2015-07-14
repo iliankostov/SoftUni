@@ -88,12 +88,6 @@
         }
 
         [TestMethod]
-        public void AssertInnitialCapacytyNotChangeCount()
-        {
-            Assert.AreEqual(0, this.linkedStackInt.Count);
-        }
-
-        [TestMethod]
         public void TestPushPopCountAssertWorkingCorrectly()
         {
             this.linkedStackInt.Push(1);
