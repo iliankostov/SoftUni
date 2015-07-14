@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03ImplementArrayBasedStack"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ArrayBasedStackUnitTests", "04ArrayBasedStackUnitTests\04ArrayBasedStackUnitTests.csproj", "{1B6288E7-C456-45D1-876D-8B28299CAFC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05LinkedStack", "05LinkedStack\05LinkedStack.csproj", "{EFA5B200-9D43-476F-90BC-FA95806FFF98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06LinkedStackUnitTests", "06LinkedStackUnitTests\06LinkedStackUnitTests.csproj", "{99DE72A2-7FA5-4628-9B0A-9873C19BCBC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B6288E7-C456-45D1-876D-8B28299CAFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA5B200-9D43-476F-90BC-FA95806FFF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA5B200-9D43-476F-90BC-FA95806FFF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA5B200-9D43-476F-90BC-FA95806FFF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA5B200-9D43-476F-90BC-FA95806FFF98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DE72A2-7FA5-4628-9B0A-9873C19BCBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DE72A2-7FA5-4628-9B0A-9873C19BCBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DE72A2-7FA5-4628-9B0A-9873C19BCBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DE72A2-7FA5-4628-9B0A-9873C19BCBC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
