@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DbContextForTheSoftUniDatabase", "01DbContextForTheSoftUniDatabase\01DbContextForTheSoftUniDatabase.csproj", "{D910621E-1401-439B-9C13-1F9145284522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02EmployeeDAOClass", "02EmployeeDAOClass\02EmployeeDAOClass.csproj", "{008EBFD1-321B-4A92-BED0-B45471D5CACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D910621E-1401-439B-9C13-1F9145284522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D910621E-1401-439B-9C13-1F9145284522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D910621E-1401-439B-9C13-1F9145284522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D910621E-1401-439B-9C13-1F9145284522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
