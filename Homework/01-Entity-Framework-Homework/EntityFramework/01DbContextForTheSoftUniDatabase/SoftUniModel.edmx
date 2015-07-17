@@ -223,8 +223,8 @@
           <NavigationProperty Name="Address" Relationship="Self.FK_Employees_Addresses" FromRole="Employees" ToRole="Addresses" />
           <NavigationProperty Name="Departments" Relationship="Self.FK_Departments_Employees" FromRole="Employees" ToRole="Departments" />
           <NavigationProperty Name="Department" Relationship="Self.FK_Employees_Departments" FromRole="Employees" ToRole="Departments" />
-          <NavigationProperty Name="Employees1" Relationship="Self.FK_Employees_Employees" FromRole="Employees" ToRole="Employees1" />
-          <NavigationProperty Name="Employee1" Relationship="Self.FK_Employees_Employees" FromRole="Employees1" ToRole="Employees" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Employees" FromRole="Employees" ToRole="Employees1" />
+          <NavigationProperty Name="Manager" Relationship="Self.FK_Employees_Employees" FromRole="Employees1" ToRole="Employees" />
           <NavigationProperty Name="Projects" Relationship="Self.EmployeesProjects" FromRole="Employees" ToRole="Projects" />
         </EntityType>
         <EntityType Name="Project">

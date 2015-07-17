@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DbContextForTheSoftUniDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02EmployeeDAOClass", "02EmployeeDAOClass\02EmployeeDAOClass.csproj", "{008EBFD1-321B-4A92-BED0-B45471D5CACA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03DatabaseSearchQueries", "03DatabaseSearchQueries\03DatabaseSearchQueries.csproj", "{7537628F-1F8A-40F3-99BA-1A28BF2939AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

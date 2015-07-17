@@ -17,7 +17,7 @@ namespace EntityFramework
         public Employee()
         {
             this.Departments = new HashSet<Department>();
-            this.Employees1 = new HashSet<Employee>();
+            this.Employees = new HashSet<Employee>();
             this.Projects = new HashSet<Project>();
         }
     
@@ -35,8 +35,8 @@ namespace EntityFramework
         public virtual Address Address { get; set; }
         public virtual ICollection<Department> Departments { get; set; }
         public virtual Department Department { get; set; }
-        public virtual ICollection<Employee> Employees1 { get; set; }
-        public virtual Employee Employee1 { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual Employee Manager { get; set; }
         public virtual ICollection<Project> Projects { get; set; }
     }
 }
