@@ -91,6 +91,30 @@
                     }
 
                     break;
+                case "4":
+                    var departments = context.Departments
+                        .Where(d => d.Employees.Count > 5)
+                        .OrderBy(d => d.Employees.Count)
+                        .Select(d => new
+                        {
+                            Name = d.Name,
+                            Manager = d.Manager.FirstName,
+                            Employees = d.Employees
+                        });
+
+                    foreach (var department in departments)
+                    {
+                        Console.WriteLine("Department: {0}\nManager: {1}\n", department.Name, department.Manager);
+                        foreach (var employee in department.Employees)
+                        {
+                            Console.WriteLine("Employee: {0} {1}; Hire on: {2}; Job title: {3}",
+                                employee.FirstName,
+                                employee.LastName,
+                                employee.HireDate,
+                                employee.JobTitle);
+                        }
+                    }
+                    break;
                 default:
                     Console.WriteLine("Wrong input.");
                     break;

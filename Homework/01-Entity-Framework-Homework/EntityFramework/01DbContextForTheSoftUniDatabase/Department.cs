@@ -23,7 +23,7 @@ namespace EntityFramework
         public string Name { get; set; }
         public int ManagerID { get; set; }
     
-        public virtual Employee Employee { get; set; }
+        public virtual Employee Manager { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
     }
 }
