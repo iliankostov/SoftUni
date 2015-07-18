@@ -69,6 +69,28 @@
                             address.EmployeeCount);
                     }
                     break;
+                case "3":
+                    var emp = context.Employees
+                        .Select(e => new
+                        {
+                            ID = e.EmployeeID,
+                            FirstName = e.FirstName,
+                            LastName = e.LastName,
+                            JobTitle = e.JobTitle,
+                            Projects = e.Projects.OrderBy(p => p.Name).Select(p => new { Name = p.Name })
+                        })
+                        .FirstOrDefault(e => e.ID == 147);
+
+                    Console.WriteLine("{0} - {1} - {2} - Projects:",
+                        emp.FirstName,
+                        emp.LastName,
+                        emp.JobTitle);
+                    foreach (var project in emp.Projects)
+                    {
+                        Console.WriteLine(project.Name);
+                    }
+
+                    break;
                 default:
                     Console.WriteLine("Wrong input.");
                     break;
