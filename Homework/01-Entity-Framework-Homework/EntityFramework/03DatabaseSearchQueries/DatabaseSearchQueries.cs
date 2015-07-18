@@ -49,6 +49,26 @@
                         }
                     }
                     break;
+                case "2":
+                    var addresses = context.Addresses
+                        .OrderByDescending(a => a.Employees.Count)
+                        .ThenBy(a => a.Town.Name)
+                        .Take(10)
+                        .Select(a => new
+                        {
+                            AddressText = a.AddressText,
+                            Town = a.Town.Name,
+                            EmployeeCount = a.Employees.Count
+                        });
+
+                    foreach (var address in addresses)
+                    {
+                        Console.WriteLine("{0}, {1} - {2} employees", 
+                            address.AddressText,
+                            address.Town,
+                            address.EmployeeCount);
+                    }
+                    break;
                 default:
                     Console.WriteLine("Wrong input.");
                     break;
