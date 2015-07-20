@@ -12,6 +12,8 @@ namespace EntityFramework
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SoftUniEntities : DbContext
     {
@@ -30,5 +32,18 @@ namespace EntityFramework
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Project> Projects { get; set; }
         public virtual DbSet<Town> Towns { get; set; }
+    
+        public virtual ObjectResult<FindAllProjectsForGivenEmployee_Result> FindAllProjectsForGivenEmployee(string firstName, string lastName)
+        {
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var lastNameParameter = lastName != null ?
+                new ObjectParameter("LastName", lastName) :
+                new ObjectParameter("LastName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FindAllProjectsForGivenEmployee_Result>("FindAllProjectsForGivenEmployee", firstNameParameter, lastNameParameter);
+        }
     }
 }
