@@ -1,4 +1,6 @@
-﻿namespace EntityFramework
+﻿using System.Diagnostics;
+
+namespace EntityFramework
 {
     using System;
     using System.Linq;
@@ -8,28 +10,39 @@
         static void Main()
         {
             var context = new SoftUniEntities();
-            DateTime startDate = Convert.ToDateTime("01/01/2002");
-            DateTime endDate = Convert.ToDateTime("31/12/2002");
+            // Estabish connection to server in advance
+            var totalCount = context.Employees.Count();
 
-            var employeesGetByLinq = context.Employees
-                .Where(e => e.Projects
-                    .Any(p => p.StartDate >= startDate && p.EndDate <= endDate))
-                .Select(e => new { FirstName = e.FirstName});
-
-            Console.WriteLine(startDate);
-            Console.WriteLine(endDate);
-            Console.WriteLine("Number of employees get by Linq: " + employeesGetByLinq.Count());
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
 
             string query = @"
-SELECT Count(e.FirstName)
-FROM Employees AS e
-JOIN EmployeesProjects AS ep ON e.EmployeeID = ep.EmployeeID
-JOIN Projects AS p ON p.ProjectID = ep.ProjectID
-WHERE YEAR(p.StartDate) = '2002'";
+SELECT 
+    e.FirstName
+    FROM Employees AS e
+    WHERE  EXISTS (SELECT 
+        1
+        FROM  EmployeesProjects AS ep
+        INNER JOIN Projects AS p ON p.ProjectID = ep.ProjectID
+        WHERE (e.EmployeeID = ep.EmployeeID) AND (2002 = (DATEPART (year, p.StartDate)))
+    )";
+            var employeesGetByNativeQuery = context.Database.SqlQuery<string>(query).ToArrayAsync().Result;
+            foreach (var employeeN in employeesGetByNativeQuery)
+            {
+                //Console.WriteLine(employeeN);
+            }
+            Console.WriteLine("Native: {0}", sw.Elapsed);
 
-            var employeesGetByNativeQuery = context.Database.SqlQuery<int>(query);
-
-            Console.WriteLine("Number of employees get by native query: " + employeesGetByNativeQuery.Count());
+            sw.Restart();
+            var employeesGetByLinq = context.Employees
+                .Where(e => e.Projects
+                    .Any(p => p.StartDate.Year == 2002))
+                .Select(e => new { e.FirstName });
+            foreach (var employeeL in employeesGetByLinq)
+            {
+                //Console.WriteLine(employeeL.FirstName);
+            }
+            Console.WriteLine("Linq:   {0}", sw.Elapsed);
         }
     }
 }
