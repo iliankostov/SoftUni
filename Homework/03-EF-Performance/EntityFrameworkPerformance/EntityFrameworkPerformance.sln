@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01ShowDataFromRelatedTables", "01ShowDataFromRelatedTables\01ShowDataFromRelatedTables.csproj", "{5B56E981-7E3F-4619-A617-7507493C1974}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02PlayWithToList", "02PlayWithToList\02PlayWithToList.csproj", "{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5B56E981-7E3F-4619-A617-7507493C1974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B56E981-7E3F-4619-A617-7507493C1974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B56E981-7E3F-4619-A617-7507493C1974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
