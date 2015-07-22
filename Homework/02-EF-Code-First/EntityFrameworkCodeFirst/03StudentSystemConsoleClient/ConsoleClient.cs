@@ -2,6 +2,7 @@
 {
     using System;
     using System.Data.Entity;
+    using System.Data.Entity.Migrations;
     using System.Data.Entity.SqlServer;
     using System.Linq;
 
@@ -76,9 +77,16 @@
                                     Name = c.Name,
                                     ResourceCount = c.Resources.Count
                                 });
-                    foreach (var course in coursesWithMoreThenFiveResources)
+                    if (coursesWithMoreThenFiveResources.Any())
                     {
-                        Console.WriteLine("{0} has {1} resources", course.Name, course.ResourceCount);
+                        foreach (var course in coursesWithMoreThenFiveResources)
+                        {
+                            Console.WriteLine("{0} has {1} resources", course.Name, course.ResourceCount);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("There are no courses with more than 5 resources.");
                     }
 
                     break;
@@ -135,6 +143,35 @@
                     Console.WriteLine("Wrong input.");
                     break;
             }
+
+            //// Add some licenses if not exists
+            for (int i = 0; i < 20; i++)
+            {
+                var newLicense = new License()
+                {
+                    Name = "License" + i,
+                };
+
+                context.Licenses.AddOrUpdate(l => l.Name, newLicense);
+            }
+
+            context.SaveChanges();
+
+            //// Attach some licenses to each resource
+            int licenseOneId = 1;
+            int licenseTwoId = 11;
+
+            foreach (var resource in context.Resources)
+            {
+                var licenseOne = context.Licenses.FirstOrDefault(l => l.Id == licenseOneId);
+                var licenseTwo = context.Licenses.FirstOrDefault(l => l.Id == licenseTwoId);
+                resource.Licenses.Add(licenseOne);
+                resource.Licenses.Add(licenseTwo);
+                licenseOneId++;
+                licenseTwoId++;
+            }
+
+            context.SaveChanges();
         }
     }
 }

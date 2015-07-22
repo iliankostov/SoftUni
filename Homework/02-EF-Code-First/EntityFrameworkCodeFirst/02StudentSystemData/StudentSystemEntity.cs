@@ -16,5 +16,7 @@ namespace EntityFrameworkCodeFirst
         public IDbSet<Homework> Homeworks { get; set; }
 
         public IDbSet<Resource> Resources { get; set; }
+
+        public IDbSet<License> Licenses { get; set; }
     }
 }

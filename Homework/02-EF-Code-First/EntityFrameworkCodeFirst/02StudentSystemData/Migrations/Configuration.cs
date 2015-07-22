@@ -4,11 +4,12 @@ namespace EntityFrameworkCodeFirst.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class Configuration : DbMigrationsConfiguration<EntityFrameworkCodeFirst.StudentSystemEntity>
+    public sealed class Configuration : DbMigrationsConfiguration<StudentSystemEntity>
     {
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = true;
+            this.AutomaticMigrationDataLossAllowed = true;
             this.ContextKey = "EntityFrameworkCodeFirst.StudentSystemEntity";
         }
 
@@ -24,7 +25,7 @@ namespace EntityFrameworkCodeFirst.Migrations
                     {
                         Name = "Resource" + i,
                         ResourceType = (ResourceType)random.Next(0, 4),
-                        Url = "http://www.example.com/" + i
+                        Url = "http://www.example.com/" + i,
                     };
 
                     context.Resources.Add(newResource);
