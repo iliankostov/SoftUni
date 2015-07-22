@@ -41,7 +41,7 @@ namespace EntityFrameworkCodeFirst.Migrations
                     {
                         Content = "Content number " + i,
                         ContentType = (ContentType)random.Next(0, 2),
-                        SubmissionDate = DateTime.Now.AddDays(i)
+                        SubmissionDate = Convert.ToDateTime("20/07/2015").AddDays(i)
                     };
 
                     context.Homeworks.Add(newNomework);
@@ -57,7 +57,7 @@ namespace EntityFrameworkCodeFirst.Migrations
                     var newStudent = new Student
                     {
                         Name = "Student" + i,
-                        RegistrationDate = DateTime.Now.AddDays(i),
+                        RegistrationDate = Convert.ToDateTime("20/07/2015").AddDays(i),
                         Homeworks = context.Homeworks.OrderBy(s => Guid.NewGuid()).Take(random.Next(0, 10)).ToList()
                     };
 
@@ -74,8 +74,8 @@ namespace EntityFrameworkCodeFirst.Migrations
                     var newCourse = new Course()
                     {
                         Name = "Course" + i,
-                        StartDate = DateTime.Now.AddDays(i),
-                        EndDate = DateTime.Now.AddMonths(i),
+                        StartDate = Convert.ToDateTime("20/07/2015").AddDays(i),
+                        EndDate = Convert.ToDateTime("20/07/2015").AddMonths(i),
                         Price = i * 100M,
                         Students = context.Students.OrderBy(s => Guid.NewGuid()).Take(random.Next(0, 10)).ToList(),
                         Resources = context.Resources.OrderBy(s => Guid.NewGuid()).Take(random.Next(0, 10)).ToList(),
