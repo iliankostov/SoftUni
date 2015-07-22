@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01ShowDataFromRelatedTables
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02PlayWithToList", "02PlayWithToList\02PlayWithToList.csproj", "{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03PlayWithSelect", "03PlayWithSelect\03PlayWithSelect.csproj", "{51A9B8ED-9BA6-47AE-B59E-215216298D28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1D087BD-6BAB-423B-BF9D-12E8CF6F4359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A9B8ED-9BA6-47AE-B59E-215216298D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A9B8ED-9BA6-47AE-B59E-215216298D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A9B8ED-9BA6-47AE-B59E-215216298D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A9B8ED-9BA6-47AE-B59E-215216298D28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
