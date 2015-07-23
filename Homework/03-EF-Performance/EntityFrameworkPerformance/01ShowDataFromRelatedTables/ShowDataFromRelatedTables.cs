@@ -3,7 +3,6 @@
     using System;
     using System.Data.Entity;
     using System.IO;
-    using System.Linq;
 
     public class ShowDataFromRelatedTables
     {
@@ -16,24 +15,17 @@
             switch (input)
             {
                 case "n":
-                    var adsOne = context.Ads
-                    .Select(a => new
-                                 {
-                                     Title = a.Title,
-                                     Status = a.AdStatus.Status,
-                                     Category = a.Category.Name,
-                                     Town = a.Town.Name,
-                                     User = a.AspNetUser.Name
-                                 });
+                    var adsOne = context.Ads;
+
                     foreach (var ad in adsOne)
                     {
                         Console.WriteLine(
                             "Title: {0}\nStatus: {1}\nCategory: {2}\nTown: {3}\nUser: {4}", 
                             ad.Title,
-                            ad.Status,
-                            ad.Category,
-                            ad.Town,
-                            ad.User);
+                            ad.AdStatus.Status,
+                            ad.Category == null ? "None" : ad.Category.Name,
+                            ad.Town == null ? "None" : ad.Town.Name,
+                            ad.AspNetUser.Name);
                     }
 
                     break;
@@ -64,7 +56,7 @@
             string table = @"
                                                          No Include(…)   With Include(…)  
                              -------------------------- --------------- ----------------- 
-                              Number of SQL statements               1                 1  ";
+                              Number of SQL statements               28                 1  ";
             File.WriteAllText(@"..\..\table.txt", table);
         }
     }
