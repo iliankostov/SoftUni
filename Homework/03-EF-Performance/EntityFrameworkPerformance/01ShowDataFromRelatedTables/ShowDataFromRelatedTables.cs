@@ -50,9 +50,9 @@
                             "Title: {0}\nStatus: {1}\nCategory: {2}\nTown: {3}\nUser: {4}",
                             ad.Title,
                             ad.AdStatus.Status,
-                            ad.Category,
-                            ad.Town,
-                            ad.AspNetUser);
+                            ad.Category == null ? "None" : ad.Category.Name,
+                            ad.Town == null ? "None" : ad.Town.Name,
+                            ad.AspNetUser.Name);
                     }
 
                     break;

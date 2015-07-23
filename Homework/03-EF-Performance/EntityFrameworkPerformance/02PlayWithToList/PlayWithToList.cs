@@ -11,7 +11,7 @@
         {
             var context = new AdsEntities();
             //// Initialize connection
-            var published = context.Ads.First().AdStatus.Status;
+            var count = context.Ads.Count();
             TimeSpan[] nonOptimizedArray = new TimeSpan[6];
             TimeSpan[] optimizedArray = new TimeSpan[6];
             Stopwatch sw = new Stopwatch();
@@ -22,30 +22,37 @@
                 sw.Restart();
                 var adsBadWay = context.Ads
                     .ToList()
-                    .Where(a => a.AdStatus.Status == published)
+                    .Where(a => a.AdStatus.Status == "Published")
                     .Select(
                         a => new
-                                 {
-                                     a.Title,
-                                     a.Category,
-                                     a.Town,
-                                     a.Date
-                                 })
+                        {
+                            a.Title,
+                            a.Category,
+                            a.Town,
+                            a.Date
+                        })
                     .ToList()
-                    .OrderBy(a => a.Date);                   
+                    .OrderBy(a => a.Date).Count();
                 nonOptimizedArray[i] = sw.Elapsed;
 
                 sw.Restart();
                 var adsOptimized = context.Ads
-                    .Where(a => a.AdStatus.Status == published)
+                    .Where(a => a.AdStatus.Status == "Published")
                     .OrderBy(a => a.Date)
                     .Select(a => new
                     {
                         a.Title,
                         a.Category,
-                        a.Town
-                    });
+                        a.Town,
+                        a.Date
+                    }).Count();
                 optimizedArray[i] = sw.Elapsed;
+
+                if (i == 5)
+                {
+                    Console.WriteLine("Number of elements for non optimized query: " + adsBadWay);
+                    Console.WriteLine("Number of elements for optimized query: " + adsOptimized);
+                }
             }
 
             sw.Stop();
