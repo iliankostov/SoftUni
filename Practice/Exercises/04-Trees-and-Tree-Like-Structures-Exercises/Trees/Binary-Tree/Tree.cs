@@ -1,38 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-
-public class Tree<T>
+﻿namespace Trees
 {
-    public Tree(T value, params Tree<T>[] children)
+    using System;
+    using System.Collections.Generic;
+
+    public class Tree<T>
     {
-        this.Value = value;
-        this.Children = new List<Tree<T>>();
-        foreach (var child in children)
+        public Tree(T value, params Tree<T>[] children)
         {
-            this.Children.Add(child);
+            this.Value = value;
+            this.Children = new List<Tree<T>>();
+            foreach (var child in children)
+            {
+                this.Children.Add(child);
+            }
         }
-    }
 
-    public T Value { get; set; }
+        public T Value { get; set; }
 
-    public IList<Tree<T>> Children { get; set; }
+        public IList<Tree<T>> Children { get; set; }
 
-    public void Print(int indent = 0)
-    {
-        Console.Write(new string(' ', 2 * indent));
-        Console.WriteLine(this.Value);
-        foreach (var child in this.Children)
+        public void Print(int indent = 0)
         {
-            child.Print(indent + 1);
+            Console.Write(new string(' ', 2 * indent));
+            Console.WriteLine(this.Value);
+            foreach (var child in this.Children)
+            {
+                child.Print(indent + 1);
+            }
         }
-    }
 
-    public void Each(Action<T> action)
-    {
-        action(this.Value);
-        foreach (var child in this.Children)
+        public void Each(Action<T> action)
         {
-            child.Each(action);
+            action(this.Value);
+            foreach (var child in this.Children)
+            {
+                child.Each(action);
+            }
         }
     }
 }
