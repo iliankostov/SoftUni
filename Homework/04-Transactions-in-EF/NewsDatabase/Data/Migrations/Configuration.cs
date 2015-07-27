@@ -1,4 +1,4 @@
-namespace EFTransactions.Migrations
+namespace NewsDatabase.Migrations
 {
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -20,7 +20,7 @@ namespace EFTransactions.Migrations
                 {
                     var news = new News
                                    {
-                                       NewsContent = "News number " + i
+                                       NewsContent = "News number " + (i + 1)
                                    };
                     context.News.Add(news);
                 }

@@ -1,4 +1,4 @@
-﻿namespace EFTransactions
+﻿namespace NewsDatabase
 {
     using System.ComponentModel.DataAnnotations;
 
@@ -8,6 +8,7 @@
         public int Id { get; set; }
 
         [Required]
+        [ConcurrencyCheck]
         public string NewsContent { get; set; }
     }
 }
