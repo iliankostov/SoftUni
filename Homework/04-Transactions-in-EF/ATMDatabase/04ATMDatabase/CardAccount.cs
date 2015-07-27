@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _04ATMDatabase
+namespace ATMDatabase
 {
     using System;
     using System.Collections.Generic;

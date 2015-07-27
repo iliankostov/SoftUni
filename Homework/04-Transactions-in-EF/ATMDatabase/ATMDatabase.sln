@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		InitializeATMDatabase.sql = InitializeATMDatabase.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05TransactionalATMWithdrawal", "05TransactionalATMWithdrawal\05TransactionalATMWithdrawal.csproj", "{709E0DE0-0E4C-476E-A2D5-B74F41E80D8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{F871FA4F-952C-4C54-8EC8-BD5FF3F706C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F871FA4F-952C-4C54-8EC8-BD5FF3F706C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F871FA4F-952C-4C54-8EC8-BD5FF3F706C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709E0DE0-0E4C-476E-A2D5-B74F41E80D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709E0DE0-0E4C-476E-A2D5-B74F41E80D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709E0DE0-0E4C-476E-A2D5-B74F41E80D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709E0DE0-0E4C-476E-A2D5-B74F41E80D8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
