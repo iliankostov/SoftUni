@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="88babe0ee49f43329cfaae7a47eeabe1" Name="ATMDiagram">
         <EntityTypeShape EntityType="ATMDatabase.CardAccount" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ATMDatabase.TransactionHistory" Width="1.5" PointX="3.125" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

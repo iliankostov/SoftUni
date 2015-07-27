@@ -26,5 +26,6 @@ namespace ATMDatabase
         }
     
         public virtual DbSet<CardAccount> CardAccounts { get; set; }
+        public virtual DbSet<TransactionHistory> TransactionHistories { get; set; }
     }
 }
