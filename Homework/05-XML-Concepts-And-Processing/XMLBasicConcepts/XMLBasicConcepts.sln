@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01CreateStudentsXMLDocument
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02AddXMLNamespace", "02AddXMLNamespace\02AddXMLNamespace.csproj", "{8B44FC4B-128F-45C9-A9B9-D4EB47161E12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03CreateXSDSchema", "03CreateXSDSchema\03CreateXSDSchema.csproj", "{ED1AF7E7-DBB3-4C93-9767-C91D8A9CE546}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8B44FC4B-128F-45C9-A9B9-D4EB47161E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B44FC4B-128F-45C9-A9B9-D4EB47161E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B44FC4B-128F-45C9-A9B9-D4EB47161E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1AF7E7-DBB3-4C93-9767-C91D8A9CE546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1AF7E7-DBB3-4C93-9767-C91D8A9CE546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1AF7E7-DBB3-4C93-9767-C91D8A9CE546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1AF7E7-DBB3-4C93-9767-C91D8A9CE546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
