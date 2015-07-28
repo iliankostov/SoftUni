@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<namespace:students xmlns:namespace="urn:students" culture="en-US">
+  <student>
+    <name>Pesho</name>
+    <gender>M</gender>
+    <birth-date>01/01/1990</birth-date>
+    <phone-number>0888888888</phone-number>
+    <e-mail>pesho@abv.bg</e-mail>
+    <university>Software University</university>
+    <speciality>Back-end developer</speciality>
+    <faculty-number>123456789</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Object Oriented Programming</name>
+        <date-taken>01/01/2015</date-taken>
+        <grade>4.98</grade>
+      </exam>
+      <exam>
+        <name>Hight Quality Code</name>
+        <date-taken>03/01/2015</date-taken>
+        <grade>4.80</grade>
+      </exam>
+    </taken-exams>
+  </student>
+  <student>
+    <name>Gosho</name>
+    <gender>M</gender>
+    <birth-date>01/01/1991</birth-date>
+    <phone-number>0888888889</phone-number>
+    <e-mail>gosho@abv.bg</e-mail>
+    <university>Software University</university>
+    <speciality>Back-end developer</speciality>
+    <faculty-number>123456789</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Object Oriented Programming</name>
+        <date-taken>01/01/2015</date-taken>
+        <grade>5.80</grade>
+      </exam>
+      <exam>
+        <name>Hight Quality Code</name>
+        <date-taken>03/01/2015</date-taken>
+        <grade>4.99</grade>
+      </exam>
+    </taken-exams>
+  </student>
+  <student>
+    <name>Maria</name>
+    <gender>F</gender>
+    <birth-date>01/01/1993</birth-date>
+    <phone-number>0888888899</phone-number>
+    <e-mail>maria@abv.bg</e-mail>
+    <university>Software University</university>
+    <speciality>Back-end developer</speciality>
+    <faculty-number>123456789</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Object Oriented Programming</name>
+        <date-taken>01/01/2015</date-taken>
+        <grade>5.00</grade>
+      </exam>
+      <exam>
+        <name>Hight Quality Code</name>
+        <date-taken>03/01/2015</date-taken>
+        <grade>4.00</grade>
+      </exam>
+    </taken-exams>
+  </student>
+</namespace:students>
