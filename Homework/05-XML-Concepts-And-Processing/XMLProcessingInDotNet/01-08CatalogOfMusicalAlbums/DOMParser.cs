@@ -4,15 +4,17 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml;
+    using System.Xml.Linq;
 
     public class DOMParser
     {
         public static void Main()
         {
-            Console.Write("Please choise number of problem in interval [2..10]: ");
+            string xmlPath = @"..\..\catalog.xml";
+            Console.Write("Please choise number of problem in interval [2..8]: ");
             var input = Console.ReadLine();
             XmlDocument catalog = new XmlDocument();
-            catalog.Load(@"..\..\catalog.xml");
+            catalog.Load(xmlPath);
 
             XmlNode rootNode = catalog.DocumentElement;
             if (rootNode != null)
@@ -110,6 +112,41 @@
                         }
 
                         Console.WriteLine("Albums after: " + rootNode.ChildNodes.Count);
+                        break;
+                    case "7":
+                        var oldAlbumsXPath = catalog.SelectNodes("//album[year/text() >= 2010]").Cast<XmlNode>();
+                        foreach (XmlNode album in oldAlbumsXPath)
+                        {
+                            Console.WriteLine(
+                                "{0}, price: {1}, year: {2}",
+                                album["name"].InnerText,
+                                album["price"].InnerText,
+                                album["year"].InnerText);
+                        }
+
+                        break;
+
+                    case "8":
+                        XDocument xDocument = new XDocument();
+                        xDocument = XDocument.Load(xmlPath);
+                        var oldAlbumsLinq =
+                            xDocument.Descendants("album")
+                                .Where(a => int.Parse(a.Element("year").Value) > 2010)
+                                .Select(a => new
+                                                {
+                                                    Name = a.Element("name").Value,
+                                                    Price = a.Element("price").Value,
+                                                    Year = a.Element("year").Value
+                                                });
+                        foreach (var album in oldAlbumsLinq)
+                        {
+                            Console.WriteLine(
+                                "{0}, price: {1}, year: {2}",
+                                album.Name,
+                                album.Price,
+                                album.Year);
+                        }
+
                         break;
                     default:
                         Console.WriteLine("Wrong input.");
