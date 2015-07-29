@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-08CatalogOfMusicalAlbums", "01-08CatalogOfMusicalAlbums\01-08CatalogOfMusicalAlbums.csproj", "{3D7BD2FE-7862-4949-A0C3-160FC6C74CD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09XmlWriterDirectory", "09XmlWriterDirectory\09XmlWriterDirectory.csproj", "{1AA17427-F185-4FC3-9AD9-F05134EE9567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3D7BD2FE-7862-4949-A0C3-160FC6C74CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D7BD2FE-7862-4949-A0C3-160FC6C74CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D7BD2FE-7862-4949-A0C3-160FC6C74CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA17427-F185-4FC3-9AD9-F05134EE9567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA17427-F185-4FC3-9AD9-F05134EE9567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA17427-F185-4FC3-9AD9-F05134EE9567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA17427-F185-4FC3-9AD9-F05134EE9567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
