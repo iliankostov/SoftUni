@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Xml;
 
     public class DOMParser
@@ -12,6 +13,7 @@
             var input = Console.ReadLine();
             XmlDocument catalog = new XmlDocument();
             catalog.Load(@"..\..\catalog.xml");
+
             XmlNode rootNode = catalog.DocumentElement;
             if (rootNode != null)
             {
@@ -73,13 +75,47 @@
                         }
 
                         break;
+                    case "5":
+                        XmlNodeList uniqueArtistList = catalog.SelectNodes("/albums/album/artist");
+                        Dictionary<string, int> uniqueArtistDictionary = new Dictionary<string, int>();
+                        foreach (XmlNode artist in uniqueArtistList)
+                        {
+                            if (uniqueArtistDictionary.ContainsKey(artist.InnerText))
+                            {
+                                uniqueArtistDictionary[artist.InnerText]++;
+                            }
+                            else
+                            {
+                                uniqueArtistDictionary[artist.InnerText] = 1;
+                            }
+                        }
+
+                        foreach (var artist in uniqueArtistDictionary)
+                        {
+                            Console.WriteLine(artist.Key + " " + artist.Value);
+                        }
+
+                        break;
+                    case "6":
+                        Console.WriteLine("Albums before: " + rootNode.ChildNodes.Count);
+
+                        var albumsForDelete = rootNode
+                            .Cast<XmlNode>()
+                            .Where(a => decimal.Parse(a["price"].InnerText) > 20m)
+                            .ToList();
+
+                        foreach (XmlNode album in albumsForDelete)
+                        {
+                            rootNode.RemoveChild(album);
+                        }
+
+                        Console.WriteLine("Albums after: " + rootNode.ChildNodes.Count);
+                        break;
                     default:
                         Console.WriteLine("Wrong input.");
                         break;
                 }
             }
         }
-
-
     }
 }
