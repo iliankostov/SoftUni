@@ -16,6 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{AC60F3
 		users.xml = users.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exports", "Exports", "{738C5BED-6003-47FD-BEF6-D74D91691910}"
+	ProjectSection(SolutionItems) = preProject
+		categories-by-products.json = categories-by-products.json
+		products-in-range.json.json = products-in-range.json.json
+		user-and-products.xml = user-and-products.xml
+		users-sold-products.json = users-sold-products.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
