@@ -101,14 +101,14 @@
                 if (element.Key.Equals(key))
                 {
                     element.Value = value;
-                    return false;
+                    return true;
                 }
             }
 
             var newElement = new KeyValue<TKey, TValue>(key, value);
             this.slots[slotNumber].AddLast(newElement);
             this.Count++;
-            return true;
+            return false;
         }
 
         public TValue Get(TKey key)
