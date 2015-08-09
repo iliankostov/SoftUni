@@ -15,7 +15,10 @@
             set.Add(25);
             set.Add(17);
 
-            Console.WriteLine(set.Count);
+            // Console.WriteLine(set.Contains(12));
+            // set.Remove(17);
+            // set.Remove(25);
+            Console.WriteLine(string.Join(", ", set));
         }
     }
 }
