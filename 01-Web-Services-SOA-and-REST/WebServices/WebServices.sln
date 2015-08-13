@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02DistanceCalculatorSOAPCli
 		{FFAB4C31-1FC7-4758-B817-057B8F9C5FC1} = {FFAB4C31-1FC7-4758-B817-057B8F9C5FC1}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03DistanceCalculatorRESTService", "DistanceCalculatorRESTService\03DistanceCalculatorRESTService.csproj", "{440361CE-4958-4289-9B07-249D7450182B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{6A266F99-37DE-45BB-AD8A-F61554B0A1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A266F99-37DE-45BB-AD8A-F61554B0A1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A266F99-37DE-45BB-AD8A-F61554B0A1BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440361CE-4958-4289-9B07-249D7450182B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440361CE-4958-4289-9B07-249D7450182B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440361CE-4958-4289-9B07-249D7450182B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440361CE-4958-4289-9B07-249D7450182B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
