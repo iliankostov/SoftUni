@@ -4,9 +4,9 @@
 
     public class ServiceDistanceCalculator : IServiceDistanceCalculator
     {
-        public double CalculateDistance(int startX, int startY, int endX, int endY)
+        public double CalculateDistance(VectorPoint start, VectorPoint end)
         {
-            return Math.Sqrt(Math.Pow(startX - endX, 2) + Math.Pow(startY - endY, 2));
+            return Math.Sqrt(Math.Pow(start.X - end.X, 2) + Math.Pow(start.Y - end.Y, 2));
         }
     }
 }

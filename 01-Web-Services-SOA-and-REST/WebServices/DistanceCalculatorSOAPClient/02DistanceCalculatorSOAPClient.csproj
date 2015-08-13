@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6A266F99-37DE-45BB-AD8A-F61554B0A1BB}</ProjectGuid>
+    <ProjectGuid>{081864BA-0E68-44F8-8739-8C7034D0F9D0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DistanceCalculatorSOAPClient</RootNamespace>
@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="DistanceCalculatorSOAPClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceReferenceCalculator\Reference.cs">
+    <Compile Include="Service References\DistanceService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -53,11 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\ServiceReferenceCalculator\ServiceDistanceCalculator.wsdl" />
-    <None Include="Service References\ServiceReferenceCalculator\ServiceDistanceCalculator.xsd">
+    <None Include="Service References\DistanceService\ServiceDistanceCalculator.wsdl" />
+    <None Include="Service References\DistanceService\ServiceDistanceCalculator.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReferenceCalculator\ServiceDistanceCalculator1.xsd">
+    <None Include="Service References\DistanceService\ServiceDistanceCalculator1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DistanceService\ServiceDistanceCalculator2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -65,19 +68,19 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReferenceCalculator\" />
+    <WCFMetadataStorage Include="Service References\DistanceService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReferenceCalculator\ServiceDistanceCalculator.disco" />
+    <None Include="Service References\DistanceService\ServiceDistanceCalculator.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReferenceCalculator\configuration91.svcinfo" />
+    <None Include="Service References\DistanceService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReferenceCalculator\configuration.svcinfo" />
+    <None Include="Service References\DistanceService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReferenceCalculator\Reference.svcmap">
+    <None Include="Service References\DistanceService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

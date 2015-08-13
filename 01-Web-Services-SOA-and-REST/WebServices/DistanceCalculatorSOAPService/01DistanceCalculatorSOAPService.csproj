@@ -63,6 +63,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VectorPoint.cs" />
     <Compile Include="ServiceDistanceCalculator.svc.cs">
       <DependentUpon>ServiceDistanceCalculator.svc</DependentUpon>
     </Compile>

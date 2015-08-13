@@ -2,14 +2,16 @@
 {
     using System;
 
-    using ServiceReferenceCalculator;
+    using global::DistanceCalculatorSOAPClient.DistanceService;
 
     internal class DistanceCalculatorSOAPClient
     {
         private static void Main()
         {
             var client = new ServiceDistanceCalculatorClient();
-            var result = client.CalculateDistance(0, 5, 10, 5);
+            var start = new VectorPoint { X = 5, Y = 5 };
+            var end = new VectorPoint { X = 10, Y = 10 };
+            var result = client.CalculateDistance(start, end);
             Console.WriteLine(result);
         }
     }
