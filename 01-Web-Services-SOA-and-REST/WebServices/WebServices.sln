@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02DistanceCalculatorSOAPCli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03DistanceCalculatorRESTService", "DistanceCalculatorRESTService\03DistanceCalculatorRESTService.csproj", "{440361CE-4958-4289-9B07-249D7450182B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceCalculatorRESTClient", "DistanceCalculatorRESTClient\DistanceCalculatorRESTClient.csproj", "{0112EE44-247C-46BE-9169-515E5146560F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04DistanceCalculatorRESTClient", "DistanceCalculatorRESTClient\04DistanceCalculatorRESTClient.csproj", "{0112EE44-247C-46BE-9169-515E5146560F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
