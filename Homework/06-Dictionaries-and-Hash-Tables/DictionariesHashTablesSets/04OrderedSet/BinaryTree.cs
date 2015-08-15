@@ -105,12 +105,18 @@
 
             if (this.Value.CompareTo(value) > 0)
             {
-                return this.LeftChild.Contains(value);
+                if (this.LeftChild != null)
+                {
+                    return this.LeftChild.Contains(value);
+                }
             }
 
             if (this.Value.CompareTo(value) < 0)
             {
-                return this.RightChild.Contains(value);
+                if (this.RightChild != null)
+                {
+                    return this.RightChild.Contains(value);                    
+                }
             }
 
             return false;
