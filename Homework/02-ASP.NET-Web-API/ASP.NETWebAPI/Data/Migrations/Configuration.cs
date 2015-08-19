@@ -6,6 +6,8 @@ namespace Data.Migrations
     using System.IO;
     using System.Linq;
 
+    using Data.Source;
+
     using Models;
     using Models.Enumerations;
 
@@ -22,10 +24,13 @@ namespace Data.Migrations
         {
             if (!context.Categories.Any())
             {
-                using (var reader = new StreamReader("../../../Source/categories.txt"))
+                // TODO: Why the file path change to C:\Source\categories.txt ?
+                string categoriesFileSource = @"../../Source/categories.txt";
+                string categoriesClassSource = Source.GetCategories();
+
+                using (var reader = new StringReader(categoriesClassSource))
                 {
                     var line = reader.ReadLine();
-                    line = reader.ReadLine();
                     while (line != null)
                     {
                         var categoryName = line;
@@ -44,7 +49,11 @@ namespace Data.Migrations
 
             if (!context.Authors.Any())
             {
-                using (var reader = new StreamReader("../../../Source/authors.txt"))
+                // TODO: Why the file path change to C:\Source\authors.txt ?
+                string authorsFileSource = @"../../Source/authors.txt";
+                string authorsClassSource = Source.GetAuthors();
+
+                using (var reader = new StringReader(authorsClassSource))
                 {
                     var line = reader.ReadLine();
                     line = reader.ReadLine();
@@ -72,7 +81,11 @@ namespace Data.Migrations
 
             if (!context.Books.Any())
             {
-                using (var reader = new StreamReader("../../../Source/books.txt"))
+                // TODO: Why the file path change to C:\Source\books.txt ?
+                string booksFileSource = @"../../Source/books.txt";
+                string booksClassSource = Source.GetBooks();
+
+                using (var reader = new StringReader(booksClassSource))
                 {
                     var line = reader.ReadLine();
                     line = reader.ReadLine();
