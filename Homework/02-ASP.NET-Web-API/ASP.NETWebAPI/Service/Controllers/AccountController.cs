@@ -17,6 +17,8 @@
     using Microsoft.Owin.Security.OAuth;
 
     using Service.Models;
+    using Service.Models.BindingModels;
+    using Service.Models.ViewModels;
     using Service.Providers;
     using Service.Results;
 
