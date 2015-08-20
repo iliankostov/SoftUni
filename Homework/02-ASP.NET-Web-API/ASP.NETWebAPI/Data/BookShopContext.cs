@@ -6,7 +6,7 @@ namespace Data
 
     using Models;
 
-    public class BookShopContext : DbContext
+    public class BookShopContext : DbContext, IBookShopContext
     {
         public BookShopContext()
             : base("BookShopContext")
@@ -20,6 +20,16 @@ namespace Data
         public IDbSet<Book> Books { get; set; }
 
         public IDbSet<Category> Categories { get; set; }
+
+        public new void SaveChanges()
+        {
+            base.SaveChanges();
+        }
+
+        public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
+        {
+            return base.Set<TEntity>();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -49,8 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookShopContext.cs" />
+    <Compile Include="BookShopData.cs" />
+    <Compile Include="IBookShopContext.cs" />
+    <Compile Include="IBookShopData.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Source\Source.cs" />
   </ItemGroup>
   <ItemGroup>
