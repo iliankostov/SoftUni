@@ -2,6 +2,7 @@
 {
     using System.Linq;
     using System.Web.Http;
+    using System.Web.Http.OData;
 
     using global::Models;
 
@@ -29,6 +30,7 @@
 
         [HttpPost]
         [Route("api/authors")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult PostAuthor(AuthorBindingModel authorBinding)
         {
             if (authorBinding == null)
@@ -61,6 +63,7 @@
 
         [HttpGet]
         [Route("api/authors/{id}/books")]
+        [EnableQuery]
         public IHttpActionResult GetBooksByAuthorId(int id)
         {
             var author = this.Data.Authors.Read().FirstOrDefault(a => a.Id == id);

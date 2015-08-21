@@ -3,16 +3,16 @@
     using System;
     using System.Linq;
     using System.Web.Http;
-
-    using global::Models;
+    using System.Web.Http.OData;
 
     using Microsoft.AspNet.Identity;
+
+    using global::Models;
 
     public class PurchaseController : BaseController
     {
         [HttpPut]
         [Route("api/books/buy/{id}")]
-        [Authorize]
         public IHttpActionResult CreatePurchase(int id)
         {
             var userId = this.User.Identity.GetUserId();
@@ -47,7 +47,6 @@
 
         [HttpPut]
         [Route("api/books/recall/{id}")]
-        [Authorize]
         public IHttpActionResult GetRacallBook(int id)
         {
             var purchase = this.Data.Purchases.Read().FirstOrDefault(p => p.Id == id);
@@ -71,22 +70,27 @@
 
         [HttpGet]
         [Route("api/users/{username}/purchase")]
+        [EnableQuery]
         public IHttpActionResult GetPurchasesByUsername(string username)
         {
-            var purchasesView = this.Data.Purchases.Read()
-                .Where(u => u.User.UserName == username)
-                .OrderBy(p => p.DateOfPurchase)
-                .Select(p => new
-                                 {
-                                     Username = username, 
-                                     Purchase = new
-                                                    {
-                                                        BookTitle = p.Book.Title, 
-                                                        PurchasePrice = p.Book.Price, 
-                                                        DateOfPurchase = p.DateOfPurchase, 
-                                                        IsRacalled = p.IsRecalled
-                                                    }
-                                 });
+            var purchasesView = this.Data.Users.Read()
+                .Where(u => u.UserName == username)
+                .Select(u => new
+                {
+                    User = new
+                            {
+                                Username = u.UserName
+                            }, 
+                    Purchases = u.Purchases
+                        .OrderBy(p => p.DateOfPurchase)
+                        .Select(p => new
+                                        {
+                                            BookTitle = p.Book.Title, 
+                                            PurchasePrice = p.Book.Price, 
+                                            DateOfPurchase = p.DateOfPurchase, 
+                                            IsRacalled = p.IsRecalled
+                                        })
+                        });
 
             return this.Ok(purchasesView);
         }

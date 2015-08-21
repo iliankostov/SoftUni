@@ -7,10 +7,11 @@
 
     using Service.Models.BindingModels;
 
-    public class UserController : BaseController
+    public class RoleController : BaseController
     {
         [HttpPut]
         [Route("api/users/{username}/roles")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult AddRole(string username, RoleBindingModel roleBinding)
         {
             var user = this.Data.Users.Read().FirstOrDefault(u => u.UserName == username);
@@ -29,29 +30,38 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var role = new IdentityRole
+            var role = this.Data.Roles.Read().FirstOrDefault(r => r.Name == roleBinding.Name);
+            if (role == null)
+            {
+                role = new IdentityRole
                            {
                                Name = roleBinding.Name
                            };
 
-            if (!this.Data.Roles.Read().Any(r => r.Name == roleBinding.Name))
-            {
                 this.Data.Roles.Create(role);
+                this.Data.SaveChanges();
             }
 
-            var userRole = new IdentityUserRole
+            var userRole = role.Users.FirstOrDefault(r => r.UserId == user.Id);
+            if (userRole == null)
+            {
+                userRole = new IdentityUserRole
                                {
-                                   UserId = user.Id
+                                   UserId = user.Id, 
+                                   RoleId = role.Id
                                };
+
+                role.Users.Add(userRole);
+            }
 
             this.Data.SaveChanges();
 
-            role.Users.Add(userRole);
             return this.Ok();
         }
 
         [HttpDelete]
         [Route("api/users/{username}/roles")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult RemoveRole(string username, RoleBindingModel roleBinding)
         {
             var user = this.Data.Users.Read().FirstOrDefault(u => u.UserName == username);
@@ -63,10 +73,17 @@
             var role = this.Data.Roles.Read().FirstOrDefault(r => r.Name == roleBinding.Name);
             if (role == null)
             {
-                return this.BadRequest("The user do not have requested role");
+                return this.BadRequest("Role not found.");
             }
 
-            this.Data.Roles.Delete(role);
+            var userRole = role.Users.FirstOrDefault(r => r.UserId == user.Id);
+            if (userRole == null)
+            {
+                return this.BadRequest("User do not have requsted role.");
+            }
+
+            role.Users.Remove(userRole);
+
             this.Data.SaveChanges();
 
             return this.Ok();

@@ -2,6 +2,7 @@
 {
     using System.Linq;
     using System.Web.Http;
+    using System.Web.Http.OData;
 
     using global::Models;
 
@@ -12,6 +13,7 @@
     {
         [HttpGet]
         [Route("api/categories")]
+        [EnableQuery]
         public IHttpActionResult GetCategories()
         {
             var categories = this.Data.Categories.Read()
@@ -39,6 +41,7 @@
 
         [HttpPost]
         [Route("api/categories")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult CreateCategory(CategoryBindingModel categoryBinding)
         {
             if (categoryBinding == null)
@@ -72,6 +75,7 @@
 
         [HttpPut]
         [Route("api/categories/{id}")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult UpdateCategory(int id, CategoryBindingModel categoryBinding)
         {
             var category = this.Data.Categories.Read().FirstOrDefault(c => c.Id == id);
@@ -112,6 +116,7 @@
 
         [HttpDelete]
         [Route("api/categories/{id}")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult DeleteCategory(int id)
         {
             var category = this.Data.Categories.Read().FirstOrDefault(c => c.Id == id);

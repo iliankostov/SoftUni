@@ -2,6 +2,7 @@
 {
     using System.Linq;
     using System.Web.Http;
+    using System.Web.Http.OData;
 
     using global::Models;
 
@@ -29,6 +30,7 @@
 
         [HttpGet]
         [Route("api/books")]
+        [EnableQuery]
         public IHttpActionResult SearchBooks(string search)
         {
             var booksView = this.Data.Books.Read()
@@ -46,6 +48,7 @@
 
         [HttpPost]
         [Route("api/books")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult AddBook(BookBindingModel bookBinding)
         {
             if (bookBinding == null)
@@ -99,6 +102,7 @@
 
         [HttpPut]
         [Route("api/books/{id}")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult UpdateBookById(int id, BookBindingModel bookBinding)
         {
             var book = this.Data.Books.Read().FirstOrDefault(b => b.Id == id);
@@ -138,6 +142,7 @@
 
         [HttpDelete]
         [Route("api/books/{id}")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult DeleteBookById(int id)
         {
             var book = this.Data.Books.Read().FirstOrDefault(b => b.Id == id);
