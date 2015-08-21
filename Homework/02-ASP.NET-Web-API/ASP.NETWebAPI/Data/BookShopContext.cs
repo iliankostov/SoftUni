@@ -4,9 +4,11 @@ namespace Data
 
     using Data.Migrations;
 
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     using Models;
 
-    public class BookShopContext : DbContext, IBookShopContext
+    public class BookShopContext : IdentityDbContext<ApplicationUser>, IBookShopContext
     {
         public BookShopContext()
             : base("BookShopContext")
@@ -14,6 +16,8 @@ namespace Data
             var migrationStrategy = new MigrateDatabaseToLatestVersion<BookShopContext, Configuration>();
             Database.SetInitializer(migrationStrategy);
         }
+
+        public IDbSet<Purchase> Purchases { get; set; }
 
         public IDbSet<Author> Authors { get; set; }
 
@@ -29,6 +33,11 @@ namespace Data
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
             return base.Set<TEntity>();
+        }
+
+        public static BookShopContext Create()
+        {
+            return new BookShopContext();
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

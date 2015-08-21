@@ -3,6 +3,8 @@
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
 
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     using Models;
 
     public interface IBookShopContext
@@ -12,6 +14,8 @@
         IDbSet<Book> Books { get; set; }
 
         IDbSet<Category> Categories { get; set; }
+
+        IDbSet<Purchase> Purchases { get; set; }
 
         void SaveChanges();
 

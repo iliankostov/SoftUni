@@ -9,6 +9,8 @@
     using System.Web;
     using System.Web.Http;
 
+    using global::Models;
+
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
@@ -331,7 +333,7 @@
                 return this.BadRequest(this.ModelState);
             }
 
-            var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser { UserName = model.Username, Email = model.Email };
 
             IdentityResult result = await this.UserManager.CreateAsync(user, model.Password);
 

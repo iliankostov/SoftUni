@@ -5,6 +5,8 @@
 
     using Data.Repositories;
 
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     using Models;
 
     public class BookShopData : IBookShopData
@@ -45,6 +47,30 @@
             get
             {
                 return this.GetRepository<Category>();
+            }
+        }
+
+        public IRepository<Purchase> Purchases
+        {
+            get
+            {
+                return this.GetRepository<Purchase>();
+            }
+        }
+
+        public IRepository<ApplicationUser> Users
+        {
+            get
+            {
+                return this.GetRepository<ApplicationUser>();
+            }
+        }
+
+        public IRepository<IdentityRole> Roles
+        {
+            get
+            {
+                return this.GetRepository<IdentityRole>();                
             }
         }
 

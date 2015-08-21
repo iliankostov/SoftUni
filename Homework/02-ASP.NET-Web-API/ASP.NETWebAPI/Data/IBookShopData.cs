@@ -2,6 +2,8 @@
 {
     using Data.Repositories;
 
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     using Models;
 
     public interface IBookShopData
@@ -11,6 +13,12 @@
         IRepository<Book> Books { get; }
 
         IRepository<Category> Categories { get; }
+
+        IRepository<Purchase> Purchases { get; }
+
+        IRepository<ApplicationUser> Users { get; }
+
+        IRepository<IdentityRole> Roles { get; } 
 
         void SaveChanges();
     }

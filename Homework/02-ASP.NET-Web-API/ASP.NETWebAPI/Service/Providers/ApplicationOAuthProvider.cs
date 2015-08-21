@@ -13,6 +13,8 @@ using Service.Models;
 
 namespace Service.Providers
 {
+    using global::Models;
+
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {
         private readonly string _publicClientId;

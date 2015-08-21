@@ -32,6 +32,9 @@
     public class RegisterBindingModel
     {
         [Required]
+        public string Username { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
