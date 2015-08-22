@@ -1,21 +1,25 @@
 namespace IssueTracker.Core
 {
     using System;
-
-    using IssueTracker.Contracts;
+    using Contracts;
+    using UserInterface;
 
     public class Engine : IEngine
     {
-        private readonly CommandProcessor commandProcessor;
+        private readonly EndpointActionDispatcher commandProcessor;
 
-        public Engine(CommandProcessor commandProcessor)
+        private readonly IUserInterface ui;
+
+        public Engine(EndpointActionDispatcher commandProcessor, IUserInterface ui)
         {
             this.commandProcessor = commandProcessor;
+            this.ui = ui;
         }
 
         public Engine()
-            : this(new CommandProcessor())
+            : this(new EndpointActionDispatcher(), new ConsoleUserInterface())
         {
+            // DI: Added IUserInterface and ConsoleUserInterface types
         }
 
         // Bug: url must be equea to null for break.
@@ -24,7 +28,7 @@ namespace IssueTracker.Core
         {
             while (true)
             {
-                string url = Console.ReadLine();
+                string url = this.ui.ReadLine();
                 if (url == null)
                 {
                     break;
@@ -35,13 +39,13 @@ namespace IssueTracker.Core
                 {
                     try
                     {
-                        var command = new Command(url);
+                        Endpoint command = new Endpoint(url);
                         string viewResult = this.commandProcessor.ProcessCommand(command);
-                        Console.WriteLine(viewResult);
+                        this.ui.WriteLine(viewResult);
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(ex.Message);
+                        this.ui.WriteLine(ex.Message);
                     }
                 }
             }

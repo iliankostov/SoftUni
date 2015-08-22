@@ -2,7 +2,7 @@ namespace IssueTracker.Contracts
 {
     using System.Collections.Generic;
 
-    public interface ICommand
+    public interface IEndpoint
     {
         string Action { get; }
 

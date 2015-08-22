@@ -1,40 +1,41 @@
 ﻿namespace IssueTracker.Contracts
 {
-    using IssueTracker.Enumerations;
+    using Enumerations;
 
     /// <summary>
-    /// The IssueTracker interface.
+    /// Contains methods for working with issue tracking system.
     /// </summary>
     public interface IIssueTracker
     {
         /// <summary>
-        /// The register user.
+        /// Register a user in the database
         /// </summary>
         /// <param name="username">
-        /// The username.
+        /// The username of the user who want to register
         /// </param>
         /// <param name="password">
-        /// The password.
+        /// The password of the user who want to register
         /// </param>
         /// <param name="confirmPassword">
-        /// The confirm password.
+        /// The password confirmation of the user who want to register. In order to be a valid registration, the two password values must match
         /// </param>
         /// <returns>
-        /// Message for sucess or failed registration.
+        /// Returns a success message in case of successful registration or an error message otherwise
         /// </returns>
+        /// <exception cref="System.ArgumentException">If the password don't match.</exception>
         string RegisterUser(string username, string password, string confirmPassword);
 
         /// <summary>
-        /// The login user.
+        /// Login a user if exist in the database
         /// </summary>
         /// <param name="username">
-        /// The username.
+        /// The user name.
         /// </param>
         /// <param name="password">
         /// The password.
         /// </param>
         /// <returns>
-        /// Message for sucess or failed login.
+        /// Message for success or failed login.
         /// </returns>
         string LoginUser(string username, string password);
 
@@ -42,7 +43,7 @@
         /// The logout user.
         /// </summary>
         /// <returns>
-        /// Message for sucess or failed logout.
+        /// Message for success or failed logout.
         /// </returns>
         string LogoutUser();
 
@@ -62,7 +63,7 @@
         /// The tags.
         /// </param>
         /// <returns>
-        /// Message for sucess or failed creating issue.
+        /// Message for success or failed creating issue.
         /// </returns>
         string CreateIssue(string title, string description, IssuePriority priority, string[] tags);
 
@@ -73,7 +74,7 @@
         /// The issue id.
         /// </param>
         /// <returns>
-        /// Message for sucess or failed removing issue.
+        /// Message for success or failed removing issue.
         /// </returns>
         string RemoveIssue(int issueId);
 
@@ -87,7 +88,7 @@
         /// The text.
         /// </param>
         /// <returns>
-        /// Message for sucess or failed add comment to issue.
+        /// Message for success or failed add comment to issue.
         /// </returns>
         string AddComment(int issueId, string text);
 
@@ -114,7 +115,7 @@
         /// The tags.
         /// </param>
         /// <returns>
-        /// Search issues by givven tags.
+        /// Search issues by given tags.
         /// </returns>
         string SearchForIssues(string[] tags);
     }

@@ -1,7 +1,6 @@
 ﻿namespace IssueTrackerTests
 {
-    using IssueTracker.Models;
-
+    using IssueTracker;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

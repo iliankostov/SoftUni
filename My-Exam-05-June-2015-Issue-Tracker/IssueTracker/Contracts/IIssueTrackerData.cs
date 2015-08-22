@@ -1,27 +1,25 @@
 ﻿namespace IssueTracker.Contracts
 {
     using System.Collections.Generic;
-
-    using IssueTracker.Models;
-
+    using Models;
     using Wintellect.PowerCollections;
 
-    internal interface IIssueTrackerData
+    public interface IIssueTrackerData
     {
         User LoggedInUser { get; set; }
 
-        IDictionary<string, User> Users { get; }
+        IDictionary<string, User> UsersByUsername { get; }
 
-        OrderedDictionary<int, Issue> IssuesWithIds { get; }
+        OrderedDictionary<int, Issue> IssuesById { get; }
 
-        MultiDictionary<string, Issue> IssuesByAuthors { get; }
+        MultiDictionary<string, Issue> IssuesByUsername { get; }
 
-        MultiDictionary<string, Issue> IssuesByTags { get; }
+        MultiDictionary<string, Issue> IssuesByTag { get; }
 
-        MultiDictionary<User, Comment> UsersComments { get; }
+        MultiDictionary<User, Comment> CommentsByUser { get; }
 
-        int AddIssue(Issue p);
+        int AddIssue(Issue issue);
 
-        void RemoveIssue(Issue p);
+        void RemoveIssue(Issue issue);
     }
 }

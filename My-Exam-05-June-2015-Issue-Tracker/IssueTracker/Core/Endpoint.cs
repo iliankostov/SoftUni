@@ -3,13 +3,11 @@ namespace IssueTracker.Core
     using System.Collections.Generic;
     using System.Linq;
     using System.Net;
+    using Contracts;
 
-    using IssueTracker.Contracts;
-
-    public class Command : ICommand
+    public class Endpoint : IEndpoint
     {
-        // todo refactor constructor
-        public Command(string url)
+        public Endpoint(string url)
         {
             this.Parameters = this.ExtractParameters(url);
             this.Action = this.ExtractAction(url);
@@ -27,16 +25,16 @@ namespace IssueTracker.Core
 
         private IDictionary<string, string> ExtractParameters(string url)
         {
-            var parameters = new Dictionary<string, string>();
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
             int questionMark = url.IndexOf('?');
             if (questionMark != -1)
             {
-                var pairs =
+                IEnumerable<string[]> pairs =
                     url.Substring(questionMark + 1)
                         .Split('&')
                         .Select(x => x.Split('=').Select(WebUtility.UrlDecode).ToArray());
 
-                foreach (var pair in pairs)
+                foreach (string[] pair in pairs)
                 {
                     parameters.Add(pair[0], pair[1]);
                 }

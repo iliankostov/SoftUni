@@ -2,8 +2,7 @@
 {
     using System.Globalization;
     using System.Threading;
-
-    using IssueTracker.Core;
+    using Core;
 
     internal class IssueTrackerMain
     {
@@ -11,7 +10,7 @@
         {
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
-            var engine = new Engine();
+            Engine engine = new Engine();
             engine.Run();
         }
     }

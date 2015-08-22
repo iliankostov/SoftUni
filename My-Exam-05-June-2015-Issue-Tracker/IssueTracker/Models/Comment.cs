@@ -2,6 +2,7 @@ namespace IssueTracker.Models
 {
     using System;
     using System.Text;
+    using Utilities;
 
     public class Comment
     {
@@ -24,9 +25,10 @@ namespace IssueTracker.Models
 
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < 2)
+                if (string.IsNullOrEmpty(value) || value.Length < Constants.CommentTextMinLenght)
                 {
-                    throw new ArgumentException("The text must be at least 2 symbols long");
+                    string message = string.Format(Messages.TextLenghtExeptionMessage, Constants.CommentTextMinLenght);
+                    throw new ArgumentException(message);
                 }
 
                 this.text = value;
@@ -36,7 +38,8 @@ namespace IssueTracker.Models
         public override string ToString()
         {
             return
-                new StringBuilder().AppendLine(this.Text)
+                new StringBuilder()
+                    .AppendLine(this.Text)
                     .AppendFormat("-- {0}", this.Author.Username)
                     .AppendLine()
                     .ToString()

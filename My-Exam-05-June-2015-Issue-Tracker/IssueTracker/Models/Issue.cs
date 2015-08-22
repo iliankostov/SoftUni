@@ -4,16 +4,14 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-
     using Enumerations;
+    using Utilities;
 
     public class Issue
     {
-        private string title;
-
         private string description;
 
-        private IList<Comment> comments = new List<Comment>(); 
+        private string title;
 
         public Issue(string title, string description, IssuePriority priority, List<string> tags)
         {
@@ -21,6 +19,7 @@
             this.Description = description;
             this.Priority = priority;
             this.Tags = tags;
+            this.Comments = new List<Comment>();
         }
 
         public int Id { get; set; }
@@ -34,9 +33,9 @@
 
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < 3)
+                if (string.IsNullOrEmpty(value) || value.Length < Constants.IssueTitleMinLenght)
                 {
-                    throw new ArgumentException("The title must be at least 3 symbols long");
+                    throw new ArgumentException(string.Format(Messages.TitleMinLenght, Constants.IssueTitleMinLenght));
                 }
 
                 this.title = value;
@@ -52,9 +51,10 @@
 
             set
             {
-                if (string.IsNullOrEmpty(value) || value.Length < 5)
+                if (string.IsNullOrEmpty(value) || value.Length < Constants.IssueDescriptionMinLenght)
                 {
-                    throw new ArgumentException("The description must be at least 5 symbols long");
+                    string message = string.Format(Messages.DescriptionMinLenght, Constants.IssueDescriptionMinLenght);
+                    throw new ArgumentException(message);
                 }
 
                 this.description = value;
@@ -65,18 +65,7 @@
 
         public IList<string> Tags { get; set; }
 
-        public IList<Comment> Comments
-        {
-            get
-            {
-                return this.comments;
-            }
-
-            set
-            {
-                this.comments = value;
-            }
-        }
+        public IList<Comment> Comments { get; set; }
 
         public void AddComment(Comment comment)
         {
@@ -85,11 +74,12 @@
 
         public override string ToString()
         {
-            var issue = new StringBuilder();
+            StringBuilder issue = new StringBuilder();
             issue.AppendLine(this.Title)
                 .AppendFormat("Priority: {0}", this.GetPriorityAsString())
                 .AppendLine()
                 .AppendLine(this.Description);
+
             if (this.Tags.Count > 0)
             {
                 issue.AppendFormat("Tags: {0}", string.Join(",", this.Tags.OrderBy(t => t))).AppendLine();
@@ -98,8 +88,8 @@
             if (this.Comments.Count > 0)
             {
                 issue.AppendFormat(
-                    "Comments:{0}{1}",
-                    Environment.NewLine,
+                    "Comments:{0}{1}", 
+                    Environment.NewLine, 
                     string.Join(Environment.NewLine, this.Comments)).AppendLine();
             }
 
@@ -120,7 +110,7 @@
                 case IssuePriority.Low:
                     return "*";
                 default:
-                    throw new InvalidOperationException("The priority is invalid");
+                    throw new InvalidOperationException(Messages.InvalidPriority);
             }
         }
     }

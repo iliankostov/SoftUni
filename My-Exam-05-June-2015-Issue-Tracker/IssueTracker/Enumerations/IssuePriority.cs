@@ -2,12 +2,12 @@
 {
     public enum IssuePriority
     {
-        Showstopper = 4, 
+        Low, 
 
-        High = 3, 
+        Medium, 
 
-        Medium = 2, 
+        High, 
 
-        Low = 1
+        Showstopper
     }
 }
