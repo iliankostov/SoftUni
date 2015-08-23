@@ -1,5 +1,6 @@
 namespace OnlineShop.Data
 {
+    using System;
     using System.Data.Entity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using OnlineShop.Data.Migrations;
@@ -18,5 +19,10 @@ namespace OnlineShop.Data
         public IDbSet<AdType> AdTypes { get; set; }
 
         public IDbSet<Category> Categories { get; set; }
+
+        public static OnlineShopContext Create()
+        {
+            return new OnlineShopContext();
+        }
     }
 }
