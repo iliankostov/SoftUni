@@ -72,6 +72,11 @@
                                ReleaseDate = bookBinding.ReleaseDate
                            };
 
+            if (bookBinding.AuthorId != null)
+            {
+                book.AuthorId = bookBinding.AuthorId;
+            }
+
             if (!string.IsNullOrEmpty(bookBinding.Categories))
             {
                 var categories = this.Data.Categories.Read().ToList();

@@ -15,7 +15,7 @@
                                 {
                                     Id = a.Id,
                                     FirstName = a.FirstName,
-                                    LastName = a.FirstName
+                                    LastName = a.LastName
                                 };
             }
         }
