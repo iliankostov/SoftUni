@@ -61,11 +61,11 @@
             ExternalLoginData externalLogin = ExternalLoginData.FromIdentity(this.User.Identity as ClaimsIdentity);
 
             return new UserInfoViewModel
-                       {
-                           Email = this.User.Identity.GetUserName(), 
-                           HasRegistered = externalLogin == null, 
-                           LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
-                       };
+                {
+                    Email = this.User.Identity.GetUserName(), 
+                    HasRegistered = externalLogin == null, 
+                    LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
+                };
         }
 
         // POST api/Account/Logout
@@ -92,28 +92,28 @@
             foreach (IdentityUserLogin linkedAccount in user.Logins)
             {
                 logins.Add(new UserLoginInfoViewModel
-                               {
-                                   LoginProvider = linkedAccount.LoginProvider, 
-                                   ProviderKey = linkedAccount.ProviderKey
-                               });
+                    {
+                        LoginProvider = linkedAccount.LoginProvider, 
+                        ProviderKey = linkedAccount.ProviderKey
+                    });
             }
 
             if (user.PasswordHash != null)
             {
                 logins.Add(new UserLoginInfoViewModel
-                               {
-                                   LoginProvider = LocalLoginProvider, 
-                                   ProviderKey = user.UserName
-                               });
+                    {
+                        LoginProvider = LocalLoginProvider, 
+                        ProviderKey = user.UserName
+                    });
             }
 
             return new ManageInfoViewModel
-                       {
-                           LocalLoginProvider = LocalLoginProvider, 
-                           Email = user.UserName, 
-                           Logins = logins, 
-                           ExternalLoginProviders = this.GetExternalLogins(returnUrl, generateState)
-                       };
+                {
+                    LocalLoginProvider = LocalLoginProvider, 
+                    Email = user.UserName, 
+                    Logins = logins, 
+                    ExternalLoginProviders = this.GetExternalLogins(returnUrl, generateState)
+                };
         }
 
         // POST api/Account/ChangePassword
@@ -302,18 +302,18 @@
             foreach (AuthenticationDescription description in descriptions)
             {
                 ExternalLoginViewModel login = new ExternalLoginViewModel
-                                                   {
-                                                       Name = description.Caption, 
-                                                       Url = this.Url.Route("ExternalLogin", new
-                                                                                                 {
-                                                                                                     provider = description.AuthenticationType, 
-                                                                                                     response_type = "token", 
-                                                                                                     client_id = Startup.PublicClientId, 
-                                                                                                     redirect_uri = new Uri(this.Request.RequestUri, returnUrl).AbsoluteUri, 
-                                                                                                     state = state
-                                                                                                 }), 
-                                                       State = state
-                                                   };
+                    {
+                        Name = description.Caption, 
+                        Url = this.Url.Route("ExternalLogin", new
+                            {
+                                provider = description.AuthenticationType, 
+                                response_type = "token", 
+                                client_id = Startup.PublicClientId, 
+                                redirect_uri = new Uri(this.Request.RequestUri, returnUrl).AbsoluteUri, 
+                                state = state
+                            }), 
+                        State = state
+                    };
                 logins.Add(login);
             }
 
@@ -331,10 +331,10 @@
             }
 
             var user = new ApplicationUser
-                           {
-                               UserName = model.Username, 
-                               Email = model.Email
-                           };
+                {
+                    UserName = model.Username, 
+                    Email = model.Email
+                };
 
             IdentityResult result = await this.UserManager.CreateAsync(user, model.Password);
 
@@ -472,11 +472,11 @@
                 }
 
                 return new ExternalLoginData
-                           {
-                               LoginProvider = providerKeyClaim.Issuer, 
-                               ProviderKey = providerKeyClaim.Value, 
-                               UserName = identity.FindFirstValue(ClaimTypes.Name)
-                           };
+                    {
+                        LoginProvider = providerKeyClaim.Issuer, 
+                        ProviderKey = providerKeyClaim.Value, 
+                        UserName = identity.FindFirstValue(ClaimTypes.Name)
+                    };
             }
         }
 

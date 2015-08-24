@@ -29,9 +29,9 @@ namespace OnlineShop.Service.Areas.HelpPage
             this.ActionSamples = new Dictionary<HelpPageSampleKey, object>();
             this.SampleObjects = new Dictionary<Type, object>();
             this.SampleObjectFactories = new List<Func<HelpPageSampleGenerator, Type, object>>
-                                             {
-                                                 DefaultSampleObjectFactory
-                                             };
+                {
+                    DefaultSampleObjectFactory
+                };
         }
 
         /// <summary>

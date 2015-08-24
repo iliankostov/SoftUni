@@ -411,35 +411,35 @@ namespace OnlineShop.Service.Areas.HelpPage
             private static Dictionary<Type, Func<long, object>> InitializeGenerators()
             {
                 return new Dictionary<Type, Func<long, object>>
-                           {
-                               { typeof(bool), index => true }, 
-                               { typeof(byte), index => (byte)64 }, 
-                               { typeof(char), index => (char)65 }, 
-                               { typeof(DateTime), index => DateTime.Now }, 
-                               { typeof(DateTimeOffset), index => new DateTimeOffset(DateTime.Now) }, 
-                               { typeof(DBNull), index => DBNull.Value }, 
-                               { typeof(decimal), index => (decimal)index }, 
-                               { typeof(double), index => index + 0.1 }, 
-                               { typeof(Guid), index => Guid.NewGuid() }, 
-                               { typeof(short), index => (short)(index % short.MaxValue) }, 
-                               { typeof(int), index => (int)(index % int.MaxValue) }, 
-                               { typeof(long), index => index }, 
-                               { typeof(object), index => new object() }, 
-                               { typeof(sbyte), index => (sbyte)64 }, 
-                               { typeof(float), index => (float)(index + 0.1) }, 
-                               {
-                                   typeof(string), index => { return string.Format(CultureInfo.CurrentCulture, "sample string {0}", index); }
-                               }, 
-                               {
-                                   typeof(TimeSpan), index => { return TimeSpan.FromTicks(1234567); }
-                               }, 
-                               { typeof(ushort), index => (ushort)(index % ushort.MaxValue) }, 
-                               { typeof(uint), index => (uint)(index % uint.MaxValue) }, 
-                               { typeof(ulong), index => (ulong)index }, 
-                               {
-                                   typeof(Uri), index => { return new Uri(string.Format(CultureInfo.CurrentCulture, "http://webapihelppage{0}.com", index)); }
-                               }
-                           };
+                    {
+                        { typeof(bool), index => true }, 
+                        { typeof(byte), index => (byte)64 }, 
+                        { typeof(char), index => (char)65 }, 
+                        { typeof(DateTime), index => DateTime.Now }, 
+                        { typeof(DateTimeOffset), index => new DateTimeOffset(DateTime.Now) }, 
+                        { typeof(DBNull), index => DBNull.Value }, 
+                        { typeof(decimal), index => (decimal)index }, 
+                        { typeof(double), index => index + 0.1 }, 
+                        { typeof(Guid), index => Guid.NewGuid() }, 
+                        { typeof(short), index => (short)(index % short.MaxValue) }, 
+                        { typeof(int), index => (int)(index % int.MaxValue) }, 
+                        { typeof(long), index => index }, 
+                        { typeof(object), index => new object() }, 
+                        { typeof(sbyte), index => (sbyte)64 }, 
+                        { typeof(float), index => (float)(index + 0.1) }, 
+                        {
+                            typeof(string), index => { return string.Format(CultureInfo.CurrentCulture, "sample string {0}", index); }
+                        }, 
+                        {
+                            typeof(TimeSpan), index => { return TimeSpan.FromTicks(1234567); }
+                        }, 
+                        { typeof(ushort), index => (ushort)(index % ushort.MaxValue) }, 
+                        { typeof(uint), index => (uint)(index % uint.MaxValue) }, 
+                        { typeof(ulong), index => (ulong)index }, 
+                        {
+                            typeof(Uri), index => { return new Uri(string.Format(CultureInfo.CurrentCulture, "http://webapihelppage{0}.com", index)); }
+                        }
+                    };
             }
 
             public static bool CanGenerateObject(Type type)

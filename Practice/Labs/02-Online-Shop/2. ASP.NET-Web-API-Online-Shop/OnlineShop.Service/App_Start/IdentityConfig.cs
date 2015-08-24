@@ -21,16 +21,16 @@
 
             // Configure validation logic for usernames
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
-                                        {
-                                            AllowOnlyAlphanumericUserNames = false, 
-                                            RequireUniqueEmail = true
-                                        };
+                {
+                    AllowOnlyAlphanumericUserNames = false, 
+                    RequireUniqueEmail = true
+                };
 
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
-                                            {
-                                                RequiredLength = 5
-                                            };
+                {
+                    RequiredLength = 5
+                };
             var dataProtectionProvider = options.DataProtectionProvider;
             if (dataProtectionProvider != null)
             {

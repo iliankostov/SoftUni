@@ -237,9 +237,9 @@ namespace OnlineShop.Service.Areas.HelpPage
         private static HelpPageApiModel GenerateApiModel(ApiDescription apiDescription, HttpConfiguration config)
         {
             HelpPageApiModel apiModel = new HelpPageApiModel
-                                            {
-                                                ApiDescription = apiDescription
-                                            };
+                {
+                    ApiDescription = apiDescription
+                };
 
             ModelDescriptionGenerator modelGenerator = config.GetModelDescriptionGenerator();
             HelpPageSampleGenerator sampleGenerator = config.GetHelpPageSampleGenerator();
@@ -340,11 +340,11 @@ namespace OnlineShop.Service.Areas.HelpPage
                                                                     ApiParameterDescription apiParameter, ModelDescription typeDescription)
         {
             ParameterDescription parameterDescription = new ParameterDescription
-                                                            {
-                                                                Name = apiParameter.Name, 
-                                                                Documentation = apiParameter.Documentation, 
-                                                                TypeDescription = typeDescription
-                                                            };
+                {
+                    Name = apiParameter.Name, 
+                    Documentation = apiParameter.Documentation, 
+                    TypeDescription = typeDescription
+                };
 
             apiModel.UriParameters.Add(parameterDescription);
             return parameterDescription;
