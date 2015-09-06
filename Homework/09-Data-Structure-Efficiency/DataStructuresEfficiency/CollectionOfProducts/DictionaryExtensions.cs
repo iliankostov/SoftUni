@@ -1,4 +1,4 @@
-﻿namespace ImplementBiDictionary
+﻿namespace CollectionOfProducts
 {
     using System.Collections.Generic;
     using System.Linq;
