@@ -7,7 +7,7 @@
     public class Repository<T> : IRepository<T>
         where T : class
     {
-        private NewsContext context;
+        private DbContext context;
 
         private IDbSet<T> set;
 
@@ -16,7 +16,7 @@
         {
         }
 
-        public Repository(NewsContext context)
+        public Repository(DbContext context)
         {
             this.context = context;
             this.set = context.Set<T>();

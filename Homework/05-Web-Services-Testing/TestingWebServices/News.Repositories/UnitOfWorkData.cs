@@ -2,12 +2,13 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.Entity;
     using News.Models;
     using News.Repositories.Interfaces;
 
     public class UnitOfWorkData : IUnitOfWorkData
     {
-        private NewsContext context;
+        private DbContext context;
 
         private IDictionary<Type, object> repositories;
 
@@ -16,7 +17,7 @@
         {
         }
 
-        public UnitOfWorkData(NewsContext context)
+        public UnitOfWorkData(DbContext context)
         {
             this.context = context;
             this.repositories = new Dictionary<Type, object>();

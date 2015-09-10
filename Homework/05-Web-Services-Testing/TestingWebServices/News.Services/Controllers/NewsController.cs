@@ -10,10 +10,11 @@
         [HttpGet]
         public IHttpActionResult GetNews()
         {
-            var news = this.Data.News.GetAll()
-                .OrderByDescending(n => n.PublishDate);
+            var newsView = this.Data.News.GetAll()
+                .OrderByDescending(n => n.PublishDate)
+                .Select(NewsViewModel.Create());
 
-            return this.Ok(news);
+            return this.Ok(newsView);
         }
 
         [HttpPost]
