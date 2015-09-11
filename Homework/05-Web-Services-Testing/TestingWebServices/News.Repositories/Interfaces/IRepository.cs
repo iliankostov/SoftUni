@@ -5,6 +5,8 @@
     public interface IRepository<T>
         where T : class
     {
+        T Find(int id);
+
         void Add(T entity);
 
         IQueryable<T> GetAll();

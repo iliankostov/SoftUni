@@ -6,6 +6,8 @@ namespace News.Services.Models
 
     public class NewsViewModel
     {
+        public int Id { get; set; }
+
         public string Title { get; set; }
 
         public string Content { get; set; }
@@ -16,6 +18,7 @@ namespace News.Services.Models
         {
             return n => new NewsViewModel()
                 {
+                    Id = n.Id,
                     Title = n.Title,
                     Content = n.Content,
                     PublishDate = n.PublishDate

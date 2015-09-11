@@ -22,6 +22,11 @@
             this.set = context.Set<T>();
         }
 
+        public T Find(int id)
+        {
+            return this.set.Find(id);
+        }
+
         public void Add(T entity)
         {
             this.ChangeEntityState(entity, EntityState.Added);

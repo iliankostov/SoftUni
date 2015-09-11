@@ -3,10 +3,20 @@
     using System.Linq;
     using System.Web.Http;
     using News.Models;
+    using News.Repositories.Interfaces;
     using News.Services.Models;
 
     public class NewsController : BaseController
     {
+        public NewsController()
+        {
+        }
+
+        public NewsController(IUnitOfWorkData data)
+            : base(data)
+        {
+        }
+
         [HttpGet]
         public IHttpActionResult GetNews()
         {
@@ -45,7 +55,13 @@
                 .Select(NewsViewModel.Create())
                 .FirstOrDefault();
 
-            return this.Ok(newsView);
+            var uriLocation = new
+                {
+                    controller = "news",
+                    id = newNews.Id
+                };
+
+            return this.CreatedAtRoute("DefaultApi", uriLocation, newsView);
         }
 
         [HttpPut]
