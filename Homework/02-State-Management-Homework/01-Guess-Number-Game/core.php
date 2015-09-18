@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['name'])) {
+if (isset($_POST['name'])) {
     $name = $_POST['name'];
     $number = rand(1, 100);
 
@@ -16,23 +16,24 @@ function check($number, $guess_number, $name)
         return "Down";
     }
 
-    if ($number <    $guess_number) {
+    if ($number < $guess_number) {
         return "Up";
     }
 
-    return "Congratulations, " . $name .". " . '<a href="index.php">Play Again</a>';
+    return "Congratulations, " . $name . ". " . '<a href="index.php">Play Again</a>';
 }
 
-function __() {
+function __()
+{
     $output = "";
 
-    if(isset($_GET['number'])) {
-        if(isset($_COOKIE['number'])) {
+    if (isset($_GET['number'])) {
+        if (isset($_COOKIE['number'])) {
             $str_number = $_GET['number'];
 
             $number = ctype_digit($str_number) ? intval($str_number) : null;
 
-            if($number >= 1 && $number <= 100 && $number !== null) {
+            if ($number >= 1 && $number <= 100 && $number !== null) {
                 isset($_COOKIE['name'])
                     ? $name = $_COOKIE['name']
                     : $name = "guest";
@@ -49,4 +50,6 @@ function __() {
     }
 
     return $output;
-};
+}
+
+;

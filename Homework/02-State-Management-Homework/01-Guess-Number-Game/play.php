@@ -5,4 +5,4 @@
     <input type="button" value="Send"/>
 </form>
 
-<div><?= __()?></div>
+<div><?= __() ?></div>

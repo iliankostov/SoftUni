@@ -1,7 +1,7 @@
 <?php
-if(isset($_GET['lang'])) {
+if (isset($_GET['lang'])) {
     $lang = $_GET['lang'];
-    if($lang != Localization::LANG_BG && $lang != Localization::LANG_EN) {
+    if ($lang != Localization::LANG_BG && $lang != Localization::LANG_EN) {
         throw new Exception("Wrong language");
     }
     setcookie('lang', $lang);
@@ -31,10 +31,11 @@ class Localization
     ];
 }
 
-function __($tag){
+function __($tag)
+{
     $lang = isset($_COOKIE['lang'])
         ? $_COOKIE['lang']
-        :Localization::LANG_DEFAULT;
+        : Localization::LANG_DEFAULT;
 
     return Localization::$string[$tag][$lang];
 }
