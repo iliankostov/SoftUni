@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1288816879">
-    <data-source source="LOCAL" name="MySQL - todo_list@localhost" uuid="32313612-9265-48ae-83d8-34c25382b8f1">
+  <component name="DataSourceManagerImpl" format="xml" hash="3690522569">
+    <data-source source="LOCAL" name="MySQL - @localhost" uuid="32313612-9265-48ae-83d8-34c25382b8f1">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/todo_list</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

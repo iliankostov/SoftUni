@@ -1,11 +1,15 @@
-<form action="index.php" method="post">
-    <?php require_once 'translations.php';?>
-    <?php foreach ($translations as $translation) :?>
+<header>
+    <a href="index.php">Home</a>
+</header>
+<br/>
+<form method="post">
+    <?php require_once 'translations.php'; ?>
+    <?php foreach ($translations as $translation) : ?>
         <div class="source-translations">
-            <?= $translation['text_'.Localization::$LANG_DEFAULT]?>
+            <?= $translation['text_' . Localization::$LANG_DEFAULT] ?>
         </div>
         <label>
-            <textarea name="text_bg[<?= array_search($translation, $translations)?>]" rows="5" cols="30"><?= $translation['text_'.Localization::LANG_BG] ?></textarea>
+            <textarea name="<?php echo 'text_bg[' . $translation['id'] . ']'; ?>" rows="5" cols="30"><?php echo $translation['text_bg']; ?></textarea>
         </label>
     <?php endforeach ?>
     <br/>

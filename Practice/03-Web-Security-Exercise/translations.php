@@ -1,12 +1,12 @@
 <?php
 require_once 'Db.php';
 require_once 'Localization.php';
-require_once 'config.php';
 
-Db::setInstance($user, $pass, $dbName, $host);
 $db = Db::getInstance();
-$db->query("SHOW COLUMNS FROM translations");
-$columns = $db->fetchAll();
+
+$result = $db->query("SHOW COLUMNS FROM translations");
+
+$columns = $result->fetchAll(PDO::FETCH_ASSOC);
 
 $possibleLanguages = [];
 foreach ($columns as $column) {
@@ -36,30 +36,32 @@ function __($tag)
         ? $_COOKIE['lang']
         : Localization::$LANG_DEFAULT;
 
-    $db = Db::getInstance();
-    $db->query("
-        SELECT
-            text_{$lang}
-        FROM
-          translations
-        WHERE
-          tag = '$tag';
-    ");
+    $sth = Db::getInstance()->prepare("
+            SELECT text_{$lang}
+            FROM translations
+            WHERE tag = ?;
+        ");
 
-    $row = $db->row();
+    $data = array($tag);
+
+    $sth -> execute($data);
+
+    $row = $sth -> fetch(PDO::FETCH_NUM);
 
     return $row[0];
 }
 
-$db->query("SET NAMES 'utf8'"); // Think about alternative!
-
-$db->query(`SELECT id, tag, text_en, text_bg FROM translations`);
-$translations = $db->fetchAll();
-
 if(isset($_POST['text_bg'])) {
-    $input = $_POST['text_bg'];
+    foreach($_POST['text_bg'] as $key => $value) {
 
-    for ($i = 0; $i < sizeof($input); $i++) {
-        $db->query(`UPDATE translations SET text_bg = '` . $input[$i] . `' WHERE id = ` . ($i + 1));
+        $updateTranslations = $db->prepare("UPDATE translations SET text_bg = ? WHERE id = ?");
+
+        $data = array($value, $key);
+
+        $updateTranslations->execute($data);
     }
 }
+
+$resultTranslations = $db->query("SELECT id, tag, text_en, text_bg FROM translations");
+
+$translations = $resultTranslations->fetchAll(PDO::FETCH_ASSOC);
