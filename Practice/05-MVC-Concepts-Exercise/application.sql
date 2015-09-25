@@ -7,11 +7,11 @@ CREATE DATABASE `mvc_app`
 USE `mvc_app`;
 
 CREATE TABLE `users` (
-  id           INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  username     VARCHAR(255),
-  passwordHash VARCHAR(255),
-  gold         INT(11),
-  food         INT(11)
+  id       INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255),
+  password VARCHAR(255),
+  gold     INT(11),
+  food     INT(11)
 );
 
 CREATE TABLE `buildings` (
@@ -38,3 +38,29 @@ CREATE TABLE `user_buildings_level` (
     ON DELETE CASCADE,
   UNIQUE (user_id, building_id, level)
 );
+
+INSERT INTO users (username, password, gold, food) VALUES ('admin', '$2y$10$ilwmxJFaAnSJ03DzgUD4u.jUQWzSN7mEsijwJn7GF6Z2dpAtiWXYO', 1500, 1500);
+
+INSERT INTO buildings (name) VALUES ('Barracks');
+INSERT INTO buildings (name) VALUES ('Archery Range');
+INSERT INTO buildings (name) VALUES ('Stables');
+INSERT INTO buildings (name) VALUES ('Siege Workshop');
+
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (1, 1, 100, 100);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (1, 2, 200, 200);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (1, 3, 300, 300);
+
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (2, 1, 100, 100);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (2, 2, 200, 200);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (2, 3, 300, 300);
+
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (3, 1, 100, 100);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (3, 2, 200, 200);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (3, 3, 300, 300);
+
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (4, 1, 100, 100);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (4, 2, 200, 200);
+INSERT INTO building_levels (building_id, level, gold, food) VALUES (4, 3, 300, 300);
+
+INSERT INTO user_buildings_level (user_id, building_id, level) VALUES (1, 1, 0);
+INSERT INTO user_buildings_level (user_id, building_id, level) VALUES (1, 2, 0);
