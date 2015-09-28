@@ -32,7 +32,8 @@ abstract class DefaultController
         $this->input = InputData::getInstance();
     }
 
-    protected function jsonResponse(){
+    protected function jsonResponse()
+    {
 
     }
 }

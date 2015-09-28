@@ -25,7 +25,7 @@ class App
         Loader::registerNamespace('Framework', dirname(__FILE__) . DIRECTORY_SEPARATOR);
         Loader::registerAutoLoad();
         $this->_config = Config::getInstance();
-        if($this->_config->getConfigFolder() == null){
+        if ($this->_config->getConfigFolder() == null) {
             $this->setConfigFolder('../config');
         }
     }
@@ -40,39 +40,43 @@ class App
         $this->router = $router;
     }
 
-    public function setConfigFolder($path) {
+    public function setConfigFolder($path)
+    {
         $this->_config->setConfigFolder($path);
     }
 
-    public function getConfigFolder(){
+    public function getConfigFolder()
+    {
         return $this->_config;
     }
 
     /**
      * @return Config
      */
-    public function getConfig(){
+    public function getConfig()
+    {
         return $this->_config;
     }
 
-    public function run(){
-        if($this->_config->getConfigFolder() == null){
-            $this->setConfigFolder('../Config');
+    public function run()
+    {
+        if ($this->_config->getConfigFolder() == null) {
+            $this->setConfigFolder('../config');
         }
 
         $this->_frontController = FrontController::getInstance();
 
-        if($this->router instanceof IRouter){
+        if ($this->router instanceof IRouter) {
             $this->_frontController->setRouter($this->router);
-        } else if($this->router == 'JsonRPCRouter'){
+        } else if ($this->router == 'JsonRPCRouter') {
             $this->_frontController->setRouter(new JsonRPCRouter());
         } else {
             $this->_frontController->setRouter(new DefaultRouter());
         }
 
         $_sess = $this->_config->app['session'];
-        if($_sess['autostart']){
-            if($_sess['type'] == 'native'){
+        if ($_sess['autostart']) {
+            if ($_sess['type'] == 'native') {
                 $s = new NativeSession
                 (
                     $_sess['name'],
@@ -89,29 +93,32 @@ class App
         $this->_frontController->dispatch();
     }
 
-    public function getSession(){
+    public function getSession()
+    {
         return $this->_session;
     }
 
-    public function setSession(ISession $session){
+    public function setSession(ISession $session)
+    {
         $this->_session = $session;
     }
 
-    public function getDbConnection($connection = null){
-        if($connection == null){
+    public function getDbConnection($connection = null)
+    {
+        if ($connection == null) {
             $connection = 'default';
         }
 
-        if(!$connection){
+        if (!$connection) {
             throw new \Exception('No connection identifier provided', 500);
         }
 
-        if($this->_dbConnections[$connection]){
+        if ($this->_dbConnections[$connection]) {
             return $this->_dbConnections[$connection];
         }
 
         $_cnf = $this->getConfig()->database;
-        if(!$_cnf[$connection]){
+        if (!$_cnf[$connection]) {
             throw new \Exception('No valid connection identifier is provided', 500);
         }
 
@@ -125,15 +132,17 @@ class App
         return $newConnection;
     }
 
-    public function _exceptionHandler(\Exception $ex){
-        if($this->_config && $this->_config->app['displayExceptions'] == true){
+    public function _exceptionHandler(\Exception $ex)
+    {
+        if ($this->_config && $this->_config->app['displayExceptions'] == true) {
             var_dump($ex);
         } else {
             $this->displayError($ex->getCode());
         }
     }
 
-    public function displayError($error){
+    public function displayError($error)
+    {
         try {
             $view = View::getInstance();
             $view->display('errors.' . $error);
@@ -147,7 +156,8 @@ class App
     /**
      * @return App
      */
-    public static function getInstance(){
+    public static function getInstance()
+    {
         if (self::$_instance == null) {
             self::$_instance = new App();
         }

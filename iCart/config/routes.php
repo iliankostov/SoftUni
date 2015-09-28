@@ -2,12 +2,14 @@
 // override default route
 //$cnf['package']['namespace'] = 'Controllers\Admin';
 //$cnf['package']['namespace'] = 'Controllers\Admin';
+
+
+//// override default controller index to users
+//$cnf['*']['controllers']['index']['to'] = 'users';
 //
-// override default controller index to newController
-//$cnf['package']['controllers']['index']['to'] = 'newController';
-//
-// override default oldMethod old to newMethod
-//$cnf['package']['controllers']['index']['methods']['oldMethod'] = 'newMethod';
+//// override default oldMethod old to newMethod
+//$cnf['*']['controllers']['index']['methods']['index'] = 'test';
+
 
 $cnf['*']['namespace'] = 'Controllers';
 

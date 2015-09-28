@@ -2,9 +2,10 @@
 
 namespace Controllers;
 
+use Framework\DefaultController;
 use Models\User;
 
-class Users
+class Users extends DefaultController
 {
     public function index()
     {

@@ -1,7 +1,6 @@
 <?php
 namespace Framework;
 
-use Framework\Routers\DefaultRouter;
 use Framework\Routers\IRouter;
 
 class FrontController
@@ -10,6 +9,7 @@ class FrontController
     private $namespace = null;
     private $controller = null;
     private $method = null;
+    private $params = [];
     /**
      * @var IRouter
      */
@@ -32,7 +32,7 @@ class FrontController
 
     public function dispatch()
     {
-        if($this->router == null){
+        if ($this->router == null) {
             throw new \Exception('No valid router found', 500);
         }
 
@@ -70,7 +70,8 @@ class FrontController
             if ($_params[1]) {
                 $this->method = strtolower($_params[1]);
                 unset($_params[0], $_params[1]);
-                $input->setGet(array_values($_params));
+                $this->params = array_values($_params);
+                $input->setGet($this->params);
             } else {
                 $this->method = $this->getDefaultMethod();
             }
@@ -83,14 +84,20 @@ class FrontController
             if ($configParams['controllers'][$this->controller]['methods'][$this->method]) {
                 $this->method = strtolower($configParams['controllers'][$this->controller]['methods'][$this->method]);
             }
-            if(isset($configParams['controllers'][$this->controller]['to'])){
+            if (isset($configParams['controllers'][$this->controller]['to'])) {
                 $this->controller = strtolower($configParams['controllers'][$this->controller]['to']);
             }
         }
 
         $input->setPost($this->router->getPost());
-        //TODO Fix
         $controller = $this->namespace . '\\' . ucfirst($this->controller);
+
+        if (App::getInstance()->getConfig()->app['debug']) {
+            var_dump("controller: " . $this->controller);
+            var_dump("method: " . $this->method);
+            var_dump($this->params);
+        }
+
         $newController = new $controller();
         $newController->{$this->method}();
     }

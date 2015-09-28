@@ -11,4 +11,9 @@ class Index extends DefaultController
         $this->view->appendToLayout('body', 'index');
         $this->view->display('layouts.default');
     }
+
+    public function test()
+    {
+        echo "test";
+    }
 }

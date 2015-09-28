@@ -27,7 +27,7 @@ final class Loader
             if (strpos($class, $k) === 0) {
 
                 $pathParams = explode("\\", $class);
-                for($i = 0; $i < sizeof($pathParams) - 1; $i++) {
+                for ($i = 0; $i < sizeof($pathParams) - 1; $i++) {
                     $pathParams[$i] = strtolower($pathParams[$i]);
                 }
                 $path = implode(DIRECTORY_SEPARATOR, $pathParams);

@@ -12,18 +12,20 @@ class View
     private $___layoutParts = [];
     private $___layoutData = [];
 
-    private function __construct(){
+    private function __construct()
+    {
         $this->___viewPath = App::getInstance()->getConfig()->app['viewsDirectory'];
-        if($this->___viewPath == null){
+        if ($this->___viewPath == null) {
             $this->___viewPath = realpath('../views/');
         }
     }
 
-    public function setViewDirectory($path){
+    public function setViewDirectory($path)
+    {
         $path = trim($path);
-        if($path){
+        if ($path) {
             $path = realpath($path) . DIRECTORY_SEPARATOR;
-            if(is_dir($path) && is_readable($path)){
+            if (is_dir($path) && is_readable($path)) {
                 $this->___viewDir = $path;
             } else {
                 //TODO
@@ -35,38 +37,41 @@ class View
         }
     }
 
-    public function display($name, $data = [], $returnAsString = false){
-        if(is_array($data)){
+    public function display($name, $data = [], $returnAsString = false)
+    {
+        if (is_array($data)) {
             $this->___data = array_merge($this->___data, $data);
         }
 
-        if(count($this->___layoutParts) > 0){
+        if (count($this->___layoutParts) > 0) {
             foreach ($this->___layoutParts as $k => $v) {
                 $r = $this->_includeFile($v);
-                if($r){
+                if ($r) {
                     $this->___layoutData[$k] = $r;
                 }
             }
 
         }
 
-        if($returnAsString){
+        if ($returnAsString) {
             return $this->_includeFile($name);
         } else {
             echo $this->_includeFile($name);
         }
     }
 
-    public function getLayoutData($name){
+    public function getLayoutData($name)
+    {
         return $this->___layoutData[$name];
     }
 
-    private function _includeFile($file){
-        if($this->___viewDir == null){
+    private function _includeFile($file)
+    {
+        if ($this->___viewDir == null) {
             $this->setViewDirectory($this->___viewPath);
         }
         $___fullPath = $this->___viewDir . str_replace('.', DIRECTORY_SEPARATOR, $file) . $this->___extension;
-        if(file_exists($___fullPath) && is_readable($___fullPath)){
+        if (file_exists($___fullPath) && is_readable($___fullPath)) {
             ob_start();
             include $___fullPath;
             return ob_get_clean();
@@ -75,23 +80,27 @@ class View
         }
     }
 
-    public function appendToLayout($key, $template){
-        if($key && $template){
+    public function appendToLayout($key, $template)
+    {
+        if ($key && $template) {
             $this->___layoutParts[$key] = $template;
         } else {
             throw new \Exception('Layout requires valid key and template', 500);
         }
     }
 
-    public function __get($name){
+    public function __get($name)
+    {
         return $this->___data[$name];
     }
 
-    public function __set($name, $value){
+    public function __set($name, $value)
+    {
         $this->___data[$name] = $value;
     }
 
-    public static function getInstance(){
+    public static function getInstance()
+    {
         if (self::$_instance == null) {
             self::$_instance = new View();
         }

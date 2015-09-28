@@ -4,23 +4,24 @@ namespace Framework;
 
 class Common
 {
-    public static function normalize($data, $types){
+    public static function normalize($data, $types)
+    {
         $types = explode('|', $types);
-        if(is_array($types)){
+        if (is_array($types)) {
             foreach ($types as $v) {
-                if($v == 'int'){
+                if ($v == 'int') {
                     $data = (int)$data;
-                } else if($v == 'float'){
+                } else if ($v == 'float') {
                     $data = (float)$data;
-                } else if($v == 'double'){
+                } else if ($v == 'double') {
                     $data = (double)$data;
-                } else if($v == 'bool'){
+                } else if ($v == 'bool') {
                     $data = (bool)$data;
-                } else if($v == 'string'){
+                } else if ($v == 'string') {
                     $data = (string)$data;
-                } else if($v == 'trim'){
+                } else if ($v == 'trim') {
                     $data = trim($data);
-                } else if($v == 'xss'){
+                } else if ($v == 'xss') {
                     $data = self::xss_clean($data);
                 }
             }
@@ -36,7 +37,7 @@ class Common
     function xss_clean($data)
     {
         // Fix &entity\n;
-        $data = str_replace(array('&amp;','&lt;','&gt;'), array('&amp;amp;','&amp;lt;','&amp;gt;'), $data);
+        $data = str_replace(array('&amp;', '&lt;', '&gt;'), array('&amp;amp;', '&amp;lt;', '&amp;gt;'), $data);
         $data = preg_replace('/(&#*\w+)[\x00-\x20]+;/u', '$1;', $data);
         $data = preg_replace('/(&#x*[0-9A-F]+);*/iu', '$1;', $data);
         $data = html_entity_decode($data, ENT_COMPAT, 'UTF-8');
@@ -57,19 +58,18 @@ class Common
         // Remove namespaced elements (we do not need them)
         $data = preg_replace('#</*\w+:\w[^>]*+>#i', '', $data);
 
-        do
-        {
+        do {
             // Remove really unwanted tags
             $old_data = $data;
             $data = preg_replace('#</*(?:applet|b(?:ase|gsound|link)|embed|frame(?:set)?|i(?:frame|layer)|l(?:ayer|ink)|meta|object|s(?:cript|tyle)|title|xml)[^>]*+>#i', '', $data);
-        }
-        while ($old_data !== $data);
+        } while ($old_data !== $data);
 
         // we are done...
         return $data;
     }
 
-    public static function headerStatus($code) {
+    public static function headerStatus($code)
+    {
         $codes = array(
             100 => 'Continue',
             101 => 'Switching Protocols',

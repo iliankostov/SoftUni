@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Framework\Routers;
-
 
 use Framework\App;
 
@@ -14,22 +12,23 @@ class JsonRPCRouter implements IRouter
 
     public function __construct()
     {
-        if($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_SERVER['CONTENT_TYPE']) || $_SERVER['CONTENT_TYPE'] != 'application/json'){
+        if ($_SERVER['REQUEST_METHOD'] != 'POST' || empty($_SERVER['CONTENT_TYPE']) || $_SERVER['CONTENT_TYPE'] != 'application/json') {
             throw new \Exception('Required json request', 400);
         }
     }
 
-    public function setMethodsMap($ar){
-        if(is_array($ar)){
+    public function setMethodsMap($ar)
+    {
+        if (is_array($ar)) {
             $this->_map = $ar;
         }
     }
 
     public function getUri()
     {
-        if(!is_array($this->_map) || count($this->_map) == 0){
+        if (!is_array($this->_map) || count($this->_map) == 0) {
             $ar = App::getInstance()->getConfig()->rpcRoutes;
-            if(is_array($ar) && count($ar) > 0){
+            if (is_array($ar) && count($ar) > 0) {
                 $this->_map = $ar;
             } else {
                 throw new \Exception('Router requires method map', 400);
@@ -37,10 +36,10 @@ class JsonRPCRouter implements IRouter
         }
 
         $request = json_decode(file_get_contents('php://input'), true);
-        if(!is_array($request) || !isset($request['method'])){
+        if (!is_array($request) || !isset($request['method'])) {
             throw new \Exception('Required json request', 400);
         } else {
-            if($this->_map[$request['method']]){
+            if ($this->_map[$request['method']]) {
                 $this->_requestId = $request['id'];
                 $this->_post = $request['params'];
                 return $this->_map[$request['method']];
@@ -50,7 +49,8 @@ class JsonRPCRouter implements IRouter
         }
     }
 
-    public function getRequestId(){
+    public function getRequestId()
+    {
         return $this->_requestId;
     }
 
