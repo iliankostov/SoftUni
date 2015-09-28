@@ -4,7 +4,7 @@ namespace Framework;
 
 final class Loader
 {
-    private static $namespace = [];
+    private static $namespace = array();
 
     private function __construct()
     {

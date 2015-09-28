@@ -16,7 +16,7 @@ class App
     private $_config = null;
     private $_frontController = null;
     private $router = null;
-    private $_dbConnections = [];
+    private $_dbConnections = array();
     private $_session = null;
 
     private function __construct()

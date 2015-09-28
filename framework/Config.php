@@ -6,7 +6,7 @@ class Config
 {
     private static $_instance = null;
     private $_configFolder = null;
-    private $_configArray = [];
+    private $_configArray = array();
 
     private function __construct()
     {
@@ -22,7 +22,7 @@ class Config
         $_configFolder = realpath($configFolder);
 
         if ($_configFolder != false && is_dir($_configFolder) && is_readable($_configFolder)) {
-            $this->_configArray = [];
+            $this->_configArray = array();
             $this->_configFolder = $_configFolder . DIRECTORY_SEPARATOR;
             $ns = $this->app['namespaces'];
             if (is_array($ns)) {
@@ -67,7 +67,8 @@ class Config
         $_file = realpath($path);
 
         if ($_file != false && is_file($_file) && is_readable($_file)) {
-            $_basename = explode('.php', basename($_file))[0];
+            $_arr = explode('.php', basename($_file));
+            $_basename = $_arr[0];
             $this->_configArray[$_basename] = include $_file;
         } else {
             throw new \Exception('Config file read error: ' . $path);

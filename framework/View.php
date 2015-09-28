@@ -6,11 +6,11 @@ class View
 {
     private static $_instance;
     private $___viewPath = null;
-    private $___data = [];
+    private $___data = array();
     private $___viewDir = null;
     private $___extension = '.php';
-    private $___layoutParts = [];
-    private $___layoutData = [];
+    private $___layoutParts = array();
+    private $___layoutData = array();
 
     private function __construct()
     {
@@ -37,7 +37,7 @@ class View
         }
     }
 
-    public function display($name, $data = [], $returnAsString = false)
+    public function display($name, $data = array(), $returnAsString = false)
     {
         if (is_array($data)) {
             $this->___data = array_merge($this->___data, $data);

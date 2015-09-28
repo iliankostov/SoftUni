@@ -9,7 +9,7 @@ class FrontController
     private $namespace = null;
     private $controller = null;
     private $method = null;
-    private $params = [];
+    private $params = array();
     /**
      * @var IRouter
      */

@@ -5,9 +5,9 @@ namespace Framework;
 class InputData
 {
     private static $_instance = null;
-    private $_get = [];
-    private $_post = [];
-    private $_cookies = [];
+    private $_get = array();
+    private $_post = array();
+    private $_cookies = array();
 
     private function __construct()
     {
