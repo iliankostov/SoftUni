@@ -5,9 +5,16 @@
 
     internal class PathsBetweenCellsInMatrix
     {
-        private static int exitFound;
+        private static readonly char[,] MatrixOne =
+            {
+                { 's', ' ', ' ', ' ' }, 
+                { ' ', '*', '*', ' ' },
+                { ' ', '*', '*', ' ' }, 
+                { ' ', '*', 'e', ' ' },
+                { ' ', ' ', ' ', ' ' }
+            };
 
-        private static char[,] matrix =
+        private static readonly char[,] MatrixTwo =
             {
                 { 's', ' ', ' ', ' ', ' ', ' ' }, 
                 { ' ', '*', '*', ' ', '*', ' ' },
@@ -16,11 +23,15 @@
                 { ' ', ' ', ' ', '*', ' ', ' ' }
             };
 
-        private static int numCols = matrix.GetLength(1);
+        private static readonly List<char> Path = new List<char>();
 
-        private static int numRows = matrix.GetLength(0);
+        private static int exitFound;
 
-        private static List<char> path = new List<char>();
+        private static char[,] matrix;
+
+        private static int numCols;
+
+        private static int numRows;
 
         private static void FindExit(int row, int col, char dir)
         {
@@ -42,7 +53,7 @@
             }
 
             matrix[row, col] = 'x';
-            path.Add(dir);
+            Path.Add(dir);
 
             FindExit(row, col + 1, 'R');
             FindExit(row - 1, col, 'U');
@@ -50,23 +61,45 @@
             FindExit(row + 1, col, 'D');
 
             matrix[row, col] = ' ';
-            path.RemoveAt(path.Count - 1);
+            Path.RemoveAt(Path.Count - 1);
         }
 
         private static void Main()
         {
+            SelectMatrix();
             FindExit(0, 0, 's');
             Console.WriteLine("Total paths found: {0}", exitFound);
         }
 
         private static void Print(char dir)
         {
-            for (int i = 1; i < path.Count; i++)
+            for (int i = 1; i < Path.Count; i++)
             {
-                Console.Write(path[i]);
+                Console.Write(Path[i]);
             }
 
             Console.WriteLine(dir);
+        }
+
+        private static void SelectMatrix()
+        {
+            Console.Write("Select matrix 1 or 2: ");
+            int matrixNumber = int.Parse(Console.ReadLine());
+            if (matrixNumber == 1)
+            {
+                matrix = MatrixOne;
+            }
+            else if (matrixNumber == 2)
+            {
+                matrix = MatrixTwo;
+            }
+            else
+            {
+                throw new IndexOutOfRangeException("Invalid matrix number");
+            }
+
+            numRows = matrix.GetLength(0);
+            numCols = matrix.GetLength(1);
         }
     }
 }

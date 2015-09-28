@@ -6,14 +6,6 @@
     {
         private static int[] arr;
 
-        private static void Main()
-        {
-            Console.Write("n = ");
-            int n = int.Parse(Console.ReadLine());
-            arr = new int[n];
-            GenerateVariationsWithRepetitions(0, n);
-        }
-
         private static void GenerateVariationsWithRepetitions(int index, int n)
         {
             if (index >= n)
@@ -28,6 +20,14 @@
                     GenerateVariationsWithRepetitions(index + 1, n);
                 }
             }
+        }
+
+        private static void Main()
+        {
+            Console.Write("n = ");
+            int n = int.Parse(Console.ReadLine());
+            arr = new int[n];
+            GenerateVariationsWithRepetitions(0, n);
         }
 
         private static void PrintVariations()
