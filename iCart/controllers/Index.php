@@ -2,10 +2,13 @@
 
 namespace Controllers;
 
-class Index
+use Framework\DefaultController;
+
+class Index extends DefaultController
 {
     public function index()
     {
-        echo "main method";
+        $this->view->appendToLayout('body', 'index');
+        $this->view->display('layouts.default');
     }
 }
