@@ -13,4 +13,22 @@ class Users extends DefaultController
         $admin = $user->getAdmin();
         var_dump($admin);
     }
+
+    public function register()
+    {
+        $this->view->appendToLayout('body', 'register');
+        $this->view->display('layouts.default');
+    }
+
+    public function login()
+    {
+        $this->view->appendToLayout('body', 'login');
+        $this->view->display('layouts.default');
+    }
+
+    public function logout()
+    {
+        $this->view->appendToLayout('body', 'index');
+        $this->view->display('layouts.default');
+    }
 }
