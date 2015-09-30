@@ -8,7 +8,10 @@ class Index extends DefaultController
 {
     public function index()
     {
-        $this->view->appendToLayout('body', 'index');
-        $this->view->display('layouts.default');
+        $data = array();
+        $data['isLogged'] = false;
+
+        $this->view->appendToLayout('main', 'index');
+        $this->view->display('layouts.default', $data);
     }
 }

@@ -3,32 +3,45 @@
 namespace Controllers;
 
 use Framework\DefaultController;
-use Models\User;
 
 class Users extends DefaultController
 {
     public function index()
     {
-        $user = new User();
-        $admin = $user->getAdmin();
-        var_dump($admin);
+        header("Location: /users/profile");
     }
 
     public function register()
     {
-        $this->view->appendToLayout('body', 'register');
-        $this->view->display('layouts.default');
+        $data = array();
+        $data['isLogged'] = false;
+
+        $this->view->appendToLayout('main', 'register');
+
+        $this->view->display('layouts.default', $data);
     }
 
     public function login()
     {
-        $this->view->appendToLayout('body', 'login');
-        $this->view->display('layouts.default');
+        $data = array();
+        $data['isLogged'] = false;
+
+        $this->view->appendToLayout('main', 'login');
+
+        $this->view->display('layouts.default', $data);
+    }
+
+    public function profile()
+    {
+        $data = array();
+        $data['isLogged'] = false;
+
+        $this->view->appendToLayout('main', 'profile');
+        $this->view->display('layouts.default', $data);
     }
 
     public function logout()
     {
-        $this->view->appendToLayout('body', 'index');
-        $this->view->display('layouts.default');
+        header("Location: /");
     }
 }

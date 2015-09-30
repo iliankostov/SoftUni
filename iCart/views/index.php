@@ -16,9 +16,7 @@
                     <p>Model</p>
                 </div>
             </div>
-            <!--/panel-->
         </div>
-        <!--/col-->
 
         <div class="col-lg-4 col-sm-6">
             <div class="panel panel-default">
@@ -29,9 +27,7 @@
                     <p>Model</p>
                 </div>
             </div>
-            <!--/panel-->
         </div>
-        <!--/col-->
 
         <div class="col-lg-4 col-sm-6">
             <div class="panel panel-default">
@@ -42,13 +38,10 @@
                     <p>Model</p>
                 </div>
             </div>
-            <!--/panel-->
         </div>
-        <!--/col-->
 
     </div>
-    <!--/row-->
-</div><!--/container-->
+</div>
 
 <div class="divider"></div>
 
@@ -70,9 +63,7 @@
                     <p>Model</p>
                 </div>
             </div>
-            <!--/panel-->
         </div>
-        <!--/col-->
 
         <div class="col-lg-4 col-sm-6">
             <div class="panel panel-default">
@@ -83,9 +74,7 @@
                     <p>Model</p>
                 </div>
             </div>
-            <!--/panel-->
         </div>
-        <!--/col-->
 
         <div class="col-lg-4 col-sm-6">
             <div class="panel panel-default">

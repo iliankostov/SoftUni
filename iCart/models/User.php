@@ -6,10 +6,17 @@ use Framework\Database\DefaultDatabase;
 
 class User
 {
-    public function getAdmin()
-    {
-        $db = new DefaultDatabase();
+    private $id;
+    private $username;
+    private $email;
+    private $password;
+    private $cash;
 
-        return $db->prepare("SELECT * FROM users WHERE id= ?")->execute([1])->fetchRowAssoc();
+    public function __construct($username, $email, $password, $cash)
+    {
+        $this->username = $username;
+        $this->email = $email;
+        $this->password = $password;
+        $this->cash = $cash;
     }
 }

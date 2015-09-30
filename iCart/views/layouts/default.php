@@ -47,8 +47,12 @@
                             <li><a href="/">Accessoaries</a></li>
                         </ul>
                     </li>
-                    <li><a href="/users/login">Login</a></li>
-                    <li><a href="/users/register">Register</a></li>
+                    <li>
+                        <a href="<?= $this->isLogged ? '/users/profile' : '/users/login' ?>"><?= $this->isLogged ? 'Profile' : 'Login' ?></a>
+                    </li>
+                    <li>
+                        <a href="<?= $this->isLogged ? '/users/logout' : '/users/register' ?>"><?= $this->isLogged ? 'Logout' : 'Register' ?></a>
+                    </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -57,8 +61,7 @@
     </div>
     <!--/.navbar -->
 
-    <?= $this->getLayoutData('body'); ?>
-
+    <?= $this->getLayoutData('main'); ?>
 </div>
 <!--/wrap-->
 
