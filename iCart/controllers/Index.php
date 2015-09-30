@@ -6,10 +6,6 @@ use Framework\DefaultController;
 
 class Index extends DefaultController
 {
-    /**
-     * @Authorize
-     */
-
     public function index()
     {
         $data = array();

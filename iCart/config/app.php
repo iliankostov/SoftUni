@@ -8,6 +8,8 @@ $cnf['namespaces']['Areas\Admin\Controllers'] = '../areas/admin/controllers';
 $cnf['namespaces']['Controllers'] = '../controllers';
 $cnf['namespaces']['Models'] = '../models';
 
+$cnf['viewsDirectory'] = '../views/';
+
 $cnf['session']['autostart'] = true;
 $cnf['session']['type'] = 'native';
 $cnf['session']['name'] = '__sess';

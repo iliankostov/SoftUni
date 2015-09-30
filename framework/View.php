@@ -28,12 +28,10 @@ class View
             if (is_dir($path) && is_readable($path)) {
                 $this->___viewDir = $path;
             } else {
-                //TODO
-                throw new \Exception('view path', 500);
+                throw new \Exception('Invalid view folder path', 500);
             }
         } else {
-            //TODO
-            throw new \Exception('view path', 500);
+            throw new \Exception('Invalid view folder path', 500);
         }
     }
 

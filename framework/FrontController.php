@@ -2,6 +2,7 @@
 namespace Framework;
 
 use Framework\Routers\IRouter;
+use ReflectionClass;
 
 class FrontController
 {
@@ -36,15 +37,15 @@ class FrontController
             throw new \Exception('No valid router found', 500);
         }
 
-        $_uri = $this->router->getUri();
-        $areas = App::getInstance()->getConfig()->areas;
-        $routes = App::getInstance()->getConfig()->routes;
+        $configParams = null;
 
-        if(is_array($areas) && count($areas) > 0) {
+        $_uri = $this->router->getUri();
+        $routes = App::getInstance()->getConfig()->routes;
+        $areas = App::getInstance()->getConfig()->areas;
+
+        if (is_array($areas) && count($areas) > 0) {
             $routes = array_merge($areas, $routes);
         }
-
-        $configParams = null;
 
         if (is_array($routes) && count($routes) > 0) {
             foreach ($routes as $key => $value) {
@@ -95,15 +96,8 @@ class FrontController
 
         $input->setPost($this->router->getPost());
         $controller = $this->namespace . '\\' . ucfirst($this->controller);
-
-        if (App::getInstance()->getConfig()->app['debug']) {
-            var_dump("controller: " . $this->controller);
-            var_dump("method: " . $this->method);
-            var_dump($this->params);
-        }
-
         $newController = new $controller();
-        $newController->{$this->method}();
+        $this->loadMethod($newController);
     }
 
     public function getDefaultController()
@@ -131,5 +125,41 @@ class FrontController
         }
 
         return self::$_instance;
+    }
+
+    private function loadMethod($newController)
+    {
+        $isMethodExists = false;
+
+        $reflectionController = new ReflectionClass($newController);
+        $reflectionMethods = $reflectionController->getMethods();
+
+        $roles = App::getInstance()->getInstance()->getConfig()->roles;
+
+        foreach ($reflectionMethods as $reflectionMethod) {
+            if ($this->method === $reflectionMethod->getName()) {
+                $doc = $reflectionMethod->getDocComment();
+
+                $annotations = array();
+                preg_match_all('#@(.*?)\n#s', $doc, $annotations);
+
+                foreach ($annotations[1] as $annotation) {
+                    foreach ($roles as $role) {
+                        if ($role === $annotation) {
+                            // TODO if user in role -> pass him
+                            throw new \Exception("You are not " . strtolower($role) . " to do this", 401);
+                        }
+                    }
+                }
+
+                $isMethodExists = true;
+            }
+        }
+
+        if ($isMethodExists) {
+            $newController->{$this->method}();
+        } else {
+            throw new \Exception("This action do not exists", 404);
+        }
     }
 }

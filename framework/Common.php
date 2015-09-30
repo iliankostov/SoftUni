@@ -125,6 +125,6 @@ class Common
         if (!$codes[$code]) {
             $code = 500;
         }
-        header($_SERVER['SERVER_PROTOCOL'] . ' ' . $statusCode . ' ' . $codes[$code], true, $code);
+        header($_SERVER['SERVER_PROTOCOL'] . ' ' . $codes[$code], true, $code);
     }
 }

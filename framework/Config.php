@@ -10,13 +10,12 @@ class Config
 
     private function __construct()
     {
-
     }
 
     public function setConfigFolder($configFolder)
     {
         if (!$configFolder) {
-            throw new \Exception('Empty config folder path');
+            throw new \Exception('Empty config folder path', 500);
         }
 
         $_configFolder = realpath($configFolder);
@@ -29,7 +28,7 @@ class Config
                 Loader::registerNamespaces($ns);
             }
         } else {
-            throw new \Exception('Config directory read error:' . $configFolder);
+            throw new \Exception('Config directory read error: ' . $configFolder, 500);
         }
     }
 
@@ -71,7 +70,7 @@ class Config
             $_basename = $_arr[0];
             $this->_configArray[$_basename] = include $_file;
         } else {
-            throw new \Exception('Config file read error: ' . $path);
+            throw new \Exception('Config file read error: ' . $path, 500);
         }
     }
 }

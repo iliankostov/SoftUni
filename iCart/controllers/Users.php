@@ -40,6 +40,9 @@ class Users extends DefaultController
         $this->view->display('layouts.default', $data);
     }
 
+    /**
+     * @Authorized
+     */
     public function logout()
     {
         header("Location: /");
