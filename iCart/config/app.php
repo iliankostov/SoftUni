@@ -4,6 +4,7 @@ $cnf['debug'] = false;
 $cnf['default_controller'] = 'Index';
 $cnf['default_method'] = 'index';
 
+$cnf['namespaces']['Areas\Admin\Controllers'] = '../areas/admin/controllers';
 $cnf['namespaces']['Controllers'] = '../controllers';
 $cnf['namespaces']['Models'] = '../models';
 

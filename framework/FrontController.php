@@ -37,14 +37,18 @@ class FrontController
         }
 
         $_uri = $this->router->getUri();
+        $areas = App::getInstance()->getConfig()->areas;
         $routes = App::getInstance()->getConfig()->routes;
+
+        if(is_array($areas) && count($areas) > 0) {
+            $routes = array_merge($areas, $routes);
+        }
+
         $configParams = null;
+
         if (is_array($routes) && count($routes) > 0) {
             foreach ($routes as $key => $value) {
-                if (stripos($_uri, $key) === 0 &&
-                    ($_uri == $key || stripos($_uri, $key . '/') === 0)
-                    && $value['namespace']
-                ) {
+                if (stripos($_uri, $key) === 0 && ($_uri == $key || stripos($_uri, $key . '/') === 0) && $value['namespace']) {
                     $this->namespace = $value['namespace'];
                     $_uri = substr($_uri, strlen($key) + 1);
                     $configParams = $value;
