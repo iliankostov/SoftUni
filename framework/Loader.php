@@ -33,6 +33,7 @@ final class Loader
                 $path = implode(DIRECTORY_SEPARATOR, $pathParams);
 
                 $file = realpath(substr_replace(str_replace('\\', DIRECTORY_SEPARATOR, $path), $v, 0, strlen($k)) . '.php');
+
                 if ($file && is_readable($file)) {
                     include $file;
                 } else {

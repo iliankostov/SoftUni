@@ -1,9 +1,9 @@
 <?php
 
-$cnf = [
+$cnf = array(
     "Admin",
     "Editor",
-    "Authorized"
-];
+    "Authorize"
+);
 
 return $cnf;

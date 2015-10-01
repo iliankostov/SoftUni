@@ -12,6 +12,10 @@ class FrontController
     private $method = null;
     private $params = array();
     /**
+     * @var InputData
+     */
+    private $input = null;
+    /**
      * @var IRouter
      */
     private $router = null;
@@ -41,11 +45,6 @@ class FrontController
 
         $_uri = $this->router->getUri();
         $routes = App::getInstance()->getConfig()->routes;
-        $areas = App::getInstance()->getConfig()->areas;
-
-        if (is_array($areas) && count($areas) > 0) {
-            $routes = array_merge($areas, $routes);
-        }
 
         if (is_array($routes) && count($routes) > 0) {
             foreach ($routes as $key => $value) {
@@ -67,7 +66,7 @@ class FrontController
             throw new \Exception('Default route missing', 500);
         }
 
-        $input = InputData::getInstance();
+        $this->input = InputData::getInstance();
         $_params = explode('/', $_uri);
         if ($_params[0]) {
             $this->controller = strtolower($_params[0]);
@@ -76,7 +75,7 @@ class FrontController
                 $this->method = strtolower($_params[1]);
                 unset($_params[0], $_params[1]);
                 $this->params = array_values($_params);
-                $input->setGet($this->params);
+                $this->input->setGet($this->params);
             } else {
                 $this->method = $this->getDefaultMethod();
             }
@@ -86,7 +85,10 @@ class FrontController
         }
 
         if (is_array($configParams) && $configParams['controllers']) {
+
             if ($configParams['controllers'][$this->controller]['methods'][$this->method]) {
+
+
                 $this->method = strtolower($configParams['controllers'][$this->controller]['methods'][$this->method]);
             }
             if (isset($configParams['controllers'][$this->controller]['to'])) {
@@ -94,9 +96,10 @@ class FrontController
             }
         }
 
-        $input->setPost($this->router->getPost());
+        $this->input->setPost($this->router->getPost());
         $controller = $this->namespace . '\\' . ucfirst($this->controller);
         $newController = new $controller();
+
         $this->loadMethod($newController);
     }
 
@@ -144,6 +147,16 @@ class FrontController
                 preg_match_all('#@(.*?)\n#s', $doc, $annotations);
 
                 foreach ($annotations[1] as $annotation) {
+                    $annotation = trim($annotation);
+                    
+                    if($annotation === "POST" && $this->input->hasGet(0)) {
+                        throw new \Exception("Cannot access Post method with Get request", 406);
+                    }
+
+                    if($annotation === "GET" && !$this->input->hasGet(0)) {
+                        throw new \Exception("Cannot access Get method with Post request", 406);
+                    }
+
                     foreach ($roles as $role) {
                         if ($role === $annotation) {
                             // TODO if user in role -> pass him

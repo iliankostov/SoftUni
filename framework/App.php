@@ -7,6 +7,7 @@ use Framework\Routers\IRouter;
 use Framework\Routers\JsonRPCRouter;
 use Framework\Sessions\ISession;
 use Framework\Sessions\NativeSession;
+use ReflectionClass;
 
 include_once 'Loader.php';
 
@@ -90,6 +91,8 @@ class App
             $this->setSession($s);
         }
 
+        $this->overrideRoutes();
+
         $this->_frontController->dispatch();
     }
 
@@ -137,7 +140,11 @@ class App
         if ($this->_config && $this->_config->app['displayExceptions'] == true) {
             var_dump($ex);
         } else {
-            $this->displayError($ex->getCode());
+            $error = $ex->getCode();
+            if($error == 0) {
+                $error = 404;
+            }
+            $this->displayError($error);
         }
     }
 
@@ -163,5 +170,98 @@ class App
         }
 
         return self::$_instance;
+    }
+
+    private function overrideRoutes()
+    {
+        $configRoute = $this->_config->getConfigFolder() . "routes.php";
+        $testFile = fopen($configRoute, "w") or die("Unable to open file!");
+        $startTag = "<?php\n";
+        fwrite($testFile, $startTag);
+
+        $namespaces = $this->getConfig()->app['namespaces'];
+        foreach ($namespaces as $namespace => $value) {
+            if(strpos($namespace, 'Controllers') || $namespace == 'Controllers') {
+                $files = scandir($value);
+                foreach ($files as $file) {
+                    if(strpos($file, '.php')) {
+                        $controllerName = str_replace('.php', '', $file);
+                        $controller = $namespace . '\\' . $controllerName;
+                        $reflectionController = new ReflectionClass(new $controller);
+                        $reflectionMethods = $reflectionController->getMethods();
+                        foreach ($reflectionMethods as $reflectionMethod) {
+                            $doc = $reflectionMethod->getDocComment();
+                            $annotations = array();
+                            preg_match_all('#@(.*?)\n#s', $doc, $annotations);
+                            foreach ($annotations[1] as $annotation) {
+                                if(substr($annotation, 0, 5) == 'Route') {
+
+                                    $newRoute = array();
+                                    preg_match('/"(.*?)"/', $annotation, $newRoute);
+
+                                    $params = explode("/", $newRoute[1]);
+                                    $params = array_values(array_filter($params));
+
+                                    if(count($params) > 2) {
+
+                                        $area = $params[0];
+
+                                        $oldControllerName = strtolower($controllerName);
+                                        $newControllerName = $params[1];
+
+                                        if($newControllerName !== $oldControllerName) {
+                                            $replaceController = "\$cnf['". $area ."']['controllers']['". $newControllerName ."']['to'] = '". $oldControllerName ."';\n";
+                                            fwrite($testFile, $replaceController);
+                                        }
+
+                                        $oldMethodName = $reflectionMethod->getName();
+                                        $newMethodName = $params[2];
+
+                                        $replaceMethod = "\$cnf['". $area ."']['controllers']['". $newControllerName ."']['methods']['" . $newMethodName . "'] = '" . $oldMethodName . "';\n";
+                                        fwrite($testFile, $replaceMethod);
+
+                                        if($oldMethodName !== $newMethodName) {
+                                            $replaceMethod = "\$cnf['". $area ."']['controllers']['". $oldControllerName ."']['methods']['" . $oldMethodName . "'] = '" . "notFound" . "';\n";
+                                            fwrite($testFile, $replaceMethod);
+                                        }
+
+                                    } else {
+                                        $oldControllerName = strtolower($controllerName);
+                                        $newControllerName = $params[0];
+
+                                        if($newControllerName !== $oldControllerName) {
+                                            $replaceController = "\$cnf['*']['controllers']['". $newControllerName ."']['to'] = '". $oldControllerName ."';\n";
+                                            fwrite($testFile, $replaceController);
+                                        }
+
+                                        $oldMethodName = $reflectionMethod->getName();
+                                        $newMethodName = $params[1];
+
+                                        $replaceMethod = "\$cnf['*']['controllers']['". $newControllerName ."']['methods']['" . $newMethodName . "'] = '" . $oldMethodName . "';\n";
+                                        fwrite($testFile, $replaceMethod);
+
+                                        if($oldMethodName !== $newMethodName) {
+                                            $replaceMethod = "\$cnf['*']['controllers']['". $oldControllerName ."']['methods']['" . $oldMethodName . "'] = '" . "notFound" . "';\n";
+                                            fwrite($testFile, $replaceMethod);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        $namespacesConfig = App::getInstance()->getConfig()->namespaces;
+        foreach ($namespacesConfig as $k => $v) {
+            $customNamespace = "\$cnf['". $k ."']['namespace'] = '". $v['namespace'] ."';\n";
+            fwrite($testFile, $customNamespace);
+        }
+
+        $returnCnf = "return \$cnf;";
+        fwrite($testFile, $returnCnf);
+
+        fclose($testFile);
     }
 }

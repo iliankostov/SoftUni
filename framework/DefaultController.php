@@ -32,8 +32,8 @@ abstract class DefaultController
         $this->input = InputData::getInstance();
     }
 
-    protected function jsonResponse()
+    public function notFound()
     {
-
+        throw new \Exception("Not Found", 404);
     }
 }

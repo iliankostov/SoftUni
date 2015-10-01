@@ -122,9 +122,8 @@ class Common
             509 => 'Bandwidth Limit Exceeded',
             510 => 'Not Extended'
         );
-        if (!$codes[$code]) {
+        if (!$codes[$code] || $code == 0) {
             $code = 500;
         }
-        header($_SERVER['SERVER_PROTOCOL'] . ' ' . $codes[$code], true, $code);
     }
 }

@@ -7,6 +7,9 @@ use Framework\View;
 
 class Index extends DefaultController
 {
+    /**
+     * @Route "/admin/test/opa"
+     */
     public function index()
     {
         $this->view->setViewDirectory("../areas/admin/views");
