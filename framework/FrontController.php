@@ -35,6 +35,33 @@ class FrontController
         $this->router = $router;
     }
 
+    public function getDefaultController()
+    {
+        $controller = App::getInstance()->getConfig()->app['default_controller'];
+        if ($controller) {
+            return strtolower($controller);
+        }
+        return 'index';
+    }
+
+    public function getDefaultMethod()
+    {
+        $method = App::getInstance()->getConfig()->app['default_method'];
+        if ($method) {
+            return strtolower($method);
+        }
+        return 'index';
+    }
+
+    public static function getInstance()
+    {
+        if (self::$_instance == null) {
+            self::$_instance = new FrontController();
+        }
+
+        return self::$_instance;
+    }
+
     public function dispatch()
     {
         if ($this->router == null) {
@@ -87,8 +114,6 @@ class FrontController
         if (is_array($configParams) && $configParams['controllers']) {
 
             if ($configParams['controllers'][$this->controller]['methods'][$this->method]) {
-
-
                 $this->method = strtolower($configParams['controllers'][$this->controller]['methods'][$this->method]);
             }
             if (isset($configParams['controllers'][$this->controller]['to'])) {
@@ -99,35 +124,7 @@ class FrontController
         $this->input->setPost($this->router->getPost());
         $controller = $this->namespace . '\\' . ucfirst($this->controller);
         $newController = new $controller();
-
         $this->loadMethod($newController);
-    }
-
-    public function getDefaultController()
-    {
-        $controller = App::getInstance()->getConfig()->app['default_controller'];
-        if ($controller) {
-            return strtolower($controller);
-        }
-        return 'index';
-    }
-
-    public function getDefaultMethod()
-    {
-        $method = App::getInstance()->getConfig()->app['default_method'];
-        if ($method) {
-            return strtolower($method);
-        }
-        return 'index';
-    }
-
-    public static function getInstance()
-    {
-        if (self::$_instance == null) {
-            self::$_instance = new FrontController();
-        }
-
-        return self::$_instance;
     }
 
     private function loadMethod($newController)
@@ -165,6 +162,7 @@ class FrontController
                     }
                 }
 
+                $this->BindModel($annotations[1]);
                 $isMethodExists = true;
             }
         }
@@ -173,6 +171,44 @@ class FrontController
             $newController->{$this->method}();
         } else {
             throw new \Exception("This action do not exists", 404);
+        }
+    }
+
+    private function BindModel($annotations)
+    {
+        $bindingNamespace = null;
+        $appConfig = App::getInstance()->getConfig()->app;
+        $namespaces = $appConfig['namespaces'];
+        foreach ($namespaces as $key => $value) {
+            if(strpos($key, "BindingModels")) {
+                $bindingNamespace = $key;
+            }
+        }
+
+        $bindingModelName = null;
+        foreach ($annotations as $annotation) {
+            $bindingAnnotation = explode(' ', $annotation);
+            if($bindingAnnotation[0] === 'BingingModel'){
+                $bindingModelName = $bindingAnnotation[1];
+            }
+        }
+
+
+        if($bindingNamespace && $bindingModelName) {
+            $bindingModelClass = $bindingNamespace . "\\" . $bindingModelName;
+            $reflectionModel = new ReflectionClass(new $bindingModelClass);
+            $properties = $reflectionModel->getProperties();
+            foreach ($properties as $propertie) {
+                $propertieName = $propertie->getName();
+                $propertieDoc = $propertie->getDocComment();
+
+                $annotations = array();
+                preg_match_all('#@(.*?)\n#s', $propertieDoc, $annotations);
+                if($annotations[1][0] === "REQUIRED") {
+                    //TODO get input data and chech
+                    var_dump($propertieName);
+                }
+            }
         }
     }
 }

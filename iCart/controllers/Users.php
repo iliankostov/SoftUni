@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Framework\DefaultController;
+use Models\BindingModels\UserBingingModel;
 
 class Users extends DefaultController
 {
@@ -31,9 +32,6 @@ class Users extends DefaultController
         $this->view->display('layouts.default', $data);
     }
 
-    /**
-     * @POST
-     */
     public function profile()
     {
         $data = array();
@@ -43,13 +41,8 @@ class Users extends DefaultController
         $this->view->display('layouts.default', $data);
     }
 
-    /**
-     * @Authorize
-     */
     public function logout()
     {
         header("Location: /");
     }
-
-
 }
