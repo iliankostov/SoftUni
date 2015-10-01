@@ -54,15 +54,12 @@ class InputData
         return $default;
     }
 
-    public function post($name, $normalize = null, $default = null)
+    public function post()
     {
-        if ($this->hasPost($name)) {
-            if ($normalize != null) {
-                return Common::normalize($this->_post[$name], $normalize);
-            }
-            return $this->_post[$name];
+        if (!$this->_post) {
+            throw new \Exception("Cannot access post input data", 500);
         }
-        return $default;
+        return $this->_post;
     }
 
     public function cookies($name, $normalize = null, $default = null)

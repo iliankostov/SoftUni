@@ -17,7 +17,7 @@
                 <div class="col-sm-6">
                     <h1><a href="/">iCart</a>
 
-                        <p class="lead"><?= $this->admin ?></p></h1>
+                        <p class="lead"><?= $this->data['admin'] ?></p></h1>
                 </div>
             </div>
         </div>

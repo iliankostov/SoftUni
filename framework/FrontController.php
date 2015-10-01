@@ -136,6 +136,7 @@ class FrontController
 
         $roles = App::getInstance()->getInstance()->getConfig()->roles;
 
+        $bindingModel = null;
         foreach ($reflectionMethods as $reflectionMethod) {
             if ($this->method === $reflectionMethod->getName()) {
                 $doc = $reflectionMethod->getDocComment();
@@ -145,12 +146,12 @@ class FrontController
 
                 foreach ($annotations[1] as $annotation) {
                     $annotation = trim($annotation);
-                    
-                    if($annotation === "POST" && $this->input->hasGet(0)) {
+
+                    if ($annotation === "POST" && $this->input->hasGet(0)) {
                         throw new \Exception("Cannot access Post method with Get request", 406);
                     }
 
-                    if($annotation === "GET" && !$this->input->hasGet(0)) {
+                    if ($annotation === "GET" && !$this->input->hasGet(0)) {
                         throw new \Exception("Cannot access Get method with Post request", 406);
                     }
 
@@ -162,13 +163,18 @@ class FrontController
                     }
                 }
 
-                $this->BindModel($annotations[1]);
+                $bindingModel = $this->BindModel($annotations[1]);
                 $isMethodExists = true;
             }
         }
 
         if ($isMethodExists) {
-            $newController->{$this->method}();
+            if ($bindingModel) {
+                $newController->{$this->method}($bindingModel);
+            } else {
+                $newController->{$this->method}();
+            }
+
         } else {
             throw new \Exception("This action do not exists", 404);
         }
@@ -180,7 +186,7 @@ class FrontController
         $appConfig = App::getInstance()->getConfig()->app;
         $namespaces = $appConfig['namespaces'];
         foreach ($namespaces as $key => $value) {
-            if(strpos($key, "BindingModels")) {
+            if (strpos($key, "BindingModels")) {
                 $bindingNamespace = $key;
             }
         }
@@ -188,27 +194,37 @@ class FrontController
         $bindingModelName = null;
         foreach ($annotations as $annotation) {
             $bindingAnnotation = explode(' ', $annotation);
-            if($bindingAnnotation[0] === 'BingingModel'){
+            if ($bindingAnnotation[0] === 'BingingModel') {
                 $bindingModelName = $bindingAnnotation[1];
             }
         }
 
-
-        if($bindingNamespace && $bindingModelName) {
+        $bindingModel = null;
+        if ($bindingNamespace && $bindingModelName) {
             $bindingModelClass = $bindingNamespace . "\\" . $bindingModelName;
-            $reflectionModel = new ReflectionClass(new $bindingModelClass);
+            $bindingModel = new $bindingModelClass;
+            $reflectionModel = new ReflectionClass($bindingModel);
             $properties = $reflectionModel->getProperties();
-            foreach ($properties as $propertie) {
-                $propertieName = $propertie->getName();
-                $propertieDoc = $propertie->getDocComment();
+
+            $post = $this->input->post();
+            foreach ($properties as $property) {
+                $propertyName = $property->getName();
+                $propertyDoc = $property->getDocComment();
 
                 $annotations = array();
-                preg_match_all('#@(.*?)\n#s', $propertieDoc, $annotations);
-                if($annotations[1][0] === "REQUIRED") {
-                    //TODO get input data and chech
-                    var_dump($propertieName);
+                preg_match_all('#@(.*?)\n#s', $propertyDoc, $annotations);
+                $set = 'set' . $propertyName;
+
+                if ($annotations[1][0] === "REQUIRED" && array_key_exists($propertyName, $post)) {
+                    $bindingModel->$set($post[$propertyName]);
+                } else if (array_key_exists($propertyName, $post)) {
+                    $bindingModel->$set($post[$propertyName]);
+                } else {
+                    throw new \Exception("Invalid input data");
                 }
             }
         }
+
+        return $bindingModel;
     }
 }
