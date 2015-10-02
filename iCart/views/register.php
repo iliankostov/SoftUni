@@ -4,7 +4,7 @@
 
             <?=
             Framework\ViewHelpers\FormViewHelper::init()
-                ->setAction("")
+                ->setAction("/users/postregister")
                 ->setMethod("post")
                 ->setClasses("form col-lg-12 center-block")
                 ->initTextField()

@@ -39,7 +39,7 @@ CREATE TABLE `products` (
   name        VARCHAR(255),
   model       VARCHAR(255),
   price       DECIMAL(18, 9),
-  quantity   INT,
+  quantity    INT,
   category_id INT,
   FOREIGN KEY (category_id) REFERENCES categories (id)
     ON DELETE CASCADE
@@ -49,7 +49,6 @@ CREATE TABLE `users_products` (
   id         INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_id    INT,
   product_id INT,
-  if_cart    BIT,
   FOREIGN KEY (user_id) REFERENCES users (id)
     ON DELETE CASCADE,
   FOREIGN KEY (product_id) REFERENCES products (id)
@@ -61,6 +60,18 @@ CREATE TABLE `available_products` (
   user_id    INT,
   product_id INT,
   discount   INT,
+  FOREIGN KEY (user_id) REFERENCES users (id)
+    ON DELETE CASCADE,
+  FOREIGN KEY (product_id) REFERENCES products (id)
+    ON DELETE CASCADE
+);
+
+CREATE TABLE `user_cart_products` (
+  id         INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id    INT,
+  product_id INT,
+  totalprice INT,
+  quantiry   INT,
   FOREIGN KEY (user_id) REFERENCES users (id)
     ON DELETE CASCADE,
   FOREIGN KEY (product_id) REFERENCES products (id)

@@ -6,7 +6,6 @@ use Framework\DefaultController;
 use Models\BindingModels\RegisterUserBingingModel;
 use Models\Repositories\UsersData;
 use Models\User;
-use Models\ViewModels\UserViewModel;
 
 class Users extends DefaultController
 {
@@ -32,6 +31,23 @@ class Users extends DefaultController
         $this->view->display('layouts.default');
     }
 
+    public function login()
+    {
+        $this->view->appendToLayout('main', 'login');
+        $this->view->display('layouts.default');
+    }
+
+    public function profile()
+    {
+        $this->view->appendToLayout('main', 'profile');
+        $this->view->display('layouts.default');
+    }
+
+    public function logout()
+    {
+        header("Location: /");
+    }
+
     /**
      * @BingingModel RegisterUserBingingModel
      */
@@ -46,31 +62,6 @@ class Users extends DefaultController
             $this->data->register($user);
         }
 
-        $this->view->appendToLayout('main', 'register');
-        $this->view->display('layouts.default');
-    }
-
-    /**
-     * @BingingModel LoginUserBingingModel
-     */
-    public function login($userBindingModel)
-    {
-        if($userBindingModel) {
-            //TODO login user
-        }
-
-        $this->view->appendToLayout('main', 'login');
-        $this->view->display('layouts.default', new UserViewModel());
-    }
-
-    public function profile()
-    {
-        $this->view->appendToLayout('main', 'profile');
-        $this->view->display('layouts.default');
-    }
-
-    public function logout()
-    {
-        header("Location: /");
+        header("Location: /users/login");
     }
 }
