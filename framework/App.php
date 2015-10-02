@@ -22,7 +22,7 @@ class App
 
     private function __construct()
     {
-        //set_exception_handler(array($this, '_exceptionHandler'));
+        set_exception_handler(array($this, '_exceptionHandler'));
         Loader::registerNamespace('Framework', dirname(__FILE__) . DIRECTORY_SEPARATOR);
         Loader::registerAutoLoad();
         $this->_config = Config::getInstance();
@@ -140,11 +140,8 @@ class App
         if ($this->_config && $this->_config->app['displayExceptions'] == true) {
             var_dump($ex);
         } else {
-            $error = $ex->getCode();
-            if($error == 0) {
-                $error = 404;
-            }
-            $this->displayError($error);
+
+            $this->displayError($ex);
         }
     }
 
@@ -152,10 +149,12 @@ class App
     {
         try {
             $view = View::getInstance();
-            $view->display('errors.' . $error);
+            $view->appendToLayout('error', 'error');
+            $view->display('layout.default', $error);
         } catch (\Exception $ex) {
-            Common::headerStatus($error);
-            echo '<h1>' . $error . '</h1>';
+            $view = View::getInstance();
+            $view->appendToLayout('error', 'error');
+            $view->display('layout.default', $error);
             exit;
         }
     }

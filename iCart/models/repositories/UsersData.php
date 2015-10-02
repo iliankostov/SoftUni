@@ -20,6 +20,10 @@ class UsersData extends DefaultData
         var_dump($response);
     }
 
+    public function login($user){
+
+    }
+
     public function exists($user)
     {
         $response = $this->db

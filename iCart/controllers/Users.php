@@ -3,6 +3,7 @@
 namespace Controllers;
 
 use Framework\DefaultController;
+use Models\BindingModels\LoginUserBingingModel;
 use Models\BindingModels\RegisterUserBingingModel;
 use Models\Repositories\UsersData;
 use Models\User;
@@ -25,7 +26,7 @@ class Users extends DefaultController
         header("Location: /users/profile");
     }
 
-    public function register()
+    public function register($error = null)
     {
         $this->view->appendToLayout('main', 'register');
         $this->view->display('layouts.default');
@@ -60,6 +61,23 @@ class Users extends DefaultController
             $user->setCash(10000);
 
             $this->data->register($user);
+        }
+
+        $this->register("dfgfh");
+    }
+
+    /**
+     * @BingingModel LoginUserBingingModel
+     */
+    public function postlogin(LoginUserBingingModel $userBindingModel)
+    {
+        if($userBindingModel) {
+            $user = new User();
+            $user->setUsername($userBindingModel->getUsername());
+            $user->setPassword($userBindingModel->getPassword());
+            $user->setCash(10000);
+
+            $this->data->login($user);
         }
 
         header("Location: /users/login");

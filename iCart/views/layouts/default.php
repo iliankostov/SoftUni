@@ -58,6 +58,7 @@
     <!--/.navbar -->
 
     <?= $this->getLayoutData('main'); ?>
+    <?= $this->getLayoutData('error'); ?>
 </div>
 <!--/wrap-->
 
