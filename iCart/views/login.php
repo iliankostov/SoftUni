@@ -1,3 +1,4 @@
+<?php /** @var Models\ViewModels\UserViewModel */ ?>
 <section class="bg-3">
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
@@ -7,10 +8,10 @@
                 ->setAction("")
                 ->setMethod("post")
                 ->setClasses("form col-lg-12 center-block")
-                ->initEmailField()
-                ->setName("email")
+                ->initTextField()
+                ->setName("username")
                 ->setClasses("form-group form-control input-lg")
-                ->setAttribute("placeholder", "Email")
+                ->setAttribute("placeholder", "Username")
                 ->create()
                 ->initPasswordField()
                 ->setName("password")

@@ -2,20 +2,15 @@
 
 namespace Models\BindingModels;
 
-class UserBingingModel
+class LoginUserBingingModel
 {
     /**
-     * @REQUIRED
+     * @Required
      */
     private $username;
 
     /**
-     * @REQUIRED
-     */
-    private $email;
-
-    /**
-     * @REQUIRED
+     * @Required
      */
     private $password;
 
@@ -27,16 +22,6 @@ class UserBingingModel
     public function setUsername($username)
     {
         $this->username = $username;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function setEmail($email)
-    {
-        $this->email = $email;
     }
 
     public function getPassword()

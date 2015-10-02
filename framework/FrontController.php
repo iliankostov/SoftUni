@@ -147,11 +147,11 @@ class FrontController
                 foreach ($annotations[1] as $annotation) {
                     $annotation = trim($annotation);
 
-                    if ($annotation === "POST" && $this->input->hasGet(0)) {
+                    if ($annotation === "POST" && $this->input->hasGet()) {
                         throw new \Exception("Cannot access Post method with Get request", 406);
                     }
 
-                    if ($annotation === "GET" && !$this->input->hasGet(0)) {
+                    if ($annotation === "GET" && $this->input->hasPost()) {
                         throw new \Exception("Cannot access Get method with Post request", 406);
                     }
 
@@ -163,7 +163,10 @@ class FrontController
                     }
                 }
 
-                $bindingModel = $this->BindModel($annotations[1]);
+                if($this->input->hasPost()) {
+                    $bindingModel = $this->BindModel($annotations[1]);
+                }
+
                 $isMethodExists = true;
             }
         }
@@ -200,6 +203,7 @@ class FrontController
         }
 
         $bindingModel = null;
+
         if ($bindingNamespace && $bindingModelName) {
             $bindingModelClass = $bindingNamespace . "\\" . $bindingModelName;
             $bindingModel = new $bindingModelClass;
@@ -215,12 +219,14 @@ class FrontController
                 preg_match_all('#@(.*?)\n#s', $propertyDoc, $annotations);
                 $set = 'set' . $propertyName;
 
-                if ($annotations[1][0] === "REQUIRED" && array_key_exists($propertyName, $post)) {
-                    $bindingModel->$set($post[$propertyName]);
-                } else if (array_key_exists($propertyName, $post)) {
+                if ($annotations[1][0] === "Required" && !$post[$propertyName]) {
+                    throw new \Exception("Field " . $propertyName . " is required");
+                }
+
+                if (array_key_exists($propertyName, $post)) {
                     $bindingModel->$set($post[$propertyName]);
                 } else {
-                    throw new \Exception("Invalid input data");
+                    throw new \Exception("Field " . $propertyName . " is not accepted");
                 }
             }
         }

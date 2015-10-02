@@ -28,14 +28,14 @@ class InputData
         }
     }
 
-    public function hasGet($id)
+    public function hasGet()
     {
-        return array_key_exists($id, $this->_get);
+        return count($this->_get) > 0;
     }
 
-    public function hasPost($name)
+    public function hasPost()
     {
-        return array_key_exists($name, $this->_post);
+        return count($this->_post) > 0;
     }
 
     public function hasCookies($name)
@@ -43,22 +43,13 @@ class InputData
         return array_key_exists($name, $this->_cookies);
     }
 
-    public function get($id, $normalize = null, $default = null)
+    public function get()
     {
-        if ($this->hasGet($id)) {
-            if ($normalize != null) {
-                return Common::normalize($this->_get[$id], $normalize);
-            }
-            return $this->_get[$id];
-        }
-        return $default;
+        return $this->_get;
     }
 
     public function post()
     {
-        if (!$this->_post) {
-            throw new \Exception("Cannot access post input data", 500);
-        }
         return $this->_post;
     }
 
