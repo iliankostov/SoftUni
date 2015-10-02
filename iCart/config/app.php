@@ -19,4 +19,7 @@ $cnf['session']['path'] = '/';
 $cnf['session']['domain'] = '';
 $cnf['session']['secure'] = false;
 
+$cnf['default_role'] = 3;
+$cnf['default_cash'] = 10000;
+
 return $cnf;

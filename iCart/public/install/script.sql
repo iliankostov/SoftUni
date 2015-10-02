@@ -16,7 +16,7 @@ VALUES ('admin'), ('editor'), ('user');
 
 CREATE TABLE `users` (
   id       INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(255),
+  username VARCHAR(255) UNIQUE,
   password VARCHAR(255),
   role_id  INT,
   cash     DECIMAL(18, 9),

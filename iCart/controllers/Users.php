@@ -23,10 +23,11 @@ class Users extends DefaultController
 
     public function index()
     {
+
         header("Location: /users/profile");
     }
 
-    public function register($error = null)
+    public function register()
     {
         $this->view->appendToLayout('main', 'register');
         $this->view->display('layouts.default');
@@ -40,17 +41,20 @@ class Users extends DefaultController
 
     public function profile()
     {
+        $user = $this->data->getUser($this->session->userid);
+
         $this->view->appendToLayout('main', 'profile');
         $this->view->display('layouts.default');
     }
 
     public function logout()
     {
+        $this->session->destroySession();
         header("Location: /");
     }
 
     /**
-     * @BingingModel RegisterUserBingingModel
+     * @BindingModel RegisterUserBingingModel
      */
     public function postregister(RegisterUserBingingModel $userBindingModel)
     {
@@ -58,16 +62,21 @@ class Users extends DefaultController
             $user = new User();
             $user->setUsername($userBindingModel->getUsername());
             $user->setPassword($userBindingModel->getPassword());
-            $user->setCash(10000);
+            $user->setRoleId($this->app->getConfig()->app['default_role']);
+            $user->setCash($this->app->getConfig()->app['default_cash']);
 
-            $this->data->register($user);
+            $response = $this->data->register($user);
+
+            if($response) {
+                header("Location: /users/login");
+            } else {
+                throw new \Exception("Cannot register user");
+            }
         }
-
-        $this->register("dfgfh");
     }
 
     /**
-     * @BingingModel LoginUserBingingModel
+     * @BindingModel LoginUserBingingModel
      */
     public function postlogin(LoginUserBingingModel $userBindingModel)
     {
@@ -75,11 +84,15 @@ class Users extends DefaultController
             $user = new User();
             $user->setUsername($userBindingModel->getUsername());
             $user->setPassword($userBindingModel->getPassword());
-            $user->setCash(10000);
 
-            $this->data->login($user);
+            $response = $this->data->login($user);
+
+            if($response) {
+                $this->session->userid = $response;
+                header("Location: /users/profile");
+            } else {
+                throw new \Exception("Cannot login user");
+            }
         }
-
-        header("Location: /users/login");
     }
 }

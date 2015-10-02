@@ -53,15 +53,9 @@ class InputData
         return $this->_post;
     }
 
-    public function cookies($name, $normalize = null, $default = null)
+    public function cookies()
     {
-        if ($this->hasCookies($name)) {
-            if ($normalize != null) {
-                return Common::normalize($this->_cookies[$name], $normalize);
-            }
-            return $this->_cookies[$name];
-        }
-        return $default;
+        return $this->_cookies;
     }
 
     public static function getInstance()

@@ -145,16 +145,21 @@ class App
         }
     }
 
-    public function displayError($error)
+    public function displayError($ex)
     {
+        $code = $ex->getCode();
+        if($code == 0) {
+            $code = 500;
+        }
+
+        $message = array("error" => $ex->getMessage());
+
         try {
             $view = View::getInstance();
-            $view->appendToLayout('error', 'error');
-            $view->display('layout.default', $error);
-        } catch (\Exception $ex) {
-            $view = View::getInstance();
-            $view->appendToLayout('error', 'error');
-            $view->display('layout.default', $error);
+            $view->display('layouts.default', $message);
+        } catch (\Exception $e) {
+            Common::headerStatus($code);
+            echo "<h1>" . $code . " " . $message . "</h1>";
             exit;
         }
     }

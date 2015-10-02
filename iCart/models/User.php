@@ -7,6 +7,23 @@ class User
     private $id;
     private $username;
     private $password;
+    private $role_id;
+
+    /**
+     * @return mixed
+     */
+    public function getRoleId()
+    {
+        return $this->role_id;
+    }
+
+    /**
+     * @param mixed $role_id
+     */
+    public function setRoleId($role_id)
+    {
+        $this->role_id = $role_id;
+    }
     private $cash;
 
     public function __construct()

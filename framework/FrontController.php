@@ -197,7 +197,7 @@ class FrontController
         $bindingModelName = null;
         foreach ($annotations as $annotation) {
             $bindingAnnotation = explode(' ', $annotation);
-            if ($bindingAnnotation[0] === 'BingingModel') {
+            if ($bindingAnnotation[0] === 'BindingModel') {
                 $bindingModelName = $bindingAnnotation[1];
             }
         }
