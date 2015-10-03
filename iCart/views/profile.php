@@ -50,6 +50,7 @@
                         </ul>
                     </li>
                     <li><a href="/users/profile">Profile</a></li>
+                    <li><a href="/users/cart">Cart</a></li>
                     <li><a href="/users/logout">Logout</a></li>
                 </ul>
             </div>

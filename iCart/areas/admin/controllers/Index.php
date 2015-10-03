@@ -34,6 +34,7 @@ class Index extends DefaultController
 
     public function logout()
     {
+        $this->session->destroySession();
         header("Location: /admin/");
     }
 

@@ -22,12 +22,18 @@ class Users extends DefaultController
         $this->data = UsersData::getInstance();
     }
 
+    /**
+     * @GET
+     */
     public function index()
     {
         header("Location: /");
         $this->session->token = uniqid();
     }
 
+    /**
+     * @GET
+     */
     public function register()
     {
         $this->session->token = uniqid();
@@ -42,6 +48,9 @@ class Users extends DefaultController
         $this->view->display('layouts.default', $data);
     }
 
+    /**
+     * @GET
+     */
     public function login()
     {
         $this->session->token = uniqid();
@@ -56,6 +65,9 @@ class Users extends DefaultController
         $this->view->display('layouts.default', $data);
     }
 
+    /**
+     * @GET
+     */
     public function profile()
     {
         $this->session->token = uniqid();
@@ -71,6 +83,26 @@ class Users extends DefaultController
         $this->view->display('profile', $userView);
     }
 
+    /**
+     * @GET
+     */
+    public function cart()
+    {
+        $this->session->token = uniqid();
+
+        if(!$this->isLogged()) {
+            header("Location: /users/profile");
+        }
+
+        $data["isLogged"] = $this->isLogged();
+
+        $this->view->appendToLayout('main', 'cart');
+        $this->view->display('layouts.default', $data);
+    }
+
+    /**
+     * @GET
+     */
     public function logout()
     {
         $this->session->token = uniqid();
@@ -85,6 +117,7 @@ class Users extends DefaultController
     }
 
     /**
+     * @POST
      * @BindingModel RegisterUserBingingModel
      */
     public function postregister(RegisterUserBingingModel $userBindingModel)
@@ -108,6 +141,7 @@ class Users extends DefaultController
     }
 
     /**
+     * @POST
      * @BindingModel LoginUserBingingModel
      */
     public function postlogin(LoginUserBingingModel $userBindingModel)
@@ -130,6 +164,7 @@ class Users extends DefaultController
     }
 
     /**
+     * @POST
      * @BindingModel UpdateUserBingingModel
      */
     public function update(UpdateUserBingingModel $userBindingModel)
