@@ -2,11 +2,30 @@
 
 namespace Models\ViewModels;
 
+use Framework\Common;
+
 class UserViewModel
 {
     private $username;
     private $role_id;
     private $cash;
+    private $data = [];
+
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param array $data
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
+    }
 
     /**
      * @return mixed
@@ -40,8 +59,12 @@ class UserViewModel
         $this->cash = $cash;
     }
 
-    public function getUsername()
+    public function getUsername($xss = true)
     {
+        if($xss) {
+            $this->username = htmlspecialchars($this->username);
+        }
+
         return $this->username;
     }
 

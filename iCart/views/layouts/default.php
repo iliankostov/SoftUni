@@ -18,12 +18,12 @@
                     <h1><a href="/">iCart</a>
 
                         <p class="lead">osCommerce</p></h1>
+
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Fixed navbar -->
     <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
         <div class="container">
             <div class="navbar-header">
@@ -47,18 +47,22 @@
                             <li><a href="/">Accessoaries</a></li>
                         </ul>
                     </li>
-                    <li><a href="/users/login">Login</a></li>
-                    <li><a href="/users/register">Register</a></li>
+                    <?php if (!$this->data['isLogged']) : ?>
+                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/users/register">Register</a></li>
+                    <?php endif ?>
+                    <?php if ($this->data['isLogged']) : ?>
+                        <li><a href="/users/profile">Profile</a></li>
+                        <li><a href="/users/logout">Logout</a></li>
+                    <?php endif ?>
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
         <!--/.container -->
     </div>
-    <!--/.navbar -->
 
     <?= $this->getLayoutData('main'); ?>
-    <div class="error"><?= $this->error; ?></div>
 </div>
 <!--/wrap-->
 

@@ -18,6 +18,9 @@ class App
     private $_frontController = null;
     private $router = null;
     private $_dbConnections = array();
+    /**
+     * @var ISession
+     */
     private $_session = null;
 
     private function __construct()
@@ -152,14 +155,14 @@ class App
             $code = 500;
         }
 
-        $message = array("error" => $ex->getMessage());
+        $message = array("error" => $ex->getMessage(), "isLogged" => $this->_session->userid);
 
         try {
             $view = View::getInstance();
-            $view->display('layouts.default', $message);
+            $view->display('errors.error', $message);
         } catch (\Exception $e) {
             Common::headerStatus($code);
-            echo "<h1>" . $code . " " . $message . "</h1>";
+            echo "<h1>" . $code . " " . $message['error'] . "</h1>";
             exit;
         }
     }

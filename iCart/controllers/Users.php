@@ -5,6 +5,7 @@ namespace Controllers;
 use Framework\DefaultController;
 use Models\BindingModels\LoginUserBingingModel;
 use Models\BindingModels\RegisterUserBingingModel;
+use Models\BindingModels\UpdateUserBingingModel;
 use Models\Repositories\UsersData;
 use Models\User;
 
@@ -23,33 +24,55 @@ class Users extends DefaultController
 
     public function index()
     {
-
-        header("Location: /users/profile");
+        header("Location: /");
     }
 
     public function register()
     {
+        if($this->isLogged()) {
+            header("Location: /users/profile");
+        }
+
+        $data["isLogged"] = $this->isLogged();
+
         $this->view->appendToLayout('main', 'register');
-        $this->view->display('layouts.default');
+        $this->view->display('layouts.default', $data);
     }
 
     public function login()
     {
+        if($this->isLogged()) {
+            header("Location: /users/profile");
+        }
+
+        $data["isLogged"] = $this->isLogged();
+
         $this->view->appendToLayout('main', 'login');
-        $this->view->display('layouts.default');
+        $this->view->display('layouts.default', $data);
     }
 
     public function profile()
     {
-        $user = $this->data->getUser($this->session->userid);
+        if(!$this->isLogged()) {
+            header("Location: /users/login");
+        }
+
+        $userView = $this->data->getUser($this->session->userid);
 
         $this->view->appendToLayout('main', 'profile');
-        $this->view->display('layouts.default');
+        $this->view->display('profile', $userView);
     }
 
     public function logout()
     {
+        if(!$this->isLogged()) {
+            var_dump(1);
+            header("Location: /users/login");
+            exit;
+        }
+
         $this->session->destroySession();
+
         header("Location: /");
     }
 
@@ -85,13 +108,34 @@ class Users extends DefaultController
             $user->setUsername($userBindingModel->getUsername());
             $user->setPassword($userBindingModel->getPassword());
 
-            $response = $this->data->login($user);
+            $userId = $this->data->login($user);
 
-            if($response) {
-                $this->session->userid = $response;
+            if($userId) {
+                $this->session->userid = $userId;
                 header("Location: /users/profile");
             } else {
                 throw new \Exception("Cannot login user");
+            }
+        }
+    }
+
+    /**
+     * @BindingModel UpdateUserBingingModel
+     */
+    public function update(UpdateUserBingingModel $userBindingModel)
+    {
+        if($userBindingModel) {
+            $user = new User();
+            $user->setId($this->session->userid);
+            $user->setPassword($userBindingModel->getNewPassword());
+            $user->setCash($userBindingModel->getCash());
+
+            $response = $this->data->update($user, $userBindingModel->getOldPassword());
+
+            if($response) {
+                header("Location: /users/profile");
+            } else {
+                throw new \Exception("Cannot update user");
             }
         }
     }

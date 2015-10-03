@@ -41,6 +41,10 @@ abstract class DefaultController
         $this->session = new NativeSession("session");
     }
 
+    public function isLogged(){
+        return $this->session->userid;
+    }
+
     public function notFound()
     {
         throw new \Exception("Not Found", 404);

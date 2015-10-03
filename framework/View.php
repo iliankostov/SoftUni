@@ -37,7 +37,12 @@ class View
 
     public function display($name, $data = array())
     {
-        $viewModel = get_class($data);
+        if(!is_array($data)){
+            $viewModel = get_class($data);
+        }else{
+            $viewModel = null;
+        }
+
         $this->data = $data;
 
         if (count($this->layoutParts) > 0) {

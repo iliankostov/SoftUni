@@ -17,13 +17,13 @@
                 <div class="col-sm-6">
                     <h1><a href="/">iCart</a>
 
-                        <p class="lead">Administration</p></h1>
-
+                        <p class="lead">osCommerce</p></h1>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Fixed navbar -->
     <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
         <div class="container">
             <div class="navbar-header">
@@ -35,21 +35,16 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav nav-justified">
-                    <?php if (!$this->data['isLogged']) : ?>
-                        <li><a href="/admin">Login</a></li>
-                    <?php endif ?>
-                    <?php if ($this->data['isLogged']) : ?>
-                        <li><a href="/admin/index/home">Profile</a></li>
-                        <li><a href="/admin/index/logout">Logout</a></li>
-                    <?php endif ?>
+                    <li><a href="/">Home</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
         <!--/.container -->
     </div>
+    <!--/.navbar -->
 
-    <?= $this->getLayoutData('admin'); ?>
+    <div class="error"><?= $this->data['error'] ?></div>
 </div>
 <!--/wrap-->
 

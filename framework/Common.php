@@ -58,8 +58,5 @@ class Common
             509 => 'Bandwidth Limit Exceeded',
             510 => 'Not Extended'
         );
-        if (!$codes[$code]) {
-            $code = 500;
-        }
     }
 }

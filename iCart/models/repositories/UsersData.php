@@ -2,7 +2,6 @@
 
 namespace Models\Repositories;
 
-use Framework\Sessions\NativeSession;
 use Models\User;
 use Models\ViewModels\UserViewModel;
 
@@ -18,7 +17,11 @@ class UsersData extends DefaultData
             ->fetchRowAssoc();
 
         $userView = new UserViewModel();
-        $userView->se;
+        $userView->setUsername($response['username']);
+        $userView->setRoleId($response['role_id']);
+        $userView->setCash($response['cash']);
+
+        return $userView;
     }
 
     public function register(User $user)
@@ -50,11 +53,35 @@ class UsersData extends DefaultData
         return false;
     }
 
-    public function exists($user)
+    public function exists(User $user)
     {
         $response = $this->db
             ->prepare("SELECT username FROM users WHERE username = ?")
             ->execute([$user->getUsername()]);
+
+        return $response->getAffectedRows() > 0;
+    }
+
+    public function update(User $user, $oldPassword)
+    {
+        $currentUser = $this->db
+            ->prepare("SELECT username, password FROM users WHERE id = ?")
+            ->execute([$user->getId()])
+            ->fetchRowAssoc();
+
+        if(!password_verify($oldPassword, $currentUser['password'])) {
+            throw new \Exception("Invalid password");
+        }
+
+        $password = password_hash($user->getPassword(), PASSWORD_DEFAULT);
+
+        $response = $this->db
+            ->prepare("UPDATE users SET password = ?, cash = ?  WHERE id = ?")
+            ->execute([
+                $password,
+                $user->getCash(),
+                $user->getId()
+            ]);
 
         return $response->getAffectedRows() > 0;
     }
