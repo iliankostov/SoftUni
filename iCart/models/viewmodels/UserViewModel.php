@@ -2,8 +2,6 @@
 
 namespace Models\ViewModels;
 
-use Framework\Common;
-
 class UserViewModel
 {
     private $username;

@@ -1,7 +1,7 @@
 <div class="continer bg-4">
     <div class="row">
 
-        <?php foreach ($this->data['cart'] as $product) : ?>
+        <?php foreach ($this->data['products'] as $product) : ?>
 
             <div class="col-lg-4 col-sm-6">
                 <div class="panel panel-default">
@@ -14,19 +14,25 @@
 
                             <p>Model: <?= $product['model'] ?></p>
 
+                            <p>Quantity: <?= $product['quantity'] ?></p>
+
                             <p>Price: <?= number_format($product['price'], 2) ?></p>
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                        <?php if($this->data['isLogged']) : ?>
+                        <p>
+                            <div class="btn btn-default text-center">Add to Cart</div>
+                        </p>
+                    <?php endif ?>
+                    </div>
+
                 </div>
                 <!--/panel-->
             </div>
             <!--/col-->
 
         <?php endforeach ?>
-
-        <div class="divider"></div>
-
-        <!-- TODO checkout button with products -->
 
     </div>
     <!--/row-->

@@ -2,24 +2,16 @@
 
 namespace Controllers;
 
-use Framework\DefaultController;
 use Models\BindingModels\LoginUserBingingModel;
 use Models\BindingModels\RegisterUserBingingModel;
 use Models\BindingModels\UpdateUserBingingModel;
-use Models\Repositories\UsersData;
 use Models\User;
 
-class Users extends DefaultController
+class Users extends Base
 {
-    /**
-     * @var UsersData
-     */
-    private $data;
-
     public function __construct()
     {
         parent::__construct();
-        $this->data = UsersData::getInstance();
     }
 
     /**
@@ -43,6 +35,7 @@ class Users extends DefaultController
         }
 
         $data["isLogged"] = $this->isLogged();
+        $data["categories"] = $this->shopData->loadCategories();
 
         $this->view->appendToLayout('main', 'register');
         $this->view->display('layouts.default', $data);
@@ -60,6 +53,7 @@ class Users extends DefaultController
         }
 
         $data["isLogged"] = $this->isLogged();
+        $data["categories"] = $this->shopData->loadCategories();
 
         $this->view->appendToLayout('main', 'login');
         $this->view->display('layouts.default', $data);
@@ -76,8 +70,9 @@ class Users extends DefaultController
             header("Location: /users/login");
         }
 
-        $userView = $this->data->getUser($this->session->userid);
+        $userView = $this->userData->getUser($this->session->userid);
         $userView->setToken($this->session->token);
+        $userView->setData($this->shopData->loadCategories());
 
         $this->view->appendToLayout('main', 'profile');
         $this->view->display('profile', $userView);
@@ -96,6 +91,8 @@ class Users extends DefaultController
         }
 
         $data["isLogged"] = $this->isLogged();
+        $data["categories"] = $this->shopData->loadCategories();
+        $data["cart"] = $this->shopData->loadCart($this->session->userid);
 
         $this->view->appendToLayout('main', 'cart');
         $this->view->display('layouts.default', $data);
@@ -132,7 +129,7 @@ class Users extends DefaultController
             $user->setRoleId($this->app->getConfig()->app['default_role']);
             $user->setCash($this->app->getConfig()->app['default_cash']);
 
-            $response = $this->data->register($user);
+            $response = $this->userData->register($user);
 
             if($response) {
                 header("Location: /users/login");
@@ -154,7 +151,7 @@ class Users extends DefaultController
             $user->setUsername($userBindingModel->getUsername());
             $user->setPassword($userBindingModel->getPassword());
 
-            $userId = $this->data->login($user);
+            $userId = $this->userData->login($user);
 
             if($userId) {
                 $this->session->userid = $userId;
@@ -181,7 +178,7 @@ class Users extends DefaultController
             $user->setPassword($userBindingModel->getNewPassword());
             $user->setCash($userBindingModel->getCash());
 
-            $response = $this->data->update($user, $userBindingModel->getOldPassword());
+            $response = $this->userData->update($user, $userBindingModel->getOldPassword());
 
             if($response) {
                 header("Location: /users/profile");

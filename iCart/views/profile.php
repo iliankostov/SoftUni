@@ -16,10 +16,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1><a href="/">iCart</a>
+                    <h1>
+                        <?php if ($this->data->getData()['isLogged']) : ?>
+                            <a href="/">iCart</a>
+                        <?php endif ?>
+                        <?php if (!$this->data->getData()['isLogged']) : ?>
+                            <a href="/users/cart">iCart</a>
+                        <?php endif ?>
 
                         <p class="lead">osCommerce</p></h1>
-
                 </div>
             </div>
         </div>
@@ -42,11 +47,11 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/">Laptops</a></li>
-                            <li><a href="/">Notebooks</a></li>
-                            <li><a href="/">Tablets</a></li>
-                            <li><a href="/">Smartphones</a></li>
-                            <li><a href="/">Accessoaries</a></li>
+                            <?php foreach ($this->data->getData() as $category) : ?>
+
+                                <li><a href="/products/category/<?= $category['name']?>"><?= $category['name'] ?></a></li>
+
+                            <?php endforeach ?>
                         </ul>
                     </li>
                     <li><a href="/users/profile">Profile</a></li>
