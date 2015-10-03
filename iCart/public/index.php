@@ -8,4 +8,3 @@ include '../../framework/App.php';
 
 $app = App::getInstance();
 $app->run();
-

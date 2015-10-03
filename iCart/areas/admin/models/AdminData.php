@@ -41,9 +41,18 @@ class AdminData
     {
         $categories = $this->db
             ->prepare("SELECT * FROM categories")
-            ->execute([]);
+            ->execute([])
+            ->fetchAllAssoc();
 
-        return $categories;
+        $products = $this->db
+            ->prepare("SELECT * FROM products")
+            ->execute([])
+            ->fetchAllAssoc();
+
+        $data['categories'] = $categories;
+        $data['products'] = $products;
+
+        return $data;
     }
 
     /**

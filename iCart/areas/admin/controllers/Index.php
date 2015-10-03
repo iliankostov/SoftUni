@@ -26,11 +26,10 @@ class Index extends DefaultController
     }
 
     public function home(){
-        $this->
-
+        $data = $this->data->loadData();
         $this->view->setViewDirectory('../areas/admin/views');
         $this->view->appendToLayout("admin", "home");
-        $this->view->display('layouts.default');
+        $this->view->display('layouts.default', $data);
     }
 
     public function logout()
