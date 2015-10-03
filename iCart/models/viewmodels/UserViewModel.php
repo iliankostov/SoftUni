@@ -9,7 +9,25 @@ class UserViewModel
     private $username;
     private $role_id;
     private $cash;
+    private $token;
     private $data = [];
+
+
+    /**
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param mixed $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
 
     /**
      * @return array
@@ -61,7 +79,7 @@ class UserViewModel
 
     public function getUsername($xss = true)
     {
-        if($xss) {
+        if ($xss) {
             $this->username = htmlspecialchars($this->username);
         }
 

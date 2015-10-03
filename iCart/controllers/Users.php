@@ -25,10 +25,13 @@ class Users extends DefaultController
     public function index()
     {
         header("Location: /");
+        $this->session->token = uniqid();
     }
 
     public function register()
     {
+        $this->session->token = uniqid();
+
         if($this->isLogged()) {
             header("Location: /users/profile");
         }
@@ -41,6 +44,8 @@ class Users extends DefaultController
 
     public function login()
     {
+        $this->session->token = uniqid();
+
         if($this->isLogged()) {
             header("Location: /users/profile");
         }
@@ -53,11 +58,14 @@ class Users extends DefaultController
 
     public function profile()
     {
+        $this->session->token = uniqid();
+
         if(!$this->isLogged()) {
             header("Location: /users/login");
         }
 
         $userView = $this->data->getUser($this->session->userid);
+        $userView->setToken($this->session->token);
 
         $this->view->appendToLayout('main', 'profile');
         $this->view->display('profile', $userView);
@@ -65,15 +73,15 @@ class Users extends DefaultController
 
     public function logout()
     {
+        $this->session->token = uniqid();
+
         if(!$this->isLogged()) {
-            var_dump(1);
             header("Location: /users/login");
             exit;
         }
 
-        $this->session->destroySession();
-
         header("Location: /");
+        $this->session->token = uniqid();
     }
 
     /**
@@ -92,6 +100,7 @@ class Users extends DefaultController
 
             if($response) {
                 header("Location: /users/login");
+                $this->session->token = uniqid();
             } else {
                 throw new \Exception("Cannot register user");
             }
@@ -112,6 +121,7 @@ class Users extends DefaultController
 
             if($userId) {
                 $this->session->userid = $userId;
+                $this->session->token = uniqid();
                 header("Location: /users/profile");
             } else {
                 throw new \Exception("Cannot login user");
@@ -125,6 +135,9 @@ class Users extends DefaultController
     public function update(UpdateUserBingingModel $userBindingModel)
     {
         if($userBindingModel) {
+            if($this->input->post()['csrf'] !== $this->session->token) {
+                throw new \Exception("Invalid token");
+            }
             $user = new User();
             $user->setId($this->session->userid);
             $user->setPassword($userBindingModel->getNewPassword());
@@ -134,6 +147,7 @@ class Users extends DefaultController
 
             if($response) {
                 header("Location: /users/profile");
+                $this->session->token = uniqid();
             } else {
                 throw new \Exception("Cannot update user");
             }
