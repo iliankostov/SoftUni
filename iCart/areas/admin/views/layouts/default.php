@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav nav-justified">
                     <?php if (!$this->data['isLogged']) : ?>
-                        <li><a href="/admin">Login</a></li>
+                        <li><a href="/admin/index/home">Home</a></li>
                     <?php endif ?>
                     <?php if ($this->data['isLogged']) : ?>
                         <li><a href="/admin/index/home">Home</a></li>

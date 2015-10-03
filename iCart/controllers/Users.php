@@ -85,6 +85,7 @@ class Users extends DefaultController
 
     /**
      * @GET
+     * @Authorize
      */
     public function cart()
     {

@@ -45,6 +45,11 @@ abstract class DefaultController
         return $this->session->userid !== null;
     }
 
+    public function isAdmin()
+    {
+        return $this->session->adminid !== null;
+    }
+
     public function notFound()
     {
         throw new \Exception("Not Found", 404);

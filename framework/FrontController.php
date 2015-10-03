@@ -2,6 +2,7 @@
 namespace Framework;
 
 use Framework\Routers\IRouter;
+use Framework\Sessions\NativeSession;
 use ReflectionClass;
 
 class FrontController
@@ -134,8 +135,6 @@ class FrontController
         $reflectionController = new ReflectionClass($newController);
         $reflectionMethods = $reflectionController->getMethods();
 
-        $roles = App::getInstance()->getInstance()->getConfig()->roles;
-
         $bindingModel = null;
         foreach ($reflectionMethods as $reflectionMethod) {
             if ($this->method === $reflectionMethod->getName()) {
@@ -155,15 +154,16 @@ class FrontController
                         throw new \Exception("Cannot access Get method with Post request", 406);
                     }
 
-                    foreach ($roles as $role) {
-                        if ($role === $annotation) {
-                            // TODO if user in role -> pass him
-                            throw new \Exception("You are not " . strtolower($role) . " to do this", 401);
-                        }
+                    if ($annotation === "Authorize" && !$_SESSION['userid']) {
+                        throw new \Exception("You are not authorized to do this", 401);
+                    }
+
+                    if ($annotation === "Admin" && !$_SESSION['adminid']) {
+                        throw new \Exception("You are not admin to do this", 401);
                     }
                 }
 
-                if($this->input->hasPost()) {
+                if ($this->input->hasPost()) {
                     $bindingModel = $this->BindModel($annotations[1]);
                 }
 
