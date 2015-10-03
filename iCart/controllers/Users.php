@@ -112,6 +112,8 @@ class Users extends DefaultController
             exit;
         }
 
+        $this->session->destroySession();
+
         header("Location: /");
         $this->session->token = uniqid();
     }

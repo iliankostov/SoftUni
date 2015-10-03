@@ -86,7 +86,7 @@
                     ->initPasswordField()
                     ->setName("confirmPassword")
                     ->setClasses("form-group form-control input-lg")
-                    ->setAttribute("placeholder", "Old Password")
+                    ->setAttribute("placeholder", "Confirm Password")
                     ->create()
                     ->initHiddenField()
                     ->setName('csrf')

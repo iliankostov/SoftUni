@@ -27,6 +27,7 @@ class Index extends DefaultController
 
     public function home(){
         $data = $this->data->loadData();
+        $data['isLogged'] = $this->session->userid;
         $this->view->setViewDirectory('../areas/admin/views');
         $this->view->appendToLayout("admin", "home");
         $this->view->display('layouts.default', $data);
@@ -47,7 +48,7 @@ class Index extends DefaultController
             $adminId = $data->login($bindingModel->getUsername(), $bindingModel->getPassword());
 
             if($adminId){
-                $this->session->adminId = $adminId;
+                $this->session->userid = $adminId;
             } else {
                 throw new \Exception('Cannot login user');
             }

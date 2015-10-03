@@ -39,7 +39,7 @@
                         <li><a href="/admin">Login</a></li>
                     <?php endif ?>
                     <?php if ($this->data['isLogged']) : ?>
-                        <li><a href="/admin/index/home">Profile</a></li>
+                        <li><a href="/admin/index/home">Home</a></li>
                         <li><a href="/admin/index/logout">Logout</a></li>
                     <?php endif ?>
                 </ul>

@@ -42,7 +42,7 @@ abstract class DefaultController
     }
 
     public function isLogged(){
-        return $this->session->userid;
+        return $this->session->userid !== null;
     }
 
     public function notFound()
