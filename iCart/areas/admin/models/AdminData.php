@@ -23,15 +23,20 @@ class AdminData
             ->prepare("SELECT * FROM users WHERE username = ?")
             ->execute([$username]);
 
+        $admin = $result->fetchRowAssoc();
+
+        if(strcmp($admin['role_id'], '1') !== 0) {
+            throw new \Exception("You are not admin");
+        }
+
         if($result->getAffectedRows() == 0){
             throw new \Exception("Invalid username");
         }
 
-        $fetchedUser = $result->fetchRowAssoc();
-        $passwordsEqual = password_verify($password, $fetchedUser['password']);
+        $passwordsEqual = password_verify($password, $admin['password']);
 
         if($passwordsEqual){
-            return $fetchedUser['id'];
+            return $admin['id'];
         }
 
         throw new \Exception("Passwords do not match");
