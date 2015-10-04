@@ -24,6 +24,7 @@ class AddProductBindingModel
      * @Required
      */
     private $productquantity;
+
     /**
      * @return mixed
      */
@@ -31,6 +32,7 @@ class AddProductBindingModel
     {
         return $this->category;
     }
+
     /**
      * @param mixed $category
      */
@@ -38,6 +40,7 @@ class AddProductBindingModel
     {
         $this->category = $category;
     }
+
     /**
      * @return mixed
      */
@@ -45,6 +48,7 @@ class AddProductBindingModel
     {
         return $this->productname;
     }
+
     /**
      * @param mixed $productname
      */
@@ -52,6 +56,7 @@ class AddProductBindingModel
     {
         $this->productname = $productname;
     }
+
     /**
      * @return mixed
      */
@@ -59,6 +64,7 @@ class AddProductBindingModel
     {
         return $this->productmodel;
     }
+
     /**
      * @param mixed $productmodel
      */
@@ -66,6 +72,7 @@ class AddProductBindingModel
     {
         $this->productmodel = $productmodel;
     }
+
     /**
      * @return mixed
      */
@@ -73,6 +80,7 @@ class AddProductBindingModel
     {
         return $this->productprice;
     }
+
     /**
      * @param mixed $productprice
      */
@@ -80,6 +88,7 @@ class AddProductBindingModel
     {
         $this->productprice = $productprice;
     }
+
     /**
      * @return mixed
      */
@@ -87,6 +96,7 @@ class AddProductBindingModel
     {
         return $this->productquantity;
     }
+
     /**
      * @param mixed $productquantity
      */

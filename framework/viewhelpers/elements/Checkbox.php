@@ -2,7 +2,6 @@
 
 namespace Framework\ViewHelpers\Elements;
 
-
 class Checkbox extends Element
 {
     public function __construct()

@@ -50,7 +50,8 @@
                         <ul class="dropdown-menu">
                             <?php foreach ($this->data['categories'] as $category) : ?>
 
-                                <li><a href="/products/category/<?= $category['name'] ?>"><?= htmlspecialchars($category['name']) ?></a>
+                                <li>
+                                    <a href="/products/category/<?= $category['name'] ?>"><?= htmlspecialchars($category['name']) ?></a>
                                 </li>
 
                             <?php endforeach ?>

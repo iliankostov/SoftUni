@@ -36,14 +36,13 @@ class AjaxScriptViewHelper
         $result .= "$(\"" . self::$sourceId . "\").click(function(e) {\n";
 
 
-
-        if(self::$preventDefault) {
+        if (self::$preventDefault) {
             $result .= "\te.preventDefault();\n";
         }
 
         $result .= "\t$.ajax({\n";
 
-        if(count(self::$ajaxElement) > 0) {
+        if (count(self::$ajaxElement) > 0) {
             foreach (self::$ajaxElement as $key => $value) {
                 $result .= "\t\t" . $key . ":'" . $value . "',\n";
             }

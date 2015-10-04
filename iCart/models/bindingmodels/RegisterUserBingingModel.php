@@ -23,7 +23,7 @@ class RegisterUserBingingModel
 
     public function setConfirm($confirm)
     {
-        if($confirm !== $this->password) {
+        if ($confirm !== $this->password) {
             throw new \Exception("Password do not match");
         }
 

@@ -6,7 +6,8 @@ class ShopData extends DefaultData
 {
     private static $_instance;
 
-    public function loadCategories() {
+    public function loadCategories()
+    {
         $categories = $this->db
             ->prepare("SELECT * FROM categories")
             ->execute([])
@@ -47,7 +48,8 @@ class ShopData extends DefaultData
         return $cart;
     }
 
-    public function buyProduct($userId, $productId){
+    public function buyProduct($userId, $productId)
+    {
         $sameProducts = $this->db
             ->prepare("SELECT * FROM user_cart_products WHERE user_id = ? AND product_id = ?")
             ->execute([$userId, $productId])
@@ -58,11 +60,11 @@ class ShopData extends DefaultData
         $price = $this->db->prepare("SELECT price FROM products WHERE id = ?")->execute([$productId])->fetchRowAssoc();
         $price = $price['price'];
 
-        if($hasDiscount['discount']){
+        if ($hasDiscount['discount']) {
             $price -= $price * $hasDiscount['discount'] / 100;
         }
 
-        if(count($sameProducts) > 0) {
+        if (count($sameProducts) > 0) {
             $this->db
                 ->prepare("UPDATE user_cart_products SET totalprice = totalprice + ?, quantiry = quantiry + 1 WHERE product_id = ? AND user_id = ?")
                 ->execute([$price, $productId, $userId]);

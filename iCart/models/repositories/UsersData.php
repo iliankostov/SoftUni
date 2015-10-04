@@ -69,7 +69,7 @@ class UsersData extends DefaultData
             ->execute([$user->getId()])
             ->fetchRowAssoc();
 
-        if(!password_verify($oldPassword, $currentUser['password'])) {
+        if (!password_verify($oldPassword, $currentUser['password'])) {
             throw new \Exception("Invalid password");
         }
 
@@ -86,11 +86,12 @@ class UsersData extends DefaultData
         return $response->getAffectedRows() > 0;
     }
 
-    public function removeProductFromCart($productId, $userId){
+    public function removeProductFromCart($productId, $userId)
+    {
         $quantity = $this->db->prepare("SELECT quantiry FROM user_cart_products WHERE user_id = ? AND product_id = ?")
             ->execute([$userId, $productId])->fetchRowAssoc();
         $result = null;
-        if($quantity['quantiry'] > 1) {
+        if ($quantity['quantiry'] > 1) {
             $result = $this->db->prepare("UPDATE user_cart_products SET quantiry = quantiry - 1 WHERE user_id = ? AND product_id = ?")
                 ->execute([$userId, $productId]);
         } else {
@@ -98,19 +99,20 @@ class UsersData extends DefaultData
                 ->execute([$userId, $productId]);
         }
 
-        if($result->getAffectedRows() > 0){
+        if ($result->getAffectedRows() > 0) {
             return true;
         } else {
             return false;
         }
     }
 
-    public function checkout($userId){
+    public function checkout($userId)
+    {
         $userCash = $this->db->prepare("SELECT cash FROM users WHERE id = ?")
             ->execute([$userId])->fetchRowAssoc();
         $totalMoneyCart = $this->db->prepare("SELECT sum(totalprice) as sum FROM user_cart_products WHERE user_id = ?")->execute([$userId])->fetchRowAssoc();
 
-        if($userCash['cash'] < $totalMoneyCart['sum']){
+        if ($userCash['cash'] < $totalMoneyCart['sum']) {
             throw new \Exception('You do not have enough money');
         }
 
@@ -118,7 +120,7 @@ class UsersData extends DefaultData
             ->execute([$userId])->fetchAllAssoc();
 
         foreach ($userCart as $product) {
-            for($i = 0; $i < $product['quantiry']; $i++){
+            for ($i = 0; $i < $product['quantiry']; $i++) {
                 $this->db->prepare("INSERT INTO users_products (user_id, product_id) VALUES (?, ?)")
                     ->execute([$product['user_id'], $product['product_id']]);
             }
@@ -128,7 +130,7 @@ class UsersData extends DefaultData
                 ->execute([$product['totalprice'], $product['user_id']]);
             $remainingQuantities = $this->db->prepare("SELECT quantity FROM products WHERE id = ?")
                 ->execute([$product['product_id']]);
-            if($remainingQuantities === 0){
+            if ($remainingQuantities === 0) {
                 $this->db->prepare("DELETE FROM available_products WHERE product_id = ?")
                     ->execute([$product['product_id']]);
             }
@@ -137,7 +139,7 @@ class UsersData extends DefaultData
         $result = $this->db->prepare("DELETE FROM user_cart_products WHERE user_id = ?")
             ->execute([$userId])->getAffectedRows();
 
-        if($result){
+        if ($result) {
             return true;
         } else {
             return false;

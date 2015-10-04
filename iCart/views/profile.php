@@ -49,7 +49,8 @@
                         <ul class="dropdown-menu">
                             <?php foreach ($this->data->getData() as $category) : ?>
 
-                                <li><a href="/products/category/<?= $category['name']?>"><?= $category['name'] ?></a></li>
+                                <li><a href="/products/category/<?= $category['name'] ?>"><?= $category['name'] ?></a>
+                                </li>
 
                             <?php endforeach ?>
                         </ul>

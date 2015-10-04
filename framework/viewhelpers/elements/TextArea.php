@@ -2,7 +2,6 @@
 
 namespace Framework\ViewHelpers\Elements;
 
-
 class TextArea extends Element
 {
     public function __construct()

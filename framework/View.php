@@ -37,9 +37,9 @@ class View
 
     public function display($name, $data = array())
     {
-        if(!is_array($data)){
+        if (!is_array($data)) {
             $viewModel = get_class($data);
-        }else{
+        } else {
             $viewModel = null;
         }
 

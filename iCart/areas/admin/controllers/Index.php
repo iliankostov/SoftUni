@@ -19,14 +19,16 @@ class Index extends DefaultController
         $this->data = AdminData::getInstance();
     }
 
-    public function index(){
+    public function index()
+    {
         $this->view->setViewDirectory('../areas/admin/views');
         $this->view->appendToLayout("admin", "index");
         $this->view->display('layouts.default');
     }
 
-    public function home(){
-        if(!$this->isAdmin()) {
+    public function home()
+    {
+        if (!$this->isAdmin()) {
             header("Location: /admin");
         }
 
@@ -46,12 +48,13 @@ class Index extends DefaultController
     /**
      * @BindingModel AdminLoginBindingModel
      */
-    public function login(AdminLoginBindingModel $bindingModel){
-        if($bindingModel){
+    public function login(AdminLoginBindingModel $bindingModel)
+    {
+        if ($bindingModel) {
             $data = new AdminData();
             $adminId = $data->login($bindingModel->getUsername(), $bindingModel->getPassword());
 
-            if($adminId){
+            if ($adminId) {
                 $this->session->adminid = $adminId;
             } else {
                 throw new \Exception('Cannot login user');

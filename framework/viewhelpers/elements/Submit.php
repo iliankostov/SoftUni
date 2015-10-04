@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Framework\ViewHelpers\Elements;
-
 
 class Submit extends Element
 {

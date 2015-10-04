@@ -30,7 +30,7 @@ class Users extends Base
     {
         $this->session->token = uniqid();
 
-        if($this->isLogged()) {
+        if ($this->isLogged()) {
             header("Location: /users/profile");
         }
 
@@ -48,7 +48,7 @@ class Users extends Base
     {
         $this->session->token = uniqid();
 
-        if($this->isLogged()) {
+        if ($this->isLogged()) {
             header("Location: /users/profile");
         }
 
@@ -66,7 +66,7 @@ class Users extends Base
     {
         $this->session->token = uniqid();
 
-        if(!$this->isLogged()) {
+        if (!$this->isLogged()) {
             header("Location: /users/login");
         }
 
@@ -82,8 +82,9 @@ class Users extends Base
      * @GET
      * @Authorize
      */
-    public function cart(){
-        if(!$this->isLogged()){
+    public function cart()
+    {
+        if (!$this->isLogged()) {
             header('Location: \users\login');
             $this->session->csrf = uniqid();
             exit;
@@ -100,14 +101,15 @@ class Users extends Base
         $this->view->display('layouts.default', $data);
     }
 
-    public function removeproductfromcart(){
-        if(!$this->isLogged()){
+    public function removeproductfromcart()
+    {
+        if (!$this->isLogged()) {
             header('Location: \users\login');
             $this->session->csrf = uniqid();
             exit;
         }
 
-        if($this->input->get()[1] !== $this->session->csrf){
+        if ($this->input->get()[1] !== $this->session->csrf) {
             throw new \Exception('Token invalid');
         }
 
@@ -115,7 +117,7 @@ class Users extends Base
         $userId = $this->session->userid;
         $success = $this->userData->removeProductFromCart($productId, $userId);
 
-        if($success){
+        if ($success) {
             header('Location: /users/cart');
             $this->session->csrf = uniqid();
             exit;
@@ -124,20 +126,21 @@ class Users extends Base
         }
     }
 
-    public function checkout(){
-        if(!$this->isLogged()){
+    public function checkout()
+    {
+        if (!$this->isLogged()) {
             header('Location: \users\login');
             $this->session->csrf = uniqid();
             exit;
         }
 
-        if($this->input->get()[0] !== $this->session->csrf){
+        if ($this->input->get()[0] !== $this->session->csrf) {
             throw new \Exception('Token invalid');
         }
 
         $this->session->csrf = uniqid();
         $success = $this->userData->checkout($this->session->userid);
-        if($success){
+        if ($success) {
             header('Location: /users/profile');
             exit;
         } else {
@@ -152,7 +155,7 @@ class Users extends Base
     {
         $this->session->token = uniqid();
 
-        if(!$this->isLogged()) {
+        if (!$this->isLogged()) {
             header("Location: /users/login");
             exit;
         }
@@ -169,7 +172,7 @@ class Users extends Base
      */
     public function postregister(RegisterUserBingingModel $userBindingModel)
     {
-        if($userBindingModel) {
+        if ($userBindingModel) {
             $user = new User();
             $user->setUsername($userBindingModel->getUsername());
             $user->setPassword($userBindingModel->getPassword());
@@ -178,7 +181,7 @@ class Users extends Base
 
             $response = $this->userData->register($user);
 
-            if($response) {
+            if ($response) {
                 header("Location: /users/login");
                 $this->session->token = uniqid();
             } else {
@@ -193,14 +196,14 @@ class Users extends Base
      */
     public function postlogin(LoginUserBingingModel $userBindingModel)
     {
-        if($userBindingModel) {
+        if ($userBindingModel) {
             $user = new User();
             $user->setUsername($userBindingModel->getUsername());
             $user->setPassword($userBindingModel->getPassword());
 
             $userId = $this->userData->login($user);
 
-            if($userId) {
+            if ($userId) {
                 $this->session->userid = $userId;
                 $this->session->token = uniqid();
                 header("Location: /users/profile");
@@ -216,8 +219,8 @@ class Users extends Base
      */
     public function update(UpdateUserBingingModel $userBindingModel)
     {
-        if($userBindingModel) {
-            if($this->input->post()['csrf'] !== $this->session->token) {
+        if ($userBindingModel) {
+            if ($this->input->post()['csrf'] !== $this->session->token) {
                 throw new \Exception("Invalid token");
             }
             $user = new User();
@@ -227,7 +230,7 @@ class Users extends Base
 
             $response = $this->userData->update($user, $userBindingModel->getOldPassword());
 
-            if($response) {
+            if ($response) {
                 header("Location: /users/profile");
                 $this->session->token = uniqid();
             } else {

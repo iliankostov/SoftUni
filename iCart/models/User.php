@@ -24,6 +24,7 @@ class User
     {
         $this->role_id = $role_id;
     }
+
     private $cash;
 
     public function __construct()

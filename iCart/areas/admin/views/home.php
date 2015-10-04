@@ -31,7 +31,7 @@
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-    <?php foreach($this->data['products'] as $product): ?>
+    <?php foreach ($this->data['products'] as $product): ?>
         <tr>
             <td><?= $product['id'] ?></td>
             <td><?= $product['name'] ?></td>
@@ -39,8 +39,8 @@
             <td><?= $product['price'] ?></td>
             <td><?= $product['quantity'] ?></td>
             <td><?= $product['categoryName'] ?></td>
-            <td><a href="/admin/products/edit/<?=$product['id']?>">Edit</a></td>
-            <td><a href="/admin/products/delete/<?=$product['id']?>">Delete</a></td>
+            <td><a href="/admin/products/edit/<?= $product['id'] ?>">Edit</a></td>
+            <td><a href="/admin/products/delete/<?= $product['id'] ?>">Delete</a></td>
         </tr>
-    <?php endforeach;?>
+    <?php endforeach; ?>
 </table>

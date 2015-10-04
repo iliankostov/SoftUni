@@ -1,4 +1,5 @@
 <?php
+
 namespace Framework;
 
 use Framework\Routers\IRouter;
@@ -164,7 +165,7 @@ class FrontController
                 }
 
                 if ($this->input->hasPost()) {
-                    $bindingModel = $this->BindModel($annotations[1]);
+                    $bindingModel = $this->bindModel($annotations[1]);
                 }
 
                 $isMethodExists = true;
@@ -183,7 +184,7 @@ class FrontController
         }
     }
 
-    private function BindModel($annotations)
+    private function bindModel($annotations)
     {
         $bindingNamespace = null;
         $appConfig = App::getInstance()->getConfig()->app;

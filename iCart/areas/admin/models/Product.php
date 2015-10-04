@@ -17,6 +17,7 @@ class Product
     {
         return $this->id;
     }
+
     /**
      * @param mixed $id
      */
@@ -24,7 +25,9 @@ class Product
     {
         $this->id = $id;
     }
+
     private $category;
+
     /**
      * @return mixed
      */
@@ -32,6 +35,7 @@ class Product
     {
         return $this->category;
     }
+
     /**
      * @param mixed $category
      */
@@ -39,6 +43,7 @@ class Product
     {
         $this->category = $category;
     }
+
     /**
      * @return mixed
      */
@@ -46,6 +51,7 @@ class Product
     {
         return $this->productname;
     }
+
     /**
      * @param mixed $productname
      */
@@ -53,6 +59,7 @@ class Product
     {
         $this->productname = $productname;
     }
+
     /**
      * @return mixed
      */
@@ -60,6 +67,7 @@ class Product
     {
         return $this->productmodel;
     }
+
     /**
      * @param mixed $productmodel
      */
@@ -67,6 +75,7 @@ class Product
     {
         $this->productmodel = $productmodel;
     }
+
     /**
      * @return mixed
      */
@@ -74,6 +83,7 @@ class Product
     {
         return $this->productprice;
     }
+
     /**
      * @param mixed $productprice
      */
@@ -81,6 +91,7 @@ class Product
     {
         $this->productprice = $productprice;
     }
+
     /**
      * @return mixed
      */
@@ -88,6 +99,7 @@ class Product
     {
         return $this->productquantity;
     }
+
     /**
      * @param mixed $productquantity
      */

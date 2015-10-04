@@ -41,7 +41,8 @@ abstract class DefaultController
         $this->session = new NativeSession("session");
     }
 
-    public function isLogged(){
+    public function isLogged()
+    {
         return $this->session->userid !== null;
     }
 

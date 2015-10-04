@@ -28,6 +28,7 @@ class EditProductBindingModel
      * @Required
      */
     private $category;
+
     /**
      * @return mixed
      */
@@ -35,6 +36,7 @@ class EditProductBindingModel
     {
         return $this->id;
     }
+
     /**
      * @param mixed $id
      */
@@ -42,6 +44,7 @@ class EditProductBindingModel
     {
         $this->id = $id;
     }
+
     /**
      * @return mixed
      */
@@ -49,6 +52,7 @@ class EditProductBindingModel
     {
         return $this->productname;
     }
+
     /**
      * @param mixed $productname
      */
@@ -56,6 +60,7 @@ class EditProductBindingModel
     {
         $this->productname = $productname;
     }
+
     /**
      * @return mixed
      */
@@ -63,6 +68,7 @@ class EditProductBindingModel
     {
         return $this->productmodel;
     }
+
     /**
      * @param mixed $productmodel
      */
@@ -70,6 +76,7 @@ class EditProductBindingModel
     {
         $this->productmodel = $productmodel;
     }
+
     /**
      * @return mixed
      */
@@ -77,6 +84,7 @@ class EditProductBindingModel
     {
         return $this->productprice;
     }
+
     /**
      * @param mixed $productprice
      */
@@ -84,6 +92,7 @@ class EditProductBindingModel
     {
         $this->productprice = $productprice;
     }
+
     /**
      * @return mixed
      */
@@ -91,6 +100,7 @@ class EditProductBindingModel
     {
         return $this->productquantity;
     }
+
     /**
      * @param mixed $productquantity
      */
@@ -98,6 +108,7 @@ class EditProductBindingModel
     {
         $this->productquantity = $productquantity;
     }
+
     /**
      * @return mixed
      */
@@ -105,6 +116,7 @@ class EditProductBindingModel
     {
         return $this->category;
     }
+
     /**
      * @param mixed $category
      */

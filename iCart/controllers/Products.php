@@ -24,14 +24,15 @@ class Products extends Base
         $this->view->display('layouts.default', $data);
     }
 
-    public function buy(){
-        if($this->input->get()[1] !== $this->session->csrf){
+    public function buy()
+    {
+        if ($this->input->get()[1] !== $this->session->csrf) {
             throw new \Exception('Token invalid');
         }
         $productId = $this->input->get()[0];
         $userId = $this->session->userid;
         $success = $this->shopData->buyProduct($userId, $productId);
-        if($success){
+        if ($success) {
             header('Location: /');
             $this->session->csrf = uniqid();
         } else {

@@ -16,7 +16,9 @@
 
                             <p>Price: <?= number_format($product['price'], 2) ?></p>
 
-                            <a class="btn btn-default text-center" href="/users/removeproductfromcart/<?=$product['id']?>/<?=$this->csrf?>">Remove product</a>
+                            <a class="btn btn-default text-center"
+                               href="/users/removeproductfromcart/<?= $product['id'] ?>/<?= $this->csrf ?>">Remove
+                                product</a>
                         </div>
                     </div>
                 </div>
@@ -31,4 +33,4 @@
 
 <div class="divider"></div>
 
-<p style="font-size: 50px; text-align: center"><?= count($this->data['cart']) > 0 ? '<a href="/users/checkout/'. $this->csrf .'">Chekout</a></p>' : 'Yor cart is empty</p>' ?>
+<p style="font-size: 50px; text-align: center"><?= count($this->data['cart']) > 0 ? '<a href="/users/checkout/' . $this->csrf . '">Chekout</a></p>' : 'Yor cart is empty</p>' ?>

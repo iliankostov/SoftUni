@@ -148,10 +148,10 @@ class App
         }
     }
 
-    public function displayError($ex)
+    public function displayError(\Exception $ex)
     {
         $code = $ex->getCode();
-        if($code == 0) {
+        if ($code == 0) {
             $code = 500;
         }
 
@@ -188,10 +188,10 @@ class App
 
         $namespaces = $this->getConfig()->app['namespaces'];
         foreach ($namespaces as $namespace => $value) {
-            if(strpos($namespace, 'Controllers') || $namespace == 'Controllers') {
+            if (strpos($namespace, 'Controllers') || $namespace == 'Controllers') {
                 $files = scandir($value);
                 foreach ($files as $file) {
-                    if(strpos($file, '.php')) {
+                    if (strpos($file, '.php')) {
                         $controllerName = str_replace('.php', '', $file);
                         $controller = $namespace . '\\' . $controllerName;
                         $reflectionController = new ReflectionClass(new $controller);
@@ -201,7 +201,7 @@ class App
                             $annotations = array();
                             preg_match_all('#@(.*?)\n#s', $doc, $annotations);
                             foreach ($annotations[1] as $annotation) {
-                                if(substr($annotation, 0, 5) == 'Route') {
+                                if (substr($annotation, 0, 5) == 'Route') {
 
                                     $newRoute = array();
                                     preg_match('/"(.*?)"/', $annotation, $newRoute);
@@ -209,26 +209,26 @@ class App
                                     $params = explode("/", $newRoute[1]);
                                     $params = array_values(array_filter($params));
 
-                                    if(count($params) > 2) {
+                                    if (count($params) > 2) {
 
                                         $area = $params[0];
 
                                         $oldControllerName = strtolower($controllerName);
                                         $newControllerName = $params[1];
 
-                                        if($newControllerName !== $oldControllerName) {
-                                            $replaceController = "\$cnf['". $area ."']['controllers']['". $newControllerName ."']['to'] = '". $oldControllerName ."';\n";
+                                        if ($newControllerName !== $oldControllerName) {
+                                            $replaceController = "\$cnf['" . $area . "']['controllers']['" . $newControllerName . "']['to'] = '" . $oldControllerName . "';\n";
                                             fwrite($testFile, $replaceController);
                                         }
 
                                         $oldMethodName = $reflectionMethod->getName();
                                         $newMethodName = $params[2];
 
-                                        $replaceMethod = "\$cnf['". $area ."']['controllers']['". $newControllerName ."']['methods']['" . $newMethodName . "'] = '" . $oldMethodName . "';\n";
+                                        $replaceMethod = "\$cnf['" . $area . "']['controllers']['" . $newControllerName . "']['methods']['" . $newMethodName . "'] = '" . $oldMethodName . "';\n";
                                         fwrite($testFile, $replaceMethod);
 
-                                        if($oldMethodName !== $newMethodName) {
-                                            $replaceMethod = "\$cnf['". $area ."']['controllers']['". $oldControllerName ."']['methods']['" . $oldMethodName . "'] = '" . "notFound" . "';\n";
+                                        if ($oldMethodName !== $newMethodName) {
+                                            $replaceMethod = "\$cnf['" . $area . "']['controllers']['" . $oldControllerName . "']['methods']['" . $oldMethodName . "'] = '" . "notFound" . "';\n";
                                             fwrite($testFile, $replaceMethod);
                                         }
 
@@ -236,19 +236,19 @@ class App
                                         $oldControllerName = strtolower($controllerName);
                                         $newControllerName = $params[0];
 
-                                        if($newControllerName !== $oldControllerName) {
-                                            $replaceController = "\$cnf['*']['controllers']['". $newControllerName ."']['to'] = '". $oldControllerName ."';\n";
+                                        if ($newControllerName !== $oldControllerName) {
+                                            $replaceController = "\$cnf['*']['controllers']['" . $newControllerName . "']['to'] = '" . $oldControllerName . "';\n";
                                             fwrite($testFile, $replaceController);
                                         }
 
                                         $oldMethodName = $reflectionMethod->getName();
                                         $newMethodName = $params[1];
 
-                                        $replaceMethod = "\$cnf['*']['controllers']['". $newControllerName ."']['methods']['" . $newMethodName . "'] = '" . $oldMethodName . "';\n";
+                                        $replaceMethod = "\$cnf['*']['controllers']['" . $newControllerName . "']['methods']['" . $newMethodName . "'] = '" . $oldMethodName . "';\n";
                                         fwrite($testFile, $replaceMethod);
 
-                                        if($oldMethodName !== $newMethodName) {
-                                            $replaceMethod = "\$cnf['*']['controllers']['". $oldControllerName ."']['methods']['" . $oldMethodName . "'] = '" . "notFound" . "';\n";
+                                        if ($oldMethodName !== $newMethodName) {
+                                            $replaceMethod = "\$cnf['*']['controllers']['" . $oldControllerName . "']['methods']['" . $oldMethodName . "'] = '" . "notFound" . "';\n";
                                             fwrite($testFile, $replaceMethod);
                                         }
                                     }
@@ -262,7 +262,7 @@ class App
 
         $namespacesConfig = App::getInstance()->getConfig()->namespaces;
         foreach ($namespacesConfig as $k => $v) {
-            $customNamespace = "\$cnf['". $k ."']['namespace'] = '". $v['namespace'] ."';\n";
+            $customNamespace = "\$cnf['" . $k . "']['namespace'] = '" . $v['namespace'] . "';\n";
             fwrite($testFile, $customNamespace);
         }
 
