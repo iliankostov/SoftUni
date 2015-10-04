@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03GenerateCombinationsItera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04GenerateSubsetsOfStringArray", "GenerateSubsetsOfStringArray\04GenerateSubsetsOfStringArray.csproj", "{276DC8D4-62FB-4797-B9C1-586C45EE2E42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05PermutationsWithRepetition", "PermutationsWithRepetition\05PermutationsWithRepetition.csproj", "{ABF52AAA-504B-4AA9-8995-B96D3F762F37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{276DC8D4-62FB-4797-B9C1-586C45EE2E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{276DC8D4-62FB-4797-B9C1-586C45EE2E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{276DC8D4-62FB-4797-B9C1-586C45EE2E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF52AAA-504B-4AA9-8995-B96D3F762F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF52AAA-504B-4AA9-8995-B96D3F762F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF52AAA-504B-4AA9-8995-B96D3F762F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF52AAA-504B-4AA9-8995-B96D3F762F37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
