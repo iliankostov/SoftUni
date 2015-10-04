@@ -1,27 +1,30 @@
-﻿using System;
-
-internal class PascalTriangle
+﻿namespace PascalTriangle
 {
-    private static void Main()
-    {
-        int n = 10;
-        decimal[] pascal = new decimal[n + 1];
+    using System;
 
-        for (int row = 0; row <= n; row++)
+    internal class PascalTriangle
+    {
+        private static void Main()
         {
-            for (int col = row; col >= 0; col--)
+            int n = 10;
+            decimal[] pascal = new decimal[n + 1];
+
+            for (int row = 0; row <= n; row++)
             {
-                if (col == 0 || col == row)
+                for (int col = row; col >= 0; col--)
                 {
-                    pascal[col] = 1;
+                    if (col == 0 || col == row)
+                    {
+                        pascal[col] = 1;
+                    }
+                    else
+                    {
+                        pascal[col] = pascal[col] + pascal[col - 1];
+                    }
+                    Console.Write(pascal[col] + " ");
                 }
-                else
-                {
-                    pascal[col] = pascal[col] + pascal[col - 1];
-                }
-                Console.Write(pascal[col] + " ");
+                Console.WriteLine();
             }
-            Console.WriteLine();
         }
     }
 }
