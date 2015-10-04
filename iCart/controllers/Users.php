@@ -82,20 +82,67 @@ class Users extends Base
      * @GET
      * @Authorize
      */
-    public function cart()
-    {
-        $this->session->token = uniqid();
-
-        if(!$this->isLogged()) {
-            header("Location: /users/profile");
+    public function cart(){
+        if(!$this->isLogged()){
+            header('Location: \users\login');
+            $this->session->csrf = uniqid();
+            exit;
         }
+
+        $this->session->csrf = uniqid();
 
         $data["isLogged"] = $this->isLogged();
         $data["categories"] = $this->shopData->loadCategories();
         $data["cart"] = $this->shopData->loadCart($this->session->userid);
+        $data["csrf"] = $this->session->csrf;
 
         $this->view->appendToLayout('main', 'cart');
         $this->view->display('layouts.default', $data);
+    }
+
+    public function removeproductfromcart(){
+        if(!$this->isLogged()){
+            header('Location: \users\login');
+            $this->session->csrf = uniqid();
+            exit;
+        }
+
+        if($this->input->get()[1] !== $this->session->csrf){
+            throw new \Exception('Token invalid');
+        }
+
+        $productId = $this->input->get()[0];
+        $userId = $this->session->userid;
+        $success = $this->userData->removeProductFromCart($productId, $userId);
+
+        if($success){
+            header('Location: /users/cart');
+            $this->session->csrf = uniqid();
+            exit;
+        } else {
+            throw new \Exception('Cannot delete product from cart');
+        }
+    }
+
+    public function checkout(){
+        if(!$this->isLogged()){
+            header('Location: \users\login');
+            $this->session->csrf = uniqid();
+            exit;
+        }
+
+        if($this->input->get()[0] !== $this->session->csrf){
+            throw new \Exception('Token invalid');
+        }
+
+        $this->session->csrf = uniqid();
+        $success = $this->userData->checkout($this->session->userid);
+        if($success){
+            header('Location: /users/profile');
+            exit;
+        } else {
+            throw new \Exception('Cannot checkout the cart');
+        }
     }
 
     /**

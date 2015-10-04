@@ -10,11 +10,13 @@
 
                     <div class="col-lg-6">
                         <div class="panel-body">
-                            <p class="lead"><?= $product['name'] ?></p>
+                            <p class="lead"><?= htmlspecialchars($product['name']) ?></p>
 
-                            <p>Model: <?= $product['model'] ?></p>
+                            <p>Model: <?= htmlspecialchars($product['model']) ?></p>
 
                             <p>Price: <?= number_format($product['price'], 2) ?></p>
+
+                            <a class="btn btn-default text-center" href="/users/removeproductfromcart/<?=$product['id']?>/<?=$this->csrf?>">Remove product</a>
                         </div>
                     </div>
                 </div>
@@ -23,11 +25,10 @@
             <!--/col-->
 
         <?php endforeach ?>
-
-        <div class="divider"></div>
-
-        <!-- TODO checkout button with products -->
-
     </div>
     <!--/row-->
 </div><!--/container-->
+
+<div class="divider"></div>
+
+<p style="font-size: 50px; text-align: center"><?= count($this->data['cart']) > 0 ? '<a href="/users/checkout/'. $this->csrf .'">Chekout</a></p>' : 'Yor cart is empty</p>' ?>

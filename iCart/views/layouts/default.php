@@ -23,7 +23,9 @@
                             <a href="/users/cart">iCart</a>
                         <?php endif ?>
 
-                        <p class="lead">osCommerce</p></h1>
+                        <p class="lead">osCommerce</p>
+
+                    </h1>
 
                 </div>
             </div>
@@ -48,7 +50,7 @@
                         <ul class="dropdown-menu">
                             <?php foreach ($this->data['categories'] as $category) : ?>
 
-                                <li><a href="/products/category/<?= $category['name'] ?>"><?= $category['name'] ?></a>
+                                <li><a href="/products/category/<?= $category['name'] ?>"><?= htmlspecialchars($category['name']) ?></a>
                                 </li>
 
                             <?php endforeach ?>

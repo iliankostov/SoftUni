@@ -8,23 +8,23 @@
                     <div class="panel-thumbnail"><img src="//placehold.it/450X250/f16251/444" class="img-responsive">
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="panel-body">
-                            <p class="lead"><?= $product['name'] ?></p>
+                            <p class="lead"><?= htmlspecialchars($product['name']) ?></p>
 
-                            <p>Model: <?= $product['model'] ?></p>
+                            <p>Model: <?= htmlspecialchars($product['model']) ?></p>
 
-                            <p>Quantity: <?= $product['quantity'] ?></p>
+                            <p>Quantity: <?= htmlspecialchars($product['quantity']) ?></p>
 
-                            <p>Price: <?= number_format($product['price'], 2) ?></p>
+                            <p>Price: <?= number_format($product['newprice'], 2) ?></p>
+
+                            <?php if ($this->data['isLogged']) : ?>
+
+                                <a class="btn btn-default text-center"
+                                   href="/products/buy/<?= $product['id'] ?>/<?= $this->csrf ?>">Add to Cart</a>
+
+                            <?php endif ?>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <?php if($this->data['isLogged']) : ?>
-                        <p>
-                            <div class="btn btn-default text-center">Add to Cart</div>
-                        </p>
-                    <?php endif ?>
                     </div>
 
                 </div>
