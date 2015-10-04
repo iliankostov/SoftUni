@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Permutations")]
+[assembly: AssemblyTitle("GeneratePermutationsIteratively")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Permutations")]
+[assembly: AssemblyProduct("GeneratePermutationsIteratively")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("45d76b60-04a9-4750-8c5f-6b3b65456f15")]
+[assembly: Guid("e0876e80-ea31-49ed-8a32-6e2ed42c9bb6")]
 
 // Version information for an assembly consists of the following four values:
 //
