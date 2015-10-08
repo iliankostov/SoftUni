@@ -55,7 +55,7 @@
 
         public static void Main()
         {
-            var sequence = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var sequence = Console.ReadLine().Split(',').Select(int.Parse).ToArray();
             var longestSeq = FindLongestIncreasingSubsequence(sequence);
             Console.WriteLine("Longest increasing subsequence (LIS)");
             Console.WriteLine("  Length: {0}", longestSeq.Length);
