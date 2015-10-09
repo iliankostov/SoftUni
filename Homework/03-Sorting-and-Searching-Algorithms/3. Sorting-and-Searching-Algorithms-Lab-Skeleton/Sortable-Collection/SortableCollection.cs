@@ -39,7 +39,12 @@
 
         public int InterpolationSearch(T item)
         {
-            throw new NotImplementedException();
+            if (this.Items.Contains(item))
+            {
+                return this.InterpolationSearchProcedure(item);
+            }
+
+            return -1;
         }
 
         public void Shuffle()
@@ -80,6 +85,40 @@
                 return this.BinarySearchProcedure(item, midPoint + 1, endIndex);
             }
             return midPoint;
+        }
+
+        private int InterpolationSearchProcedure(T item)
+        {
+            // Returns index of searchValue in sorted input data
+            // array x, or -1 if searchValue is not found
+            int low = 0;
+            int high = this.Items.Count - 1;
+            int mid;
+
+            while ((this.Items[low].CompareTo(item)) < 0 && (this.Items[high].CompareTo(item)) >= 0)
+            {
+                // TODO generic implementation
+                mid = low; //+ ((item - this.Items[low]) * (high - low)) / (this.Items[high] - this.Items[low]);
+
+                if (this.Items[mid].CompareTo(item) < 0)
+                {
+                    low = mid + 1;
+                }
+                else if (this.Items[mid].CompareTo(item) > 0)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    return mid;
+                }
+            }
+
+            if (this.Items[low].CompareTo(item) == 0)
+            {
+                return low;
+            }
+            return -1; // Not found 
         }
     }
 }
