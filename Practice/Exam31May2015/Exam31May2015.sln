@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02TargetPractice", "TargetP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03TextTransformer", "TextTransformer\03TextTransformer.csproj", "{BA3A2885-81FF-4A80-9F63-511D05B6F6E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04OlympicsAreComing", "OlympicsAreComing\04OlympicsAreComing.csproj", "{D100E919-89C9-4F43-B3AF-0751CADF3680}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BA3A2885-81FF-4A80-9F63-511D05B6F6E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA3A2885-81FF-4A80-9F63-511D05B6F6E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA3A2885-81FF-4A80-9F63-511D05B6F6E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D100E919-89C9-4F43-B3AF-0751CADF3680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D100E919-89C9-4F43-B3AF-0751CADF3680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D100E919-89C9-4F43-B3AF-0751CADF3680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D100E919-89C9-4F43-B3AF-0751CADF3680}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
