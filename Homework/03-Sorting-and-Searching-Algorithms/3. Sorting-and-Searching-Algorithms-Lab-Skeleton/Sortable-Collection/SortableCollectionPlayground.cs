@@ -6,30 +6,22 @@
 
     public class SortableCollectionPlayground
     {
-        private static Random Random = new Random();
-
         public static void Main(string[] args)
         {
-            const int NumberOfElementsToSort = 22;
-            const int MaxValue = 150;
+            var collection = new SortableCollection<int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-            var array = new int[NumberOfElementsToSort];
+            Console.WriteLine("Unshuffled");
+            Console.WriteLine(string.Join(", ", collection));
 
-            for (int i = 0; i < NumberOfElementsToSort; i++)
-            {
-                array[i] = Random.Next(MaxValue);
-            }
+            collection.Shuffle();
 
-            var collectionToSort = new SortableCollection<int>(array);
-            collectionToSort.Sort(new BucketSorter { Max = MaxValue });
+            Console.WriteLine("Shuffled");
+            Console.WriteLine(string.Join(", ", collection));
 
-            Console.WriteLine(collectionToSort);
+            collection.Shuffle();
 
-            var collection = new SortableCollection<int>(2, -1, 5, 0, -3);
-            Console.WriteLine(collection);
-
-            collection.Sort(new Quicksorter<int>());
-            Console.WriteLine(collection);
+            Console.WriteLine("Shuffled");
+            Console.WriteLine(string.Join(", ", collection));
         }
     }
 }

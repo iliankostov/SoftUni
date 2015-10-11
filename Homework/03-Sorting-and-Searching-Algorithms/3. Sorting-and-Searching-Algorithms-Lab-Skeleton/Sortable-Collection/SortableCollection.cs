@@ -77,7 +77,18 @@
 
         public void Shuffle()
         {
-            throw new NotImplementedException();
+            Random random = new Random();
+
+            var n = this.Items.Count;
+
+            for (var i = 0; i < n; i++)
+            {
+                int randomIndex = i + random.Next(0, n - i);
+
+                var temp = this.Items[i];
+                this.Items[i] = this.Items[randomIndex];
+                this.Items[randomIndex] = temp;
+            }
         }
 
         public void Sort(ISorter<T> sorter)
