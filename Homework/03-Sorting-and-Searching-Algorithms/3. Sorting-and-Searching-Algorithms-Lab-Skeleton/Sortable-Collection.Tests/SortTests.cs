@@ -13,7 +13,7 @@
     {
         private static readonly Random Random = new Random();
 
-        private static readonly ISorter<int> TestSorter = new InsertionSorter<int>();
+        private static readonly ISorter<int> TestSorter = new MergeSorter<int>();
 
         [TestMethod]
         public void TestSortWithMultipleElements()
