@@ -37,28 +37,25 @@
             return -1;
         }
 
-        public int InterpolationSearch(int searchValue)
+        public int InterpolationSearch(T item)
         {
-            List<int> collection = this.Items.Select(i => (int)(object)i).ToList();
+            int low = 0;
+            int high = this.Items.Count - 1;
 
-            if (collection.Count == 0)
+            if (high <= low)
             {
                 return -1;
             }
 
-            int low = 0;
-            int high = collection.Count - 1;
-            int mid;
-
-            while (collection[low] < searchValue && collection[high] >= searchValue)
+            while (this.Items[low].CompareTo(item) <= 0 && this.Items[high].CompareTo(item) >= 0)
             {
-                mid = low + ((searchValue - collection[low]) * (high - low)) / (collection[high] - collection[low]);
+                int mid = low + (high - low) / 2;
 
-                if (collection[mid] < searchValue)
+                if (this.Items[mid].CompareTo(item) < 0)
                 {
                     low = mid + 1;
                 }
-                else if (collection[mid] > searchValue)
+                else if (this.Items[mid].CompareTo(item) > 0)
                 {
                     high = mid - 1;
                 }
@@ -68,12 +65,14 @@
                 }
             }
 
-            if (collection[low] == searchValue)
+            if (this.Items[low].CompareTo(item) == 0)
             {
                 return low;
             }
-
-            return -1;
+            else
+            {
+                return -1;
+            }
         }
 
         public void Shuffle()
