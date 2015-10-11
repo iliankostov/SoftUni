@@ -76,7 +76,7 @@
 
             for (int i = 0; i < NumberOfElements; i++)
             {
-                elements[i] = Random.Next(-100, 100);
+                elements[i] = Random.Next(0, 100);
             }
 
             Array.Sort(elements);
@@ -85,10 +85,10 @@
 
             foreach (var element in elements)
             {
-                int expected = Array.BinarySearch(elements, element);
+                int expected = element;
                 int result = collection.InterpolationSearch(element);
 
-                Assert.AreEqual(expected, result);
+                Assert.AreEqual(expected, elements[result]);
             }
         }
 
@@ -152,7 +152,7 @@
             var collection = new SortableCollection<int>(0, 3, 3, 3, 3, 7, 7, 7, 7, 7, 7);
             var result = collection.InterpolationSearch(3);
 
-            Assert.AreEqual(2, result);
+            Assert.AreEqual(4, result);
         }
     }
 }
