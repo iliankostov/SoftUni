@@ -1,8 +1,16 @@
 ﻿namespace Twitter.App.Controllers
 {
-    using System.Web.Mvc;
+    using Twitter.Data.Contracts;
 
-    public class TweetsController : Controller
+    public class TweetsController : BaseController
     {
+        public TweetsController()
+        {
+        }
+
+        public TweetsController(ITwitterData data)
+            : base(data)
+        {
+        }
     }
 }

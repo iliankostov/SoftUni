@@ -1,8 +1,17 @@
 ﻿namespace Twitter.App.Controllers
 {
-    using System.Web.Mvc;
+    using Twitter.Data;
+    using Twitter.Data.Contracts;
 
-    public class NotificationsController : Controller
+    public class NotificationsController : BaseController
     {
+        public NotificationsController()
+        {
+        }
+
+        public NotificationsController(ITwitterData data)
+            : base(data)
+        {
+        }
     }
 }

@@ -2,8 +2,20 @@
 {
     using System.Web.Mvc;
 
-    public class HomeController : Controller
+    using Twitter.Data;
+    using Twitter.Data.Contracts;
+
+    public class HomeController : BaseController
     {
+        public HomeController()
+        {
+        }
+
+        public HomeController(ITwitterData data)
+            : base(data)
+        {
+        }
+
         public ActionResult Index()
         {
             return this.View();
