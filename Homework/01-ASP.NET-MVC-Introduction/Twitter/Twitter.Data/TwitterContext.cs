@@ -21,6 +21,8 @@ namespace Twitter.Data
 
         public virtual IDbSet<Message> Messages { get; set; }
 
+        public virtual IDbSet<Report> Reports { get; set; }
+
         public static TwitterContext Create()
         {
             return new TwitterContext();
