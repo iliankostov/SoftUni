@@ -46,20 +46,20 @@
             var manager = new ApplicationUserManager(new UserStore<User>(context.Get<TwitterContext>()));
             // Configure validation logic for usernames
             manager.UserValidator = new UserValidator<User>(manager)
-                                        {
-                                            AllowOnlyAlphanumericUserNames = false,
-                                            RequireUniqueEmail = true
-                                        };
+                {
+                    AllowOnlyAlphanumericUserNames = false,
+                    RequireUniqueEmail = true
+                };
 
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
-                                            {
-                                                RequiredLength = 6,
-                                                RequireNonLetterOrDigit = false,
-                                                RequireDigit = false,
-                                                RequireLowercase = false,
-                                                RequireUppercase = false
-                                            };
+                {
+                    RequiredLength = 6,
+                    RequireNonLetterOrDigit = false,
+                    RequireDigit = false,
+                    RequireLowercase = false,
+                    RequireUppercase = false
+                };
 
             // Configure user lockout defaults
             manager.UserLockoutEnabledByDefault = true;

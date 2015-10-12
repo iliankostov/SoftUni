@@ -2,7 +2,6 @@
 {
     using System.Web.Mvc;
 
-    using Twitter.Data;
     using Twitter.Data.Contracts;
 
     public class HomeController : BaseController

@@ -4,10 +4,11 @@ namespace Twitter.Data
 
     using Microsoft.AspNet.Identity.EntityFramework;
 
+    using Twitter.Data.Contracts;
     using Twitter.Data.Migrations;
     using Twitter.Models;
 
-    public class TwitterContext : IdentityDbContext<User>
+    public class TwitterContext : IdentityDbContext<User>, ITwitterContext
     {
         public TwitterContext()
             : base("name=TwitterContext")
@@ -30,21 +31,15 @@ namespace Twitter.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .HasMany(u => u.Followers)
-                .WithMany()
-                .Map(
+            modelBuilder.Entity<User>().HasMany(u => u.Followers).WithMany().Map(
                 m =>
                     {
                         m.MapLeftKey("UserId");
                         m.MapRightKey("FollowerId");
                         m.ToTable("UserFollowers");
                     });
-            
-            modelBuilder.Entity<User>()
-                .HasMany(u => u.Following)
-                .WithMany()
-                .Map(
+
+            modelBuilder.Entity<User>().HasMany(u => u.Following).WithMany().Map(
                 m =>
                     {
                         m.MapLeftKey("UserId");
@@ -52,10 +47,7 @@ namespace Twitter.Data
                         m.ToTable("UserFollowing");
                     });
 
-            modelBuilder.Entity<Tweet>()
-                .HasMany(u => u.ReplyTweets)
-                .WithMany()
-                .Map(
+            modelBuilder.Entity<Tweet>().HasMany(u => u.ReplyTweets).WithMany().Map(
                 m =>
                     {
                         m.MapLeftKey("TweetId");
