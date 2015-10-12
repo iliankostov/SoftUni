@@ -30,6 +30,39 @@ namespace Twitter.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Followers)
+                .WithMany()
+                .Map(
+                m =>
+                    {
+                        m.MapLeftKey("UserId");
+                        m.MapRightKey("FollowerId");
+                        m.ToTable("UserFollowers");
+                    });
+            
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Following)
+                .WithMany()
+                .Map(
+                m =>
+                    {
+                        m.MapLeftKey("UserId");
+                        m.MapRightKey("FollowingId");
+                        m.ToTable("UserFollowing");
+                    });
+
+            modelBuilder.Entity<Tweet>()
+                .HasMany(u => u.ReplyTweets)
+                .WithMany()
+                .Map(
+                m =>
+                    {
+                        m.MapLeftKey("TweetId");
+                        m.MapRightKey("ReplyTweetId");
+                        m.ToTable("ReplyTweets");
+                    });
+
             base.OnModelCreating(modelBuilder);
         }
     }
