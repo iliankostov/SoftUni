@@ -1,6 +1,5 @@
 ﻿namespace Twitter.App.Controllers
 {
-    using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Mvc;
@@ -40,6 +39,7 @@
             {
                 return this.signInManager ?? this.HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
+
             private set
             {
                 this.signInManager = value;
@@ -52,28 +52,21 @@
             {
                 return this.userManager ?? this.HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
+
             private set
             {
                 this.userManager = value;
             }
         }
 
-        // GET: /Manage/Index
-        public async Task<ActionResult> Index(ManageMessageId? message)
+        // GET: /Users/Profile
+        public async Task<ActionResult> Profile(ManageMessageId? message)
         {
             this.ViewBag.StatusMessage = message == ManageMessageId.ChangePasswordSuccess
                                              ? "Your password has been changed."
                                              : message == ManageMessageId.SetPasswordSuccess
                                                    ? "Your password has been set."
-                                                   : message == ManageMessageId.SetTwoFactorSuccess
-                                                         ? "Your two-factor authentication provider has been set."
-                                                         : message == ManageMessageId.Error
-                                                               ? "An error has occurred."
-                                                               : message == ManageMessageId.AddPhoneSuccess
-                                                                     ? "Your phone number was added."
-                                                                     : message == ManageMessageId.RemovePhoneSuccess
-                                                                           ? "Your phone number was removed."
-                                                                           : "";
+                                                   : "";
 
             var userId = this.User.Identity.GetUserId();
             var model = new IndexViewModel
@@ -87,68 +80,13 @@
             return this.View(model);
         }
 
-        // POST: /Manage/RemoveLogin
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> RemoveLogin(string loginProvider, string providerKey)
-        {
-            ManageMessageId? message;
-            var result =
-                await
-                this.UserManager.RemoveLoginAsync(
-                    this.User.Identity.GetUserId(),
-                    new UserLoginInfo(loginProvider, providerKey));
-            if (result.Succeeded)
-            {
-                var user = await this.UserManager.FindByIdAsync(this.User.Identity.GetUserId());
-                if (user != null)
-                {
-                    await this.SignInManager.SignInAsync(user, false, false);
-                }
-                message = ManageMessageId.RemoveLoginSuccess;
-            }
-            else
-            {
-                message = ManageMessageId.Error;
-            }
-            return this.RedirectToAction("ManageLogins", new { Message = message });
-        }
-
-        // POST: /Manage/EnableTwoFactorAuthentication
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> EnableTwoFactorAuthentication()
-        {
-            await this.UserManager.SetTwoFactorEnabledAsync(this.User.Identity.GetUserId(), true);
-            var user = await this.UserManager.FindByIdAsync(this.User.Identity.GetUserId());
-            if (user != null)
-            {
-                await this.SignInManager.SignInAsync(user, false, false);
-            }
-            return this.RedirectToAction("Index", "Users");
-        }
-
-        // POST: /Manage/DisableTwoFactorAuthentication
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DisableTwoFactorAuthentication()
-        {
-            await this.UserManager.SetTwoFactorEnabledAsync(this.User.Identity.GetUserId(), false);
-            var user = await this.UserManager.FindByIdAsync(this.User.Identity.GetUserId());
-            if (user != null)
-            {
-                await this.SignInManager.SignInAsync(user, false, false);
-            }
-            return this.RedirectToAction("Index", "Users");
-        }
-
-        // GET: /Manage/ChangePassword
+        // GET: /Users/ChangePassword
         public ActionResult ChangePassword()
         {
             return this.View();
         }
 
-        // POST: /Manage/ChangePassword
+        // POST: /Users/ChangePassword
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
@@ -170,19 +108,19 @@
                 {
                     await this.SignInManager.SignInAsync(user, false, false);
                 }
-                return this.RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+                return this.RedirectToAction("Profile", new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             this.AddErrors(result);
             return this.View(model);
         }
 
-        // GET: /Manage/SetPassword
+        // GET: /Users/SetPassword
         public ActionResult SetPassword()
         {
             return this.View();
         }
 
-        // POST: /Manage/SetPassword
+        // POST: /Users/SetPassword
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SetPassword(SetPasswordViewModel model)
@@ -197,60 +135,13 @@
                     {
                         await this.SignInManager.SignInAsync(user, false, false);
                     }
-                    return this.RedirectToAction("Index", new { Message = ManageMessageId.SetPasswordSuccess });
+                    return this.RedirectToAction("Profile", new { Message = ManageMessageId.SetPasswordSuccess });
                 }
                 this.AddErrors(result);
             }
 
             // If we got this far, something failed, redisplay form
             return this.View(model);
-        }
-
-        // GET: /Manage/ManageLogins
-        public async Task<ActionResult> ManageLogins(ManageMessageId? message)
-        {
-            this.ViewBag.StatusMessage = message == ManageMessageId.RemoveLoginSuccess
-                                             ? "The external login was removed."
-                                             : message == ManageMessageId.Error ? "An error has occurred." : "";
-            var user = await this.UserManager.FindByIdAsync(this.User.Identity.GetUserId());
-            if (user == null)
-            {
-                return this.View("Error");
-            }
-            var userLogins = await this.UserManager.GetLoginsAsync(this.User.Identity.GetUserId());
-            var otherLogins =
-                this.AuthenticationManager.GetExternalAuthenticationTypes()
-                    .Where(auth => userLogins.All(ul => auth.AuthenticationType != ul.LoginProvider))
-                    .ToList();
-            this.ViewBag.ShowRemoveButton = user.PasswordHash != null || userLogins.Count > 1;
-            return this.View(new ManageLoginsViewModel { CurrentLogins = userLogins, OtherLogins = otherLogins });
-        }
-
-        // POST: /Manage/LinkLogin
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult LinkLogin(string provider)
-        {
-            // Request a redirect to the external login provider to link a login for the current user
-            return new AccountController.ChallengeResult(
-                provider,
-                this.Url.Action("LinkLoginCallback", "Users"),
-                this.User.Identity.GetUserId());
-        }
-
-        // GET: /Manage/LinkLoginCallback
-        public async Task<ActionResult> LinkLoginCallback()
-        {
-            var loginInfo =
-                await this.AuthenticationManager.GetExternalLoginInfoAsync(XsrfKey, this.User.Identity.GetUserId());
-            if (loginInfo == null)
-            {
-                return this.RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
-            }
-            var result = await this.UserManager.AddLoginAsync(this.User.Identity.GetUserId(), loginInfo.Login);
-            return result.Succeeded
-                       ? this.RedirectToAction("ManageLogins")
-                       : this.RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
         }
 
         protected override void Dispose(bool disposing)
@@ -291,16 +182,6 @@
             if (user != null)
             {
                 return user.PasswordHash != null;
-            }
-            return false;
-        }
-
-        private bool HasPhoneNumber()
-        {
-            var user = this.UserManager.FindById(this.User.Identity.GetUserId());
-            if (user != null)
-            {
-                return user.PhoneNumber != null;
             }
             return false;
         }
