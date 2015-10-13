@@ -103,7 +103,20 @@
                 return this.View(model);
             }
 
+            var userId = this.User.Identity.GetUserId();
+            var user = this.Data.Users.Find(userId);
 
+            if (user == null)
+            {
+                return this.View(model);
+            }
+
+            user.UserName = model.Username;
+            user.Email = model.Email;
+            this.Data.SaveChanges();
+
+            model.Username = user.UserName;
+            model.Email = user.Email;
 
             return this.View(model);
         }

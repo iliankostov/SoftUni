@@ -4,6 +4,8 @@
 
     public interface ITwitterData
     {
+        IRepository<User> Users { get; }
+
         IRepository<Tweet> Tweets { get; }
 
         IRepository<Notification> Notifications { get; }

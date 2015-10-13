@@ -23,7 +23,7 @@
             this.set = context.Set<T>();
         }
 
-        public T Find(int id)
+        public T Find(object id)
         {
             return this.set.Find(id);
         }

@@ -5,7 +5,7 @@
     public interface IRepository<T>
         where T : class
     {
-        T Find(int id);
+        T Find(object id);
 
         IQueryable<T> GetAll();
 
