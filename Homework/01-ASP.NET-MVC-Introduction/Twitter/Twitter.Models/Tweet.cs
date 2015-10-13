@@ -10,16 +10,16 @@
 
         private ICollection<User> retweetedBy;
 
-        private ICollection<Tweet> replyTweets;
+        private ICollection<Report> reportedBy;
 
-        private ICollection<Report> reports;
+        private ICollection<Tweet> replyTweets;
 
         public Tweet()
         {
             this.favoritedBy = new HashSet<User>();
             this.retweetedBy = new HashSet<User>();
+            this.reportedBy = new HashSet<Report>();
             this.replyTweets = new HashSet<Tweet>();
-            this.reports = new HashSet<Report>();
         }
 
         [Key]
@@ -33,7 +33,7 @@
 
         public DateTime Date { get; set; }
 
-        public int AuthorId { get; set; }
+        public string AuthorId { get; set; }
 
         public virtual User Author { get; set; }
 
@@ -63,6 +63,19 @@
             }
         }
 
+        public virtual ICollection<Report> ReportedBy
+        {
+            get
+            {
+                return this.reportedBy;
+            }
+
+            set
+            {
+                this.reportedBy = value;
+            }
+        }
+
         public virtual ICollection<Tweet> ReplyTweets
         {
             get
@@ -73,19 +86,6 @@
             set
             {
                 this.replyTweets = value;
-            }
-        }
-
-        public virtual ICollection<Report> Reports
-        {
-            get
-            {
-                return this.reports;
-            }
-
-            set
-            {
-                this.reports = value;
             }
         }
     }

@@ -12,10 +12,12 @@
 
         public DateTime Date { get; set; }
 
+        public string Content { get; set; }
+
         public NotificationType NotificationType { get; set; }
 
-        public int AuthorId { get; set; }
+        public string ReceiverId { get; set; }
 
-        public virtual User Author { get; set; }
+        public virtual User Receiver { get; set; }
     }
 }

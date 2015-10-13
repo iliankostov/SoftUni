@@ -9,20 +9,71 @@
 
     public class User : IdentityUser
     {
+        private ICollection<Tweet> ownTweets;
+
+        private ICollection<Tweet> favoriteTweets;
+
+        private ICollection<Report> reportedTweets;
+
         private ICollection<User> followers;
 
         private ICollection<User> following;
 
-        private ICollection<Notification> notifications;
+        private ICollection<Message> sentMessages;
 
-        private ICollection<Message> messages;
+        private ICollection<Message> receivedMessages;
+
+        private ICollection<Notification> notifications;
 
         public User()
         {
+            this.ownTweets = new HashSet<Tweet>();
+            this.favoriteTweets = new HashSet<Tweet>();
+            this.reportedTweets = new HashSet<Report>();
             this.followers = new HashSet<User>();
             this.following = new HashSet<User>();
+            this.sentMessages = new HashSet<Message>();
+            this.receivedMessages = new HashSet<Message>();
             this.notifications = new HashSet<Notification>();
-            this.messages = new HashSet<Message>();
+        }
+
+        public virtual ICollection<Tweet> OwnTweets
+        {
+            get
+            {
+                return this.ownTweets;
+            }
+
+            set
+            {
+                this.ownTweets = value;
+            }
+        }
+
+        public virtual ICollection<Tweet> FavoriteTweets
+        {
+            get
+            {
+                return this.favoriteTweets;
+            }
+
+            set
+            {
+                this.favoriteTweets = value;
+            }
+        }
+
+        public virtual ICollection<Report> ReportedTweets
+        {
+            get
+            {
+                return this.reportedTweets;
+            }
+
+            set
+            {
+                this.reportedTweets = value;
+            }
         }
 
         public virtual ICollection<User> Followers
@@ -51,6 +102,32 @@
             }
         }
 
+        public virtual ICollection<Message> SentMessages
+        {
+            get
+            {
+                return this.sentMessages;
+            }
+
+            set
+            {
+                this.sentMessages = value;
+            }
+        }
+
+        public virtual ICollection<Message> ReceivedMessages
+        {
+            get
+            {
+                return this.receivedMessages;
+            }
+
+            set
+            {
+                this.receivedMessages = value;
+            }
+        }
+
         public virtual ICollection<Notification> Notifications
         {
             get
@@ -64,26 +141,9 @@
             }
         }
 
-        public virtual ICollection<Message> Messages
-        {
-            get
-            {
-                return this.messages;
-            }
-
-            set
-            {
-                this.messages = value;
-            }
-        }
-
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {
-            // Note the authenticationType must match the one 
-            // defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
-
-            // Add custom user claims here
             return userIdentity;
         }
     }

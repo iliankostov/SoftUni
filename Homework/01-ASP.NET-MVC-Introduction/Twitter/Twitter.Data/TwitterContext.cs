@@ -1,6 +1,7 @@
 namespace Twitter.Data
 {
     using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
 
     using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -31,6 +32,18 @@ namespace Twitter.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+            modelBuilder.Entity<User>()
+                        .HasMany(u => u.SentMessages)
+                        .WithRequired(m => m.Receiver)
+                        .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                        .HasMany(u => u.ReceivedMessages)
+                        .WithRequired(m => m.Sender)
+                        .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<User>().HasMany(u => u.Followers).WithMany().Map(
                 m =>
                     {
@@ -53,6 +66,22 @@ namespace Twitter.Data
                         m.MapLeftKey("TweetId");
                         m.MapRightKey("ReplyTweetId");
                         m.ToTable("ReplyTweets");
+                    });
+
+            modelBuilder.Entity<Tweet>().HasMany(t => t.FavoritedBy).WithMany(u => u.FavoriteTweets).Map(
+                m =>
+                    {
+                        m.MapLeftKey("UserId");
+                        m.MapRightKey("TweetId");
+                        m.ToTable("UsersFavoriteTweets");
+                    });
+
+            modelBuilder.Entity<Tweet>().HasMany(t => t.RetweetedBy).WithMany().Map(
+                m =>
+                    {
+                        m.MapLeftKey("UserId");
+                        m.MapRightKey("TweetId");
+                        m.ToTable("UsersReTweets");
                     });
 
             base.OnModelCreating(modelBuilder);

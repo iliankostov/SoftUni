@@ -1,5 +1,6 @@
 ﻿namespace Twitter.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
 
     public class Message
@@ -9,8 +10,14 @@
 
         public string Content { get; set; }
 
-        public int AuthorId { get; set; }
+        public DateTime CreatedAt { get; set; }
 
-        public virtual User Author { get; set; }
+        public string SenderId { get; set; }
+
+        public virtual User Sender { get; set; }
+
+        public string ReceiverId { get; set; }
+
+        public virtual User Receiver { get; set; }
     }
 }
