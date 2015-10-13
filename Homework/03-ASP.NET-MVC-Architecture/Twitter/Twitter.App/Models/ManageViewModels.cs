@@ -6,17 +6,22 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.Owin.Security;
 
-    public class IndexViewModel
+    public class ProfileViewModel
     {
         public bool HasPassword { get; set; }
 
         public IList<UserLoginInfo> Logins { get; set; }
 
-        public string PhoneNumber { get; set; }
-
         public bool TwoFactor { get; set; }
 
         public bool BrowserRemembered { get; set; }
+    }
+
+    public class EditProfileViewModel
+    {
+        public string Username { get; set; }
+
+        public string Email { get; set; }
     }
 
     public class ManageLoginsViewModel

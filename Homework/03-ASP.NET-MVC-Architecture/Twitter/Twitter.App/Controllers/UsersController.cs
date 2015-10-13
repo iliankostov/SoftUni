@@ -69,14 +69,42 @@
                                                    : "";
 
             var userId = this.User.Identity.GetUserId();
-            var model = new IndexViewModel
+            var model = new ProfileViewModel
                 {
                     HasPassword = this.HasPassword(),
-                    PhoneNumber = await this.UserManager.GetPhoneNumberAsync(userId),
                     TwoFactor = await this.UserManager.GetTwoFactorEnabledAsync(userId),
                     Logins = await this.UserManager.GetLoginsAsync(userId),
                     BrowserRemembered = await this.AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
                 };
+            return this.View(model);
+        }
+
+        // GET: /Users/EditProfile
+        public async Task<ActionResult> EditProfile(ManageMessageId? message)
+        {
+            var userId = this.User.Identity.GetUserId();
+
+            var model = new EditProfileViewModel()
+                {
+                    Username = this.User.Identity.GetUserName(),
+                    Email = await this.UserManager.GetEmailAsync(userId),
+                };
+
+            return this.View(model);
+        }
+
+        // POST: /Users/EditPassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditProfile(EditProfileViewModel model)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
+
+
             return this.View(model);
         }
 
