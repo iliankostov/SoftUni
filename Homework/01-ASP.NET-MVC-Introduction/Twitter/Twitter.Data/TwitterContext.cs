@@ -44,23 +44,20 @@ namespace Twitter.Data
                         .WithRequired(m => m.Sender)
                         .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<User>().HasMany(u => u.Followers).WithMany().Map(
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Followers)
+                .WithMany(u => u.Following)
+                .Map(
                 m =>
                     {
-                        m.MapLeftKey("UserId");
-                        m.MapRightKey("FollowerId");
-                        m.ToTable("UserFollowers");
-                    });
-
-            modelBuilder.Entity<User>().HasMany(u => u.Following).WithMany().Map(
-                m =>
-                    {
-                        m.MapLeftKey("UserId");
+                        m.MapLeftKey("FollowerId");
                         m.MapRightKey("FollowingId");
-                        m.ToTable("UserFollowing");
+                        m.ToTable("FollowerFollowing");
                     });
 
-            modelBuilder.Entity<Tweet>().HasMany(u => u.ReplyTweets).WithMany().Map(
+            modelBuilder.Entity<Tweet>()
+                .HasMany(u => u.ReplyTweets)
+                .WithMany().Map(
                 m =>
                     {
                         m.MapLeftKey("TweetId");
