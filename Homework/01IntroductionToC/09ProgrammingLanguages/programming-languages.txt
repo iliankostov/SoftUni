@@ -1,0 +1,15 @@
+C is a general-purpose, imperative computer programming language, supporting structured programming, lexical variable scope and recursion, while a static type system prevents many unintended operations.
+
+C++ uses the value of classes. C++ is usually considered a "multi-paradigm" language. That is, you can use it for object-oriented, procedural, and even functional programming.
+
+C# is a multi-paradigm programming language encompassing strong typing, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.
+
+Objective-C is the main programming language used by Apple for their operating systems. Objective-C is tightly coupled with Cocoa.
+
+Java is one of the best programing languages. It is extremely similar to C# and you can easy jump from one to another. Their differences are in the frameworks in which they operate.
+
+PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language. PHP code is usually processed by a PHP interpreter, which is usually implemented as a web server's native module or a Common Gateway Interface (CGI) executable.
+
+Python is open source programing language which has availability to use open source libraries. It is easy to learn and it has easy syntax.
+
+Ruby is another open source language which has got completely different platform called Rails. In addition it is easy to write, but hard to understand.
