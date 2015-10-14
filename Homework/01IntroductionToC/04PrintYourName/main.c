@@ -3,7 +3,8 @@
 
 int main(int argc, char** argv) {
 
-    printf("%s", "My name is Pesho.");
+    char *name = "Pesho";
+    printf("My name is %s.", name);
     
     return (EXIT_SUCCESS);
 }

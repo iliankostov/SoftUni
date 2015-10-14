@@ -3,7 +3,9 @@
 
 int main(int argc, char** argv) {
 
-    printf("%s\n%s", "Pesho", "Peshev");
+    char *firstName = "Pesho";
+    char *lastName=  "Peshev";
+    printf("%s %s", firstName, lastName);
 
     return (EXIT_SUCCESS);
 }
