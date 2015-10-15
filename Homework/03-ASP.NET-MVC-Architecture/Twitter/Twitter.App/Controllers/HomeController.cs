@@ -3,9 +3,10 @@
     using System.Linq;
     using System.Web.Mvc;
 
+    using Microsoft.AspNet.Identity;
+
     using PagedList;
 
-    using Twitter.App.Constants;
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
 
@@ -20,17 +21,32 @@
         [AllowAnonymous]
         public ActionResult Index(int? page)
         {
-            var tweets = this.Data.Tweets.GetAll().OrderByDescending(t => t.Date).Select(TweetViewModel.Create());
+            bool currentUserIsLogged = System.Web.HttpContext.Current.User != null
+                                       && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
 
-            if (tweets.Any())
+            IQueryable<TweetViewModel> tweets;
+
+            if (currentUserIsLogged)
             {
-                int pageSize = Constants.DefaultPageSize;
-                int pageNumber = page ?? Constants.DefaultStartPage;
+                string currentUserName = System.Web.HttpContext.Current.User.Identity.GetUserName();
 
-                return this.View(tweets.ToPagedList(pageNumber, pageSize));
+                tweets =
+                    this.Data.Tweets.GetAll()
+                        .Where(t => t.Author.Following.Any(u => u.UserName == currentUserName))
+                        .OrderByDescending(t => t.Date)
+                        .Select(TweetViewModel.Create());
+            }
+            else
+            {
+                tweets = this.Data.Tweets.GetAll()
+                    .OrderByDescending(t => t.Date)
+                    .Select(TweetViewModel.Create());
             }
 
-            return this.View();
+            int pageSize = App.Constants.Constants.DefaultPageSize;
+            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+
+            return this.View(tweets.ToPagedList(pageNumber, pageSize));
         }
     }
 }
