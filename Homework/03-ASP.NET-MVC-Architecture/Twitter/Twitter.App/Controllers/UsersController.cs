@@ -3,7 +3,6 @@
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
-    using System.Web.Http;
     using System.Web.Mvc;
 
     using Microsoft.AspNet.Identity;
@@ -68,7 +67,7 @@
             var user =
                 this.Data.Users.GetAll()
                     .Where(u => u.UserName == username)
-                    .Select(UserPageViewModel.Create())
+                    .Select(UserViewModel.Create())
                     .FirstOrDefault();
 
             if (user == null)

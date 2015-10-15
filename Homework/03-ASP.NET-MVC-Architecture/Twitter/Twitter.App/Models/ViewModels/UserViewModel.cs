@@ -7,7 +7,7 @@
 
     using Twitter.Models;
 
-    public class UserPageViewModel
+    public class UserViewModel
     {
         public string Username { get; set; }
 
@@ -15,11 +15,11 @@
 
         public string CoverImage { get; set; }
 
-        public static Expression<Func<User, UserPageViewModel>> Create()
+        public static Expression<Func<User, UserViewModel>> Create()
         {
             return
                 u =>
-                new UserPageViewModel
+                new UserViewModel
                     {
                         Username = u.UserName,
                         ProfileImage = u.ProfileImage ?? Constants.DefaultProfileImage,

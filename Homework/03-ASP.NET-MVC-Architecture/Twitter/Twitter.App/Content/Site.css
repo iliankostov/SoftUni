@@ -29,6 +29,7 @@ textarea {
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    margin: -200px 0 0 20px;
+    width: 150px;
+    height: 150px;
 }
