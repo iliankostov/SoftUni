@@ -61,8 +61,7 @@
             }
         }
 
-        // GET: /Users/Index
-        public ActionResult Index(string username)
+        public ActionResult Following(string username)
         {
             var user =
                 this.Data.Users.GetAll()
@@ -72,9 +71,23 @@
 
             if (user == null)
             {
-                return this.RedirectToAction("Index");
+                return this.RedirectToAction("Following");
             }
+            return this.View(user);
+        }
 
+        public ActionResult Followers(string username)
+        {
+            var user =
+                this.Data.Users.GetAll()
+                    .Where(u => u.UserName == username)
+                    .Select(UserViewModel.Create())
+                    .FirstOrDefault();
+
+            if (user == null)
+            {
+                return this.RedirectToAction("Followers");
+            }
             return this.View(user);
         }
 

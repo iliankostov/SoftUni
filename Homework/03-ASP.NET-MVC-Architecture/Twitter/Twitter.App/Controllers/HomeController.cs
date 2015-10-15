@@ -3,10 +3,9 @@
     using System.Linq;
     using System.Web.Mvc;
 
-    using Constants;
-
     using PagedList;
 
+    using Twitter.App.Constants;
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
 
@@ -21,9 +20,7 @@
         [AllowAnonymous]
         public ActionResult Index(int? page)
         {
-            var tweets = this.Data.Tweets.GetAll()
-                .OrderByDescending(t => t.Date)
-                .Select(TweetViewModel.Create());
+            var tweets = this.Data.Tweets.GetAll().OrderByDescending(t => t.Date).Select(TweetViewModel.Create());
 
             if (tweets.Any())
             {

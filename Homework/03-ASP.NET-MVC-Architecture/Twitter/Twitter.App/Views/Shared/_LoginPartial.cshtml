@@ -7,10 +7,10 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li>
-                @Html.ActionLink(User.Identity.GetUserName(), "Index", "Users", new { username = User.Identity.GetUserName() }, new { title = "User.Identity.GetUserName()" })
+                @Html.ActionLink(User.Identity.GetUserName(), "Index", "Tweets", new { username = User.Identity.GetUserName() }, new { title = "User.Identity.GetUserName()" })
             </li>
             <li>
-                @Html.ActionLink("Profile", "Profile", "Users", null, new { title = "Profile" })
+                @Html.ActionLink("Settings", "Profile", "Users", null, new { title = "Profile" })
             </li>
             <li>
                 <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>

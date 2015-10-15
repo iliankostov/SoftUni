@@ -1,0 +1,6 @@
+﻿@model Twitter.App.Models.ViewModels.UserViewModel
+@{
+    ViewBag.Title = @Model.Username + "\'s favourite tweets";
+}
+
+@Html.Partial("_UserHomePageHeader", Model)
