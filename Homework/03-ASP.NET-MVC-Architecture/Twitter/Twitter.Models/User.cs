@@ -37,6 +37,10 @@
             this.notifications = new HashSet<Notification>();
         }
 
+        public string ProfileImage { get; set; }
+
+        public string CoverImage { get; set; }
+
         public virtual ICollection<Tweet> OwnTweets
         {
             get

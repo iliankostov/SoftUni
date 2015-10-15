@@ -1,8 +1,17 @@
-﻿@model Twitter.App.Models.ViewModels.ProfileViewModel
+﻿@model Twitter.App.Models.ViewModels.UserPageViewModel
 @{
-    ViewBag.Title = "User Page";
+    ViewBag.Title = @Model.Username;
 }
 
-<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <img class="cover-image" src="@Model.CoverImage" />
+        <img class="profile-image" src="@Model.ProfileImage" />
+    </div>
+</div>
 
-<p class="text-success">@ViewBag.StatusMessage</p>
+
+
+
+
+

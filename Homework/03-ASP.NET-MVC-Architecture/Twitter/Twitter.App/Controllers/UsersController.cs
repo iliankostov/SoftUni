@@ -1,19 +1,20 @@
 ﻿namespace Twitter.App.Controllers
 {
+    using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
+    using System.Web.Http;
     using System.Web.Mvc;
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
 
-    using Twitter.App.Models;
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
 
-    [Authorize]
+    [System.Web.Mvc.Authorize]
     public class UsersController : BaseController
     {
         private ApplicationSignInManager signInManager;
@@ -62,11 +63,20 @@
         }
 
         // GET: /Users/Index
-        public ActionResult Index(string user)
+        public ActionResult Index(string username)
         {
+            var user =
+                this.Data.Users.GetAll()
+                    .Where(u => u.UserName == username)
+                    .Select(UserPageViewModel.Create())
+                    .FirstOrDefault();
 
+            if (user == null)
+            {
+                return this.RedirectToAction("Index");
+            }
 
-            return this.View();
+            return this.View(user);
         }
 
         // GET: /Users/Profile
@@ -79,8 +89,8 @@
                                                    : message == ManageMessageId.EditProfileSucess
                                                          ? "Your profile has been changed."
                                                          : message == ManageMessageId.Error
-                                                         ? "Incorrect data. Please try again."
-                                                         : "";
+                                                               ? "Incorrect data. Please try again."
+                                                               : "";
 
             var userId = this.User.Identity.GetUserId();
             var model = new ProfileViewModel
@@ -96,9 +106,7 @@
         // GET: /Users/EditProfile
         public async Task<ActionResult> EditProfile(ManageMessageId? message)
         {
-            this.ViewBag.StatusMessage = message == ManageMessageId.Error
-                                                         ? "Incorrect data. Please try again."
-                                                         : "";
+            this.ViewBag.StatusMessage = message == ManageMessageId.Error ? "Incorrect data. Please try again." : "";
 
             var userId = this.User.Identity.GetUserId();
 
@@ -112,7 +120,7 @@
         }
 
         // POST: /Users/EditProfile
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditProfile(EditProfileBindingModel model)
         {
@@ -146,7 +154,7 @@
         }
 
         // POST: /Users/ChangePassword
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
         {
@@ -183,7 +191,7 @@
         }
 
         // POST: /Users/SetPassword
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SetPassword(SetPasswordViewModel model)
         {
