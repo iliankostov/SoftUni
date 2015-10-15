@@ -1,4 +1,4 @@
-﻿namespace Twitter.App.Models
+﻿namespace Twitter.App.Models.ViewModels
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

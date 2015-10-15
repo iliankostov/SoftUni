@@ -10,6 +10,7 @@
     using Microsoft.Owin.Security;
 
     using Twitter.App.Models;
+    using Twitter.App.Models.ViewModels;
     using Twitter.Models;
 
     [Authorize]

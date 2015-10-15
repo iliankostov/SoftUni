@@ -9,6 +9,8 @@
     using Microsoft.Owin.Security;
 
     using Twitter.App.Models;
+    using Twitter.App.Models.BindingModels;
+    using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
 
     [Authorize]
@@ -59,6 +61,14 @@
             }
         }
 
+        // GET: /Users/Index
+        public ActionResult Index(string user)
+        {
+
+
+            return this.View();
+        }
+
         // GET: /Users/Profile
         public async Task<ActionResult> Profile(ManageMessageId? message)
         {
@@ -66,7 +76,11 @@
                                              ? "Your password has been changed."
                                              : message == ManageMessageId.SetPasswordSuccess
                                                    ? "Your password has been set."
-                                                   : "";
+                                                   : message == ManageMessageId.EditProfileSucess
+                                                         ? "Your profile has been changed."
+                                                         : message == ManageMessageId.Error
+                                                         ? "Incorrect data. Please try again."
+                                                         : "";
 
             var userId = this.User.Identity.GetUserId();
             var model = new ProfileViewModel
@@ -82,6 +96,10 @@
         // GET: /Users/EditProfile
         public async Task<ActionResult> EditProfile(ManageMessageId? message)
         {
+            this.ViewBag.StatusMessage = message == ManageMessageId.Error
+                                                         ? "Incorrect data. Please try again."
+                                                         : "";
+
             var userId = this.User.Identity.GetUserId();
 
             var model = new EditProfileViewModel()
@@ -93,14 +111,14 @@
             return this.View(model);
         }
 
-        // POST: /Users/EditPassword
+        // POST: /Users/EditProfile
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProfile(EditProfileViewModel model)
+        public ActionResult EditProfile(EditProfileBindingModel model)
         {
             if (!this.ModelState.IsValid)
             {
-                return this.View(model);
+                return this.RedirectToAction("EditProfile", new { Message = ManageMessageId.Error });
             }
 
             var userId = this.User.Identity.GetUserId();
@@ -108,7 +126,7 @@
 
             if (user == null)
             {
-                return this.View(model);
+                return this.RedirectToAction("EditProfile", new { Message = ManageMessageId.Error });
             }
 
             user.UserName = model.Username;
@@ -118,7 +136,7 @@
             model.Username = user.UserName;
             model.Email = user.Email;
 
-            return this.View(model);
+            return this.RedirectToAction("Profile", new { Message = ManageMessageId.EditProfileSucess });
         }
 
         // GET: /Users/ChangePassword
@@ -136,6 +154,7 @@
             {
                 return this.View(model);
             }
+
             var result =
                 await
                 this.UserManager.ChangePasswordAsync(
@@ -149,8 +168,10 @@
                 {
                     await this.SignInManager.SignInAsync(user, false, false);
                 }
+
                 return this.RedirectToAction("Profile", new { Message = ManageMessageId.ChangePasswordSuccess });
             }
+
             this.AddErrors(result);
             return this.View(model);
         }
@@ -229,17 +250,11 @@
 
         public enum ManageMessageId
         {
-            AddPhoneSuccess,
+            EditProfileSucess,
 
             ChangePasswordSuccess,
 
-            SetTwoFactorSuccess,
-
             SetPasswordSuccess,
-
-            RemoveLoginSuccess,
-
-            RemovePhoneSuccess,
 
             Error
         }

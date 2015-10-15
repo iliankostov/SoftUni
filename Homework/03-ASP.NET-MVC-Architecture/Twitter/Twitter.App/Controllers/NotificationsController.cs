@@ -4,10 +4,6 @@
 
     public class NotificationsController : BaseController
     {
-        public NotificationsController()
-        {
-        }
-
         public NotificationsController(ITwitterData data)
             : base(data)
         {

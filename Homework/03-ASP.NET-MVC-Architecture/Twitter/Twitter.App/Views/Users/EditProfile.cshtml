@@ -1,9 +1,11 @@
-﻿@model Twitter.App.Models.EditProfileViewModel
+﻿@model Twitter.App.Models.ViewModels.EditProfileViewModel
 @{
     ViewBag.Title = "Edit Profile";
 }
 
 <h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
 
 @using (Html.BeginForm("EditProfile", "Users", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
