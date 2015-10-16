@@ -37,7 +37,7 @@
         </div>
     }
 
-    if (Model.HasNextPage)
+    if (Model.HasNextPage || Model.HasPreviousPage)
     {
         @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
     }

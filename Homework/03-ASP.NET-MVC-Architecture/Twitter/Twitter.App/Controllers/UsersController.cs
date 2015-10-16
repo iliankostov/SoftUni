@@ -13,7 +13,7 @@
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
 
-    [System.Web.Mvc.Authorize]
+    [Authorize]
     public class UsersController : BaseController
     {
         private ApplicationSignInManager signInManager;
@@ -61,6 +61,7 @@
             }
         }
 
+        // GET: {username}/Users/Following
         public ActionResult Following(string username)
         {
             var user =
@@ -76,6 +77,7 @@
             return this.View(user);
         }
 
+        // GET: {username}/Users/Followers
         public ActionResult Followers(string username)
         {
             var user =
@@ -91,7 +93,25 @@
             return this.View(user);
         }
 
-        // GET: /Users/Profile
+        // POST: {username}/Users/Follow
+        public ActionResult Follow(string followUserId)
+        {
+            var currentUserId = this.User.Identity.GetUserId();
+            var currentUser = this.Data.Users.GetAll().FirstOrDefault(u => u.Id == currentUserId);
+            var followUser = this.Data.Users.GetAll().FirstOrDefault(u => u.Id == followUserId);
+
+            if (currentUser == null || followUser == null)
+            {
+                return this.RedirectToAction("Following");
+            }
+
+            followUser.Following.Add(currentUser);
+            this.Data.SaveChanges();
+
+            return this.RedirectToAction("Following");
+        }
+
+        // GET: {username}/Users/Profile
         public async Task<ActionResult> Profile(ManageMessageId? message)
         {
             this.ViewBag.StatusMessage = message == ManageMessageId.ChangePasswordSuccess
@@ -115,7 +135,7 @@
             return this.View(model);
         }
 
-        // GET: /Users/EditProfile
+        // GET: {username}/Users/EditProfile
         public async Task<ActionResult> EditProfile(ManageMessageId? message)
         {
             this.ViewBag.StatusMessage = message == ManageMessageId.Error ? "Incorrect data. Please try again." : "";
@@ -131,8 +151,8 @@
             return this.View(model);
         }
 
-        // POST: /Users/EditProfile
-        [System.Web.Mvc.HttpPost]
+        // POST: {username}/Users/EditProfile
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditProfile(EditProfileBindingModel model)
         {
@@ -153,20 +173,19 @@
             user.Email = model.Email;
             this.Data.SaveChanges();
 
-            model.Username = user.UserName;
-            model.Email = user.Email;
+            this.HttpContext.GetOwinContext().Authentication.SignOut();
 
-            return this.RedirectToAction("Profile", new { Message = ManageMessageId.EditProfileSucess });
+            return this.RedirectToAction("Login", "Account");
         }
 
-        // GET: /Users/ChangePassword
+        // GET: {username}/Users/ChangePassword
         public ActionResult ChangePassword()
         {
             return this.View();
         }
 
-        // POST: /Users/ChangePassword
-        [System.Web.Mvc.HttpPost]
+        // POST: {username}/Users/ChangePassword
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
         {
@@ -196,14 +215,14 @@
             return this.View(model);
         }
 
-        // GET: /Users/SetPassword
+        // GET: {username}/Users/SetPassword
         public ActionResult SetPassword()
         {
             return this.View();
         }
 
-        // POST: /Users/SetPassword
-        [System.Web.Mvc.HttpPost]
+        // POST: {username}/Users/SetPassword
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SetPassword(SetPasswordViewModel model)
         {

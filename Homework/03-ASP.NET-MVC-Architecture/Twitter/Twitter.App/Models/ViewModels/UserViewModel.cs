@@ -9,6 +9,8 @@
 
     public class UserViewModel
     {
+        public string Id { get; set; }
+
         public string Username { get; set; }
 
         public string ProfileImage { get; set; }
@@ -21,6 +23,7 @@
                 u =>
                 new UserViewModel
                     {
+                        Id = u.Id,
                         Username = u.UserName,
                         ProfileImage = u.ProfileImage ?? Constants.DefaultProfileImage,
                         CoverImage = u.CoverImage ?? Constants.DefaultCoverImage

@@ -6,6 +6,10 @@
         <img class="profile-image img-circle" src="@Model.ProfileImage"/>
         <div>
             <p class="username lead">@Model.Username</p>
+            <form action="/@Model.Username/Users/Follow" method="POST">
+                <input name="followUserId" type="hidden" value="@Model.Id" />
+                <input class="btn btn-default" type="submit" value="Follow"/>
+            </form>
         </div>
     </div>
 </div>

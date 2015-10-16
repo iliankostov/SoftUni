@@ -25,7 +25,7 @@
     </div>
 }
 
-@if (Model.TweetViewModels.HasNextPage)
+@if (Model.TweetViewModels.HasNextPage || Model.TweetViewModels.HasPreviousPage)
 {
     @Html.PagedListPager(Model.TweetViewModels, page => Url.Action("Index", new {Model.User.Username, page }));
 }

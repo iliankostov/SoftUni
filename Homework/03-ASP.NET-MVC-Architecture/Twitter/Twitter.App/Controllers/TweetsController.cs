@@ -21,6 +21,7 @@
         {
         }
 
+        // GET: {username}/Tweets
         public ActionResult Index(string username, int? page)
         {
             var user =
@@ -36,11 +37,10 @@
 
             int pageSize = App.Constants.Constants.DefaultPageSize;
             int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
-            var userId = this.User.Identity.GetUserId();
 
             IPagedList<TweetViewModel> tweets =
                 this.Data.Tweets.GetAll()
-                    .Where(u => u.AuthorId == userId)
+                    .Where(u => u.AuthorId == user.Id)
                     .OrderByDescending(t => t.Date)
                     .Select(TweetViewModel.Create())
                     .ToPagedList(pageNumber, pageSize);
@@ -54,6 +54,7 @@
             return this.View(model);
         }
 
+        // GET: {username}/Tweets/Favourite
         public ActionResult Favourite(string username)
         {
             var user =
@@ -69,6 +70,7 @@
             return this.View(user);
         }
 
+        // GET: /Tweets/PostTweet
         [ChildActionOnly]
         public ActionResult PostTweet()
         {
@@ -86,6 +88,7 @@
             return this.PartialView("~/Views/Shared/_FormTweet.cshtml", tweet);
         }
 
+        // POST: /Tweets/PostTweets
         [HttpPost]
         public async Task<ActionResult> PostTweet(PostTweetBindingModel model)
         {
