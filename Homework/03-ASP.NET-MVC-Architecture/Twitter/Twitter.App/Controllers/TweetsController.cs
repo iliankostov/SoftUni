@@ -13,6 +13,7 @@
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
     using Twitter.Models;
+    using Twitter.Models.Enumerations;
 
     public class TweetsController : BaseController
     {
@@ -153,6 +154,17 @@
             }
 
             tweet.FavoritedBy.Add(user);
+
+            var notification = new Notification()
+            {
+                Content = string.Format("Your tweet was favoured by {0}", user.UserName),
+                Date = DateTime.Now,
+                ReceiverId = tweet.AuthorId,
+                NotificationType = NotificationType.FavouriteTweet
+            };
+
+            this.Data.Notifications.Add(notification);
+
             this.Data.SaveChanges();
 
             return this.Redirect("/" + user.UserName);
@@ -171,6 +183,16 @@
             }
             
             tweet.RetweetedBy.Add(user);
+
+            var notification = new Notification()
+            {
+                Content = string.Format("Your tweet was retweeted by {0}", user.UserName),
+                Date = DateTime.Now,
+                ReceiverId = tweet.AuthorId,
+                NotificationType = NotificationType.Retweet
+            };
+
+            this.Data.Notifications.Add(notification);
             this.Data.SaveChanges();
 
             return this.Redirect("/" + user.UserName);

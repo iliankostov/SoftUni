@@ -25,6 +25,11 @@
                 new { controller = "Users", action = "Index" });
 
             routes.MapRoute(
+                "Notifications",
+                "{username}/Notifications/{action}/{id}",
+                new { controller = "Notifications", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
                 "Default",
                 "{controller}/{action}/{id}",
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional });

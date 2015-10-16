@@ -1,5 +1,6 @@
 ﻿namespace Twitter.App.Controllers
 {
+    using System;
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
@@ -14,6 +15,8 @@
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
+    using Twitter.Models;
+    using Twitter.Models.Enumerations;
 
     [Authorize]
     public class UsersController : BaseController
@@ -161,6 +164,16 @@
             }
 
             followUser.Following.Add(currentUser);
+            
+            var notification = new Notification()
+                {
+                    Content = string.Format("You have been followed by {0}", currentUser.UserName),
+                    Date = DateTime.Now,
+                    ReceiverId = followUserId,
+                    NotificationType = NotificationType.NewFollower
+                };
+
+            this.Data.Notifications.Add(notification);
             this.Data.SaveChanges();
 
             return this.RedirectToAction("Following");
@@ -209,7 +222,7 @@
         // POST: {username}/Users/EditProfile
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProfile(EditProfileBindingModel model)
+        public ActionResult EditProfile(EditProfileBindingModel model, HttpPostedFileBase ProfileImage)
         {
             if (!this.ModelState.IsValid)
             {

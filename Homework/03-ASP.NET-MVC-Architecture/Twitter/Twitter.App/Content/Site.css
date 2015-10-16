@@ -47,4 +47,8 @@ textarea {
     width: 100%;
     max-width: 100%;
     resize: none;
+}       
+
+a.notifications {
+    color: #9d9d9d;
 }

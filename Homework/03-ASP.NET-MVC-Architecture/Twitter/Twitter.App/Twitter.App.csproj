@@ -222,6 +222,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\ViewModels\NotificationViewModel.cs" />
     <Compile Include="Models\ViewModels\UserAndFollowersViewModel.cs" />
     <Compile Include="Models\ViewModels\UserSearchViewModel.cs" />
     <Compile Include="Models\ViewModels\UserAndTweetsViewModel.cs" />
@@ -308,6 +309,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Users\EditProfile.cshtml" />
+    <Content Include="Views\Notifications\Index.cshtml" />
+    <Content Include="Views\Notifications\View.cshtml" />
     <None Include="Views\Tweets\Favourite.cshtml" />
     <None Include="Views\Tweets\Index.cshtml" />
     <Content Include="Views\Shared\_FormTweet.cshtml" />
@@ -316,9 +319,7 @@
     <Content Include="Views\Shared\_UserHomePageHeader.cshtml" />
     <None Include="Views\Users\Search.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Notifications\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
