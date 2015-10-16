@@ -57,7 +57,7 @@
         }
 
         // GET: {username}/Tweets/Favourite
-        public ActionResult Favourite(string username)
+        public ActionResult Favourite(string username, int? page)
         {
             var currentUserId = this.User.Identity.GetUserId();
 
@@ -71,7 +71,24 @@
             {
                 return this.RedirectToAction("Favourite");
             }
-            return this.View(user);
+
+            int pageSize = App.Constants.Constants.DefaultPageSize;
+            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+
+            IPagedList<TweetViewModel> tweets =
+                this.Data.Tweets.GetAll()
+                    .Where(t => t.FavoritedBy.Any(ft => ft.Id == user.Id))
+                    .OrderByDescending(t => t.Date)
+                    .Select(TweetViewModel.Create())
+                    .ToPagedList(pageNumber, pageSize);
+
+            var model = new UserAndTweetsViewModel()
+            {
+                User = user,
+                TweetViewModels = tweets
+            };
+
+            return this.View(model);
         }
 
         // GET: /Tweets/PostTweet
@@ -120,6 +137,24 @@
             }
 
             return this.PartialView("~/Views/Shared/_FormTweet.cshtml");
+        }
+
+        [Authorize]
+        public ActionResult FavorTweet(int tweetId)
+        {
+            var currentUserId = this.User.Identity.GetUserId();
+            var user = this.Data.Users.GetAll().FirstOrDefault(u => u.Id == currentUserId);
+            var tweet = this.Data.Tweets.GetAll().FirstOrDefault(t => t.Id == tweetId);
+
+            if (tweet == null && user == null)
+            {
+                return this.Redirect("/");
+            }
+
+            tweet.FavoritedBy.Add(user);
+            this.Data.SaveChanges();
+
+            return this.Redirect("/");
         }
     }
 }
