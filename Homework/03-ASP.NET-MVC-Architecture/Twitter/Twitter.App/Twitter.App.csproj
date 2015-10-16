@@ -222,6 +222,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\ViewModels\UserSearchViewModel.cs" />
     <Compile Include="Models\ViewModels\UserAndTweetsViewModel.cs" />
     <Compile Include="Models\BindingModels\PostTweetBindingModel.cs" />
     <Compile Include="Models\ViewModels\TweetViewModel.cs" />
@@ -312,6 +313,7 @@
     <None Include="Views\Users\Followers.cshtml" />
     <None Include="Views\Users\Following.cshtml" />
     <Content Include="Views\Shared\_UserHomePageHeader.cshtml" />
+    <None Include="Views\Users\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Notifications\" />

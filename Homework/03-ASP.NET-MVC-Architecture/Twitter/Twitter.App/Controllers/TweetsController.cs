@@ -24,10 +24,12 @@
         // GET: {username}/Tweets
         public ActionResult Index(string username, int? page)
         {
+            var currentUserId = this.User.Identity.GetUserId();
+
             var user =
                 this.Data.Users.GetAll()
                     .Where(u => u.UserName == username)
-                    .Select(UserViewModel.Create())
+                    .Select(UserViewModel.Create(currentUserId))
                     .FirstOrDefault();
 
             if (user == null)
@@ -57,10 +59,12 @@
         // GET: {username}/Tweets/Favourite
         public ActionResult Favourite(string username)
         {
+            var currentUserId = this.User.Identity.GetUserId();
+
             var user =
                 this.Data.Users.GetAll()
                     .Where(u => u.UserName == username)
-                    .Select(UserViewModel.Create())
+                    .Select(UserViewModel.Create(currentUserId))
                     .FirstOrDefault();
 
             if (user == null)
@@ -77,7 +81,10 @@
             string currentUserId = System.Web.HttpContext.Current.User.Identity.GetUserId();
 
             var currentUser =
-                this.Data.Users.GetAll().Where(u => u.Id == currentUserId).Select(UserViewModel.Create()).First();
+                this.Data.Users.GetAll()
+                .Where(u => u.Id == currentUserId)
+                .Select(UserViewModel.Create(currentUserId))
+                .FirstOrDefault();
 
             var tweet = new PostTweetBindingModel
                 {

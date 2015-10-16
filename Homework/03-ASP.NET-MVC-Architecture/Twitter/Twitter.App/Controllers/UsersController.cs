@@ -64,10 +64,12 @@
         // GET: {username}/Users/Following
         public ActionResult Following(string username)
         {
+            var currentUserId = this.User.Identity.GetUserId();
+
             var user =
                 this.Data.Users.GetAll()
                     .Where(u => u.UserName == username)
-                    .Select(UserViewModel.Create())
+                    .Select(UserViewModel.Create(currentUserId))
                     .FirstOrDefault();
 
             if (user == null)
@@ -80,10 +82,12 @@
         // GET: {username}/Users/Followers
         public ActionResult Followers(string username)
         {
+            var currentUserId = this.User.Identity.GetUserId();
+
             var user =
                 this.Data.Users.GetAll()
                     .Where(u => u.UserName == username)
-                    .Select(UserViewModel.Create())
+                    .Select(UserViewModel.Create(currentUserId))
                     .FirstOrDefault();
 
             if (user == null)
@@ -91,6 +95,22 @@
                 return this.RedirectToAction("Followers");
             }
             return this.View(user);
+        }
+
+        // GET: {username/Users/Search}
+
+        // POST: {username}/Users/Search
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult Search(string search)
+        {
+            var keyword = search.ToLower();
+
+            var foundUsers = this.Data.Users.GetAll()
+                .Where(u => u.UserName.ToLower().Contains(keyword))
+                .Select(UserSearchViewModel.Create());
+
+            return this.View(foundUsers);
         }
 
         // POST: {username}/Users/Follow
@@ -298,6 +318,6 @@
             Error
         }
 
-        #endregion
+        #endregion     
     }
 }

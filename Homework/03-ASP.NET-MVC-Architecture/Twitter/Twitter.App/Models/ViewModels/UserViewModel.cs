@@ -1,6 +1,7 @@
 ﻿namespace Twitter.App.Models.ViewModels
 {
     using System;
+    using System.Linq;
     using System.Linq.Expressions;
 
     using Constants;
@@ -17,7 +18,9 @@
 
         public string CoverImage { get; set; }
 
-        public static Expression<Func<User, UserViewModel>> Create()
+        public bool IsFollowing { get; set; }
+
+        public static Expression<Func<User, UserViewModel>> Create(string loggedUserId)
         {
             return
                 u =>
@@ -26,8 +29,9 @@
                         Id = u.Id,
                         Username = u.UserName,
                         ProfileImage = u.ProfileImage ?? Constants.DefaultProfileImage,
-                        CoverImage = u.CoverImage ?? Constants.DefaultCoverImage
-                    };
+                        CoverImage = u.CoverImage ?? Constants.DefaultCoverImage,
+                        IsFollowing = u.Following.Any(f => f.Id.Equals(loggedUserId))
+                };
         }
     }
 }
