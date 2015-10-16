@@ -9,6 +9,8 @@
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
 
+    using PagedList;
+
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
     using Twitter.Data.Contracts;
@@ -62,42 +64,75 @@
         }
 
         // GET: {username}/Users/Following
-        public ActionResult Following(string username)
+        public ActionResult Following(string username, int? page)
         {
             var currentUserId = this.User.Identity.GetUserId();
+            var currentUser = this.Data.Users.GetAll()
+                .Where(u => u.Id == currentUserId)
+                .Select(UserViewModel.Create(currentUserId))
+                .FirstOrDefault();
 
-            var user =
+            int pageSize = App.Constants.Constants.DefaultPageSize;
+            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+
+            IPagedList<UserViewModel> following =
                 this.Data.Users.GetAll()
-                    .Where(u => u.UserName == username)
+                    .Where(u => u.Following.Any(fu => fu.UserName == username))
+                    .OrderBy(u => u.UserName)
                     .Select(UserViewModel.Create(currentUserId))
-                    .FirstOrDefault();
+                    .ToPagedList(pageNumber, pageSize);
 
-            if (user == null)
+            if (following == null)
             {
                 return this.RedirectToAction("Following");
             }
-            return this.View(user);
+
+            var model = new UserAndFollowersViewModel()
+                {
+                    User = currentUser,
+                    Followers = following
+                };
+
+            return this.View(model);
         }
 
         // GET: {username}/Users/Followers
-        public ActionResult Followers(string username)
+        public ActionResult Followers(string username, int? page)
         {
             var currentUserId = this.User.Identity.GetUserId();
+            var currentUser = this.Data.Users.GetAll()
+                .Where(u => u.Id == currentUserId)
+                .Select(UserViewModel.Create(currentUserId))
+                .FirstOrDefault();
 
-            var user =
-                this.Data.Users.GetAll()
-                    .Where(u => u.UserName == username)
-                    .Select(UserViewModel.Create(currentUserId))
-                    .FirstOrDefault();
-
-            if (user == null)
+            if (currentUser == null)
             {
                 return this.RedirectToAction("Followers");
             }
-            return this.View(user);
-        }
 
-        // GET: {username/Users/Search}
+            int pageSize = App.Constants.Constants.DefaultPageSize;
+            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+
+            IPagedList<UserViewModel> following =
+                this.Data.Users.GetAll()
+                    .Where(u => u.Followers.Any(fu => fu.UserName == username))
+                    .OrderBy(u => u.UserName)
+                    .Select(UserViewModel.Create(currentUserId))
+                    .ToPagedList(pageNumber, pageSize);
+
+            if (following == null)
+            {
+                return this.RedirectToAction("Followers");
+            }
+
+            var model = new UserAndFollowersViewModel()
+            {
+                User = currentUser,
+                Followers = following
+            };
+
+            return this.View(model);
+        }
 
         // POST: {username}/Users/Search
         [HttpPost]
