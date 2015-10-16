@@ -42,7 +42,7 @@
 
             IPagedList<TweetViewModel> tweets =
                 this.Data.Tweets.GetAll()
-                    .Where(u => u.AuthorId == user.Id)
+                    .Where(t => t.AuthorId == user.Id || t.RetweetedBy.Any(u => u.Id == user.Id))
                     .OrderByDescending(t => t.Date)
                     .Select(TweetViewModel.Create())
                     .ToPagedList(pageNumber, pageSize);
@@ -57,6 +57,7 @@
         }
 
         // GET: {username}/Tweets/Favourite
+        [Authorize]
         public ActionResult Favourite(string username, int? page)
         {
             var currentUserId = this.User.Identity.GetUserId();
@@ -148,13 +149,57 @@
 
             if (tweet == null && user == null)
             {
-                return this.Redirect("/");
+                return this.Redirect("/" + user.UserName);
             }
 
             tweet.FavoritedBy.Add(user);
             this.Data.SaveChanges();
 
-            return this.Redirect("/");
+            return this.Redirect("/" + user.UserName);
+        }
+
+        [Authorize]
+        public ActionResult ReTweet(int tweetId)
+        {
+            var userId = this.User.Identity.GetUserId();
+            var user = this.Data.Users.GetAll().FirstOrDefault(u => u.Id == userId);
+            var tweet = this.Data.Tweets.GetAll().FirstOrDefault(t => t.Id == tweetId);
+
+            if (user == null && tweet == null)
+            {
+                return this.Redirect("/" + user.UserName);
+            }
+            
+            tweet.RetweetedBy.Add(user);
+            this.Data.SaveChanges();
+
+            return this.Redirect("/" + user.UserName);
+        }
+
+        [Authorize]
+        public ActionResult Report(int tweetId)
+        {
+            var userId = this.User.Identity.GetUserId();
+            var user = this.Data.Users.GetAll().FirstOrDefault(u => u.Id == userId);
+            var tweet = this.Data.Tweets.GetAll().FirstOrDefault(t => t.Id == tweetId);
+
+            if (user == null && tweet == null)
+            {
+                return this.Redirect("/" + user.UserName);
+            }
+
+            var report = new Report()
+                {
+                    Author = user,
+                    Tweet = tweet,
+                    Date = DateTime.Now,
+                    Content = "Report by " + user.UserName
+                };
+
+            tweet.Reports.Add(report);
+            this.Data.SaveChanges();
+
+            return this.Redirect("/" + user.UserName);
         }
     }
 }

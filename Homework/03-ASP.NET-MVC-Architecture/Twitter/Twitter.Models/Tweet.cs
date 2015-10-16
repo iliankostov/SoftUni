@@ -10,7 +10,7 @@
 
         private ICollection<User> retweetedBy;
 
-        private ICollection<Report> reportedBy;
+        private ICollection<Report> reports;
 
         private ICollection<Tweet> replyTweets;
 
@@ -18,7 +18,7 @@
         {
             this.favoritedBy = new HashSet<User>();
             this.retweetedBy = new HashSet<User>();
-            this.reportedBy = new HashSet<Report>();
+            this.reports = new HashSet<Report>();
             this.replyTweets = new HashSet<Tweet>();
         }
 
@@ -63,16 +63,16 @@
             }
         }
 
-        public virtual ICollection<Report> ReportedBy
+        public virtual ICollection<Report> Reports
         {
             get
             {
-                return this.reportedBy;
+                return this.reports;
             }
 
             set
             {
-                this.reportedBy = value;
+                this.reports = value;
             }
         }
 

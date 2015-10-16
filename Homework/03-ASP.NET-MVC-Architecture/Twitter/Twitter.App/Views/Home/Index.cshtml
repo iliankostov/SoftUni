@@ -31,10 +31,8 @@
                     <div class="panel-body">@tweet.Content</div>
                     <div class="panel-footer" style="text-align: right">
                         @Html.ActionLink("Favourite", "FavorTweet", "Tweets", new { tweetId = tweet.Id }, new { @class = "btn btn-default btn-primary" })
-                        <a href="" class="btn btn-default btn-primary">Retweet</a>
-                        <a href="" class="btn btn-default btn-primary">Report</a>
-                        <a href="" class="btn btn-default btn-primary">Reply</a>
-                        <a href="" class="btn btn-default btn-primary">Share</a>
+                        @Html.ActionLink("ReTweet", "ReTweet", "Tweets", new { tweetId = tweet.Id }, new { @class = "btn btn-default btn-primary" })
+                        @Html.ActionLink("Report", "Report", "Tweets", new { tweetId = tweet.Id }, new { @class = "btn btn-default btn-primary" })
                     </div>
                 </div>
             }

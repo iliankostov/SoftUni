@@ -76,8 +76,8 @@ namespace Twitter.Data
             modelBuilder.Entity<Tweet>().HasMany(t => t.RetweetedBy).WithMany().Map(
                 m =>
                     {
-                        m.MapLeftKey("UserId");
-                        m.MapRightKey("TweetId");
+                        m.MapLeftKey("TweetId");
+                        m.MapRightKey("UserId");
                         m.ToTable("UsersReTweets");
                     });
 
