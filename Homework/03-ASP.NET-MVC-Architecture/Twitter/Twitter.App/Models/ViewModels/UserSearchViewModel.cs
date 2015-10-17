@@ -4,7 +4,7 @@ namespace Twitter.App.Models.ViewModels
     using System.Linq;
     using System.Linq.Expressions;
 
-    using Twitter.App.Constants;
+    using Twitter.App.Utilities;
     using Twitter.Models;
 
     public class UserSearchViewModel
@@ -18,7 +18,7 @@ namespace Twitter.App.Models.ViewModels
             return u => new UserSearchViewModel
                 {
                     Username = u.UserName,
-                    ProfileImage = u.ProfileImage ?? Constants.DefaultProfileImage
+                    ProfileImage = u.ProfileImage ?? DefaultValues.DefaultProfileImage
                 };
         }
     }

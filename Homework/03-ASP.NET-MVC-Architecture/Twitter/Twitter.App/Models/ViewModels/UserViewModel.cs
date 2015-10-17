@@ -4,8 +4,7 @@
     using System.Linq;
     using System.Linq.Expressions;
 
-    using Constants;
-
+    using Twitter.App.Utilities;
     using Twitter.Models;
 
     public class UserViewModel
@@ -28,8 +27,8 @@
                     {
                         Id = u.Id,
                         Username = u.UserName,
-                        ProfileImage = u.ProfileImage ?? Constants.DefaultProfileImage,
-                        CoverImage = u.CoverImage ?? Constants.DefaultCoverImage,
+                        ProfileImage = u.ProfileImage ?? DefaultValues.DefaultProfileImage,
+                        CoverImage = u.CoverImage ?? DefaultValues.DefaultCoverImage,
                         IsFollowing = u.Following.Any(f => f.Id.Equals(loggedUserId))
                 };
         }

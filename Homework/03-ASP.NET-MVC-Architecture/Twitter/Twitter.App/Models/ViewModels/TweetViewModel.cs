@@ -3,8 +3,7 @@
     using System;
     using System.Linq.Expressions;
 
-    using Constants;
-
+    using Twitter.App.Utilities;
     using Twitter.Models;
 
     public class TweetViewModel
@@ -30,7 +29,7 @@
                 Author = new UserViewModel
                 {
                     Username = tweet.Author.UserName,
-                    ProfileImage = tweet.Author.ProfileImage ?? Constants.DefaultProfileImage
+                    ProfileImage = tweet.Author.ProfileImage ?? DefaultValues.DefaultProfileImage
                 }
             };
         }

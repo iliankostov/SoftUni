@@ -1,7 +1,6 @@
 ﻿namespace Twitter.App.Models.BindingModels
 {
     using System.ComponentModel.DataAnnotations;
-    using System.Web;
 
     public class EditProfileBindingModel
     {
@@ -9,7 +8,5 @@
 
         [EmailAddress]
         public string Email { get; set; }
-
-        public HttpPostedFileBase ProfileImage { get; set; }
     }
 }

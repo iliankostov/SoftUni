@@ -8,6 +8,7 @@
     using PagedList;
 
     using Twitter.App.Models.ViewModels;
+    using Twitter.App.Utilities;
     using Twitter.Data.Contracts;
 
     public class HomeController : BaseController
@@ -43,8 +44,8 @@
                     .Select(TweetViewModel.Create());
             }
 
-            int pageSize = App.Constants.Constants.DefaultPageSize;
-            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+            int pageSize = DefaultValues.DefaultPageSize;
+            int pageNumber = page ?? DefaultValues.DefaultStartPage;
 
             return this.View(tweets.ToPagedList(pageNumber, pageSize));
         }

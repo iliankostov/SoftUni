@@ -11,6 +11,7 @@
 
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
+    using Twitter.App.Utilities;
     using Twitter.Data.Contracts;
     using Twitter.Models;
     using Twitter.Models.Enumerations;
@@ -38,8 +39,8 @@
                 return this.RedirectToAction("Index");
             }
 
-            int pageSize = App.Constants.Constants.DefaultPageSize;
-            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+            int pageSize = DefaultValues.DefaultPageSize;
+            int pageNumber = page ?? DefaultValues.DefaultStartPage;
 
             IPagedList<TweetViewModel> tweets =
                 this.Data.Tweets.GetAll()
@@ -74,8 +75,8 @@
                 return this.RedirectToAction("Favourite");
             }
 
-            int pageSize = App.Constants.Constants.DefaultPageSize;
-            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+            int pageSize = DefaultValues.DefaultPageSize;
+            int pageNumber = page ?? DefaultValues.DefaultStartPage;
 
             IPagedList<TweetViewModel> tweets =
                 this.Data.Tweets.GetAll()

@@ -1,6 +1,8 @@
 ﻿namespace Twitter.App.Controllers
 {
     using System;
+    using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
     using System.Web;
@@ -14,6 +16,7 @@
 
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
+    using Twitter.App.Utilities;
     using Twitter.Data.Contracts;
     using Twitter.Models;
     using Twitter.Models.Enumerations;
@@ -75,8 +78,8 @@
                 .Select(UserViewModel.Create(currentUserId))
                 .FirstOrDefault();
 
-            int pageSize = App.Constants.Constants.DefaultPageSize;
-            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+            int pageSize = DefaultValues.DefaultPageSize;
+            int pageNumber = page ?? DefaultValues.DefaultStartPage;
 
             IPagedList<UserViewModel> following =
                 this.Data.Users.GetAll()
@@ -113,8 +116,8 @@
                 return this.RedirectToAction("Followers");
             }
 
-            int pageSize = App.Constants.Constants.DefaultPageSize;
-            int pageNumber = page ?? App.Constants.Constants.DefaultStartPage;
+            int pageSize = DefaultValues.DefaultPageSize;
+            int pageNumber = page ?? DefaultValues.DefaultStartPage;
 
             IPagedList<UserViewModel> following =
                 this.Data.Users.GetAll()
@@ -222,7 +225,7 @@
         // POST: {username}/Users/EditProfile
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProfile(EditProfileBindingModel model, HttpPostedFileBase ProfileImage)
+        public ActionResult EditProfile(EditProfileBindingModel model, IList<HttpPostedFileBase> images)
         {
             if (!this.ModelState.IsValid)
             {
@@ -237,8 +240,23 @@
                 return this.RedirectToAction("EditProfile", new { Message = ManageMessageId.Error });
             }
 
+            string profileImage = user.ProfileImage;
+            if (images[0] != null)
+            {
+                profileImage = Helpers.ConvertImage(images[0]);
+            }
+
+            string coverImage = user.CoverImage;
+            if (images[1] != null)
+            {
+                coverImage = Helpers.ConvertImage(images[1]);
+            }
+
             user.UserName = model.Username;
             user.Email = model.Email;
+            user.ProfileImage = profileImage;
+            user.CoverImage = coverImage;
+
             this.Data.SaveChanges();
 
             this.HttpContext.GetOwinContext().Authentication.SignOut();

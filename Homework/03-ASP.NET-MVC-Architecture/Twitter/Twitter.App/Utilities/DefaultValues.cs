@@ -1,6 +1,6 @@
-﻿namespace Twitter.App.Constants
+﻿namespace Twitter.App.Utilities
 {
-    public static class Constants
+    public static class DefaultValues
     {
         public const int DefaultPageSize = 10;
 
