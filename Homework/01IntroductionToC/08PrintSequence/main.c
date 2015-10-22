@@ -13,8 +13,7 @@ int main(int argc, char** argv) {
                 break;
             }
             printf("%d, ", number);
-        }
-        else{
+        } else {
             if (number == input - 1) {
                 printf("%d", number * -1);
                 break;

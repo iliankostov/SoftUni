@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
-    
+
     int count;
     scanf("%d", &count);
-    
+
     double sum = 0;
     int i;
     for (i = 0; i < count; i++) {
@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
         scanf("%lf", &temp);
         sum += temp;
     }
-    
+
     printf("%.1lf", sum);
 
     return (EXIT_SUCCESS);

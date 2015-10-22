@@ -4,14 +4,14 @@
 #define STR_CAPACITY 32
 
 int main(int argc, char** argv) {
-    
+
     int choose, n;
     double d;
     char str[STR_CAPACITY];
     printf("1 --> int\n2 --> double\n3 --> string\nPlease choose a type: ");
     scanf("%d", &choose);
-    
-    switch(choose){
+
+    switch (choose) {
         case 1:
             printf("Please enter a int: ");
             scanf("%d", &n);
@@ -31,14 +31,14 @@ int main(int argc, char** argv) {
             for (i = 0; i < STR_CAPACITY; i++) {
                 if (str[i] == '\0') {
                     str[i] = '*';
-                    str[i+1] = '\0';
+                    str[i + 1] = '\0';
                     break;
                 }
             }
             printf("%s", str);
             break;
         default: printf("invalid choose");
-        break;
+            break;
     }
 
     return (EXIT_SUCCESS);

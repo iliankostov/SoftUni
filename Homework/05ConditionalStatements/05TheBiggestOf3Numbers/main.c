@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
-    
+
     double a, b, c, biggest;
     printf("a = ");
     scanf("%lf", &a);
@@ -10,19 +10,17 @@ int main(int argc, char** argv) {
     scanf("%lf", &b);
     printf("c = ");
     scanf("%lf", &c);
-    
-    
+
+
     if (a >= b && a >= c) {
         biggest = a;
-    }
-    else if (b >= a && b >= c) {
+    } else if (b >= a && b >= c) {
         biggest = b;
-    }
-    else if (c >= a && c >= b) {
+    } else if (c >= a && c >= b) {
         biggest = c;
     }
 
     printf("biggest = %.1lf", biggest);
-    
+
     return (EXIT_SUCCESS);
 }

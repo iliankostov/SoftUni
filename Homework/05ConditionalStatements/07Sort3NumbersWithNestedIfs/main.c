@@ -4,7 +4,7 @@
 #define FORMAT "%.1lf "
 
 int main(int argc, char** argv) {
-    
+
     double a, b, c;
     printf("a = ");
     scanf("%lf", &a);
@@ -12,14 +12,13 @@ int main(int argc, char** argv) {
     scanf("%lf", &b);
     printf("c = ");
     scanf("%lf", &c);
-    
+
     if (a >= b && a >= c) {
         printf(FORMAT, a);
         if (b >= c) {
             printf(FORMAT, b);
             printf(FORMAT, c);
-        }
-        else {
+        } else {
             printf(FORMAT, c);
             printf(FORMAT, b);
         }
@@ -28,8 +27,7 @@ int main(int argc, char** argv) {
         if (a >= c) {
             printf(FORMAT, a);
             printf(FORMAT, c);
-        }
-        else {
+        } else {
             printf(FORMAT, c);
             printf(FORMAT, a);
         }
@@ -38,8 +36,7 @@ int main(int argc, char** argv) {
         if (a >= b) {
             printf(FORMAT, a);
             printf(FORMAT, b);
-        }
-        else {
+        } else {
             printf(FORMAT, b);
             printf(FORMAT, a);
         }

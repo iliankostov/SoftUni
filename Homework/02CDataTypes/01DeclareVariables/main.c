@@ -10,6 +10,6 @@ int main(int argc, char** argv) {
     char five = 97;
     short six = -10000;
     long long seven = -35982859328592389;
-    
+
     return (EXIT_SUCCESS);
 }
