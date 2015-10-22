@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 
     int yourAge = yearNow - year;
 
-    if (monthNow < month) {
+    if (monthNow <= month) {
         if (dayNow < day) {
             yourAge -= 1;
         }

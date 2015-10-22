@@ -3,23 +3,19 @@
 
 int main(int argc, char** argv) {
 
-    int input;
+    int input, number = 2;
     scanf("%d", &input);
-    int number;
-    for (number = 2; number < input; number++) {
+
+    while (input != 0) {
+
         if (number % 2 == 0) {
-            if (number == input - 1) {
-                printf("%d", number);
-                break;
-            }
-            printf("%d, ", number);
+            printf("%d ", number);
         } else {
-            if (number == input - 1) {
-                printf("%d", number * -1);
-                break;
-            }
-            printf("%d, ", number * -1);
+            printf("%d ", number * -1);
         }
+
+        number++;
+        input--;
     }
 
     return (EXIT_SUCCESS);
