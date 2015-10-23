@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>03MinMaxSumAverageOfNNumbers</name>
+            <name>06CalculateExpression</name>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions/>
