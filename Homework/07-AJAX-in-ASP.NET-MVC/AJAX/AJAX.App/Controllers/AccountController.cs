@@ -157,25 +157,16 @@
         [AllowAnonymous]
         public ActionResult Register()
         {
-            //bool isTaken = this.Data.Users.GetAll().Any(u => u.UserName == username);
-
-            //if (isTaken)
-            //{
-            //    return this.View();
-            //}
-
             return this.View();
         }
 
-        [HttpGet]
-        public ActionResult Search(string username)
+        [AllowAnonymous]
+        public ActionResult IsUsernameTaken(string username)
         {
-            var items = this.Data.Users.GetAll()
-                .Where(u => u.UserName.Contains(username))
-                .Select(u => u.UserName)
-                .ToList();
+            var users = this.Data.Users.GetAll()
+                .Any(u => u.UserName == username);
 
-            return this.Json(items, JsonRequestBehavior.AllowGet);
+            return this.Json(users, JsonRequestBehavior.AllowGet);
         }
 
         //
