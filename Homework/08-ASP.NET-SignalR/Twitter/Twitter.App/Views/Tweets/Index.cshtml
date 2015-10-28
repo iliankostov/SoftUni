@@ -6,11 +6,6 @@
 
 @Html.Partial("_UserHomePageHeader", Model.User)
 
-@if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
-{
-    Html.RenderAction("PostTweet", "Tweets");
-}
-
 @foreach (var tweet in Model.TweetViewModels)
 {
     <div class="panel panel-default">

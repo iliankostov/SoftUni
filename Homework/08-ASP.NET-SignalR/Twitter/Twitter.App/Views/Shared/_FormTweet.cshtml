@@ -3,12 +3,7 @@
     ViewBag.Title = "Post New Tweet";
 }
 
-@using (Ajax.BeginForm("PostTweet", "Tweets", new AjaxOptions()
-    {
-        HttpMethod = "POST",
-        UpdateTargetId = "new-tweet",
-        InsertionMode = InsertionMode.InsertAfter
-    }))
+@using (Html.BeginForm("PostTweet", "Tweets", FormMethod.Post))
 {
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -16,33 +11,11 @@
             <span style="margin-left: 10px"><b>@Model.Author.Username</b></span>
         </div>
         <div class="panel-body">
-            @Html.TextAreaFor(m => m.Content, new { @class = "new-post-text-area", @rows = "3", id = "tweet-content" })
+            @Html.TextAreaFor(m => m.Content, new { @class = "new-post-text-area", @rows = "3" })
         </div>
         <div class="panel-footer" style="text-align: right">
             <p class="text-success">@ViewBag.StatusMessage</p>
-            <input id="tweet" type="submit" class="btn btn-default btn-primary" value="Tweet"/>
+            <input type="submit" class="btn btn-default btn-primary" value="Tweet"/>
         </div>
     </div>
-}
-<div id="new-tweet"></div>
-
-@section scripts
-{
-    <script src="/Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function () {
-            var tweeter = connection.twitter;
-
-            $("#tweet").click(function () {
-
-                tweeter.client.viewTweet = function (tweet) {
-                    console.log(tweet);
-                    var tweetBox = '<div class="pannel pannel-default"></div>';
-                    $("#new-tweet").append(tweetBox);
-                }
-            });
-
-            $.connection.hub.start();
-        })
-    </script>
 }

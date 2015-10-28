@@ -5,11 +5,9 @@
     using System.Web.Mvc;
 
     using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.SignalR;
 
     using PagedList;
 
-    using Twitter.App.Hubs;
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
     using Twitter.App.Utilities;
@@ -56,7 +54,7 @@
         }
 
         // GET: {username}/Tweets/Favourite
-        [System.Web.Mvc.Authorize]
+        [Authorize]
         public ActionResult Favourite(string username, int? page)
         {
             var currentUserId = this.User.Identity.GetUserId();
@@ -106,10 +104,10 @@
                     .FirstOrDefault();
 
             var tweet = new PostTweetBindingModel
-            {
-                Author = new UserViewModel { Username = currentUser.Username, ProfileImage = currentUser.ProfileImage },
-                Content = string.Empty
-            };
+                {
+                    Author = new UserViewModel { Username = currentUser.Username, ProfileImage = currentUser.ProfileImage },
+                    Content = string.Empty
+                };
 
             return this.PartialView("~/Views/Shared/_FormTweet.cshtml", tweet);
         }
@@ -122,36 +120,26 @@
 
             var user = this.Data.Users.Find(currentUserId);
 
-            if (!this.ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                return this.Content("Tweet error!");
-                //return this.RedirectToAction("Index", "Tweets", new { Message = ManageMessageId.Error });
+                var newTweet = new Tweet
+                    {
+                        Content = model.Content,
+                        PageUrl = string.Empty,
+                        Date = DateTime.Now,
+                        AuthorId = user.Id
+                    };
+
+                this.Data.Tweets.Add(newTweet);
+                this.Data.SaveChanges();
+
+                return this.RedirectToAction("Index", "Home", new { Message = ManageMessageId.PostTweetSucess });
             }
 
-            var newTweet = new Tweet
-            {
-                Content = model.Content,
-                PageUrl = string.Empty,
-                Date = DateTime.Now,
-                AuthorId = user.Id
-            };
-
-            this.Data.Tweets.Add(newTweet);
-            this.Data.SaveChanges();
-
-            var viewModel = this.Data.Tweets.GetAll()
-                                .Where(t => t.Id == newTweet.Id)
-                                .Select(TweetViewModel.Create())
-                                .FirstOrDefault();
-
-            var hubContext = GlobalHost.ConnectionManager.GetHubContext<TwitterHub>();
-            hubContext.Clients.All.viewTweet(viewModel);
-            return this.Content("Tweet posted!");
-
-            //return this.RedirectToAction("Index", "Tweets", new { Message = ManageMessageId.PostTweetSucess });
+            return this.RedirectToAction("Index", "Home", new { Message = ManageMessageId.Error });
         }
 
-        [System.Web.Mvc.Authorize]
+        [Authorize]
         public ActionResult FavorTweet(int tweetId)
         {
             var currentUserId = this.User.Identity.GetUserId();
@@ -166,12 +154,12 @@
             tweet.FavoritedBy.Add(user);
 
             var notification = new Notification()
-            {
-                Content = string.Format("Your tweet was favoured by {0}", user.UserName),
-                Date = DateTime.Now,
-                ReceiverId = tweet.AuthorId,
-                NotificationType = NotificationType.FavouriteTweet
-            };
+                {
+                    Content = string.Format("Your tweet was favoured by {0}", user.UserName),
+                    Date = DateTime.Now,
+                    ReceiverId = tweet.AuthorId,
+                    NotificationType = NotificationType.FavouriteTweet
+                };
 
             this.Data.Notifications.Add(notification);
 
@@ -180,7 +168,7 @@
             return this.Redirect("/" + user.UserName);
         }
 
-        [System.Web.Mvc.Authorize]
+        [Authorize]
         public ActionResult ReTweet(int tweetId)
         {
             var userId = this.User.Identity.GetUserId();
@@ -195,12 +183,12 @@
             tweet.RetweetedBy.Add(user);
 
             var notification = new Notification()
-            {
-                Content = string.Format("Your tweet was retweeted by {0}", user.UserName),
-                Date = DateTime.Now,
-                ReceiverId = tweet.AuthorId,
-                NotificationType = NotificationType.Retweet
-            };
+                {
+                    Content = string.Format("Your tweet was retweeted by {0}", user.UserName),
+                    Date = DateTime.Now,
+                    ReceiverId = tweet.AuthorId,
+                    NotificationType = NotificationType.Retweet
+                };
 
             this.Data.Notifications.Add(notification);
             this.Data.SaveChanges();
@@ -208,7 +196,7 @@
             return this.Redirect("/" + user.UserName);
         }
 
-        [System.Web.Mvc.Authorize]
+        [Authorize]
         public ActionResult Report(int tweetId)
         {
             var userId = this.User.Identity.GetUserId();
@@ -221,12 +209,12 @@
             }
 
             var report = new Report()
-            {
-                Author = user,
-                Tweet = tweet,
-                Date = DateTime.Now,
-                Content = "Report by " + user.UserName
-            };
+                {
+                    Author = user,
+                    Tweet = tweet,
+                    Date = DateTime.Now,
+                    Content = "Report by " + user.UserName
+                };
 
             tweet.Reports.Add(report);
             this.Data.SaveChanges();

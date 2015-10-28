@@ -12,6 +12,11 @@
 </div>
 <div class="row">
     <div class="col-lg-8">
+        @if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            Html.RenderAction("PostTweet", "Tweets");
+        }
+
         @if (@Model != null)
         {
             foreach (var tweet in Model)
