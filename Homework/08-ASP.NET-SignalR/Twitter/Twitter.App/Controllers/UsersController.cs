@@ -13,6 +13,7 @@
 
     using PagedList;
 
+    using Twitter.App.Hubs;
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
     using Twitter.App.Utilities;
@@ -172,6 +173,10 @@
 
             this.Data.Notifications.Add(notification);
             this.Data.SaveChanges();
+
+            TwitterHub hub = new TwitterHub();
+
+            hub.Notification(followUserId);
 
             return this.RedirectToAction("Following");
         }

@@ -1,13 +1,16 @@
 ﻿namespace Twitter.App.Controllers
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
 
+    using Microsoft.Ajax.Utilities;
     using Microsoft.AspNet.Identity;
 
     using PagedList;
 
+    using Twitter.App.Hubs;
     using Twitter.App.Models.BindingModels;
     using Twitter.App.Models.ViewModels;
     using Twitter.App.Utilities;
@@ -51,6 +54,33 @@
             var model = new UserAndTweetsViewModel() { User = user, TweetViewModels = tweets };
 
             return this.View(model);
+        }
+
+        [HttpGet]
+        public ActionResult GetTweet(int id)
+        {
+            var tweet = this.Data.Tweets.Find(id);
+
+            if (tweet == null)
+            {
+                return this.HttpNotFound("Tweet not found.");
+            }
+
+            var viewModel = new TweetViewModel()
+                {
+                    Id = tweet.Id,
+                    Content = tweet.Content,
+                    Uri = tweet.PageUrl,
+                    TweetedOn = tweet.Date,
+                    Author =
+                                new UserViewModel
+                                {
+                                    Username = tweet.Author.UserName,
+                                    ProfileImage = tweet.Author.ProfileImage ?? DefaultValues.DefaultProfileImage
+                                }
+            };
+
+            return this.PartialView("_TweetPartial", viewModel);
         }
 
         // GET: {username}/Tweets/Favourite
@@ -104,10 +134,10 @@
                     .FirstOrDefault();
 
             var tweet = new PostTweetBindingModel
-                {
-                    Author = new UserViewModel { Username = currentUser.Username, ProfileImage = currentUser.ProfileImage },
-                    Content = string.Empty
-                };
+            {
+                Author = new UserViewModel { Username = currentUser.Username, ProfileImage = currentUser.ProfileImage },
+                Content = string.Empty
+            };
 
             return this.PartialView("~/Views/Shared/_FormTweet.cshtml", tweet);
         }
@@ -133,6 +163,10 @@
                 this.Data.Tweets.Add(newTweet);
                 this.Data.SaveChanges();
 
+                TwitterHub hub = new TwitterHub();
+
+                hub.Tweet(user.Followers.Select(u => u.Id).ToList(), newTweet.Id);
+
                 return this.RedirectToAction("Index", "Home", new { Message = ManageMessageId.PostTweetSucess });
             }
 
@@ -148,7 +182,7 @@
 
             if (tweet == null && user == null)
             {
-                return this.Redirect("/" + user.UserName);
+                return this.HttpNotFound();
             }
 
             tweet.FavoritedBy.Add(user);
@@ -165,6 +199,10 @@
 
             this.Data.SaveChanges();
 
+            TwitterHub hub = new TwitterHub();
+
+            hub.Notification(tweet.Author.Id);
+
             return this.Redirect("/" + user.UserName);
         }
 
@@ -177,7 +215,7 @@
 
             if (user == null && tweet == null)
             {
-                return this.Redirect("/" + user.UserName);
+                return this.HttpNotFound();
             }
 
             tweet.RetweetedBy.Add(user);
@@ -192,6 +230,10 @@
 
             this.Data.Notifications.Add(notification);
             this.Data.SaveChanges();
+
+            TwitterHub hub = new TwitterHub();
+
+            hub.Notification(tweet.Author.Id);
 
             return this.Redirect("/" + user.UserName);
         }

@@ -300,6 +300,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\script.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -336,6 +337,7 @@
     <None Include="Views\Tweets\Favourite.cshtml" />
     <None Include="Views\Tweets\Index.cshtml" />
     <Content Include="Views\Shared\_FormTweet.cshtml" />
+    <None Include="Views\Tweets\_TweetPartial.cshtml" />
     <None Include="Views\Users\Followers.cshtml" />
     <None Include="Views\Users\Following.cshtml" />
     <Content Include="Views\Shared\_UserHomePageHeader.cshtml" />

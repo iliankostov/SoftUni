@@ -17,6 +17,8 @@
             Html.RenderAction("PostTweet", "Tweets");
         }
 
+        <div id="new-tweet" class="row"></div>
+
         @if (@Model != null)
         {
             foreach (var tweet in Model)
