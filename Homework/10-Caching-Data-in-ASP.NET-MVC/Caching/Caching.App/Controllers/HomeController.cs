@@ -19,15 +19,13 @@
         {
         }
 
-        //See cache profile settings in web.config
-        //[OutputCache(CacheProfile = "ClientCacheForGivenTime")]
+        [OutputCache(Duration = 15)]
         public ActionResult Index()
         {
             return this.View();
         }
 
-        //See override method GetVaryByCustomString in Global.asax.cs
-        [OutputCache(Duration = 300, VaryByCustom = "host", VaryByParam = "page")]
+        [OutputCache(Duration = 300)]
         public ActionResult RssFeed(int? page)
         {
             var document = XDocument.Load("https://softuni.bg/feed/news");

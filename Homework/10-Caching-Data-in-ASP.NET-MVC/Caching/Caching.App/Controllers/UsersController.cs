@@ -18,16 +18,24 @@
         {
         }
 
-        // GET: Users/page
-        [OutputCache(Duration = 3600, SqlDependency = "DefaultConnection:AspNetUsers", VaryByParam = "none")]
         public ActionResult Index(int? page)
         {
-            var users = this.ApplicationData.Users.All()
+            if (this.HttpContext.Cache["users"] == null)
+            {
+                var users = this.ApplicationData.Users.All()
                             .OrderBy(u => u.UserName)
                             .ProjectTo<UserViewModel>()
                             .ToPagedList(pageNumber: page ?? 1, pageSize: AppConfig.PageSize);
 
-            return this.View(users);
+                this.HttpContext.Cache.Insert(
+                    "users", 
+                    users, 
+                    null, 
+                    System.Web.Caching.Cache.NoAbsoluteExpiration, 
+                    System.Web.Caching.Cache.NoSlidingExpiration);
+            }
+
+            return this.View(this.HttpContext.Cache["users"]);
         }
     }
 }

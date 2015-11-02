@@ -178,6 +178,8 @@
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
+                    //// Remove users cache !!!
+                    this.HttpContext.Cache.Remove("users");
                     return this.RedirectToAction("Index", "Home");
                 }
                 this.AddErrors(result);
