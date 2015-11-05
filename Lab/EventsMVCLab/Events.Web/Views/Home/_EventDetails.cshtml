@@ -5,9 +5,19 @@
     <div class="description">Description: @Model.Description</div>
 }
 
+
+@Ajax.ActionLink("Comment", "Create", "Comments", new { id = Model.Id }, new AjaxOptions()
+    {
+        HttpMethod = "GET",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "comment-form-for-event-" + Model.Id
+    }, new { @class = "btn btn-default" })
+<hr/>
+<div id="comment-form-for-event-@Model.Id"></div>
+Comments:
+
 @if (Model.Comments.Any())
 {
-    @:Comments:
     <ul>
         @foreach (var comment in Model.Comments)
         {
@@ -19,6 +29,7 @@
                 }
             </li>
         }
+        <div id="new-comments-for-event-@Model.Id"></div>
     </ul>
 }
 else
@@ -28,7 +39,7 @@ else
 
 @if (ViewBag.CanEdit)
 {
-    @Html.ActionLink("Edit", "Edit", "Events", new {id = Model.Id }, new { @class = "btn btn-default"})
+    @Html.ActionLink("Edit", "Edit", "Events", new { id = Model.Id }, new { @class = "btn btn-default" })
     <span></span>
-    @Html.ActionLink("Delete", "Delete", "Events", new {id = Model.Id}, new {@class = "btn btn-default"})
+    @Html.ActionLink("Delete", "Delete", "Events", new { id = Model.Id }, new { @class = "btn btn-default" })
 }

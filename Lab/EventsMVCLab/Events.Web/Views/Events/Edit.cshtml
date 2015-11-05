@@ -11,7 +11,7 @@
     @Scripts.Render("~/bundles/jqueryval")
 
     <script>
-        $(function() {
+        $(function () {
             $("#StartDateTime").datetimepicker({
                 format: 'DD-MMM-YYYY HH:mm',
                 sideBySide: true,
@@ -21,14 +21,14 @@
     </script>
 
     <script>
-        $(function() {
+        $(function () {
             var date = new Date();
             date.setHours(1);
             date.setMinutes(0);
             $("#Duration").datetimepicker({
                 format: 'HH:mm',
                 defaultDate: date,
-                showTodayButton: true
+                showClear: true
             });
         })
     </script>

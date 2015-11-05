@@ -38,11 +38,11 @@
                                        e => e.IsPublic ||
                                             isAdmin ||
                                             (e.AuthorId != null && e.AuthorId == currentUserId))
-                                   .Select(EventDetailsViewModel.ViewModel)
+                                   .Select(EventDetailsViewModel.ViewModel())
                                    .FirstOrDefault();
-            var isOwner = (eventDetails != null && eventDetails.AuthorId != null
-                           && eventDetails.AuthorId == currentUserId);
-            this.ViewBag.CanEdit = isOwner || isAdmin;
+            var isEventOwner = (eventDetails != null && eventDetails.AuthorId != null
+                                && eventDetails.AuthorId == currentUserId);
+            this.ViewBag.CanEdit = isEventOwner || isAdmin;
 
             return this.PartialView("_EventDetails", eventDetails);
         }

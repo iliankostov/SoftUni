@@ -17,18 +17,15 @@
 
         public IEnumerable<CommentViewModel> Comments { get; set; }
 
-        public static Expression<Func<Event, EventDetailsViewModel>> ViewModel
+        public static Expression<Func<Event, EventDetailsViewModel>> ViewModel()
         {
-            get
-            {
-                return e => new EventDetailsViewModel()
-                    {
-                        Id = e.Id,
-                        Description = e.Description,
-                        Comments = e.Comments.AsQueryable().Select(CommentViewModel.ViewModel),
-                        AuthorId = e.Author.Id
-                    };
-            }
+            return e => new EventDetailsViewModel()
+                {
+                    Id = e.Id,
+                    Description = e.Description,
+                    Comments = e.Comments.AsQueryable().Select(CommentViewModel.ViewModel()),
+                    AuthorId = e.Author.Id
+                };
         }
     }
 }

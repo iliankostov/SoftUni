@@ -7,20 +7,23 @@ namespace Events.Web.Models
 
     public class CommentViewModel
     {
+        public int Id { get; set; }
+
+        public int EventId { get; set; }
+
         public string Text { get; set; }
 
         public string Author { get; set; }
 
-        public static Expression<Func<Comment, CommentViewModel>> ViewModel
+        public static Expression<Func<Comment, CommentViewModel>> ViewModel()
         {
-            get
-            {
-                return c => new CommentViewModel()
-                    {
-                        Text = c.Text,
-                        Author = c.Author.FullName
-                    };
-            }
+            return c => new CommentViewModel()
+                {
+                    Id = c.Id,
+                    Text = c.Text,
+                    EventId = c.Event.Id,
+                    Author = c.Author.FullName,
+                };
         }
     }
 }

@@ -1,0 +1,9 @@
+﻿@model Events.Web.Models.CommentViewModel
+
+<li>
+    @Model.Text
+    @if (@Model.Author != null)
+    {
+        @: (by @Model.Author)
+    }
+</li>
