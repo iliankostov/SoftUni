@@ -1,0 +1,74 @@
+﻿@model Snippy.Web.Models.ViewModels.HomePageViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row margin">
+    <div class="col-lg-5">
+        <h3>Latest snippets:</h3>
+        @if (Model.LatestSnippets != null)
+        {
+            foreach (var snippet in Model.LatestSnippets)
+            {
+                <h4>@Html.ActionLink(snippet.Title, "Details", "Snippets", new { area = string.Empty, id = snippet.Id }, null)</h4>
+
+                if (snippet.Lables != null)
+                {
+                    foreach (var label in snippet.Lables)
+                    {
+                        @Html.ActionLink(label.Text, "Details", "Labels", new { area = string.Empty, id = label.Id }, new { @class = "label label-primary margin" })
+                    }
+                }
+            }
+        }
+    </div>
+    <div class="col-lg-5">
+        <h3>Latest comments:</h3>
+        @if (Model.LatestComments != null)
+        {
+            foreach (var comment in Model.LatestComments)
+            {
+                <div class="well">
+                    <div class="row">
+                        <p>@comment.Content</p>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <p>
+                            <span class="glyphicon glyphicon-user"></span> <strong>@comment.AuthorUserName</strong> on @comment.CreatedOn.ToString("dd.MM.yyyy hh:mm:ss")
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p>on snippet @Html.ActionLink(comment.SnippetTitle, "Details", "Snippets", new { area = string.Empty, id = comment.SnippetId }, null)</p>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <div class="col-lg-2">
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Best labels</div>
+                <div class="panel-body">
+                    @if (Model.BestLabels != null)
+                    {
+                        foreach (var label in Model.BestLabels)
+                        {
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <p>
+                                        @Html.ActionLink(label.Text, "Details", "Labels", new { area = string.Empty, id = label.Id }, null)
+                                    </p>
+
+                                </div>
+                                <div class="col-lg-2 text-right">
+                                    <span class="badge">@label.SnippetsCount</span>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
