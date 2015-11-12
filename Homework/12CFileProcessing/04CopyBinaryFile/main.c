@@ -39,6 +39,8 @@ void copy(const char *sourceFilePath, const char *destinationFilePath) {
 
     fclose(sourceFile);
     fclose(destinationFile);
+    
+    printf("Done!");
 }
 
 void die(const char *msg) {

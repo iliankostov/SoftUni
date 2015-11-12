@@ -53,6 +53,7 @@ int main(int argc, char** argv) {
 
     fclose(sourceFile);
     fclose(fixedFile);
+    printf("Done!");
 
     return (EXIT_SUCCESS);
 }
