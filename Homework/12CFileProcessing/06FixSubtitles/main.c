@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <string.h>
 
 #define BUFFER_SIZE 4096
 
 ssize_t get_line(char **lineptr, size_t *buf_size, FILE *stream);
 int str_split(char** dest[], char* raw_str, const char* delimiters);
+void str_arr_free(char** str_arr, int len);
 void offset_time(char *newStr, char *oldStr, int offset);
 void die(const char *);
 
@@ -22,6 +24,7 @@ int main(int argc, char** argv) {
     FILE *fixedFile = fopen("fixed.sub", "w");
     if (!fixedFile) {
         die("Cannot open destination file");
+        return (EXIT_FAILURE);
     }
 
     char buffer[BUFFER_SIZE];
@@ -48,7 +51,10 @@ int main(int argc, char** argv) {
             sprintf(line, "%s --> %s", new_start_str, new_end_str);
         }
 
+        str_arr_free(elements, element_count);
+
         fprintf(fixedFile, "%s\n", line);
+        free(line);
     }
 
     fclose(sourceFile);
@@ -129,19 +135,22 @@ int str_split(char** dest[], char* raw_str, const char* delimiters) {
     }
 
     return split_arr_len;
+
 }
 
 void offset_time(char *newStr, char *oldStr, int offset) {
     long long timespan = 0;
 
     char **elements = NULL;
-    str_split(&elements, oldStr, ":,");
+    int elements_count = str_split(&elements, oldStr, ":,");
 
     char *ptr;
     long hours = strtol(*(elements), &ptr, 10);
     long minutes = strtol(*(elements + 1), &ptr, 10);
     long seconds = strtol(*(elements + 2), &ptr, 10);
     long miliseconds = strtol(*(elements + 3), &ptr, 10);
+
+    str_arr_free(elements, elements_count);
 
     timespan += hours * 60 * 60 * 1000;
     timespan += minutes * 60 * 1000;
@@ -177,11 +186,20 @@ void offset_time(char *newStr, char *oldStr, int offset) {
     sprintf(newStr, "%s:%s:%s,%s", hoursStr, minutesStr, secondsStr, milisecondsStr);
 }
 
+void str_arr_free(char** str_arr, int len) {
+    int i;
+    for (i = 0; i < len; ++i) {
+        free(str_arr[i]);
+    }
+
+    free(str_arr);
+}
+
 void die(const char *msg) {
     if (errno) {
         perror(msg);
     } else {
-        fprintf(stderr, msg);
+        fprintf(stderr, "%s", msg);
     }
 
     exit(EXIT_FAILURE);
