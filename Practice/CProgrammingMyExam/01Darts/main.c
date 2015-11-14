@@ -31,7 +31,6 @@ int main(int argc, char** argv) {
             scanf("%lf %lf", &shotX, &shotY);
         }
 
-
         double pathToBoardCenter = sqrt(pow(shotX - boardX, 2) + pow(shotY - boardY, 2));
         double pathToHeadCenter = sqrt(pow(shotX - headX, 2) + pow(shotY - headY, 2));
 
@@ -48,29 +47,23 @@ int main(int argc, char** argv) {
             points += 25;
             health -= 25;
             successfulShots++;
-
-            if (health <= 0) {
-                numberOfShots = i + 1;
-                health = 0;
-                break;
-            }
         }
 
         if (!hitBoard && (hitHead || hitArm)) {
             health -= 30;
+        }
 
-            if (health <= 0) {
-                numberOfShots = i + 1;
-                health = 0;
-                break;
-            }
+        if (health <= 0) {
+            numberOfShots = i + 1;
+            health = 0;
+            break;
         }
     }
 
-    double hitRatio = (successfulShots * 1.0 / numberOfShots) * 100;
-    
+    int hitRatio = (successfulShots * 1.0 / numberOfShots) * 100;
+
     printf("Points: %.0f\n", points);
-    printf("Hit ratio: %.0f%%\n", hitRatio);
+    printf("Hit ratio: %d%%\n", hitRatio);
     printf("Bay Mile: %0.f\n", health);
 
     return (EXIT_SUCCESS);
