@@ -90,7 +90,7 @@ void die(const char *msg) {
     if (errno) {
         perror(msg);
     } else {
-        fprintf(stderr, msg);
+        fprintf(stderr, "%s", msg);
     }
 
     exit(EXIT_FAILURE);
