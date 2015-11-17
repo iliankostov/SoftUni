@@ -10,7 +10,44 @@
     {
         public void Sort(List<T> collection)
         {
-            throw new NotImplementedException();
+            this.InPlaceMergeSort(collection, 0, collection.Count - 1);
+        }
+
+        private void InPlaceMergeSort(List<T> collection, int start, int end)
+        {
+            if (start < end)
+            {
+                int mid = (start + end) / 2;
+                this.InPlaceMergeSort(collection, start, mid);
+                this.InPlaceMergeSort(collection, mid + 1, end);
+
+                int leftIndex = start;
+                int rightIndex = mid + 1;
+                while (rightIndex <= end)
+                {
+                    if (collection[leftIndex].CompareTo(collection[rightIndex]) <= 0)
+                    {
+                        leftIndex++;
+                        if (leftIndex == rightIndex)
+                        {
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        T tmp = collection[rightIndex];
+                        for (int i = rightIndex; i > leftIndex; i--)
+                        {
+                            collection[i] = collection[i - 1];
+                        }
+
+                        collection[leftIndex] = tmp;
+
+                        rightIndex++;
+                        leftIndex++;
+                    }
+                }
+            }
         }
     }
 }
