@@ -1,0 +1,6 @@
+Normalization of the relational schema removes repeating data. There are 5 steps:
+- step 1 - remove redundancies in a table by dividing recurring groups of data into separate tables and assign a primary key to identify the relationship between each data set.
+- step 2 - to improve the efficiency of a relational database relocate values into individual tables when they are associated to more than 1 record, and assign a foreign key to each new table.
+- step 3 - remove any field that does not correlate to the assigned key. By creating a separate table for data that has no relationship with the primary key, the potential for data redundancy is further reduced.
+- step 4 - separate independent entities into individual tables when a many-to-many relationship exists within the data set.
+- step 5 - reconstruct the original table only from those tables created as a result of its initial deconstruction. This ensures that there are no unnecessary columns within the data schema and that each table structure has achieved optimal efficiency in terms of its size.

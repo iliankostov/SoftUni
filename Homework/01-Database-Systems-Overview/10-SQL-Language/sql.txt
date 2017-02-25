@@ -1,0 +1,7 @@
+SQL stands for Structured Query Language. SQL is used to communicate with a database. SQL statements are used to perform tasks such as update data on a database, or retrieve data from a database. Most database systems use SQL, most of them also have their own additional proprietary extensions that are usually only used on their system.
+Originally based upon relational algebra and tuple relational calculus, SQL consists of a data definition language and a data manipulation language.
+SQL statements are used to perform tasks such as update data on a database, or retrieve data from a database.
+For example:
+The SELECT statement is used to select data from a database -> SELECT * FROM table_name;
+The WHERE clause is used to extract only those records that fulfill a specified criterion -> SELECT * FROM table_name WHERE column_name operator value;
+The INSERT statement is used to populate the table with a few rows -> INSERT INTO table_name VALUES (valueOne, valueTwo);
