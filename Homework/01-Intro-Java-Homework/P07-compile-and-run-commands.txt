@@ -1,0 +1,2 @@
+$ javac P06SumTwoNumbers.java
+$ java P06SumTwoNumbers

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Homework/01-Intro-Java-Homework/01-Intro-Java-Homework.iml" filepath="$PROJECT_DIR$/Homework/01-Intro-Java-Homework/01-Intro-Java-Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework/02-Java-Syntax-Homework/02-Java-Syntax-Homework.iml" filepath="$PROJECT_DIR$/Homework/02-Java-Syntax-Homework/02-Java-Syntax-Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework/03-Java-Loops-Methods-Classes-Homework/03-Java-Loops-Methods-Classes-Homework.iml" filepath="$PROJECT_DIR$/Homework/03-Java-Loops-Methods-Classes-Homework/03-Java-Loops-Methods-Classes-Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Homework/04-Java-Collections-Basics-Homework/04-Java-Collections-Basics-Homework.iml" filepath="$PROJECT_DIR$/Homework/04-Java-Collections-Basics-Homework/04-Java-Collections-Basics-Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Exam1June/Exam1June.iml" filepath="$PROJECT_DIR$/Practice/Exam1June/Exam1June.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Exam22June/Exam22June.iml" filepath="$PROJECT_DIR$/Practice/Exam22June/Exam22June.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Exam26May/Exam26May.iml" filepath="$PROJECT_DIR$/Practice/Exam26May/Exam26May.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Exam27May/Exam27May.iml" filepath="$PROJECT_DIR$/Practice/Exam27May/Exam27May.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Exam3September/Exam3September.iml" filepath="$PROJECT_DIR$/Practice/Exam3September/Exam3September.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/January7CorrectiveExam/January7CorrectiveExam.iml" filepath="$PROJECT_DIR$/Practice/January7CorrectiveExam/January7CorrectiveExam.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaBasics.iml" filepath="$PROJECT_DIR$/.idea/JavaBasics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/September21Evening/September21Evening.iml" filepath="$PROJECT_DIR$/Practice/September21Evening/September21Evening.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/September21Morning/September21Morning.iml" filepath="$PROJECT_DIR$/Practice/September21Morning/September21Morning.iml" />
+    </modules>
+  </component>
+</project>
