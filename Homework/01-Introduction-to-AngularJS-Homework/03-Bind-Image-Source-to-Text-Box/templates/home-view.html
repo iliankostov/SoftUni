@@ -1,0 +1,9 @@
+<h2>Welcome to live image viewer</h2>
+
+<form name="imageForm">
+    <label for="image-address">Please fill valid image address</label>
+    <input id="image-address" type="text" name="imageAddress" required ng-pattern="regex" style="width: 500px" ng-model="picture.address"/>
+</form>
+<div>
+    <img ng-src="{{picture.address}}" ng-hide="imageForm.imageAddress.$error.pattern || imageForm.imageAddress.$error.required" />
+</div>
