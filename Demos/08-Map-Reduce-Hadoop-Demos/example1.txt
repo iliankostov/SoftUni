@@ -1,0 +1,6 @@
+This is word-count example of Apache Hadoop Map-Reduce framework.
+I am an example.
+I am an example, a Hadoop example.
+This is an example.
+Is this an example?
+Example of Hadoop map-reduce framework.
