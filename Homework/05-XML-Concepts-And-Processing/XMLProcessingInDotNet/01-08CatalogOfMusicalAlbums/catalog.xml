@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<albums>
+  <album>
+    <name>Album One</name>
+    <artist>Artist One</artist>
+    <year>2015</year>
+    <producer>Producer One</producer>
+    <price>60.00</price>
+    <songs>
+      <song>
+        <title>Song One</title>
+        <duration>PT0H3M45S</duration>
+      </song>
+      <song>
+        <title>Song Two</title>
+        <duration>PT0H3M59S</duration>
+      </song>
+      <song>
+        <title>Song Three</title>
+        <duration>PT0H4M32S</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album Two</name>
+    <artist>Artist Two</artist>
+    <year>2014</year>
+    <producer>Producer Two</producer>
+    <price>40.00</price>
+    <songs>
+      <song>
+        <title>Song One</title>
+        <duration>PT0H3M30S</duration>
+      </song>
+      <song>
+        <title>Song Two</title>
+        <duration>PT0H3M25S</duration>
+      </song>
+      <song>
+        <title>Song Three</title>
+        <duration>PT0H4M50S</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album Three</name>
+    <artist>Artist Three</artist>
+    <year>2013</year>
+    <producer>Producer Three</producer>
+    <price>20.00</price>
+    <songs>
+      <song>
+        <title>Song One</title>
+        <duration>PT0H3M12S</duration>
+      </song>
+      <song>
+        <title>Song Two</title>
+        <duration>PT0H3M52S</duration>
+      </song>
+      <song>
+        <title>Song Three</title>
+        <duration>PT0H4M30S</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album Four</name>
+    <artist>Artist Four</artist>
+    <year>2012</year>
+    <producer>Producer Four</producer>
+    <price>10.00</price>
+    <songs>
+      <song>
+        <title>Song One</title>
+        <duration>PT0H3M28S</duration>
+      </song>
+      <song>
+        <title>Song Two</title>
+        <duration>PT0H3M46S</duration>
+      </song>
+      <song>
+        <title>Song Three</title>
+        <duration>PT0H4M32S</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album Five</name>
+    <artist>Artist Five</artist>
+    <year>2011</year>
+    <producer>Producer Five</producer>
+    <price>5.00</price>
+    <songs>
+      <song>
+        <title>Song One</title>
+        <duration>PT0H3M04S</duration>
+      </song>
+      <song>
+        <title>Song Two</title>
+        <duration>PT0H3M12S</duration>
+      </song>
+      <song>
+        <title>Song Three</title>
+        <duration>PT0H4M06S</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Album Six</name>
+    <artist>Artist Five</artist>
+    <year>2010</year>
+    <producer>Producer Six</producer>
+    <price>2.50</price>
+    <songs>
+      <song>
+        <title>Song One</title>
+        <duration>PT0H3M48S</duration>
+      </song>
+      <song>
+        <title>Song Two</title>
+        <duration>PT0H3M36S</duration>
+      </song>
+      <song>
+        <title>Song Three</title>
+        <duration>PT0H4M18S</duration>
+      </song>
+    </songs>
+  </album>
+</albums>

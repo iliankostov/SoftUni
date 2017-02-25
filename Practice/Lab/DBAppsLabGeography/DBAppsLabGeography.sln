@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01EFMapping", "EFMapping\01EFMapping.csproj", "{BA4485DE-55A6-4C02-93D6-1D4AB806EEAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02ExportRiversAsJSON", "ExportRiversAsJSON\02ExportRiversAsJSON.csproj", "{7AF9D8F6-876D-4DA0-885D-2AB0894570AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03ExportMonasteriesByCountryAsXML", "ExportMonasteriesByCountryAsXML\03ExportMonasteriesByCountryAsXML.csproj", "{388FDB0A-EB90-4587-95BC-CDF47AFC689C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04ImportRiversFromXML", "ImportRiversFromXML\04ImportRiversFromXML.csproj", "{AF246567-B398-416E-999A-499963EAE230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05EFCodeFirstCountriesMountainsAndPeaks", "EFCodeFirstCountriesMountainsAndPeaks\05EFCodeFirstCountriesMountainsAndPeaks.csproj", "{001AFE98-88DB-4274-94E2-408EAD193210}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA4485DE-55A6-4C02-93D6-1D4AB806EEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4485DE-55A6-4C02-93D6-1D4AB806EEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4485DE-55A6-4C02-93D6-1D4AB806EEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4485DE-55A6-4C02-93D6-1D4AB806EEAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF9D8F6-876D-4DA0-885D-2AB0894570AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF9D8F6-876D-4DA0-885D-2AB0894570AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF9D8F6-876D-4DA0-885D-2AB0894570AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF9D8F6-876D-4DA0-885D-2AB0894570AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{388FDB0A-EB90-4587-95BC-CDF47AFC689C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388FDB0A-EB90-4587-95BC-CDF47AFC689C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388FDB0A-EB90-4587-95BC-CDF47AFC689C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388FDB0A-EB90-4587-95BC-CDF47AFC689C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF246567-B398-416E-999A-499963EAE230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF246567-B398-416E-999A-499963EAE230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF246567-B398-416E-999A-499963EAE230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF246567-B398-416E-999A-499963EAE230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{001AFE98-88DB-4274-94E2-408EAD193210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{001AFE98-88DB-4274-94E2-408EAD193210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{001AFE98-88DB-4274-94E2-408EAD193210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{001AFE98-88DB-4274-94E2-408EAD193210}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

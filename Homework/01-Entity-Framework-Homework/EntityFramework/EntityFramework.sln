@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01DbContextForTheSoftUniDatabase", "01DbContextForTheSoftUniDatabase\01DbContextForTheSoftUniDatabase.csproj", "{D910621E-1401-439B-9C13-1F9145284522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02EmployeeDAOClass", "02EmployeeDAOClass\02EmployeeDAOClass.csproj", "{008EBFD1-321B-4A92-BED0-B45471D5CACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03DatabaseSearchQueries", "03DatabaseSearchQueries\03DatabaseSearchQueries.csproj", "{7537628F-1F8A-40F3-99BA-1A28BF2939AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04NativeSQLQuery", "04NativeSQLQuery\04NativeSQLQuery.csproj", "{8CCA0373-2997-4863-AEE2-3B06896EFFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05ConcurrentDatabaseChanges", "05ConcurrentDatabaseChanges\05ConcurrentDatabaseChanges.csproj", "{938DEE1C-D78E-49CE-B967-5821F6D2AC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06CallAStoredProcedure", "06CallAStoredProcedure\06CallAStoredProcedure.csproj", "{55003CFE-8602-47FA-B384-7AF689CEB182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D910621E-1401-439B-9C13-1F9145284522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D910621E-1401-439B-9C13-1F9145284522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D910621E-1401-439B-9C13-1F9145284522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D910621E-1401-439B-9C13-1F9145284522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008EBFD1-321B-4A92-BED0-B45471D5CACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7537628F-1F8A-40F3-99BA-1A28BF2939AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCA0373-2997-4863-AEE2-3B06896EFFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCA0373-2997-4863-AEE2-3B06896EFFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CCA0373-2997-4863-AEE2-3B06896EFFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CCA0373-2997-4863-AEE2-3B06896EFFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938DEE1C-D78E-49CE-B967-5821F6D2AC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938DEE1C-D78E-49CE-B967-5821F6D2AC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938DEE1C-D78E-49CE-B967-5821F6D2AC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938DEE1C-D78E-49CE-B967-5821F6D2AC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55003CFE-8602-47FA-B384-7AF689CEB182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55003CFE-8602-47FA-B384-7AF689CEB182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55003CFE-8602-47FA-B384-7AF689CEB182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55003CFE-8602-47FA-B384-7AF689CEB182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

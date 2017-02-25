@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root-dir path="C:\Media">
+  <dir name="Music">
+    <file name="Robin Schulz - North Amercian Tour 2015.mp3" />
+  </dir>
+  <dir name="Pictures">
+    <file name="SoftUni-Wallpaper-1920-1080.png" />
+  </dir><dir name="Presentation">
+    <file name="6.2. XML-Processing-in-.NET.pptx" />
+    <dir name="GitHub">
+      <dir name="Homework">
+        <file name="6.1. XML-Basic-Concepts-Homework.docx" />
+      </dir>
+    </dir>
+  </dir>
+</root-dir>

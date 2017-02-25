@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="students"
+    targetNamespace="students.xsd"
+    elementFormDefault="qualified"
+    xmlns="students.xsd"
+    xmlns:mstns="students.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="gender" type="xs:string" />
+              <xs:element name="birth-date" type="xs:date" />
+              <xs:element name="phone-number" type="xs:string" minOccurs="0"/>
+              <xs:element name="email" type="xs:string" />
+              <xs:element name="university" type="xs:string" />
+              <xs:element name="speciality" type="xs:string" />
+              <xs:element name="faculty-number" type="xs:string" minOccurs="0"/>
+              <xs:sequence>
+                <xs:element name="taken-exams">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="exam" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="date-taken" type="xs:date" />
+                            <xs:element name="grade" type="xs:float" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:sequence>
+                <xs:element name="endorsements" minOccurs="0">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="endorsement" maxOccurs="unbounded">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="author" type="xs:string" />
+                            <xs:element name="author-email" type="xs:string" />
+                            <xs:element name="endorsement-date" type="xs:date" />
+                            <xs:element name="endorsement-text" type="xs:string" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

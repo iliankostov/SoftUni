@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<students xmlns="students.xsd">
+  <student>
+    <name>Pesho</name>
+    <gender>M</gender>
+    <birth-date>1990-01-01</birth-date>
+    <email>pesho@abv.bg</email>
+    <university>Software University</university>
+    <speciality>Back-end developer</speciality>
+    <taken-exams>
+      <exam>
+        <name>Object Oriented Programming</name>
+        <date-taken>2015-01-01</date-taken>
+        <grade>4.98</grade>
+      </exam>
+      <exam>
+        <name>Hight Quality Code</name>
+        <date-taken>2015-03-01</date-taken>
+        <grade>4.99</grade>
+      </exam>
+    </taken-exams>
+    <endorsements>
+      <endorsement>
+        <author>Maria</author>
+        <author-email>maria@abv.bg</author-email>
+        <endorsement-date>2015-01-01</endorsement-date>
+        <endorsement-text>Bravo</endorsement-text>
+      </endorsement>
+      <endorsement>
+        <author>Gosho</author>
+        <author-email>gosho@abv.bg</author-email>
+        <endorsement-date>2015-01-01</endorsement-date>
+        <endorsement-text>Bravo</endorsement-text>
+      </endorsement>
+    </endorsements>
+  </student>
+  <student>
+    <name>Gosho</name>
+    <gender>M</gender>
+    <birth-date>1991-01-01</birth-date>
+    <phone-number>0888888889</phone-number>
+    <email>gosho@abv.bg</email>
+    <university>Software University</university>
+    <speciality>Back-end developer</speciality>
+    <faculty-number>123456789</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Object Oriented Programming</name>
+        <date-taken>2015-01-01</date-taken>
+        <grade>5.80</grade>
+      </exam>
+      <exam>
+        <name>Hight Quality Code</name>
+        <date-taken>2015-03-01</date-taken>
+        <grade>4.99</grade>
+      </exam>
+    </taken-exams>
+  </student>
+  <student>
+    <name>Maria</name>
+    <gender>F</gender>
+    <birth-date>1993-01-01</birth-date>
+    <phone-number>0888888899</phone-number>
+    <email>maria@abv.bg</email>
+    <university>Software University</university>
+    <speciality>Back-end developer</speciality>
+    <faculty-number>123456789</faculty-number>
+    <taken-exams>
+      <exam>
+        <name>Object Oriented Programming</name>
+        <date-taken>2015-01-01</date-taken>
+        <grade>5.00</grade>
+      </exam>
+      <exam>
+        <name>Hight Quality Code</name>
+        <date-taken>2015-03-01</date-taken>
+        <grade>4.00</grade>
+      </exam>
+    </taken-exams>
+    <endorsements>
+      <endorsement>
+        <author>Pesho</author>
+        <author-email>pesho@abv.bg</author-email>
+        <endorsement-date>2015-03-01</endorsement-date>
+        <endorsement-text>Bravo</endorsement-text>
+      </endorsement>
+      <endorsement>
+        <author>Gosho</author>
+        <author-email>gosho@abv.bg</author-email>
+        <endorsement-date>2015-03-01</endorsement-date>
+        <endorsement-text>Bravo</endorsement-text>
+      </endorsement>
+    </endorsements>
+  </student>
+</students>
