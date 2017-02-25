@@ -1,0 +1,37 @@
+Test 1 in:
+login=student&password=student
+
+Test 1 out:
+login=[student]password=[student]
+
+--------------------------------------------------------------------------
+
+Test 2 in:
+field=value1&field=value2&field=value3
+http://example.com/over/there?name=ferret
+
+Test 2 out:
+field=[value1, value2, value3]
+name=[ferret]
+
+--------------------------------------------------------------------------
+
+Test 3 in:
+foo=%20foo&value=+val&foo+=5+%20+203
+foo=poo%20&value=valley&dog=wow+
+url=https://softuni.bg/trainings/coursesinstances/details/1070
+https://softuni.bg/trainings?trainer=nakov&course=oop&course=php
+
+Test 3 out:
+foo=[foo, 5 203]value=[val]
+foo=[poo]value=[valley]dog=[wow]
+url=[https://softuni.bg/trainings/coursesinstances/details/1070]
+trainer=[nakov]course=[oop, php]
+
+    var pattern = /([ a-z A-Z 0-9]+)\w+[:/.a-zA-Z0-9]+/g;
+
+
+        arr.push(input[i].replace('+', '').replace('+%20', '').replace('%20', '').replace('+', '').replace('+', '').match(pattern));
+
+
+

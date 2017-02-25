@@ -1,0 +1,25 @@
+Test 1 in:
+22.03.2014
+17.05.1933
+10.10.1954
+
+Test 1 out:
+The biggest fan of ewoks was born on Sat Mar 22 2014
+The biggest hater of ewoks was born on Wed May 17 1933
+
+--------------------------------------------------------------------------
+
+Test 2 in:
+'22.03.2000'
+
+Test 2 out:
+The biggest fan of ewoks was born on Wed Mar 22 2000
+
+--------------------------------------------------------------------------
+
+Test 3 in:,
+'22.03.1700',
+'01.07.2020'
+
+Test 3 out:
+No result

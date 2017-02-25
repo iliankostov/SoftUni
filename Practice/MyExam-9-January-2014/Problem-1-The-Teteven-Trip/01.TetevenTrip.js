@@ -1,0 +1,64 @@
+function solve (input) {
+    var output = "";
+    for (var row = 0; row < input.length; row++) {
+        var tempRow = input[row].split(' ');
+        var car = tempRow[0];
+        var fuel = tempRow[1];
+        var trace = tempRow[2];
+        var baggage = parseFloat(tempRow[3]);
+        var finalConsumption = calculateFinalConsumption(trace, fuel, baggage);
+        finalConsumption = Math.round(finalConsumption);
+
+        output += car + ' ' + fuel + ' ' + trace + ' ' + finalConsumption + "\n";
+    }
+    console.log(output);
+
+    function getConsumptionByFuel(fuelType) {
+        var BASE_CONSUMPTION = 10;
+        if(fuelType === 'petrol') {
+            return BASE_CONSUMPTION;
+        } else if (fuelType === 'diesel') {
+            return 0.8 * BASE_CONSUMPTION;
+        } else if (fuelType === 'gas') {
+            return 1.2 * BASE_CONSUMPTION;
+        }
+    }
+
+    function getOverFuelConsumption (baggage) {
+        return 0.01 * baggage;
+    }
+
+    function calculateFinalConsumption (trace, fuelType, baggage) {
+        var averageConsumption = getConsumptionByFuel(fuelType) + getOverFuelConsumption(baggage);
+        var consumptionInSnow;
+        var calculatedConsumption;
+        if (trace === '1') {
+            consumptionInSnow = calculateOverConsumptionInSnow(10, averageConsumption);
+            calculatedConsumption = consumptionInSnow + (averageConsumption * (110 * 0.01))
+        } else {
+            consumptionInSnow = calculateOverConsumptionInSnow(30, averageConsumption);
+            calculatedConsumption = consumptionInSnow + (averageConsumption * (95 * 0.01))
+        }
+
+        return calculatedConsumption;
+    }
+
+    function calculateOverConsumptionInSnow (km, averageConsumption) {
+        return (0.3 * averageConsumption) * (km * 0.01);
+    }
+}
+
+// ------------------------------------------------------------
+// Read the input from the console as array and process it
+// Remove all below code before submitting to the judge system!
+// ------------------------------------------------------------
+
+var arr = [];
+require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+}).on('line', function (line) {
+    arr.push(line);
+}).on('close', function () {
+    solve(arr);
+});
