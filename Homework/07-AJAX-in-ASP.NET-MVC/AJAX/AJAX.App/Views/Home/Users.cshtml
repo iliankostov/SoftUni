@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AJAX.App.Models.UserViewModel>
+@{
+    ViewBag.Title = "Users";
+}
+<h2>@ViewBag.Title</h2>
+
+@foreach (var user in Model)
+{
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="btn btn-link user" data-toggle="popover" data-trigger="hover"
+                 title="@user.Username" data-content="@user.StatusType">
+                @user.Username
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+}

@@ -1,0 +1,68 @@
+﻿@model Snippy.Web.Models.ViewModels.SnippetViewModel
+
+@{
+    ViewBag.Title = "Snippet details";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        @if (Model != null)
+        {
+            <h2>
+                @Html.ActionLink(Model.Language.Name, "Details", "Languages", new { area = string.Empty, id = Model.Language.Id }, new { @class = "btn btn-success" })
+                @Model.Title
+            </h2>
+
+            <p>
+                by <span class="glyphicon glyphicon-user"></span> <strong>@Model.AuthorUserName</strong> on @Model.CreatedOn.ToString("dd.MM.yyyy hh:mm:ss")
+            </p>
+
+            <p>
+                Labels:
+                @foreach (var label in Model.Lables)
+                {
+                    @Html.ActionLink(label.Text, "Details", "Languages", new { area = string.Empty, id = label.Id }, new { @class = "label label-primary margin" })
+                }
+            </p>
+
+            <p>@Model.Description</p>
+
+            <p>
+                <pre><code>@Model.Code</code></pre>
+            </p>
+
+            <p>
+                Comments:
+            </p>
+
+            if (User.Identity.IsAuthenticated)
+            {
+                @Ajax.ActionLink("New Comment", "Create", "Comments", new { id = Model.Id }, new AjaxOptions()
+                    {
+                        HttpMethod = "GET",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "comment-form"
+                    }, new { @class = "btn btn-default" })
+            }
+            <hr/>
+
+            <div id="comment-form"></div>
+            <div id="new-comments"></div>
+
+            foreach (var comment in Model.Comments)
+            {
+                <div class="well">
+                    <p>@comment.Content</p>
+                    <p>
+                        <span class="glyphicon glyphicon-user"></span> <strong>@comment.AuthorUserName</strong> on @comment.CreatedOn.ToString("dd.MM.yyyy hh:mm:ss")
+                    </p>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/ajax")
+}
+

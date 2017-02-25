@@ -1,0 +1,8 @@
+﻿@model Snippy.Web.Models.ViewModels.CommentViewModel
+
+<div class="well">
+    <p>@Model.Content</p>
+    <p>
+        <span class="glyphicon glyphicon-user"></span> <strong>@Model.AuthorUserName</strong> on @Model.CreatedOn.ToString("dd.MM.yyyy hh:mm:ss")
+    </p>
+</div>

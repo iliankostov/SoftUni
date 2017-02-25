@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Snippy.Web.Models.ViewModels.SnippetViewModel>
+
+@{
+    ViewBag.Title = "All snippets";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row margin">
+    @if (Model != null)
+    {
+        foreach (var snippet in Model)
+        {
+            <h4>@Html.ActionLink(snippet.Title, "Details", "Snippets", new { area = string.Empty, id = snippet.Id }, null)</h4>
+
+            if (snippet.Lables != null)
+            {
+                foreach (var label in snippet.Lables)
+                {
+                    @Html.ActionLink(label.Text, "Details", "Labels", new { area = string.Empty, id = label.Id }, new { @class = "btn btn-primary margin" })
+                }
+            }
+        }
+    }
+</div>
