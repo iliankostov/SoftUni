@@ -1,2 +1,0 @@
-# CSharpAdvanced
-Advanced C# Practice
