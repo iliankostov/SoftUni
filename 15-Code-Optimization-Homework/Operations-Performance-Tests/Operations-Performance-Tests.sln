@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01AddSubstractIncrementMultiplyDivide", "AddSubstractIncrementMultiplyDivide\01AddSubstractIncrementMultiplyDivide.csproj", "{2D4570C4-4DE6-4F26-9420-19D91166E0F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02SquareRootNaturalLogarithmSinus", "SquareRootNaturalLogarithmSinus\02SquareRootNaturalLogarithmSinus.csproj", "{E12FD15B-8A53-49FB-8378-88F706ADE3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03SortTests", "SortTests\03SortTests.csproj", "{68AA5274-B6F9-4BFF-80F5-F3BD24342514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortAlgorithm.Test", "SortAlgorithm.Test\SortAlgorithm.Test.csproj", "{B9969EB3-DD3F-416F-9C43-E2D65F748199}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D4570C4-4DE6-4F26-9420-19D91166E0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4570C4-4DE6-4F26-9420-19D91166E0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4570C4-4DE6-4F26-9420-19D91166E0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4570C4-4DE6-4F26-9420-19D91166E0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12FD15B-8A53-49FB-8378-88F706ADE3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12FD15B-8A53-49FB-8378-88F706ADE3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12FD15B-8A53-49FB-8378-88F706ADE3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12FD15B-8A53-49FB-8378-88F706ADE3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68AA5274-B6F9-4BFF-80F5-F3BD24342514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68AA5274-B6F9-4BFF-80F5-F3BD24342514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68AA5274-B6F9-4BFF-80F5-F3BD24342514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68AA5274-B6F9-4BFF-80F5-F3BD24342514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9969EB3-DD3F-416F-9C43-E2D65F748199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9969EB3-DD3F-416F-9C43-E2D65F748199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9969EB3-DD3F-416F-9C43-E2D65F748199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9969EB3-DD3F-416F-9C43-E2D65F748199}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
