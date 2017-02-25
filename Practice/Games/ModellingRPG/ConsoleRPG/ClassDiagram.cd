@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleRPG.Models.Ally.Characters.Hero">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ally\Characters\Hero.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleRPG.Models.Ally.Characters.Barbarian">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ally\Characters\Barbarian.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Ally.Characters.Monk">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ally\Characters\Monk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Ally.Characters.Crusader">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ally\Characters\Crusader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Enemy.Monster">
+    <Position X="5.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enemy\Monster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleRPG.Models.Enemy.Desecrator">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enemy\Desecrator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Enemy.Jailer">
+    <Position X="4" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enemy\Jailer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Enemy.Molten">
+    <Position X="5.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enemy\Molten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Enemy.Orbiter">
+    <Position X="7.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enemy\Orbiter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleRPG.Models.Enemy.Vampiric">
+    <Position X="9.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Enemy\Vampiric.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ConsoleRPG.Contracts.IAttack">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IAttack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleRPG.Contracts.IHeal">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IHeal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleRPG.Contracts.IDrop">
+    <Position X="7.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IDrop.cs</FileName>
+      <NewMemberFileName>Contracts\Idrop.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleRPG.Contracts.ISelectDrop">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ISelectDrop.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ConsoleRPG.Contracts.IBuy">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IBuy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

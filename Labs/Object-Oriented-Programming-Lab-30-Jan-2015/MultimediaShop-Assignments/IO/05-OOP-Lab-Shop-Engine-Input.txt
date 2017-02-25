@@ -1,0 +1,3 @@
+supply book 5 id=4fd332&title=Boat&price=20&author=Sellinger&genre=comedy
+supply game 4 id=sfd33&title=Assassin's_Creed&price=19.00&genre=fiction&ageRestriction=Teen
+supply video 40 id=sfd332&title=The_Godfather&price=79.00&genre=crime&length=187
