@@ -1,0 +1,12 @@
+body input {
+  margin: 10px; }
+body #wrapper .country-list {
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px; }
+  body #wrapper .country-list p {
+    text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */
