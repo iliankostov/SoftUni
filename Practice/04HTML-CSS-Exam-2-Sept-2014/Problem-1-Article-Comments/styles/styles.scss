@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  main {
+    width: 648px;
+    margin: 0 auto;
+    header {
+      border-bottom: 1px solid #cccccc;
+      h1 {
+        font-size: 18px;
+      }
+    }
+    article {
+      border-bottom: 1px solid #cccccc;
+      padding: 20px 0;
+      .right {
+        text-align: right;
+        float: right;
+        width: 20%;
+        .report {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url("../images/report-spam.jpg") no-repeat;
+        }
+        .vote-up {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url("../images/vote-up.jpg") no-repeat;
+        }
+        .vote-down {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url("../images/vote-down.jpg") no-repeat;
+        }
+        h3 {
+          color: #ff0000;
+          font-size: 14px;
+        }
+      }
+      .left {
+        display: flex;
+        .img {
+          width: 100px;
+          height: 100px;
+          padding-right: 5px;
+        }
+        .info {
+          padding-left: 10px;
+          h2 {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 400;
+          }
+          .date-time {
+            color: #9a9a9a;
+          }
+        }
+      }
+      p {
+        clear: both;
+        margin-top: 10px;
+        a {
+          color: #000000;
+        }
+        a:hover {
+          color: #ababab;
+        }
+      }
+    }
+    article:nth-child(2) {
+      .right {
+        h3 {
+          color: #676767;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 14px; }
+  html a, body a {
+    text-decoration: none;
+    color: #828589; }
+  html ul, body ul {
+    list-style: none;
+    padding: 0; }
+  html #wrapper, body #wrapper {
+    margin: 0 auto;
+    width: 960px; }
+    html #wrapper header, body #wrapper header {
+      height: 100px;
+      background-color: #eeeeee; }
+      html #wrapper header img, body #wrapper header img {
+        display: inline-block;
+        margin: 20px; }
+      html #wrapper header nav, body #wrapper header nav {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+        margin: 25px 0; }
+        html #wrapper header nav ul, body #wrapper header nav ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; }
+          html #wrapper header nav ul li a, body #wrapper header nav ul li a {
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: 800; }
+          html #wrapper header nav ul li a:hover, body #wrapper header nav ul li a:hover {
+            background-color: #cad1d1; }
+          html #wrapper header nav ul li:first-child a, body #wrapper header nav ul li:first-child a {
+            color: orange; }
+    html #wrapper main, body #wrapper main {
+      width: 840px;
+      margin: 0 auto; }
+      html #wrapper main h1, body #wrapper main h1 {
+        color: #463f3f;
+        font-weight: 400; }
+      html #wrapper main section, body #wrapper main section {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; }
+        html #wrapper main section article, body #wrapper main section article {
+          padding-bottom: 30px;
+          width: 45%;
+          color: #595959; }
+    html #wrapper footer, body #wrapper footer {
+      height: 100px;
+      background-color: #eeeeee; }
+      html #wrapper footer #left-foot, body #wrapper footer #left-foot {
+        float: left;
+        padding: 40px;
+        color: #595959; }
+      html #wrapper footer #right-foot, body #wrapper footer #right-foot {
+        float: right;
+        padding: 16px 50px 16px 0; }
+        html #wrapper footer #right-foot ul, body #wrapper footer #right-foot ul {
+          display: flex;
+          justify-content: space-between; }
+          html #wrapper footer #right-foot ul li:first-child, body #wrapper footer #right-foot ul li:first-child {
+            margin: 5px; }
+            html #wrapper footer #right-foot ul li:first-child a, body #wrapper footer #right-foot ul li:first-child a {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 0 no-repeat; }
+            html #wrapper footer #right-foot ul li:first-child a:hover, body #wrapper footer #right-foot ul li:first-child a:hover {
+              background: url("../images/icons.png") -40px 0 no-repeat; }
+          html #wrapper footer #right-foot ul li:nth-child(2), body #wrapper footer #right-foot ul li:nth-child(2) {
+            margin: 5px; }
+            html #wrapper footer #right-foot ul li:nth-child(2) a, body #wrapper footer #right-foot ul li:nth-child(2) a {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 -40px no-repeat; }
+            html #wrapper footer #right-foot ul li:nth-child(2) a:hover, body #wrapper footer #right-foot ul li:nth-child(2) a:hover {
+              background: url("../images/icons.png") -40px -40px no-repeat; }
+          html #wrapper footer #right-foot ul li:nth-child(3), body #wrapper footer #right-foot ul li:nth-child(3) {
+            margin: 5px; }
+            html #wrapper footer #right-foot ul li:nth-child(3) a, body #wrapper footer #right-foot ul li:nth-child(3) a {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 -80px no-repeat; }
+            html #wrapper footer #right-foot ul li:nth-child(3) a:hover, body #wrapper footer #right-foot ul li:nth-child(3) a:hover {
+              background: url("../images/icons.png") -40px -80px no-repeat; }
+          html #wrapper footer #right-foot ul li:last-child, body #wrapper footer #right-foot ul li:last-child {
+            margin: 5px; }
+            html #wrapper footer #right-foot ul li:last-child a, body #wrapper footer #right-foot ul li:last-child a {
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 -120px no-repeat; }
+            html #wrapper footer #right-foot ul li:last-child a:hover, body #wrapper footer #right-foot ul li:last-child a:hover {
+              background: url("../images/icons.png") -40px -120px no-repeat; }
+
+/*# sourceMappingURL=styles.css.map */

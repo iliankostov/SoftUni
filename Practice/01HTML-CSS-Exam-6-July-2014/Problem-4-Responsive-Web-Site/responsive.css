@@ -1,0 +1,41 @@
+/* Add here your responsive CSS */
+
+@media screen and (max-width: 780px) {
+    .mainHeader > img {
+        width: 100%;
+        height: auto;
+    }
+    .mainHeader > nav > ul {
+        padding: 0;
+    }
+    .mainHeader > nav > ul > li {
+        width: 100%;
+
+    }
+    .mainHeader nav li a {
+        width: 100%;
+
+    }
+    .mainHeader nav li a:link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mainContent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content {
+        width: 100%;
+    }
+    .top-sidebar {
+        margin: 10px 0;
+    }
+    .middle-sidebar {
+        margin: 0;
+    }
+    .bottom-sidebar {
+        margin: 10px 0;
+    }
+
+
+}

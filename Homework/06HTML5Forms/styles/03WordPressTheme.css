@@ -1,0 +1,30 @@
+html, body, main, legend, label, input, div, p {
+    margin: 0;
+    padding: 0;
+}
+article {
+    display: inline-block;
+}
+.position {
+    float: left;
+    margin: 3px;
+}
+.text {
+    font-size: 12px;
+    font-weight: bold;
+}
+.browse input {
+    font-size: 12px;
+    font-weight: bold;
+}
+.search input {
+    width: 120px;
+    height: 22px;
+}
+.button input {
+    background: url("../images/wordpress_button.png") no-repeat ;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    border: none;
+}

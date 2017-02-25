@@ -1,0 +1,46 @@
+body {
+  font-family: Tahoma, Helvetica, sans-serif;
+  font-size: 11px; }
+  body h1 {
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase; }
+  body a {
+    text-decoration: none;
+    color: #000000; }
+  body section {
+    margin: 0 auto;
+    width: 600px; }
+    body section article {
+      display: inline-block;
+      vertical-align: top;
+      margin: 5px;
+      width: 145px; }
+      body section article header a img {
+        border: 1px solid #dadee4; }
+      body section article header a h1 {
+        margin: 10px 0 5px 0;
+        height: 27px; }
+      body section article header a h1:hover {
+        color: #dadee4; }
+      body section article p {
+        margin: 5px 0;
+        color: #6a6a6a;
+        height: 27px; }
+      body section article div {
+        margin: 10px 0;
+        color: #90070b;
+        font-weight: 800; }
+      body section article footer button {
+        width: 100px;
+        padding: 3px 0 3px 15px;
+        font-size: 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background: url("../images/shopping-cart-inactive.png"); }
+      body section article footer button:hover {
+        background: url("../images/shopping-cart-active.png"); }
+
+/*# sourceMappingURL=styles.css.map */

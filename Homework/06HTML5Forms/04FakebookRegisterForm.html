@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/04FakebookRegisterForm.css"/>
+    <title>Fakebook Register Form</title>
+</head>
+<body>
+<section>
+    <header>fakebook<span>&#174</span></header>
+    <header>Registration</header>
+    <header>It is safe and it will always be!</header>
+    <form method="post">
+        <fieldset>
+            <legend>None - Important Information</legend>
+            <div>
+                <input type="text" placeholder="First Name" name="first_name" pattern="[A-Za-z]+" title="First name should include only uppercase and lowercase letters.">
+                <input type="text" placeholder="Last Name" name="last_name" pattern="[A-Za-z]+" title="Last name should include only uppercase and lowercase letters.">
+                <input type="email" name="email" placeholder="Your Email" pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}" title="Please, enter a valid email address e.g. example@domain.com">
+                <input type="tel" name="phone" placeholder="Phone Number" pattern="\+[0-9]{13}" title="Please, enter a valid phone number e.g. +447500000000." tabindex="5">
+                <input type="password" name="password" placeholder="Your Password" pattern="[A-Za-z0-9_-]{6,18}" title="Password should be 6 to 18 characters long and can only include uppercase and lowercase letters, digits, underscores and hyphens.">
+                <input type="url" name="website" placeholder="Website"
+                       title="Please, enter a valid website address e.g. http://www.example.com" />
+            </div>
+
+            <!---->
+            <div>
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="birthday_date">
+                <input type="time" name="birthday" id="birthday_time">
+            </div>
+
+            <!---->
+            <div>
+                <input type="radio" name="gender" id="female" tabindex="4">
+                <label for="female">Female</label>
+                <!---->
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <!---->
+                <input type="radio" name="gender" id="other">
+                <label for="other">Other</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Important Information *required</legend>
+            <div>
+                <select name="country" onchange="this.className = 'blackText'" required>
+                    <option disabled selected>Country</option>
+                    <option>United Kingdom</option>
+                    <option>Germany</option>
+                    <option>Spain</option>
+                    <option>Italy</option>
+                    <option>France</option>
+                </select>
+
+                <input type="text" placeholder="Village" name="village" pattern="[A-Za-z\ ]+" title="Village name should include only uppercase, lowercase letters and spaces." required="true">
+                <input type="text" placeholder="District" name="district" pattern="[A-Za-z\ ]+" title="District name should include only uppercase, lowercase letters and spaces." required="true">
+                <input type="text" placeholder="Street" name="street" pattern="[A-Za-z\ .-]+" title="Street name should include only uppercase, lowercase letters, spaces, dots and hyphens." required="true">
+                <input type="text" placeholder="Nr" name="nr" pattern="[0-9]+" title="Street name should include only digits." required="true">
+                <input type="number" placeholder="Floor" name="floor" min="1" required="true">
+                <input type="number" placeholder="App Nr" name="app_nr" min="0" required="true">
+            </div>
+
+            <div>
+                <label for="door_color">Door Color</label>
+                <input type="color" name="door_color" value="#ff80c0" required="true" tabindex="3">
+                <input type="text" placeholder="Water Meter Nr" name="water_meter_nr" pattern="[0-9]+" title="Water meter number should include only digits." required="true" tabindex="2">
+                <select name="aunt_bra_size" onchange="this.className = 'blackText'" required tabindex="1">
+                    <option disabled selected>Aunt's Bra Size</option>
+                    <option>32 A</option>
+                    <option>34 B</option>
+                    <option>36 C</option>
+                    <option>38 D</option>
+                    <option>40 DD</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="more_personal_information">More Personal Information</label>
+                <textarea name="more_personal_information" placeholder="Give Us More Information!!!" required></textarea>
+            </div>
+        </fieldset>
+
+        <input type="reset" value="Clear Form">
+        <input type="submit" name="register" value="Register">
+    </form>
+</section>
+</body>
+</html>

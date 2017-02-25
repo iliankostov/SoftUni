@@ -1,0 +1,111 @@
+html {
+  font-family: tahoma, verdana, sans-serif; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  color: #789ecc;
+  text-decoration: none; }
+
+body {
+  font-size: 16px; }
+  body header {
+    margin: 0 auto;
+    width: 1000px;
+    height: 90px;
+    border-bottom: 1px solid #d9d9d9; }
+    body header h1 {
+      margin: 15px;
+      font-weight: 400; }
+    body header nav ul li {
+      margin: 10px 60px 0 10px;
+      float: left;
+      color: #d9d9d9;
+      text-transform: uppercase; }
+    body header form input {
+      float: right;
+      padding: 7px;
+      width: 200px;
+      height: 15px;
+      background-color: #f7f7f7;
+      border: 1px solid #d9d9d9;
+      border-right: none; }
+    body header form ::-webkit-input-placeholder {
+      color: #d9d9d9; }
+    body header form input:focus {
+      outline: 0; }
+    body header form button {
+      float: right;
+      padding: 5px;
+      background-color: #f7f7f7;
+      border: 1px solid #d9d9d9;
+      border-left: none;
+      outline: 0; }
+      body header form button img {
+        width: 16px;
+        height: 16px; }
+  body main {
+    width: 960px;
+    margin: 0 auto; }
+    body main .left-side {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      margin: 40px 10px 0 0;
+      border-top: 1px solid #d9d9d9; }
+      body main .left-side ul li {
+        margin-top: 10px; }
+    body main section {
+      display: inline-block;
+      vertical-align: top;
+      width: 500px;
+      margin: 0 10px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d9d9d9; }
+      body main section article h1 {
+        font-weight: normal;
+        margin-bottom: 0; }
+      body main section article h4 {
+        font-weight: normal;
+        font-size: 10px;
+        margin-top: 0; }
+    body main .right-side {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      margin: 40px 0 0 10px; }
+      body main .right-side label {
+        display: block;
+        padding: 5px 0;
+        border-bottom: 1px solid #d9d9d9; }
+      body main .right-side select {
+        margin: 15px 0; }
+    body main .bottom-side {
+      margin-top: 20px; }
+      body main .bottom-side a {
+        margin-left: 230px; }
+      body main .bottom-side p {
+        font-size: 14px;
+        color: #d9d9d9; }
+  body footer {
+    background-color: #020202;
+    color: white; }
+    body footer section article {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+      margin: 20px 30px; }
+      body footer section article h2, body footer section article h3 {
+        margin-top: 0; }
+      body footer section article a {
+        color: #ffffff; }
+      body footer section article ul li a {
+        font-size: 14px;
+        color: #ffffff; }
+      body footer section article div {
+        color: #9b9b9b; }
+
+/*# sourceMappingURL=04BGJUGWebPage.css.map */

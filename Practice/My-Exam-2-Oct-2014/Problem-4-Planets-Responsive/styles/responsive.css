@@ -1,0 +1,63 @@
+@media all and (max-width: 999px) {
+  body {
+    min-width: 0; }
+    body #wrapper {
+      width: 100%; }
+      body #wrapper header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 200px; }
+        body #wrapper header #logoarea {
+          padding-bottom: 10px; }
+        body #wrapper header #header-area-right {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-top: 10px;
+          width: 400px;
+          margin: 0 auto; }
+          body #wrapper header #header-area-right #search-form {
+            margin-top: 10px; }
+      body #wrapper .contentblock {
+        min-width: 0;
+        min-height: 0; }
+        body #wrapper .contentblock #publicphotos {
+          width: 100%; }
+          body #wrapper .contentblock #publicphotos h1 {
+            display: flex;
+            justify-content: center; }
+          body #wrapper .contentblock #publicphotos #p-albums-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+      body #wrapper footer {
+        min-width: 0;
+        display: flex;
+        justify-content: space-between; } }
+@media screen and (max-width: 755px) {
+  body #wrapper header {
+    height: 300px;
+    justify-content: flex-start; }
+    body #wrapper header #header-area-right {
+      width: 100%; }
+      body #wrapper header #header-area-right #menu {
+        width: 100%;
+        height: 150px; }
+        body #wrapper header #header-area-right #menu #nav-menu {
+          display: flex;
+          flex-wrap: wrap; }
+          body #wrapper header #header-area-right #menu #nav-menu li {
+            width: 90%;
+            margin: 0 auto;
+            padding: 3px; }
+            body #wrapper header #header-area-right #menu #nav-menu li a {
+              width: 100%;
+              text-align: center; }
+      body #wrapper header #header-area-right #search-form {
+        width: 70%; }
+  body #wrapper .contentblock #publicphotos {
+    width: 90%;
+    padding-left: 35px; } }
+
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,136 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+  a {
+    text-decoration: none;
+    color: #828589;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  #wrapper {
+    margin: 0 auto;
+    width: 960px;
+    header {
+      height: 100px;
+      background-color: #eeeeee;
+      img {
+        display: inline-block;
+        margin: 20px;
+      }
+      nav {
+        display: inline-block;
+        vertical-align: top;
+        width: 80%;
+        margin: 25px 0;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          li {
+            a {
+              padding: 15px;
+              border-radius: 5px;
+              font-weight: 800;
+            }
+            a:hover {
+              background-color: #cad1d1;
+            }
+            &:first-child {
+              a {
+                color: orange;
+              }
+            }
+          }
+        }
+      }
+    }
+    main {
+      width: 840px;
+      margin: 0 auto;
+      h1 {
+        color: #463f3f;
+        font-weight: 400;
+      }
+      section {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        article {
+          padding-bottom: 30px;
+          width: 45%;
+          color: #595959;
+        }
+      }
+    }
+    footer {
+      height: 100px;
+      background-color: #eeeeee;
+      #left-foot {
+        float: left;
+        padding: 40px;
+        color: #595959;
+      }
+      #right-foot {
+        float: right;
+        padding: 16px 50px 16px 0;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li:first-child {
+            margin: 5px;
+            a{
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 0 no-repeat;
+            }
+            a:hover {
+              background: url("../images/icons.png") -40px 0 no-repeat;
+            }
+          }
+          li:nth-child(2) {
+            margin: 5px;
+            a{
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 -40px no-repeat;
+            }
+            a:hover {
+              background: url("../images/icons.png") -40px -40px no-repeat;
+            }
+          }
+          li:nth-child(3) {
+            margin: 5px;
+            a{
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 -80px no-repeat;
+            }
+            a:hover {
+              background: url("../images/icons.png") -40px -80px no-repeat;
+            }
+          }
+          li:last-child {
+            margin: 5px;
+            a{
+              display: block;
+              width: 30px;
+              height: 30px;
+              background: url("../images/icons.png") 0 -120px no-repeat;
+            }
+            a:hover {
+              background: url("../images/icons.png") -40px -120px no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}

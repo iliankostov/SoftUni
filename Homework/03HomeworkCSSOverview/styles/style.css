@@ -1,0 +1,199 @@
+html, body, table, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #00923e;
+}
+.main {
+    margin: 2em auto;
+    border: 0.15em solid #000000;
+    width: 45em;
+
+    -moz-border-radius-bottomleft: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+
+    -moz-border-radius-bottomright: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    -moz-border-radius-topright: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+
+    -moz-border-radius-topleft: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+.main table{
+     border-collapse: collapse;
+     border-spacing: 0;
+     width: 45em;
+}
+.main tr:last-child td:last-child {
+      -moz-border-radius-bottomright: 0.5em;
+      -webkit-border-bottom-right-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+}
+.main table tr:first-child td:first-child {
+    -moz-border-radius-topleft: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+.main table tr:first-child td:last-child {
+    -moz-border-radius-topright: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.main tr:last-child td:first-child{
+     -moz-border-radius-bottomleft: 0.5em;
+     -webkit-border-bottom-left-radius: 0.5em;
+     border-bottom-left-radius: 0.5em;
+}
+.main tr:nth-child(odd){
+    background-color: #c8c8c8;
+}
+.main tr:nth-child(even)    {
+    background-color: #ffffff;
+}
+.main td{
+     vertical-align: middle;
+     border: 0.2em solid #000000;
+     border-width: 0em 0.1em 0.1em 0em;
+     text-align: center;
+     padding: 0.4em;
+     font-size: 0.7em;
+     font-family: Verdana;
+     font-weight: normal;
+     color: #000000;
+}
+.main tr:first-child td {
+    background-color: #f8c711;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.main tr:last-child td{
+    border-width: 0em 0.1em 0em 0em;
+}
+.main tr td:last-child{
+    border-width: 0em 0em 0.1em 0em;
+}
+.main tr:last-child td:last-child{
+    border-width: 0em 0em 0em 0em;
+}
+.main td:first-child {
+    text-align: right;
+}
+.main td:nth-child(3) {
+    text-align: left;
+}
+.main td:nth-child(5) {
+    text-align: right;
+}
+.main td:nth-child(7) {
+    text-align: left;
+}
+.main tr:first-child td:nth-child(5) {
+    text-align: center;
+}
+
+.main .brasil:after {
+    content: url("../images/brazil.png");
+    padding-left: 0.3em;
+}
+
+.main .mexico:before {
+    content: url("../images/mexico.png");
+    padding-right: 0.3em;
+}
+
+.main .spain:after {
+     content: url("../images/spain.png");
+     padding-left: 0.3em;
+ }
+
+.main .netherlands:before {
+    content: url("../images/netherlands.png");
+    padding-right: 0.3em;
+}
+
+.main .italy:after {
+    content: url("../images/italy.png");
+    padding-left: 0.3em;
+}
+
+.main .england:before {
+    content: url("../images/england.png");
+    padding-right: 0.3em;
+}
+
+.main .argentina:after {
+    content: url("../images/argentina.png");
+    padding-left: 0.3em;
+}
+
+.main .bosnia:before {
+    content: url("../images/bosnia.png");
+    padding-right: 0.3em;
+}
+
+.main .germany:after {
+    content: url("../images/germany.png");
+    padding-left: 0.3em;
+}
+
+.main .portugal:before {
+    content: url("../images/portugal.png");
+    padding-right: 0.3em;
+}
+
+.main select {
+    width: 2.6em;
+    border: 0.1 solid #c8c8c8;
+    color: #00923e;
+}
+.main tr:nth-child(2) select {
+    color: #ff0000;
+    background: #dcdcdc;
+}
+.main tr:nth-child(3) select {
+    color: #ff0000;
+    background: #dcdcdc;
+}
+.main tr:nth-child(4) select {
+    color: #ff0000;
+    background: #dcdcdc;
+}
+
+.main button {
+    width: 4em;
+    height: 4em;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 0.7em;
+    color: #ffffff;
+    background-color: #00923e;
+}
+
+.circle {
+
+    background: #4679BD;
+}
+
+.main tr:nth-child(2) button {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+.main tr:nth-child(3) button {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+.main tr:nth-child(4) button {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
