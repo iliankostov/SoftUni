@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="row">
+        <div class="4u">
+            <a href="#/{{userPreviewData.username}}">
+                <img class="thumb-image" ng-src="{{userPreviewData.profileImageData}}"/>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <a href="#/{{userPreviewData.username}}">
+            <span class="12u">
+                {{userPreviewData.name}}
+            </span>
+        </a>
+    </div>
+    <div class="row">
+        <span class="icon fa-transgender" ng-if="userPreviewData.gender == 0"></span>
+        <span class="icon fa-mars" ng-if="userPreviewData.gender == 1"></span>
+        <span class="icon fa-venus" ng-if="userPreviewData.gender == 2"></span>
+    </div>
+    <div class="row">
+        <div class="4u">
+            <input ng-if="userPreviewData.username != myData.username && userPreviewData.isFriend"
+                   type="button" ng-disabled="true" value="Friend"/>
+            <input ng-if="userPreviewData.username != myData.username && userPreviewData.hasPendingRequest"
+                   type="button" ng-disabled="true" value="Pending"/>
+            <input ng-if="userPreviewData.username != myData.username && !userPreviewData.hasPendingRequest && !userPreviewData.isFriend"
+                   type="button" value="Invite" ng-click="sendFriendRequest(userPreviewData.username)"/>
+        </div>
+    </div>
+</div>

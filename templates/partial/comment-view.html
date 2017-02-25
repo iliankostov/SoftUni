@@ -1,0 +1,85 @@
+<!-- Post Comments -->
+<div class="row" ng-if="isNewCommentTextareaExpanded && commentPostId == post.id">
+    <div class="12u">
+        <form name="newCommentForm">
+            <div class="row">
+                <div class="6u">
+                        <textarea name="newComment" id="newComment" required placeholder="Message..."
+                                  ng-model="commentData.commentContent"></textarea>
+                </div>
+                <div class="6u">
+                    <input type="button" ng-disabled="!newCommentForm.$valid" value="Comment"
+                           ng-click="createComment(post, commentData); expandNewCommentTextarea(post.id)"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br/>
+<article class="box box-radius" ng-repeat="comment in post.comments">
+    <div class="row">
+        <div class="4u">
+            <a href="#/{{comment.author.username}}">
+                <img class="thumb-image" title="{{comment.author.name}}"
+                     ng-src="{{comment.author.profileImageData}}"/>
+            </a>
+        </div>
+        <div class="8u">
+            <div class="row">
+                <div class="8u">
+                    <a href="#/{{comment.author.username}}" title="{{comment.author.name}}">
+                        {{comment.author.name}}
+                    </a>
+                    <div class="box ng-popup" ng-include="'templates/partial/popup-view.html'"
+                         ng-controller="PopupController" ng-init="loadUserPreview(comment.author.username)"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="8u">
+                    {{comment.date | date:'dd MMM yyyy HH:mm:ss'}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="12u">
+            {{comment.commentContent}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="4u">
+            {{comment.likesCount}}
+            <span ng-if="!authorisationSecurity(post)"> Likes</span>
+            <a href="" class="icon {{!comment.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}"
+               ng-if="authorisationSecurity(post)"
+               ng-click="comment.liked = !comment.liked; !comment.liked && unlikeComment(post, comment); comment.liked && likeComment(post, comment);">
+                {{!comment.liked && 'Like' || 'Unlike'}}</a>
+        </div>
+        <div class="4u" ng-if="comment.author.username == myData.username">
+            <a href="" class="icon fa-edit" ng-click="expandEditCommentTextarea(comment.id)"> Edit</a>
+        </div>
+        <div class="4u" ng-if="(post.wallOwner.username == myData.username) || (comment.author.username == myData.username)">
+            <a href="" class="icon fa-eraser" ng-click="deleteComment(post, comment)"> Delete</a>
+        </div>
+    </div>
+    <div class="row" ng-if="isEditCommentTextareaExpanded && editCommentId == comment.id">
+        <div class="12u">
+            <form name="editCommentForm">
+                <div class="row">
+                    <div class="6u">
+                        <textarea name="comment" id="comment" required ng-model="comment.commentContent"></textarea>
+                    </div>
+                    <div class="6u">
+                        <input type="button" ng-disabled="!editCommentForm.$valid" value="Edit Comment"
+                               ng-click="editComment(post, comment)"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</article>
+<div class="row" ng-if="isMoreButtonVisible && post.totalCommentsCount > 3">
+    <div class="12u">
+        <input type="button" value="More" ng-click="loadComments(post); hideMoreButton();"/>
+    </div>
+</div>

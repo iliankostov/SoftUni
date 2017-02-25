@@ -1,0 +1,75 @@
+<!-- Title -->
+<title ng-bind="title"></title>
+
+<!-- Header -->
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- Sign Up Guest -->
+<div class="wrapper">
+    <article id="signUp" class="container 75%">
+        <header>
+            <h2>Sign Up</h2>
+            <p>* required fields</p>
+        </header>
+        <div>
+            <div class="row">
+                <div class="12u">
+                    <form name="registerForm">
+                        <div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="username" id="username" placeholder="Username *"
+                                           required ng-model="signUpData.username" />
+                                </div>
+                                <div class="6u">
+                                    <input type="text" name="email" id="email" placeholder="Email *"
+                                           required ng-model="signUpData.email" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="password" name="password" id="password" placeholder="Password *"
+                                           required ng-model="signUpData.password" />
+                                </div>
+                                <div class="6u">
+                                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password *"
+                                            required ng-model="signUpData.confirmPassword"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="name" id="name" placeholder="Name *"
+                                           required ng-model="signUpData.name" />
+                                </div>
+                                <div class="6u radio">
+                                    <legend>Gender:</legend>
+                                    <label for="male">Male</label>
+                                    <input type="radio" name="gender" id="male" value=1 ng-model="signUpData.gender"/>
+                                    <label for="female">Female</label>
+                                    <input type="radio" name="gender" id="female" value=2 ng-model="signUpData.gender"/>
+                                    <label for="other">Other</label>
+                                    <input type="radio" name="gender" id="other" value=0 ng-model="signUpData.gender"/>
+                                </div>
+                            </div>
+                            <div class="row 200%">
+                                <div class="12u">
+                                    <ul class="actions">
+                                        <li><input type="button" value="Sign Up" ng-click="signUp()"
+                                                   ng-disabled="!registerForm.$valid"/></li>
+                                        <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Sign Up User -->
+<div class="wrapper style1 first" ng-if="isLoggedIn" ng-bind="cancel()"></div>
+
+<!-- Footer -->
+<div ng-include="'templates/partial/footer-view.html'"></div>

@@ -1,0 +1,44 @@
+<!-- Title -->
+<title ng-bind="title"></title>
+
+<!-- Header -->
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- Welcome Guest -->
+<div class="wrapper" ng-if="!isLoggedIn">
+    <article class="container" id="top">
+        <div class="row">
+            <div class="4u">
+                <span class="image fit"><img src="images/logo.jpg" alt=""/></span>
+            </div>
+            <div class="8u">
+                <header>
+                    <h1>Welcome to <strong>iBook</strong></h1>
+                </header>
+                <p>Stay connected with your friends. It's free and aways will be.</p>
+                <a href="#/login" class="button big">Log In</a>
+                <a href="#/signup" class="button big">Sign Up</a>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- User News Feed -->
+<div class="wrapper" ng-if="isLoggedIn">
+    <article class="container">
+        <div class="row">
+            <div class="12u">
+                <h1>News Feed</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="4u" ng-include="'templates/partial/friends-preview-view.html'"></div>
+            <div ng-include="'templates/partial/posts-view.html'" class="8u" ng-infinite-scroll="loadNewsFeed()"
+                 ng-infinite-scroll-disabled="newsFeedBusy" ng-infinite-scroll-distance="0" ng-controller="PostController">
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Footer -->
+<div ng-include="'templates/partial/footer-view.html'"></div>

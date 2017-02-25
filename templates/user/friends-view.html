@@ -1,0 +1,45 @@
+<!-- Title -->
+<title ng-bind="title"></title>
+
+<!-- Header -->
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- User Friends -->
+<div class="wrapper" ng-if="isLoggedIn && (userData.isFriend || userData.username == myData.username)"
+     ng-init="loadFriends()">
+    <article class="container">
+        <div class="12u">
+            <header>
+                <h1>{{userData.name}} - Friends ({{friendsDataTotalCount}} total)</h1>
+            </header>
+            <div class="12u">
+                <form name="friendsFilter">
+                    <div class="12u">
+                        <input type="text" placeholder="Search..." ng-model="search.name"/>
+                    </div>
+                </form>
+            </div>
+            <br/>
+            <div class="12u">
+                <section class="12u box friend-link" ng-repeat="friend in friendsData | filter:search">
+                    <a href="#/{{friend.username}}" title="{{friend.name}}">
+                        <div class="row">
+                            <div class="4u">
+                                <img ng-src="{{friend.profileImageData}}" class="thumb-image"/>
+                            </div>
+                            <div class="8u">
+                                {{friend.name}}
+                            </div>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Friends Security-->
+<div class="wrapper style1 first" ng-if="friendsSecurity()" ng-bind="cancel()"></div>
+
+<!-- Footer -->
+<div ng-include="'templates/partial/footer-view.html'"></div>

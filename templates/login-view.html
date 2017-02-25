@@ -1,0 +1,49 @@
+<!-- Title -->
+<title ng-bind="title"></title>
+
+<!-- Header -->
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- LogIn Guest -->
+<div class="wrapper" ng-if="!isLoggedIn">
+    <article id="logIn" class="container 75%">
+        <header>
+            <h2>Log In</h2>
+        </header>
+        <div>
+            <div class="row">
+                <div class="12u">
+                    <form name="logInForm">
+                        <div>
+                            <div class="row">
+                                <div class="6u">
+                                    <input type="text" name="username" id="loginUsername" required
+                                           ng-model="logInData.username" placeholder="Username"/>
+                                </div>
+                                <div class="6u">
+                                    <input type="password" name="password" id="loginPassword" required
+                                           ng-model="logInData.password" placeholder="Password"/>
+                                </div>
+                            </div>
+                            <div class="row 200%">
+                                <div class="12u">
+                                    <ul class="actions">
+                                        <li><input type="button" value="Log In" ng-click="logIn()"
+                                                   ng-disabled="!logInForm.$valid"/></li>
+                                        <li><input type="button" ng-click="cancel()" value="Cancel" class="alt"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- LogIn User -->
+<div class="wrapper style1 first" ng-if="isLoggedIn" ng-bind="cancel()"></div>
+
+<!-- Footer -->
+<div ng-include="'templates/partial/footer-view.html'"></div>

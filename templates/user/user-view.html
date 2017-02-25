@@ -1,0 +1,65 @@
+<!-- Title -->
+<title ng-bind="title"></title>
+
+<!-- Header -->
+<div ng-include="'templates/partial/header-view.html'"></div>
+
+<!-- User Wall -->
+<div class="wrapper" ng-if="isLoggedIn">
+    <article class="container" id="top">
+        <section class="box style1" ng-style="{'background-image':'url(' + userData.coverImageData + ')'}">
+            <div class="row" >
+                <div class="4u">
+                    <span class="image fit"><img ng-src="{{userData.profileImageData}}"/></span>
+                </div>
+                <div class="8u">
+                    <h1>{{userData.name}}</h1>
+                    <input ng-if="userData.username != myData.username && userData.isFriend"
+                           type="button" ng-disabled="true" value="Friend"/>
+                    <input ng-if="userData.username != myData.username && userData.hasPendingRequest"
+                           type="button" ng-disabled="true" value="Pending"/>
+                    <input ng-if="userData.username != myData.username && !userData.hasPendingRequest && !userData.isFriend"
+                           type="button" value="Invite" ng-click="sendFriendRequest(userData.username)"/>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="4u" >
+                <div class="row" ng-if="userData.isFriend || userData.username == myData.username">
+                    <div class="12u">
+                        <section class="box style1" ng-controller="PostController">
+                            <form name="postForm">
+                                <div class="row">
+                                    <div class="12u">
+                                    <textarea name="post" id="post" placeholder="Message..." required
+                                              ng-model="postData.postContent"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="12u">
+                                        <img class="profile-image" ng-show="myData.profileImageData"
+                                             ng-src="{{myData.profileImageData}}"/>
+                                        <span>as {{myData.name}}</span>
+                                        <input type="button" ng-disabled="!postForm.$valid" value="Post" ng-click="createPost()"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+                <div class="row" ng-if="userData.isFriend || userData.username == myData.username">
+                    <div class="12u" ng-include="'templates/partial/friends-preview-view.html'"></div>
+                </div>
+            </div>
+            <div ng-include="'templates/partial/posts-view.html'" class="8u" ng-infinite-scroll="loadWallFeed()"
+                 ng-infinite-scroll-disabled="wallFeedBusy" ng-infinite-scroll-distance="0" ng-controller="PostController">
+            </div>
+        </div>
+    </article>
+</div>
+
+<!-- Guest Wall -->
+<div class="wrapper style1 first" ng-if="!isLoggedIn" ng-bind="cancel()"></div>
+
+<!-- Footer -->
+<div ng-include="'templates/partial/footer-view.html'"></div>

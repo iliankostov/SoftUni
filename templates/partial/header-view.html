@@ -1,0 +1,67 @@
+<!-- Guest Nav -->
+<nav class="nav" ng-if="!isLoggedIn">
+    <ul class="container">
+        <li><a href="#/login">Log In</a></li>
+        <li><a href="#/signup">Sign Up</a></li>
+    </ul>
+</nav>
+
+<!-- User Nav-->
+<nav class="nav" ng-if="isLoggedIn" ng-controller="HeaderController">
+    <div class="box 6u friend-requests" ng-if="friendRequestsDataExpanded">
+        <div class="row" ng-repeat="friendRequest in friendRequestsData">
+            <div class="row">
+                <div class="12u">
+                    <a href="#/{{friendRequest.user.username}}">
+                        <img class="thumb-image" ng-src="{{friendRequest.user.profileImageData}}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <a href="#/{{friendRequest.user.username}}">
+                    <div class="12u">{{friendRequest.user.name}}</div>
+                </a>
+            </div>
+            <div class="row">
+                <div class="6u">
+                    <input type="button" value="Accept" ng-click="acceptFriendRequest(friendRequest.id)"/>
+                </div>
+                <div class="6u">
+                    <input type="button" value="Reject" ng-click="rejectFriendRequest(friendRequest.id)"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="container">
+        <li><a href="#/{{myData.username}}" title="{{myData.name}}">
+            <img class="profile-image" ng-show="myData.profileImageData" ng-src="{{myData.profileImageData}}"/>
+            <span>{{myData.name}}</span></a>
+        </li>
+        <li><a href="#/" class="icon fa-comments" title="News Feed"></a></li>
+        <li><a href="" class="icon fa-users" title="Friends" ng-click="expandFriendRequests()">
+            <div class="red-dot" ng-if="friendRequestsData.length != 0">{{friendRequestsData.length}}</div>
+        </a>
+        </li>
+        <li><a href="#/edit/profile" class="icon fa-cogs" title="Edit Profile"></a></li>
+        <li><a href="#/edit/password" class="icon fa-key" title="Change Password"></a></li>
+        <li><a href="" class="icon fa-sign-out" title="Log Out" ng-click="logout()"></a></li>
+        <li>
+            <form><input class="search-box" type="text" placeholder="Search..." ng-model="searchDataWord"
+                         ng-change="searchUsersByName(searchDataWord)" ng-blur="clearDropDown()"/></form>
+        </li>
+    </ul>
+    <div class="6u search-response" ng-if="searchResults">
+        <div class="row" ng-repeat="user in searchResults">
+            <div class="12u search-element">
+                <a href="#/{{user.username}}" class="row">
+                    <div class="4u">
+                        <img class="small-thumb-image" ng-src="{{user.profileImageData}}"/>
+                    </div>
+                    <div class="4u">
+                        {{user.name}}
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

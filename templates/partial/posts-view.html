@@ -1,0 +1,71 @@
+<!-- User Posts -->
+<section class="box" ng-repeat="post in feedData">
+    <div class="row">
+        <div class="4u">
+            <a href="#/{{post.author.username}}">
+                <img class="thumb-image" title="{{post.author.name}}" ng-src="{{post.author.profileImageData}}"/>
+            </a>
+        </div>
+        <div class="8u">
+            <div class="row">
+                <div class="8u">
+                    <a href="#/{{post.author.username}}" title="{{post.author.name}}">
+                        {{post.author.name}}
+                    </a>
+                    <div class="box ng-popup" ng-include="'templates/partial/popup-view.html'"
+                            ng-controller="PopupController" ng-init="loadUserPreview(post.author.username)"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="8u">
+                    {{post.date | date:'dd MMM yyyy HH:mm:ss'}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="12u">
+            {{post.postContent}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="6u" ng-if="post.author.username == myData.username">
+            <a href="" class="icon fa-edit" ng-click="expandEditPostTextarea(post.id)"> Edit</a>
+        </div>
+        <div class="6u"
+             ng-if="(post.wallOwner.username == myData.username) || (post.author.username == myData.username)">
+            <a href="" class="icon fa-eraser" ng-click="deletePost(post)"> Delete</a>
+        </div>
+    </div>
+    <div class="row" ng-if="isEditPostTextareaExpanded && editPostId == post.id">
+        <div class="12u">
+            <form name="editPostForm">
+                <div class="row">
+                    <div class="6u">
+                        <textarea name="post" id="post" required ng-model="post.postContent"></textarea>
+                    </div>
+                    <div class="6u">
+                        <input type="button" ng-disabled="!editPostForm.$valid" value="Edit Post"
+                               ng-click="editPost(post)"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="6u">
+            {{post.likesCount}}
+            <span ng-if="!authorisationSecurity(post)"> Likes</span>
+            <a href="" class="icon {{!post.liked && 'fa-thumbs-o-up' || 'fa-thumbs-o-down'}}" ng-if="authorisationSecurity(post)"
+               ng-click="post.liked = !post.liked; !post.liked && unlikePost(post); post.liked && likePost(post);">
+                {{!post.liked && 'Like' || 'Unlike'}}</a>
+        </div>
+        <div class="6u">
+            {{post.totalCommentsCount}}
+            <span ng-if="!authorisationSecurity(post)"> Comments</span>
+            <a href="" class="icon fa-comments-o" ng-if="authorisationSecurity(post)"
+               ng-click="expandNewCommentTextarea(post.id)"> Comment</a>
+        </div>
+    </div>
+    <div ng-include="'templates/partial/comment-view.html'" ng-controller="CommentController"></div>
+</section>
