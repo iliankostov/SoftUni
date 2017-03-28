@@ -97,13 +97,13 @@
             for (int a = 1; a < 1000; a++)
             {
                 //// Assert
-                account.AssertWithdraw(a, 5m);
+                account.AssertWithdraw(a, 2m);
             }
 
             for (int b = 1000; b < 2000; b++)
             {
                 //// Assert
-                account.AssertWithdraw(b, 2m);
+                account.AssertWithdraw(b, 5m);
             }
         }
     }

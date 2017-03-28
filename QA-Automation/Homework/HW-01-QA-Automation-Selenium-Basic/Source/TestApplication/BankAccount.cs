@@ -45,12 +45,12 @@
         {
             if (amount < 1000)
             {
-                amount += (amount * 0.05m);
+                amount += (amount * 0.02m);
                 this.Amount -= amount;
             }
             else
             {
-                amount += (amount * 0.02m);
+                amount += (amount * 0.05m);
                 this.Amount -= amount;
             }
         }
