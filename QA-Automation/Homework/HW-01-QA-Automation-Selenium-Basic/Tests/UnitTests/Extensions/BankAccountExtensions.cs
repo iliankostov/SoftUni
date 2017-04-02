@@ -9,7 +9,7 @@
 
         public static void AssertWithdraw(this BankAcount account, decimal amount, decimal fee)
         {
-            //// Prepare
+            //// Arrange
             var amountBefore = account.Amount;
             var expectedFee = amount * fee / percentageCoefficient;
             var expectedAmount = amount + expectedFee;

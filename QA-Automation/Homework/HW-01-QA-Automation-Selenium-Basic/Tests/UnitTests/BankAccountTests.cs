@@ -11,7 +11,7 @@
         [Test]
         public void InstantiateBankAccountWithNegativeMoneyShouldThrowArgumentException()
         {
-            //// Prepare
+            //// Arrange
             var negativeAmount = -1m;
 
             //// Assert
@@ -21,7 +21,7 @@
         [Test]
         public void DepositeZeroMoneyShouldNotThrowArgumentException()
         {
-            //// Prepare
+            //// Arrange
             var account = new BankAcount(0m);
 
             //// Assert
@@ -31,7 +31,7 @@
         [Test]
         public void BankAccountAmountMustBeInDecimalType()
         {
-            //// Prepare
+            //// Arrange
             var account = new BankAcount(100m);
             var expectedType = typeof(decimal);
 
@@ -45,7 +45,7 @@
         [Test]
         public void WithdrawMustDecreaseAmountOfMoneyForBankTransfer()
         {
-            //// Prepare
+            //// Arrange
             var initialAmount = 1000m;
             var account = new BankAcount(initialAmount);
 
@@ -60,7 +60,7 @@
         [Test]
         public void DepositMustIncreaseAmountOfMoneyForBankTransfer()
         {
-            //// Prepare
+            //// Arrange
             var initialAmount = 0m;
             var account = new BankAcount(initialAmount);
 
@@ -75,7 +75,7 @@
         [Test]
         public void DepositMustSetRightAmountOfMoneyForBankTransfer()
         {
-            //// Prepare
+            //// Arrange
             var account = new BankAcount(0m);
             var expectedAmount = 1000m;
 
@@ -91,7 +91,7 @@
         [Test]
         public void WithdrawMustGetRightAmountOfMoneyForBankTransfer()
         {
-            //// Prepare
+            //// Arrange
             var account = new BankAcount(10000000m);
 
             for (int a = 1; a < 1000; a++)
