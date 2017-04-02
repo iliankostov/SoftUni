@@ -1,4 +1,4 @@
-﻿namespace AuitomationTests
+﻿namespace AutomationTests
 {
     using NUnit.Framework;
     using OpenQA.Selenium;
@@ -15,6 +15,7 @@
             //// Arrange
             var expectedTitle = "Selenium - Web Browser Automation";
             IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
 
             //// Act
             driver.Url = "http://google.com";

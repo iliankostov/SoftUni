@@ -1,4 +1,4 @@
-﻿namespace AuitomationTests
+﻿namespace AutomationTests
 {
     using NUnit.Framework;
     using OpenQA.Selenium;
@@ -11,11 +11,12 @@
     public class QAAutomation
     {
         [Test]
-        public void SearchingInGoogleAndOpeningSeleniumWebsiteShouldRenderACorrectTitle()
+        public void OpeningTheSoftUniCourseShouldRenderEqualHeadings()
         {
             //// Arrange
             var expectedHeading = "Курс QA Automation - март 2017";
             IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
 
             //// Act
             driver.Url = "http://softuni.bg";

@@ -1,4 +1,4 @@
-﻿namespace AuitomationTests
+﻿namespace AutomationTests
 {
     using NUnit.Framework;
     using OpenQA.Selenium;
@@ -12,9 +12,10 @@
         {
             //// Arrange
             var expectedUrl = "http://demoqa.com/registration/";
+            IWebDriver driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
 
             //// Act
-            IWebDriver driver = new ChromeDriver();
             driver.Url = "http://demoqa.com/";
             var registrationButton = driver.FindElement(By.XPath("//*[@id=\"menu-item-374\"]/a"));
             registrationButton.Click();
