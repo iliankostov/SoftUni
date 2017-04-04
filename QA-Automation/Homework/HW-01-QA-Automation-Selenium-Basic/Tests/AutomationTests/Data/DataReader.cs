@@ -4,6 +4,7 @@
     using System.Data;
     using System.Data.OleDb;
     using NUnit.Framework;
+    using System.Linq;
 
     public class DataReader
     {
@@ -20,25 +21,15 @@
         public static IList<object> Read(string test, string model)
         {
             var dataTable = new DataTable();
-
             var dataPath = TestContext.CurrentContext.TestDirectory.Replace(PATH_TO_REPLACE, PATH_SUFFIX);
 
-            using (var con = new OleDbConnection(string.Format(CONNECTION_STRING, dataPath)))
+            using (var connection = new OleDbConnection(string.Format(CONNECTION_STRING, dataPath)))
             {
-                string query = string.Format(QUERY, test, model);
-
-                var adapter = new OleDbDataAdapter(query, con);
-
+                var adapter = new OleDbDataAdapter(string.Format(QUERY, test, model), connection);
                 adapter.Fill(dataTable);
             }
 
-            var data = new List<object>();
-            foreach (DataRow row in dataTable.Rows)
-            {
-                data.Add(row.ItemArray[0]);
-            }
-
-            return data;
+            return dataTable.Rows.Cast<DataRow>().Select(r => r.ItemArray[0]).ToList();
         }
     }
 }

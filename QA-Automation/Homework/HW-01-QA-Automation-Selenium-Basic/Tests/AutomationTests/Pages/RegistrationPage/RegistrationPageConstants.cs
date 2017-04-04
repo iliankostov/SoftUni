@@ -1,6 +1,6 @@
 ﻿namespace AutomationTests.Pages.RegistrationPage
 {
-    internal class Constants
+    internal static class Constants
     {
         //// Common
         internal const string URL = "http://demoqa.com/registration/";
