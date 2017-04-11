@@ -1,7 +1,10 @@
 ﻿namespace AutomationTests.Utilities
 {
-    using OpenQA.Selenium;
     using System.Collections.Generic;
+    using System.Linq;
+    using NUnit.Framework;
+    using OpenQA.Selenium;
+    using System.IO;
 
     public static class DriverExtensions
     {
@@ -11,15 +14,22 @@
             element.SendKeys(text);
         }
 
-        public static void ClickOnElements(this List<IWebElement> elements, List<bool> conditions)
+        public static void ClickOnElements(this List<IWebElement> elements, string data)
         {
+            var conditions = data.Split(',').Select(int.Parse).ToList();
+
             for (int i = 0; i < conditions.Count; i++)
             {
-                if (conditions[i])
+                if (conditions[i] == 1)
                 {
                     elements[i].Click();
                 }
             }
+        }
+
+        public static string ToAbsolutePath(this string relativePath)
+        {
+            return Path.GetFullPath(Path.Combine(TestContext.CurrentContext.TestDirectory, relativePath));
         }
     }
 }

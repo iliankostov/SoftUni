@@ -5,7 +5,6 @@
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using Data;
-    using Models;
 
     using Pages.RegistrationPage;
 
@@ -32,12 +31,11 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var userData = DataReader.RegistrationUser(MethodBase.GetCurrentMethod().Name);
-            var registrationUser = new RegistrationUser(userData);
+            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
-            registrationPage.SubmitForm(registrationUser);
+            registrationPage.SubmitForm(user);
 
             //// Assert
             registrationPage.AssertNamesErrorMessage();
@@ -48,12 +46,11 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var userData = DataReader.RegistrationUser(MethodBase.GetCurrentMethod().Name);
-            var registrationUser = new RegistrationUser(userData);
+            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
-            registrationPage.SubmitForm(registrationUser);
+            registrationPage.SubmitForm(user);
 
             //// Assert
             registrationPage.AssertPhoneErrorMessage();
@@ -64,12 +61,11 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var userData = DataReader.RegistrationUser(MethodBase.GetCurrentMethod().Name);
-            var registrationUser = new RegistrationUser(userData);
+            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
-            registrationPage.SubmitForm(registrationUser);
+            registrationPage.SubmitForm(user);
 
             //// Assert
             registrationPage.AssertInvalidEmailErrorMessage();
@@ -80,12 +76,11 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var userData = DataReader.RegistrationUser(MethodBase.GetCurrentMethod().Name);
-            var registrationUser = new RegistrationUser(userData);
+            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
-            registrationPage.SubmitForm(registrationUser);
+            registrationPage.SubmitForm(user);
 
             //// Assert
             registrationPage.AssertEmailErrorMessage();
@@ -96,12 +91,11 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var userData = DataReader.RegistrationUser(MethodBase.GetCurrentMethod().Name);
-            var registrationUser = new RegistrationUser(userData);
+            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
-            registrationPage.SubmitForm(registrationUser);
+            registrationPage.SubmitForm(user);
 
             //// Assert
             registrationPage.AssertPasswordErrorMessage();
@@ -112,12 +106,11 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var userData = DataReader.RegistrationUser(MethodBase.GetCurrentMethod().Name);
-            var registrationUser = new RegistrationUser(userData);
+            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
-            registrationPage.SubmitForm(registrationUser);
+            registrationPage.SubmitForm(user);
 
             //// Assert
             registrationPage.AssertDiferentPasswordsErrorMessage();

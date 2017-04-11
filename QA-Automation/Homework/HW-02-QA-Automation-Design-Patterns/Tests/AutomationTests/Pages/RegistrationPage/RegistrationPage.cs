@@ -1,7 +1,7 @@
 ﻿namespace AutomationTests.Pages.RegistrationPage
 {
     using OpenQA.Selenium;
-    using AutomationTests.Utilities;
+    using Utilities;
     using Models;
 
     public class RegistrationPage : BasePage<RegistrationPageMap>
@@ -23,16 +23,16 @@
             this.Elements.FirstName.Type(user.FirstName);
             this.Elements.LastName.Type(user.LastName);
             this.Elements.MaritalStatus.ClickOnElements(user.MaritalStatus);
-            this.Elements.Hobbys.ClickOnElements(user.Hobbys);
+            this.Elements.Hobbys.ClickOnElements(user.Hobbies);
             this.Elements.CountryOption.SelectByText(user.Country);
             this.Elements.MounthOption.SelectByText(user.BirthMonth);
             this.Elements.DayOption.SelectByText(user.BirthDay);
             this.Elements.YearOption.SelectByText(user.BirthYear);
             this.Elements.Phone.Type(user.Phone);
-            this.Elements.UserName.Type(user.UserName);
+            this.Elements.UserName.Type(user.Username);
             this.Elements.Email.Type(user.Email);
             this.Elements.UploadButton.Click();
-            this.Driver.SwitchTo().ActiveElement().SendKeys(user.Picture);
+            this.Driver.SwitchTo().ActiveElement().SendKeys(user.Picture.ToAbsolutePath());
             this.Elements.Description.Type(user.Description);
             this.Elements.Password.Type(user.Password);
             this.Elements.ConfirmPassword.Type(user.ConfirmPassword);
