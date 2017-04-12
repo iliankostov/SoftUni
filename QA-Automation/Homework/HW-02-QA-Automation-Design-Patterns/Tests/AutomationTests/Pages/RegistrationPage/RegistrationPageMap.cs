@@ -210,12 +210,30 @@
             }
         }
 
+        public IWebElement ErrorMessagesForHobbies
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.ERROR_HOBBIES_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.ERROR_HOBBIES_SELECTOR));
+            }
+        }
+
         public IWebElement ErrorMessagesForPhone
         {
             get
             {
                 this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.ERROR_PHONE_SELECTOR)));
                 return this.driver.FindElement(By.XPath(Constants.ERROR_PHONE_SELECTOR));
+            }
+        }
+
+        public IWebElement ErrorMessagesForUsername
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.ERROR_USERNAME_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.ERROR_USERNAME_SELECTOR));
             }
         }
 

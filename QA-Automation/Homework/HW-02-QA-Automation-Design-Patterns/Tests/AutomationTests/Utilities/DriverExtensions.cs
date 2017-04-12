@@ -1,10 +1,10 @@
 ﻿namespace AutomationTests.Utilities
 {
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using NUnit.Framework;
     using OpenQA.Selenium;
-    using System.IO;
 
     public static class DriverExtensions
     {

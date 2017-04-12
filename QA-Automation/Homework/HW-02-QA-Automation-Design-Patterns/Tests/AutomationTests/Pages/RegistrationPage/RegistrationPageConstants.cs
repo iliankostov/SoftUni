@@ -4,12 +4,13 @@
     {
         //// Common
         internal const string URL = "http://demoqa.com/registration/";
-        internal const int WAIT_SECCONDS = 10;
+        internal const int WAIT_SECCONDS = 20;
 
         //// Messages
         internal const string ERROR_REQUIRED = "* This field is required";
         internal const string ERROR_PHONE = "* Minimum 10 Digits starting with Country Code";
         internal const string ERROR_EMAIL = "* Invalid email address";
+        internal const string ERROR_SHORT_PASSWORD = "* Minimum 8 characters required";
         internal const string ERROR_PASSWORD_NOT_MATCH = "* Fields do not match";
 
         //// Selectors
@@ -33,7 +34,9 @@
         internal const string _SUBMIT_BUTTON_SELECTOR = "pie_submit";
         internal const string SUCCESS_MESSAGE_SELECTOR = "piereg_message";
         internal const string ERROR_NAME_SELECTOR = "//*[@id=\"pie_register\"]/li[1]/div[1]/div[2]/span";
+        internal const string ERROR_HOBBIES_SELECTOR = "//*[@id=\"pie_register\"]/li[3]/div/div[2]/span";
         internal const string ERROR_PHONE_SELECTOR = "//*[@id=\"pie_register\"]/li[6]/div/div/span";
+        internal const string ERROR_USERNAME_SELECTOR = "//*[@id=\"pie_register\"]/li[7]/div/div/span";
         internal const string ERROR_EMAIL_SELECTOR = "//*[@id=\"pie_register\"]/li[8]/div/div/span";
         internal const string ERROR_PASSWORD_SELECTOR = "//*[@id=\"pie_register\"]/li[11]/div/div/span";
         internal const string ERROR_CONFIRM_PASSWORD_SELECTOR = "//*[@id=\"pie_register\"]/li[12]/div/div/span";

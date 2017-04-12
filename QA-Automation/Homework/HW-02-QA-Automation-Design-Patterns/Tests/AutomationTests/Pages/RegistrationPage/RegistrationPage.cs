@@ -1,8 +1,8 @@
 ﻿namespace AutomationTests.Pages.RegistrationPage
 {
     using OpenQA.Selenium;
-    using Utilities;
     using Models;
+    using Utilities;
 
     public class RegistrationPage : BasePage<RegistrationPageMap>
     {

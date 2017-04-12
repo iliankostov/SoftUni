@@ -2,8 +2,6 @@
 {
     public class RegistrationUser
     {
-        public string TestName { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
