@@ -7,6 +7,7 @@
     using Data;
 
     using Pages.RegistrationPage;
+    using Models;
 
     [TestFixture]
     public class DemoQANegative
@@ -31,7 +32,8 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
@@ -46,7 +48,8 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
@@ -61,7 +64,8 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
@@ -76,7 +80,8 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
@@ -91,7 +96,8 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
@@ -106,7 +112,8 @@
         {
             //// Arrange
             var registrationPage = new RegistrationPage(this.driver);
-            var user = DataReader.User(MethodBase.GetCurrentMethod().Name);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
 
             //// Act
             registrationPage.Open();
