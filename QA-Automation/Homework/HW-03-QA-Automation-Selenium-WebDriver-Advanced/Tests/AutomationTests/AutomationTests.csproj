@@ -60,9 +60,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataReader.cs" />
+    <Compile Include="DemoQASortableTests.cs" />
+    <Compile Include="DemoQASelectableTests.cs" />
+    <Compile Include="DemoQAResizeableTests.cs" />
+    <Compile Include="DemoQADropableTests.cs" />
+    <Compile Include="DemoQADragableTests.cs" />
     <Compile Include="DemoQARegistrationTests.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\SortablePage\SortablePage.cs" />
+    <Compile Include="Pages\SortablePage\SortablePageAsserter.cs" />
+    <Compile Include="Pages\SortablePage\SortablePageConstants.cs" />
+    <Compile Include="Pages\SortablePage\SortablePageMap.cs" />
+    <Compile Include="Pages\SelectablePage\SelectablePage.cs" />
+    <Compile Include="Pages\SelectablePage\SelectablePageAsserter.cs" />
+    <Compile Include="Pages\SelectablePage\SelectablePageConstants.cs" />
+    <Compile Include="Pages\SelectablePage\SelectablePageMap.cs" />
+    <Compile Include="Pages\ResizeablePage\ResizeablePage.cs" />
+    <Compile Include="Pages\ResizeablePage\ResizeablePageAsserter.cs" />
+    <Compile Include="Pages\ResizeablePage\ResizeablePageConstants.cs" />
+    <Compile Include="Pages\ResizeablePage\ResizeablePageMap.cs" />
+    <Compile Include="Pages\DropablePage\DropablePage.cs" />
+    <Compile Include="Pages\DropablePage\DropablePageAsserter.cs" />
+    <Compile Include="Pages\DropablePage\DropablePageConstants.cs" />
+    <Compile Include="Pages\DropablePage\DropablePageMap.cs" />
+    <Compile Include="Pages\DragablePage\DragablePage.cs" />
+    <Compile Include="Pages\DragablePage\DragablePageAsserter.cs" />
+    <Compile Include="Pages\DragablePage\DragablePageConstants.cs" />
+    <Compile Include="Pages\DragablePage\DragablePageMap.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageConstants.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageAsserter.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageMap.cs" />
@@ -80,10 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\example.jpg" />
+    <Content Include="Logs\readme.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.2.29.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.29.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
