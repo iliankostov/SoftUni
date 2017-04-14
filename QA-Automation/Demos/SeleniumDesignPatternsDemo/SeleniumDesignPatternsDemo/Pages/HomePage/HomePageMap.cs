@@ -7,10 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SeleniumDesignPatternsDemo.Pages.HomePage
-{     
+{
     public partial class HomePage
     {
-        [FindsBy(How = How.Id, Using = "menu-item-374")]
-        public IWebElement RegirstratonButton { get; set; }
+        public IWebElement RegirstratonButton
+        {
+            get
+            {
+                return this.Driver.FindElement(By.PartialLinkText("Registration"));
+            }
+        }
     }
 }

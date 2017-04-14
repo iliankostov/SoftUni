@@ -29,8 +29,8 @@ namespace SeleniumDesignPatternsDemo.Pages.RegistrationPage
 
         public static void AssertPhoneErrorMessage(this RegistrationPage page, string text)
         {
-            Assert.IsTrue(page.ErrorMessagesForNames.Displayed);
-            StringAssert.Contains(text, page.ErrorMessagesForNames.Text);
+            Assert.IsTrue(page.ErrorMessagesForPhone.Displayed);
+            StringAssert.Contains(text, page.ErrorMessagesForPhone.Text);
         }
     }
 }
