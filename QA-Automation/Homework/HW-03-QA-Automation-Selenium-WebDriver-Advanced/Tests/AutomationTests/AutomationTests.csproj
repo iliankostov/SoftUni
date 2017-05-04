@@ -84,10 +84,10 @@
     <Compile Include="Pages\DropablePage\DropablePageAsserter.cs" />
     <Compile Include="Pages\DropablePage\DropablePageConstants.cs" />
     <Compile Include="Pages\DropablePage\DropablePageMap.cs" />
-    <Compile Include="Pages\DragablePage\DragablePage.cs" />
-    <Compile Include="Pages\DragablePage\DragablePageAsserter.cs" />
-    <Compile Include="Pages\DragablePage\DragablePageConstants.cs" />
-    <Compile Include="Pages\DragablePage\DragablePageMap.cs" />
+    <Compile Include="Pages\DraggablePage\DraggablePage.cs" />
+    <Compile Include="Pages\DraggablePage\DraggablePageAsserter.cs" />
+    <Compile Include="Pages\DraggablePage\DraggablePageConstants.cs" />
+    <Compile Include="Pages\DraggablePage\DraggablePageMap.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageConstants.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageAsserter.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageMap.cs" />
