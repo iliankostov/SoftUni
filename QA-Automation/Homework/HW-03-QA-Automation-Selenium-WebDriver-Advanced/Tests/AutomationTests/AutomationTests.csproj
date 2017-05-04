@@ -63,8 +63,8 @@
     <Compile Include="DemoQASortableTests.cs" />
     <Compile Include="DemoQASelectableTests.cs" />
     <Compile Include="DemoQAResizeableTests.cs" />
-    <Compile Include="DemoQADropableTests.cs" />
-    <Compile Include="DemoQADragableTests.cs" />
+    <Compile Include="DemoQADroppableTests.cs" />
+    <Compile Include="DemoQADraggableTests.cs" />
     <Compile Include="DemoQARegistrationTests.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
@@ -80,10 +80,10 @@
     <Compile Include="Pages\ResizeablePage\ResizeablePageAsserter.cs" />
     <Compile Include="Pages\ResizeablePage\ResizeablePageConstants.cs" />
     <Compile Include="Pages\ResizeablePage\ResizeablePageMap.cs" />
-    <Compile Include="Pages\DropablePage\DropablePage.cs" />
-    <Compile Include="Pages\DropablePage\DropablePageAsserter.cs" />
-    <Compile Include="Pages\DropablePage\DropablePageConstants.cs" />
-    <Compile Include="Pages\DropablePage\DropablePageMap.cs" />
+    <Compile Include="Pages\DroppablePage\DroppablePage.cs" />
+    <Compile Include="Pages\DroppablePage\DroppablePageAsserter.cs" />
+    <Compile Include="Pages\DroppablePage\DroppablePageConstants.cs" />
+    <Compile Include="Pages\DroppablePage\DroppablePageMap.cs" />
     <Compile Include="Pages\DraggablePage\DraggablePage.cs" />
     <Compile Include="Pages\DraggablePage\DraggablePageAsserter.cs" />
     <Compile Include="Pages\DraggablePage\DraggablePageConstants.cs" />

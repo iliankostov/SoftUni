@@ -47,11 +47,11 @@
             }
         }
 
-        public IWebElement DragableAndSortableTab
+        public IWebElement DraggableAndSortableTab
         {
             get
             {
-                return this.driver.FindElement(By.Id(Constants.DRAGABLE_AND_SORTABLE_TAB_SELECTOR));
+                return this.driver.FindElement(By.Id(Constants.DRAGGABLE_AND_SORTABLE_TAB_SELECTOR));
             }
         }
 

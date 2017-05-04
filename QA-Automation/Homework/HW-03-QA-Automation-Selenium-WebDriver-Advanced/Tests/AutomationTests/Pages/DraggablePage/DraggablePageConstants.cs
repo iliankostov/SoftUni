@@ -3,7 +3,7 @@
     internal static class Constants
     {
         //// Common
-        internal const string DRAGABLE_URL = "draggable/";
+        internal const string DRAGGABLE_URL = "draggable/";
         internal const int WAIT_SECCONDS = 20;
 
         //// Selectors
@@ -11,7 +11,7 @@
         internal const string CONSTRAIN_MOVEMENT_TAB_SELECTOR = "ui-id-2";
         internal const string CURSOR_STYLE_TAB_SELECTOR = "ui-id-3";
         internal const string EVENTS_TAB_SELECTOR = "ui-id-4";
-        internal const string DRAGABLE_AND_SORTABLE_TAB_SELECTOR = "ui-id-5";
+        internal const string DRAGGABLE_AND_SORTABLE_TAB_SELECTOR = "ui-id-5";
         internal const string BODY_ELEMENT = "body";
         internal const string DEFAULT_DRAG_ELEMENT = "draggable";
         internal const string CONSTRAINT_MOVEMENT_ELEMENT = "draggabl2";

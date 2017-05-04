@@ -7,7 +7,7 @@
     using AutomationTests.Utilities;
 
     [TestFixture]
-    public class DemoQADragableTests
+    public class DemoQADraggableTests
     {
         private IWebDriver driver;
 
@@ -28,28 +28,28 @@
         public void DragItemShouldChangeItsPosition()
         {
             //// Arrange 
-            var dragablePage = new DraggablePage(this.driver);
+            var draggablePage = new DraggablePage(this.driver);
             int offsetX = 100, offsetY = 100;
 
             //// Act
-            dragablePage.PerformDefaultDrag(offsetX, offsetY);
+            draggablePage.PerformDefaultDrag(offsetX, offsetY);
 
             //// Assert
-            dragablePage.AssertDefaultDragIsPerformed(offsetX, offsetY);
+            draggablePage.AssertDefaultDragIsPerformed(offsetX, offsetY);
         }
 
         [Test]
         public void DragElementWithConstraintMovementShouldProcessCorrectly()
         {
             //// Arrange 
-            var dragablePage = new DraggablePage(this.driver);
+            var draggablePage = new DraggablePage(this.driver);
             int offsetX = 100, offsetY = 100;
 
             //// Act
-            dragablePage.PerformConstraintMovementDrag(offsetX, offsetY);
+            draggablePage.PerformConstraintMovementDrag(offsetX, offsetY);
 
             //// Assert
-            dragablePage.AssertConstraintMovementDrag(offsetX, offsetY);
+            draggablePage.AssertConstraintMovementDrag(offsetX, offsetY);
         }
 
 
@@ -57,42 +57,42 @@
         public void DragElementWithChangingCursorShouldProcessCorrectly()
         {
             //// Arrange 
-            var dragablePage = new DraggablePage(this.driver);
+            var draggablePage = new DraggablePage(this.driver);
             int offsetX = 100, offsetY = 100;
 
             //// Act
-            dragablePage.PerformDragWithCursorChange(offsetX, offsetY);
+            draggablePage.PerformDragWithCursorChange(offsetX, offsetY);
 
             //// Assert
-            dragablePage.AssertDragWithCursorChange(offsetX, offsetY);
+            draggablePage.AssertDragWithCursorChange(offsetX, offsetY);
         }
 
         [Test]
         public void DragElementWithEventShouldProcessCorrectly()
         {
             //// Arrange 
-            var dragablePage = new DraggablePage(this.driver);
+            var draggablePage = new DraggablePage(this.driver);
             int offsetX = 100, offsetY = 100;
 
             //// Act
-            dragablePage.PerformEventsDrag(offsetX, offsetY);
+            draggablePage.PerformEventsDrag(offsetX, offsetY);
 
             //// Assert
-            dragablePage.AssertEventsDrag(offsetX, offsetY);
+            draggablePage.AssertEventsDrag(offsetX, offsetY);
         }
 
         [Test]
         public void DragAndSortElementShouldProcessCorrectly()
         {
             //// Arrange 
-            var dragablePage = new DraggablePage(this.driver);
+            var draggablePage = new DraggablePage(this.driver);
             int offsetX = 0, offsetY = 50;
 
             //// Act
-            dragablePage.PerformDragAndSort(offsetX, offsetY);
+            draggablePage.PerformDragAndSort(offsetX, offsetY);
 
             //// Assert
-            dragablePage.AssertDragAndSort(offsetX, offsetY);
+            draggablePage.AssertDragAndSort(offsetX, offsetY);
         }
     }
 }

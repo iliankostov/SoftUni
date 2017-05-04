@@ -12,7 +12,7 @@
         {
             get
             {
-                return Constants.DRAGABLE_URL;
+                return Constants.SORTABLE_URL;
             }
         }
 

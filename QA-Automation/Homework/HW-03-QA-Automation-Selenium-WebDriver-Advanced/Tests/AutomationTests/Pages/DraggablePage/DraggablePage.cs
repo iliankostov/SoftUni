@@ -13,7 +13,7 @@
         {
             get
             {
-                return Constants.DRAGABLE_URL;
+                return Constants.DRAGGABLE_URL;
             }
         }
 
@@ -67,7 +67,7 @@
         public void PerformDragAndSort(int offsetX, int offsetY)
         {
             this.Open();
-            this.Elements.DragableAndSortableTab.Click();
+            this.Elements.DraggableAndSortableTab.Click();
             var builder = new Actions(this.Driver);
             builder.MoveToElement(this.Elements.DraggableBoxElement)
                    .ClickAndHold()
