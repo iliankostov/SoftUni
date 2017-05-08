@@ -1,7 +1,7 @@
 ﻿namespace AutomationTests.Pages.SelectablePage
 {
-    using NUnit.Framework;
     using System.Collections.Generic;
+    using NUnit.Framework;
 
     public static class SelectablePageAsserter
     {

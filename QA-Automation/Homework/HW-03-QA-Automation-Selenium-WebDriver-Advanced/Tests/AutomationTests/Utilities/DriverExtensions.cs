@@ -1,16 +1,16 @@
 ﻿namespace AutomationTests.Utilities
 {
+    using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.IO;
     using System.Linq;
-    using NUnit.Framework;
-    using OpenQA.Selenium;
-    using System;
-    using System.Configuration;
-    using NUnit.Framework.Interfaces;
     using NLog;
     using NLog.Config;
     using NLog.Targets;
+    using NUnit.Framework;
+    using NUnit.Framework.Interfaces;
+    using OpenQA.Selenium;
 
     public static class DriverExtensions
     {
@@ -40,7 +40,7 @@
 
         public static IWebDriver Log(this IWebDriver driver)
         {
-            var today = DateTime.Now.Date.ToShortDateString();
+            var today = DateTime.Now.Date.ToShortDateString().Replace('/', '-');
             var dirPath = ConfigurationManager.AppSettings["logsPath"].ToAbsolutePath() + today;
             if (!Directory.Exists(dirPath))
             {

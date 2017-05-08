@@ -47,8 +47,7 @@
             {
                 if (selects.Contains(i + 1))
                 {
-                    builder.MoveToElement(list[i])
-                           .Click();
+                    builder.MoveToElement(list[i]).Click();
                 }
             }
 
