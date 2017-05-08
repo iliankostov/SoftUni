@@ -76,10 +76,10 @@
     <Compile Include="Pages\SelectablePage\SelectablePageAsserter.cs" />
     <Compile Include="Pages\SelectablePage\SelectablePageConstants.cs" />
     <Compile Include="Pages\SelectablePage\SelectablePageMap.cs" />
-    <Compile Include="Pages\ResizeablePage\ResizeablePage.cs" />
-    <Compile Include="Pages\ResizeablePage\ResizeablePageAsserter.cs" />
-    <Compile Include="Pages\ResizeablePage\ResizeablePageConstants.cs" />
-    <Compile Include="Pages\ResizeablePage\ResizeablePageMap.cs" />
+    <Compile Include="Pages\ResizablePage\ResizablePage.cs" />
+    <Compile Include="Pages\ResizablePage\ResizablePageAsserter.cs" />
+    <Compile Include="Pages\ResizablePage\ResizablePageConstants.cs" />
+    <Compile Include="Pages\ResizablePage\ResizablePageMap.cs" />
     <Compile Include="Pages\DroppablePage\DroppablePage.cs" />
     <Compile Include="Pages\DroppablePage\DroppablePageAsserter.cs" />
     <Compile Include="Pages\DroppablePage\DroppablePageConstants.cs" />
