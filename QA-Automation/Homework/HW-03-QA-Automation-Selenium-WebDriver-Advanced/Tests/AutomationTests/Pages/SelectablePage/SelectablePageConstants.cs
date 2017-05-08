@@ -1,18 +1,19 @@
 ﻿namespace AutomationTests.Pages.SelectablePage
 {
-    public static class Constants
+    internal static class Constants
     {
         //// Common
-        public const string SELECTABLE_URL = "selectable/";
-        public const int WAIT_SECCONDS = 20;
+        internal const string SELECTABLE_URL = "selectable/";
+        internal const int WAIT_SECCONDS = 20;
 
         //// Selectors
-        public const string DEFAULT_TAB_SELECTOR = "ui-id-1";
-        public const string DISPLAY_AS_GRID_TAB_SELECTOR = "ui-id-2";
-        public const string SERIALIZE_TAB_SELECTOR = "ui-id-3";
-        public const string SELECTABLE_LIST_SELECTOR = "selectable";
-        public const string SELECTABLE_GRID_SELECTOR = "selectable_grid";
-        public const string SELECTABLE_SERIALIZIZE_SELECTOR = "selectable-serialize";
-        public const string SELECT_RESULT_SELECTOR = "select-result";
+        internal const string DEFAULT_TAB_SELECTOR = "ui-id-1";
+        internal const string DISPLAY_AS_GRID_TAB_SELECTOR = "ui-id-2";
+        internal const string SERIALIZE_TAB_SELECTOR = "ui-id-3";
+        internal const string SELECTABLE_LISTS_TAG_NAME_SELECTOR = "li";
+        internal const string SELECTABLE_LIST_SELECTOR = "selectable";
+        internal const string SELECTABLE_GRID_SELECTOR = "selectable_grid";
+        internal const string SELECTABLE_SERIALIZIZE_SELECTOR = "selectable-serialize";
+        internal const string SELECT_RESULT_SELECTOR = "select-result";
     }
 }
