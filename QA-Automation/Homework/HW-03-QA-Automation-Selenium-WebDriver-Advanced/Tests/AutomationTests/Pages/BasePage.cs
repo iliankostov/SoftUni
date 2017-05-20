@@ -1,7 +1,6 @@
 ﻿namespace AutomationTests.Pages
 {
     using OpenQA.Selenium;
-    using System.Configuration;
 
     public abstract class BasePage<T> where T : class
     {
@@ -19,8 +18,7 @@
 
         public virtual void Open(string part = "")
         {
-            var domain = ConfigurationManager.AppSettings["domain"];
-            this.Driver.Navigate().GoToUrl($"{domain}{this.Url}{part}");
+            this.Driver.Navigate().GoToUrl($"{this.Url}{part}");
         }
     }
 }

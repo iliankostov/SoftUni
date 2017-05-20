@@ -3,7 +3,7 @@
     internal static class Constants
     {
         //// Common
-        internal const string DRAGGABLE_URL = "draggable/";
+        internal const string DRAGGABLE_URL = "http://demoqa.com/draggable/";
         internal const int WAIT_SECCONDS = 20;
 
         //// Selectors

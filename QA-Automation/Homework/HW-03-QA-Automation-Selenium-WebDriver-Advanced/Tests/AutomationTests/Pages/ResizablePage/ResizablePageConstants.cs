@@ -3,7 +3,7 @@
     internal static class Constants
     {
         //// Common
-        internal const string RESIZABLE_URL = "resizable/";
+        internal const string RESIZABLE_URL = "http://demoqa.com/resizable/";
         internal const int WAIT_SECCONDS = 20;
 
         //// Selectors

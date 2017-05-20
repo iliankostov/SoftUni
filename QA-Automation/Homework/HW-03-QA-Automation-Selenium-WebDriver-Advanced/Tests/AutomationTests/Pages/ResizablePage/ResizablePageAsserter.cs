@@ -13,10 +13,10 @@
 
         public static void AssertConstraintResize(this ResizablePage page)
         {
-            decimal maxWidth = 180.3m;
-            decimal maxHeight = 136.9m;
-            Assert.IsTrue(page.Elements.ConstraintResizableBox.GetAttribute("style").Contains($"width: {maxWidth}px"));
-            Assert.IsTrue(page.Elements.ConstraintResizableBox.GetAttribute("style").Contains($"height: {maxHeight}px"));
+            int maxWidth = 180;
+            int maxHeight = 137;
+            Assert.IsTrue(page.Elements.ConstraintResizableBox.GetAttribute("style").Contains($"width: {maxWidth}"));
+            Assert.IsTrue(page.Elements.ConstraintResizableBox.GetAttribute("style").Contains($"height: {maxHeight}"));
         }
 
         public static void AssertMinConstraintResize(this ResizablePage page)

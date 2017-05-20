@@ -3,7 +3,7 @@
     internal static class Constants
     {
         //// Common
-        internal const string REGISTRATION_URL = "registration/";
+        internal const string REGISTRATION_URL = "http://demoqa.com/registration/";
         internal const int WAIT_SECCONDS = 20;
 
         //// Messages
