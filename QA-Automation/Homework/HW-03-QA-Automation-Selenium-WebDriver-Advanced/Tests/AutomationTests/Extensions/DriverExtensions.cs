@@ -5,6 +5,7 @@
     using System.Configuration;
     using System.IO;
     using System.Linq;
+    using System.Linq.Expressions;
     using NLog;
     using NLog.Config;
     using NLog.Targets;
@@ -30,6 +31,21 @@
             screenshot.SaveAsFile($"{path}{name}.jpg", ScreenshotImageFormat.Jpeg);
 
             return driver;
+        }
+
+        public static void SwitchToWindow(this IWebDriver driver, Expression<Func<IWebDriver, bool>> predicateExp)
+        {
+            var predicate = predicateExp.Compile();
+            foreach (var handle in driver.WindowHandles)
+            {
+                driver.SwitchTo().Window(handle);
+                if (predicate(driver))
+                {
+                    return;
+                }
+            }
+
+            throw new ArgumentException(string.Format("Unable to find window with condition: '{0}'", predicateExp.Body));
         }
 
         public static void Type(this IWebElement element, string text)
