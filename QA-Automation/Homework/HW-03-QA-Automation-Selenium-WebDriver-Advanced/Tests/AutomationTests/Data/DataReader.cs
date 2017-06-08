@@ -4,7 +4,7 @@
     using System.Data.OleDb;
     using System.Linq;
     using Dapper;
-    using Utilities;
+    using Extensions;
 
     public class DataReader<T> where T : class
     {

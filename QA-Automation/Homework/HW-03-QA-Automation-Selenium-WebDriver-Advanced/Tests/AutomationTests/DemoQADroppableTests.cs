@@ -3,7 +3,7 @@
     using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
-    using AutomationTests.Utilities;
+    using AutomationTests.Extensions;
     using AutomationTests.Pages.DroppablePage;
 
     [TestFixture]

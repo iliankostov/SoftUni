@@ -1,0 +1,1 @@
+﻿The Screenshots folder will contain diferent screenshots taken from the driver

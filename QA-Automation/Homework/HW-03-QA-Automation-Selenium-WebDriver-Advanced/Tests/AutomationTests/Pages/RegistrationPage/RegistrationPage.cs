@@ -2,7 +2,7 @@
 {
     using OpenQA.Selenium;
     using Models;
-    using Utilities;
+    using Extensions;
 
     public class RegistrationPage : BasePage<RegistrationPageMap>
     {

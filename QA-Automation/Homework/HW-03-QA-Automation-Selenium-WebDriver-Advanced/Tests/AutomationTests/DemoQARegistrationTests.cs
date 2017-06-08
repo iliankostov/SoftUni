@@ -7,7 +7,7 @@
     using Data;
     using Models;
     using Pages.RegistrationPage;
-    using AutomationTests.Utilities;
+    using AutomationTests.Extensions;
 
     [TestFixture]
     public class DemoQARegistrationTests

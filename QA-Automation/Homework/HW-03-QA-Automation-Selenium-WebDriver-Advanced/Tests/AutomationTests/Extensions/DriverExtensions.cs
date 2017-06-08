@@ -1,4 +1,4 @@
-﻿namespace AutomationTests.Utilities
+﻿namespace AutomationTests.Extensions
 {
     using System;
     using System.Collections.Generic;
@@ -14,6 +14,24 @@
 
     public static class DriverExtensions
     {
+        public static IWebDriver TakeScreenshot(this IWebDriver driver, string path = "", string name = "")
+        {
+            if (string.IsNullOrWhiteSpace(path))
+            {
+                path = ConfigurationManager.AppSettings["screenshotsPath"].ToAbsolutePath();
+            }
+
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = $"{DateTime.Now.ToShortDateString().Replace('/', '-')}";
+            }
+
+            var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            screenshot.SaveAsFile($"{path}{name}.jpg", ScreenshotImageFormat.Jpeg);
+
+            return driver;
+        }
+
         public static void Type(this IWebElement element, string text)
         {
             element.Clear();
@@ -55,9 +73,7 @@
                 if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
                 {
                     logger.Log(NLog.LogLevel.Error, TestContext.CurrentContext.Result.Message);
-
-                    var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-                    screenshot.SaveAsFile($"{dirPath}\\{TestContext.CurrentContext.Test.Name}.jpg", ScreenshotImageFormat.Jpeg);
+                    driver.TakeScreenshot($"{dirPath}\\", TestContext.CurrentContext.Test.Name);
                 }
                 else
                 {

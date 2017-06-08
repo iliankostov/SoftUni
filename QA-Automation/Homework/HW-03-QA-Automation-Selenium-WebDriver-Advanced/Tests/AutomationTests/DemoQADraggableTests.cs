@@ -4,7 +4,7 @@
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using AutomationTests.Pages.DraggablePage;
-    using AutomationTests.Utilities;
+    using AutomationTests.Extensions;
 
     [TestFixture]
     public class DemoQADraggableTests
