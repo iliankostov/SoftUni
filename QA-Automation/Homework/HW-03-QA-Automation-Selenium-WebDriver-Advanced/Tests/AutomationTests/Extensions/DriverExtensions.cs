@@ -14,16 +14,16 @@
 
     public static class DriverExtensions
     {
-        public static IWebDriver TakeScreenshot(this IWebDriver driver, string path = "", string name = "")
+        public static IWebDriver TakeScreenshot(this IWebDriver driver, string name = "", string path = "")
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = $"{DateTime.Now.ToString("dd-MMM-yyyy HH-mm-ss")}";
+            }
+
             if (string.IsNullOrWhiteSpace(path))
             {
                 path = ConfigurationManager.AppSettings["screenshotsPath"].ToAbsolutePath();
-            }
-
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                name = $"{DateTime.Now.ToShortDateString().Replace('/', '-')}";
             }
 
             var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
@@ -58,7 +58,7 @@
 
         public static IWebDriver Log(this IWebDriver driver)
         {
-            var today = DateTime.Now.Date.ToShortDateString().Replace('/', '-');
+            var today = DateTime.Now.ToString("dd-MMM-yyyy");
             var dirPath = ConfigurationManager.AppSettings["logsPath"].ToAbsolutePath() + today;
             if (!Directory.Exists(dirPath))
             {
@@ -73,7 +73,7 @@
                 if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
                 {
                     logger.Log(NLog.LogLevel.Error, TestContext.CurrentContext.Result.Message);
-                    driver.TakeScreenshot($"{dirPath}\\", TestContext.CurrentContext.Test.Name);
+                    driver.TakeScreenshot(TestContext.CurrentContext.Test.Name, $"{dirPath}\\");
                 }
                 else
                 {

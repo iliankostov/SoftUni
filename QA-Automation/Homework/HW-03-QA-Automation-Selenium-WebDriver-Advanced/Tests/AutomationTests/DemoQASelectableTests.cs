@@ -1,11 +1,12 @@
 ﻿namespace AutomationTests
 {
+    using System.Collections.Generic;
+    using System.Configuration;
     using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using AutomationTests.Extensions;
     using AutomationTests.Pages.SelectablePage;
-    using System.Collections.Generic;
 
     [TestFixture]
     public class DemoQASelectableTests
@@ -15,7 +16,9 @@
         [SetUp]
         public void BeforeEachTest()
         {
-            this.driver = new ChromeDriver();
+            var options = new ChromeOptions();
+            options.AddExtension(ConfigurationManager.AppSettings["extAdblockChrome"].ToAbsolutePath());
+            this.driver = new ChromeDriver(options);
             this.driver.Manage().Window.Maximize();
         }
 

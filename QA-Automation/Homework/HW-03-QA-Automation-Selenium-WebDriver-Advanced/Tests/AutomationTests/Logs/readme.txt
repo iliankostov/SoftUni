@@ -1,1 +1,0 @@
-﻿The Logs folder will contain log files and failed test's screenshots organized by folders

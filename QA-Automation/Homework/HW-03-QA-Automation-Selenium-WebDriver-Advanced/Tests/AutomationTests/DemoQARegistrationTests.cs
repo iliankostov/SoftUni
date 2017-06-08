@@ -1,5 +1,6 @@
 ﻿namespace AutomationTests
 {
+    using System.Configuration;
     using System.Reflection;
     using NUnit.Framework;
     using OpenQA.Selenium;
@@ -17,7 +18,9 @@
         [SetUp]
         public void BeforeEachTest()
         {
-            this.driver = new ChromeDriver();
+            var options = new ChromeOptions();
+            options.AddExtension(ConfigurationManager.AppSettings["extAdblockChrome"].ToAbsolutePath());
+            this.driver = new ChromeDriver(options);
             this.driver.Manage().Window.Maximize();
         }
 
