@@ -12,9 +12,16 @@
     using NUnit.Framework;
     using NUnit.Framework.Interfaces;
     using OpenQA.Selenium;
+    using OpenQA.Selenium.Support.UI;
 
     public static class DriverExtensions
     {
+        public static void WaitTheBody(this IWebDriver driver, int seconds = 20)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds));
+            wait.Until(ExpectedConditions.ElementExists(By.TagName("body")));
+        }
+
         public static IWebDriver TakeScreenshot(this IWebDriver driver, string name = "", string path = "")
         {
             if (string.IsNullOrWhiteSpace(name))
